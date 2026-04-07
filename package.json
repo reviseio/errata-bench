@@ -21,6 +21,7 @@
     "bench:rescore": "node --import tsx src/rescore-results.ts",
     "bench:refresh": "node --import tsx src/refresh-results.ts",
     "bench:prune": "node --import tsx src/prune-results.ts",
+    "pricing:refresh": "node --import tsx src/refresh-pricing.ts",
     "dataset:disqualify-issues": "node --import tsx src/disqualify-dataset-issues.ts",
     "generate:corrupted": "node --import tsx src/generate-corrupted-case.ts"
   },

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-04-07T13:07:52.582Z",
+  "fetchedAt": "2026-04-07T20:28:30.748Z",
   "source": "https://openrouter.ai/api/v1/models",
   "prices": {
     "ai21/jamba-large-1.7": {
@@ -167,6 +167,11 @@
       "outputUsdPerToken": 0.000025,
       "source": "https://openrouter.ai/api/v1/models"
     },
+    "anthropic/claude-4.6-opus-fast-20260407": {
+      "inputUsdPerToken": 0.00003,
+      "outputUsdPerToken": 0.00015,
+      "source": "https://openrouter.ai/api/v1/models"
+    },
     "anthropic/claude-4.6-sonnet-20260217": {
       "inputUsdPerToken": 0.000003,
       "outputUsdPerToken": 0.000015,
@@ -195,6 +200,11 @@
     "anthropic/claude-opus-4.6": {
       "inputUsdPerToken": 0.000005,
       "outputUsdPerToken": 0.000025,
+      "source": "https://openrouter.ai/api/v1/models"
+    },
+    "anthropic/claude-opus-4.6-fast": {
+      "inputUsdPerToken": 0.00003,
+      "outputUsdPerToken": 0.00015,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "anthropic/claude-sonnet-4": {
@@ -637,6 +647,11 @@
       "outputUsdPerToken": 4e-7,
       "source": "https://openrouter.ai/api/v1/models"
     },
+    "google/gemma-4-26b-a4b-it:free": {
+      "inputUsdPerToken": 0,
+      "outputUsdPerToken": 0,
+      "source": "https://openrouter.ai/api/v1/models"
+    },
     "google/gemma-4-31b-it": {
       "inputUsdPerToken": 1.4e-7,
       "outputUsdPerToken": 4e-7,
@@ -645,6 +660,11 @@
     "google/gemma-4-31b-it-20260402": {
       "inputUsdPerToken": 1.4e-7,
       "outputUsdPerToken": 4e-7,
+      "source": "https://openrouter.ai/api/v1/models"
+    },
+    "google/gemma-4-31b-it:free": {
+      "inputUsdPerToken": 0,
+      "outputUsdPerToken": 0,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "google/lyria-3-clip-preview": {
@@ -2395,6 +2415,16 @@
     "z-ai/glm-5-turbo-20260315": {
       "inputUsdPerToken": 0.0000012,
       "outputUsdPerToken": 0.000004,
+      "source": "https://openrouter.ai/api/v1/models"
+    },
+    "z-ai/glm-5.1": {
+      "inputUsdPerToken": 0.000001,
+      "outputUsdPerToken": 0.0000032000000000000003,
+      "source": "errata-bench pinned pricing override"
+    },
+    "z-ai/glm-5.1-20260406": {
+      "inputUsdPerToken": 0.000001,
+      "outputUsdPerToken": 0.0000032,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "z-ai/glm-5v-turbo": {

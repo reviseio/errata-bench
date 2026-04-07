@@ -42,6 +42,7 @@ type PricingOverrideEntry = {
 };
 
 const OPENROUTER_MODELS_API_SOURCE = "https://openrouter.ai/api/v1/models";
+const PINNED_MODEL_PRICING_SOURCE = "errata-bench pinned pricing override";
 const PRICING_CACHE_PATH = path.resolve("artifacts/cache/openrouter-model-pricing.json");
 const DEFAULT_CACHE_TTL_MS = 6 * 60 * 60 * 1000;
 
@@ -85,6 +86,14 @@ const STATIC_MODEL_PRICING: Record<string, ModelPricing> = {
     inputUsdPerToken: 0.039 / 1_000_000,
     outputUsdPerToken: 0.19 / 1_000_000,
     source: OPENROUTER_MODELS_API_SOURCE
+  }
+};
+
+const PINNED_MODEL_PRICING: Record<string, ModelPricing> = {
+  "z-ai/glm-5.1": {
+    inputUsdPerToken: 1 / 1_000_000,
+    outputUsdPerToken: 3.2 / 1_000_000,
+    source: PINNED_MODEL_PRICING_SOURCE
   }
 };
 
@@ -226,7 +235,7 @@ async function writePricingCache(prices: Record<string, ModelPricing>): Promise<
   await writeJson(PRICING_CACHE_PATH, {
     fetchedAt: new Date().toISOString(),
     source: OPENROUTER_MODELS_API_SOURCE,
-    prices: normalizePricingMap(prices)
+    prices: normalizePricingMap({ ...prices, ...PINNED_MODEL_PRICING })
   } satisfies PricingCacheFile);
 }
 
@@ -261,6 +270,24 @@ async function fetchPricingIndexFromOpenRouter(): Promise<Record<string, ModelPr
   return prices;
 }
 
+export function getPricingCachePath(): string {
+  return PRICING_CACHE_PATH;
+}
+
+export async function refreshPricingCache(): Promise<Record<string, ModelPricing>> {
+  if (!usesOpenRouterPricing()) {
+    throw new Error(
+      "OpenRouter pricing refresh requires ERRATA_BENCH_API_PROVIDER=openrouter."
+    );
+  }
+
+  const overrides = await readPricingOverrides();
+  const livePrices = await fetchPricingIndexFromOpenRouter();
+  const mergedPrices = { ...STATIC_MODEL_PRICING, ...livePrices, ...PINNED_MODEL_PRICING, ...overrides };
+  pricingIndexPromise = Promise.resolve(mergedPrices);
+  return mergedPrices;
+}
+
 async function loadPricingIndex(): Promise<Record<string, ModelPricing>> {
   if (pricingIndexPromise) {
     return pricingIndexPromise;
@@ -276,18 +303,18 @@ async function loadPricingIndex(): Promise<Record<string, ModelPricing>> {
     const cached = await readPricingCache();
 
     if (cached && isFreshCache(cached)) {
-      return { ...STATIC_MODEL_PRICING, ...cached.prices, ...overrides };
+      return { ...STATIC_MODEL_PRICING, ...cached.prices, ...PINNED_MODEL_PRICING, ...overrides };
     }
 
     try {
       const livePrices = await fetchPricingIndexFromOpenRouter();
-      return { ...STATIC_MODEL_PRICING, ...livePrices, ...overrides };
+      return { ...STATIC_MODEL_PRICING, ...livePrices, ...PINNED_MODEL_PRICING, ...overrides };
     } catch {
       if (cached) {
-        return { ...STATIC_MODEL_PRICING, ...cached.prices, ...overrides };
+        return { ...STATIC_MODEL_PRICING, ...cached.prices, ...PINNED_MODEL_PRICING, ...overrides };
       }
 
-      return { ...STATIC_MODEL_PRICING, ...overrides };
+      return { ...STATIC_MODEL_PRICING, ...PINNED_MODEL_PRICING, ...overrides };
     }
   })();
 
