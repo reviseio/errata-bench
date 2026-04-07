@@ -88,7 +88,7 @@ const EDIT_TOOLS: OpenRouterToolDefinition[] = [
 
 export const DEFAULT_MAX_TURNS_PER_CHUNK = 3;
 export const DEFAULT_MAX_COMPLETION_TOKENS_PER_TURN = 8_192;
-export const DEFAULT_MAX_WORDS_PER_CHUNK = 3_000;
+export const DEFAULT_MAX_WORDS_PER_CHUNK = 2_000;
 
 export type RunProgressUpdate = {
   chunkIndex: number;

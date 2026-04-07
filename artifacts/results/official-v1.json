@@ -2,7 +2,7 @@
   "version": "v1",
   "groupId": "official-v1",
   "createdAt": "2026-04-06T19:47:57.750Z",
-  "updatedAt": "2026-04-07T14:03:13.298Z",
+  "updatedAt": "2026-04-07T16:09:38.510Z",
   "models": [
     "anthropic/claude-haiku-4.5:high @2000w/3t",
     "anthropic/claude-haiku-4.5:low @2000w/3t",

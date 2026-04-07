@@ -96,12 +96,12 @@ type LiveModelProgress = {
 };
 
 function parseArgs(argv: string[]): CliOptions {
-  let datasetPaths = ["datasets/v1/starter-suite.json"];
+  let datasetPaths = ["datasets/v1/generated"];
   let groupId = DEFAULT_RESULT_GROUP_ID;
   let judgeModel: string | null = getDefaultJudgeModel() ?? DEFAULT_ALTERNATIVE_JUDGE_MODEL;
   let models: string[] = [];
   let modelsFile: string | null = "models/starter-models.json";
-  let runs = 1;
+  let runs = 3;
   let concurrency = 3;
   let verbose = false;
   let requestTimeoutMs: number | null = 360_0000;
