@@ -1,0 +1,202 @@
+{
+  "version": "v1",
+  "runId": "2026-03-31T19-42-47-697Z",
+  "createdAt": "2026-03-31T19:42:47.697Z",
+  "datasetPath": "/Users/artur/work/errata-bench/datasets/v1/tool-editing-baseline.json",
+  "mode": "openrouter",
+  "model": "moonshotai/kimi-k2.5",
+  "cases": [
+    {
+      "caseId": "tool-editing-silly-001",
+      "instruction": "Proofread the document. Fix spelling and obvious grammar mistakes while preserving meaning, tone, paragraph ids, and intentionally odd details.",
+      "initialDocumentHtml": "<p id=\"Xr6osk\">My pet dinasaur stole teh mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I has wrote a apology note, but it still sound ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>",
+      "expectedDocumentHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I wrote an apology note, but it still sounds ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>",
+      "finalDocumentHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I have written an apology note, but it still sounds ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>",
+      "issues": [
+        {
+          "id": "issue-p1-dinasaur",
+          "category": "non_word_typo",
+          "paragraphId": "Xr6osk",
+          "description": "Correct dinasaur to dinosaur.",
+          "expectedCorrection": {
+            "find": "dinasaur",
+            "replace": "dinosaur"
+          }
+        },
+        {
+          "id": "issue-p1-teh",
+          "category": "non_word_typo",
+          "paragraphId": "Xr6osk",
+          "description": "Correct teh to the.",
+          "expectedCorrection": {
+            "find": "teh",
+            "replace": "the"
+          }
+        },
+        {
+          "id": "issue-p2-has-wrote",
+          "category": "verb_form",
+          "paragraphId": "CYklKQ",
+          "description": "Correct has wrote to wrote.",
+          "expectedCorrection": {
+            "find": "has wrote",
+            "replace": "wrote"
+          }
+        },
+        {
+          "id": "issue-p2-a-apology",
+          "category": "article",
+          "paragraphId": "CYklKQ",
+          "description": "Correct a apology to an apology.",
+          "expectedCorrection": {
+            "find": "a apology",
+            "replace": "an apology"
+          }
+        },
+        {
+          "id": "issue-p2-sound",
+          "category": "agreement",
+          "paragraphId": "CYklKQ",
+          "description": "Correct sound to sounds.",
+          "expectedCorrection": {
+            "find": "still sound ridiculous",
+            "replace": "still sounds ridiculous"
+          }
+        }
+      ],
+      "passes": [
+        {
+          "passName": "proofread-pass-1",
+          "passInstruction": "Do one conservative proofreading pass over the document. This is pass 1 of at most 3.",
+          "startingDocumentHtml": "<p id=\"Xr6osk\">My pet dinasaur stole teh mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I has wrote a apology note, but it still sound ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>",
+          "endingDocumentHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I have written an apology note, but it still sounds ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>",
+          "turnTraces": [
+            {
+              "turn": 1,
+              "requestDurationMs": 27965,
+              "finishReason": "tool_calls",
+              "assistantContent": null,
+              "toolCallCount": 6,
+              "rawToolCallCount": 6,
+              "rawContentPartTypes": [],
+              "rawContentPreview": null,
+              "reasoningTextLength": 1796,
+              "reasoningDetailsCount": 1
+            }
+          ],
+          "toolExecutions": [
+            {
+              "step": 1,
+              "toolCallId": "functions.find_and_replace:0",
+              "toolName": "find_and_replace",
+              "arguments": {
+                "paragraphId": "Xr6osk",
+                "find": "dinasaur",
+                "replace": "dinosaur"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "Xr6osk",
+                "updatedParagraphHtml": "<p id=\"Xr6osk\">My pet dinosaur stole teh mayor's toast at dawn.</p>",
+                "replacementsApplied": 1,
+                "message": "Replaced 1 occurrence(s) in paragraph \"Xr6osk\"."
+              }
+            },
+            {
+              "step": 2,
+              "toolCallId": "functions.find_and_replace:1",
+              "toolName": "find_and_replace",
+              "arguments": {
+                "paragraphId": "Xr6osk",
+                "find": "teh",
+                "replace": "the"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "Xr6osk",
+                "updatedParagraphHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>",
+                "replacementsApplied": 1,
+                "message": "Replaced 1 occurrence(s) in paragraph \"Xr6osk\"."
+              }
+            },
+            {
+              "step": 3,
+              "toolCallId": "functions.find_and_replace:2",
+              "toolName": "find_and_replace",
+              "arguments": {
+                "paragraphId": "CYklKQ",
+                "find": "has wrote",
+                "replace": "have written"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "CYklKQ",
+                "updatedParagraphHtml": "<p id=\"CYklKQ\">I have written a apology note, but it still sound ridiculous.</p>",
+                "replacementsApplied": 1,
+                "message": "Replaced 1 occurrence(s) in paragraph \"CYklKQ\"."
+              }
+            },
+            {
+              "step": 4,
+              "toolCallId": "functions.find_and_replace:3",
+              "toolName": "find_and_replace",
+              "arguments": {
+                "paragraphId": "CYklKQ",
+                "find": "a apology",
+                "replace": "an apology"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "CYklKQ",
+                "updatedParagraphHtml": "<p id=\"CYklKQ\">I have written an apology note, but it still sound ridiculous.</p>",
+                "replacementsApplied": 1,
+                "message": "Replaced 1 occurrence(s) in paragraph \"CYklKQ\"."
+              }
+            },
+            {
+              "step": 5,
+              "toolCallId": "functions.find_and_replace:4",
+              "toolName": "find_and_replace",
+              "arguments": {
+                "paragraphId": "CYklKQ",
+                "find": "sound",
+                "replace": "sounds"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "CYklKQ",
+                "updatedParagraphHtml": "<p id=\"CYklKQ\">I have written an apology note, but it still sounds ridiculous.</p>",
+                "replacementsApplied": 1,
+                "message": "Replaced 1 occurrence(s) in paragraph \"CYklKQ\"."
+              }
+            },
+            {
+              "step": 6,
+              "toolCallId": "functions.finish_pass:5",
+              "toolName": "finish_pass",
+              "arguments": {
+                "decision": "stop",
+                "reason": "All spelling and grammar mistakes have been fixed. Paragraph 1: corrected 'dinasaur' to 'dinosaur' and 'teh' to 'the'. Paragraph 2: corrected 'has wrote' to 'have written', 'a apology' to 'an apology', and 'sound' to 'sounds'. Paragraph 3 was already correct and was left unchanged."
+              },
+              "result": {
+                "ok": true,
+                "decision": "stop",
+                "message": "STOP: All spelling and grammar mistakes have been fixed. Paragraph 1: corrected 'dinasaur' to 'dinosaur' and 'teh' to 'the'. Paragraph 2: corrected 'has wrote' to 'have written', 'a apology' to 'an apology', and 'sound' to 'sounds'. Paragraph 3 was already correct and was left unchanged."
+              }
+            }
+          ],
+          "finalAssistantMessage": "STOP: All spelling and grammar mistakes have been fixed. Paragraph 1: corrected 'dinasaur' to 'dinosaur' and 'teh' to 'the'. Paragraph 2: corrected 'has wrote' to 'have written', 'a apology' to 'an apology', and 'sound' to 'sounds'. Paragraph 3 was already correct and was left unchanged.",
+          "decision": "stop",
+          "outputTokens": 763,
+          "promptTokens": 654,
+          "durationMs": 27966
+        }
+      ],
+      "finalAssistantMessage": "STOP: All spelling and grammar mistakes have been fixed. Paragraph 1: corrected 'dinasaur' to 'dinosaur' and 'teh' to 'the'. Paragraph 2: corrected 'has wrote' to 'have written', 'a apology' to 'an apology', and 'sound' to 'sounds'. Paragraph 3 was already correct and was left unchanged.",
+      "terminationReason": "model_stop",
+      "outputTokens": 763,
+      "promptTokens": 654,
+      "durationMs": 27966
+    }
+  ]
+}

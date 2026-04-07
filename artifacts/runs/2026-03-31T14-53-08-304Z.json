@@ -1,0 +1,235 @@
+{
+  "version": "v1",
+  "runId": "2026-03-31T14-53-08-304Z",
+  "createdAt": "2026-03-31T14:53:08.304Z",
+  "datasetPath": "/Users/artur/work/errata-bench/datasets/v1/tool-editing-baseline.json",
+  "mode": "openrouter",
+  "model": "openai/gpt-5.4-mini",
+  "cases": [
+    {
+      "caseId": "tool-editing-silly-001",
+      "instruction": "Proofread the document. Fix spelling and obvious grammar mistakes while preserving meaning, tone, paragraph ids, and intentionally odd details.",
+      "initialDocumentHtml": "<p id=\"p1\">My pet dinasaur stole teh mayor's toast at dawn.</p>\n<p id=\"p2\">I has wrote a apology note, but it still sound ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+      "expectedDocumentHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"p2\">I wrote an apology note, but it still sounds ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+      "finalDocumentHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"p2\">I have written an apology note, but it still sounds ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+      "issues": [
+        {
+          "id": "issue-p1-dinasaur",
+          "category": "non_word_typo",
+          "paragraphId": "p1",
+          "description": "Correct dinasaur to dinosaur.",
+          "expectedCorrection": {
+            "find": "dinasaur",
+            "replace": "dinosaur"
+          }
+        },
+        {
+          "id": "issue-p1-teh",
+          "category": "non_word_typo",
+          "paragraphId": "p1",
+          "description": "Correct teh to the.",
+          "expectedCorrection": {
+            "find": "teh",
+            "replace": "the"
+          }
+        },
+        {
+          "id": "issue-p2-has-wrote",
+          "category": "verb_form",
+          "paragraphId": "p2",
+          "description": "Correct has wrote to wrote.",
+          "expectedCorrection": {
+            "find": "has wrote",
+            "replace": "wrote"
+          }
+        },
+        {
+          "id": "issue-p2-a-apology",
+          "category": "article",
+          "paragraphId": "p2",
+          "description": "Correct a apology to an apology.",
+          "expectedCorrection": {
+            "find": "a apology",
+            "replace": "an apology"
+          }
+        },
+        {
+          "id": "issue-p2-sound",
+          "category": "agreement",
+          "paragraphId": "p2",
+          "description": "Correct sound to sounds.",
+          "expectedCorrection": {
+            "find": "still sound ridiculous",
+            "replace": "still sounds ridiculous"
+          }
+        }
+      ],
+      "passes": [
+        {
+          "passName": "proofread-pass-1",
+          "passInstruction": "Do one conservative proofreading pass over the document. This is pass 1 of at most 3.",
+          "startingDocumentHtml": "<p id=\"p1\">My pet dinasaur stole teh mayor's toast at dawn.</p>\n<p id=\"p2\">I has wrote a apology note, but it still sound ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+          "endingDocumentHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"p2\">I have wrote a apology note, but it still sounds ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+          "turnTraces": [
+            {
+              "turn": 1,
+              "finishReason": "tool_calls",
+              "assistantContent": null,
+              "toolCallCount": 1,
+              "rawToolCallCount": 1,
+              "rawContentPartTypes": [],
+              "rawContentPreview": null,
+              "reasoningTextLength": 0,
+              "reasoningDetailsCount": 0
+            },
+            {
+              "turn": 2,
+              "finishReason": "tool_calls",
+              "assistantContent": null,
+              "toolCallCount": 1,
+              "rawToolCallCount": 1,
+              "rawContentPartTypes": [],
+              "rawContentPreview": null,
+              "reasoningTextLength": 0,
+              "reasoningDetailsCount": 0
+            },
+            {
+              "turn": 3,
+              "finishReason": "tool_calls",
+              "assistantContent": null,
+              "toolCallCount": 1,
+              "rawToolCallCount": 1,
+              "rawContentPartTypes": [],
+              "rawContentPreview": null,
+              "reasoningTextLength": 0,
+              "reasoningDetailsCount": 0
+            },
+            {
+              "turn": 4,
+              "finishReason": "stop",
+              "assistantContent": "CONTINUE: Minor fixes made, but p2 may need another pass for grammar.",
+              "toolCallCount": 0,
+              "rawToolCallCount": 0,
+              "rawContentPartTypes": [],
+              "rawContentPreview": "CONTINUE: Minor fixes made, but p2 may need another pass for grammar.",
+              "reasoningTextLength": 0,
+              "reasoningDetailsCount": 0
+            }
+          ],
+          "toolExecutions": [
+            {
+              "step": 1,
+              "toolCallId": "call_blVMblJXiO3Hm4KiJrhIWKlG",
+              "toolName": "find_and_replace",
+              "arguments": {
+                "paragraphId": "p1",
+                "find": "dinasaur",
+                "replace": "dinosaur"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "p1",
+                "updatedParagraphHtml": "<p id=\"p1\">My pet dinosaur stole teh mayor's toast at dawn.</p>",
+                "replacementsApplied": 1,
+                "message": "Replaced 1 occurrence(s) in paragraph \"p1\"."
+              }
+            },
+            {
+              "step": 2,
+              "toolCallId": "call_dv7jDNEcBZq9Od9WkoAhUswB",
+              "toolName": "find_and_replace",
+              "arguments": {
+                "paragraphId": "p1",
+                "find": "teh",
+                "replace": "the"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "p1",
+                "updatedParagraphHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>",
+                "replacementsApplied": 1,
+                "message": "Replaced 1 occurrence(s) in paragraph \"p1\"."
+              }
+            },
+            {
+              "step": 3,
+              "toolCallId": "call_vAuBIZgpwZeOFXWAJHAsq72o",
+              "toolName": "replace_paragraph",
+              "arguments": {
+                "paragraphId": "p2",
+                "newParagraphHtml": "<p id=\"p2\">I have wrote a apology note, but it still sounds ridiculous.</p>"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "p2",
+                "updatedParagraphHtml": "<p id=\"p2\">I have wrote a apology note, but it still sounds ridiculous.</p>",
+                "message": "Paragraph \"p2\" was replaced."
+              }
+            }
+          ],
+          "finalAssistantMessage": "CONTINUE: Minor fixes made, but p2 may need another pass for grammar.",
+          "decision": "continue",
+          "outputTokens": 131,
+          "promptTokens": 2824
+        },
+        {
+          "passName": "proofread-pass-2",
+          "passInstruction": "Do one conservative proofreading pass over the document. This is pass 2 of at most 3.",
+          "startingDocumentHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"p2\">I have wrote a apology note, but it still sounds ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+          "endingDocumentHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"p2\">I have written an apology note, but it still sounds ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+          "turnTraces": [
+            {
+              "turn": 1,
+              "finishReason": "tool_calls",
+              "assistantContent": null,
+              "toolCallCount": 1,
+              "rawToolCallCount": 1,
+              "rawContentPartTypes": [],
+              "rawContentPreview": null,
+              "reasoningTextLength": 0,
+              "reasoningDetailsCount": 0
+            },
+            {
+              "turn": 2,
+              "finishReason": "stop",
+              "assistantContent": "STOP Reason: One clear grammar fix was applied; the remaining paragraphs are already correct.",
+              "toolCallCount": 0,
+              "rawToolCallCount": 0,
+              "rawContentPartTypes": [],
+              "rawContentPreview": "STOP Reason: One clear grammar fix was applied; the remaining paragraphs are already correct.",
+              "reasoningTextLength": 0,
+              "reasoningDetailsCount": 0
+            }
+          ],
+          "toolExecutions": [
+            {
+              "step": 1,
+              "toolCallId": "call_7JwNyzCBQTBoF56VkoJH34Oe",
+              "toolName": "find_and_replace",
+              "arguments": {
+                "paragraphId": "p2",
+                "find": "have wrote a apology note",
+                "replace": "have written an apology note"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "p2",
+                "updatedParagraphHtml": "<p id=\"p2\">I have written an apology note, but it still sounds ridiculous.</p>",
+                "replacementsApplied": 1,
+                "message": "Replaced 1 occurrence(s) in paragraph \"p2\"."
+              }
+            }
+          ],
+          "finalAssistantMessage": "STOP Reason: One clear grammar fix was applied; the remaining paragraphs are already correct.",
+          "decision": "stop",
+          "outputTokens": 58,
+          "promptTokens": 1208
+        }
+      ],
+      "finalAssistantMessage": "STOP Reason: One clear grammar fix was applied; the remaining paragraphs are already correct.",
+      "terminationReason": "model_stop",
+      "outputTokens": 189,
+      "promptTokens": 4032
+    }
+  ]
+}

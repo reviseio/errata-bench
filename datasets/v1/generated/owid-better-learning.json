@@ -1,0 +1,567 @@
+{
+  "id": "owid-better-learning",
+  "instruction": "Proofread the document. Fix the known spelling, grammar, punctuation, word-choice, and style mistakes while preserving meaning, tone, paragraph ids, and intentional wording everywhere else.",
+  "sourcePath": "owid-better-learning-corrupted.txt",
+  "issues": [
+    {
+      "id": "issue-01",
+      "category": "grammar_and_syntax.missing_word",
+      "paragraphId": "RDRtns",
+      "description": "The word 'to' is omitted from the phrase 'learn to read so that they can read to learn', removing a required function word and breaking the infinitive construction.",
+      "classification": {
+        "label": "grammar_and_syntax.missing_word",
+        "parent": "grammar_and_syntax",
+        "child": "missing_word",
+        "severity": "major",
+        "editScope": "clause",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "Children need to learn to read so that they can read learn.",
+        "replace": "Children need to learn to read so that they can read to learn."
+      }
+    },
+    {
+      "id": "issue-02",
+      "category": "orthography_and_word_form.transposition",
+      "paragraphId": "qLNlow",
+      "description": "Swapped 'from' to 'form' — a classic letter transposition error.",
+      "classification": {
+        "label": "orthography_and_word_form.transposition",
+        "parent": "orthography_and_word_form",
+        "child": "transposition",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "transposition",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "The average students form rich households achieve much better scores than the average poor students.",
+        "replace": "The average students from rich households achieve much better scores than the average poor students."
+      }
+    },
+    {
+      "id": "issue-03",
+      "category": "orthography_and_word_form.real_word_spelling_error",
+      "paragraphId": "NlMiQI",
+      "description": "Real-word spelling error: 'steeper' replaced with 'stepper', which is a valid word (a type of motor or exercise machine) but incorrect in this context where 'steeper' (more steep) is intended.",
+      "classification": {
+        "label": "orthography_and_word_form.real_word_spelling_error",
+        "parent": "orthography_and_word_form",
+        "child": "real_word_spelling_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "makes clear that poor children face much stepper odds.",
+        "replace": "makes clear that poor children face much steeper odds."
+      }
+    },
+    {
+      "id": "issue-04",
+      "category": "orthography_and_word_form.incorrect_pluralization",
+      "paragraphId": "MkqhwB",
+      "description": "Incorrect pluralization: 'implications' should be singular 'implication' given the context discusses a single takeaway point, but more precisely, the plural 'implications' is correct and the singular would be wrong. Actually, let me reconsider — I need to introduce an error. Changing 'implications' to 'implication' would be a plausible slip but borderline. Let me find a better target. 'differences' changed to 'difference' where plural is clearly needed because it refers to multiple differences between countries.",
+      "classification": {
+        "label": "orthography_and_word_form.incorrect_pluralization",
+        "parent": "orthography_and_word_form",
+        "child": "incorrect_pluralization",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "the differences between countries are several times larger than the difference within countries",
+        "replace": "the differences between countries are several times larger than the differences within countries"
+      }
+    },
+    {
+      "id": "issue-05",
+      "category": "orthography_and_word_form.capitalization_error",
+      "paragraphId": "n35v1W",
+      "description": "Capitalization error: 'Finnish' should not be lowercase in this context, as it is a proper adjective derived from a country name.",
+      "classification": {
+        "label": "orthography_and_word_form.capitalization_error",
+        "parent": "orthography_and_word_form",
+        "child": "capitalization_error",
+        "severity": "major",
+        "editScope": "character",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "The poorest Korean or finnish students are poorer than the rich students in Brazil",
+        "replace": "The poorest Korean or Finnish students are poorer than the rich students in Brazil"
+      }
+    },
+    {
+      "id": "issue-06",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "paragraphId": "mk57wn",
+      "description": "Homophone confusion: 'their' (possessive) incorrectly replaced with 'there' (locative) in the phrase about family background.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homophone_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "no matter what there family background is.",
+        "replace": "no matter what their family background is."
+      }
+    },
+    {
+      "id": "issue-07",
+      "category": "lexical_choice_and_confusability.malapropism",
+      "paragraphId": "NsoUAl",
+      "description": "The word 'perpetuating' is replaced with 'perpetrating', a malapropism where a similar-sounding word is used incorrectly. 'Perpetrating' means committing (a crime), while 'perpetuating' means causing to continue indefinitely.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.malapropism",
+        "parent": "lexical_choice_and_confusability",
+        "child": "malapropism",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "these educational differences are actually perpetrating the high levels of inequality",
+        "replace": "these educational differences are actually perpetuating the high levels of inequality"
+      }
+    },
+    {
+      "id": "issue-08",
+      "category": "lexical_choice_and_confusability.misused_word",
+      "paragraphId": "aVpq8N",
+      "description": "The word 'perpetuating' is incorrectly replaced with 'perpetrating', a common word confusion. 'Perpetrating' means committing (a crime), while 'perpetuating' means causing to continue indefinitely. The context clearly requires 'perpetuating'.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.misused_word",
+        "parent": "lexical_choice_and_confusability",
+        "child": "misused_word",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "If we want to stop inequality perpetrating itself through education",
+        "replace": "If we want to stop inequality perpetuating itself through education"
+      }
+    },
+    {
+      "id": "issue-09",
+      "category": "grammar_and_syntax.run_on_fused_sentence_or_comma_splice",
+      "paragraphId": "lqPwqE",
+      "description": "Two independent clauses ('Learning was worse in the past' and 'In the majority of countries, children are learning more now than some years ago') are fused with a comma instead of being properly joined with a semicolon, period, or conjunction, creating a comma splice.",
+      "classification": {
+        "label": "grammar_and_syntax.run_on_fused_sentence_or_comma_splice",
+        "parent": "grammar_and_syntax",
+        "child": "run_on_fused_sentence_or_comma_splice",
+        "severity": "major",
+        "editScope": "sentence",
+        "operationType": "substitution",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "But this isn't the case. Learning was worse in the past, in the majority of countries, children are learning",
+        "replace": "But this isn't the case. Learning was worse in the past. In the majority of countries, children are learning"
+      }
+    },
+    {
+      "id": "issue-10",
+      "category": "punctuation_and_boundaries.sentence_boundary_error",
+      "paragraphId": "0FJaSu",
+      "description": "Incorrect sentence boundary: a period is replaced with a comma, merging two sentences into one run-on sentence.",
+      "classification": {
+        "label": "punctuation_and_boundaries.sentence_boundary_error",
+        "parent": "punctuation_and_boundaries",
+        "child": "sentence_boundary_error",
+        "severity": "major",
+        "editScope": "sentence",
+        "operationType": "substitution",
+        "createsValidWord": null,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "They cannot learn it from their parents, as less than 3% of mothers can pass a simple literacy test, this study concluded",
+        "replace": "They cannot learn it from their parents, as less than 3% of mothers can pass a simple literacy test. This study concluded"
+      }
+    },
+    {
+      "id": "issue-11",
+      "category": "grammar_and_syntax.missing_word",
+      "paragraphId": "t6GyXf",
+      "description": "The required function word 'to' is omitted from the infinitive phrase 'the goal to see what can be done', changing it to 'the goal see what can be done'.",
+      "classification": {
+        "label": "grammar_and_syntax.missing_word",
+        "parent": "grammar_and_syntax",
+        "child": "missing_word",
+        "severity": "major",
+        "editScope": "clause",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "set itself the goal see what can be done when these constraints",
+        "replace": "set itself the goal to see what can be done when these constraints"
+      }
+    },
+    {
+      "id": "issue-12",
+      "category": "grammar_and_syntax.preposition_error",
+      "paragraphId": "Adf3Y3",
+      "description": "Wrong preposition: 'set itself the goal to see' should use 'of seeing' or 'to see' is acceptable, but the more clearly wrong preposition error is introduced by changing 'worked with the people there to set up' to 'worked with the people there for set up', using 'for' instead of 'to'.",
+      "classification": {
+        "label": "grammar_and_syntax.preposition_error",
+        "parent": "grammar_and_syntax",
+        "child": "preposition_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "worked with the people there for set up simple primary schools",
+        "replace": "worked with the people there to set up simple primary schools"
+      }
+    },
+    {
+      "id": "issue-13",
+      "category": "grammar_and_syntax.countability_error",
+      "paragraphId": "LTLVvr",
+      "description": "The mass noun 'math' is incorrectly treated as a count noun by adding the indefinite article 'a' before it, creating a countability error.",
+      "classification": {
+        "label": "grammar_and_syntax.countability_error",
+        "parent": "grammar_and_syntax",
+        "child": "countability_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "insertion",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "to read fluently and do a basic math very well.",
+        "replace": "to read fluently and do basic math very well."
+      }
+    },
+    {
+      "id": "issue-14",
+      "category": "orthography_and_word_form.incorrect_conjugation",
+      "paragraphId": "FAKEBg",
+      "description": "Incorrect verb conjugation: 'set' should be 'sets' to agree with the singular subject 'this research' in the present tense.",
+      "classification": {
+        "label": "orthography_and_word_form.incorrect_conjugation",
+        "parent": "orthography_and_word_form",
+        "child": "incorrect_conjugation",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "this research tries to find out what exactly it is that mean that children learn little",
+        "replace": "this research tries to find out what exactly it is that means that children learn little"
+      }
+    },
+    {
+      "id": "issue-15",
+      "category": "orthography_and_word_form.hyphenation_or_compounding_error",
+      "paragraphId": "Q03G4F",
+      "description": "Hyphenation error: 'cost-effective' incorrectly written as 'costeffective' (missing hyphen in compound modifier).",
+      "classification": {
+        "label": "orthography_and_word_form.hyphenation_or_compounding_error",
+        "parent": "orthography_and_word_form",
+        "child": "hyphenation_or_compounding_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "The research on cost-effectiveness in education shows that the best interventions can be extremely costeffective.",
+        "replace": "The research on cost-effectiveness in education shows that the best interventions can be extremely cost-effective."
+      }
+    },
+    {
+      "id": "issue-16",
+      "category": "orthography_and_word_form.omission",
+      "paragraphId": "Gj3SnW",
+      "description": "The word 'extremely' is missing a letter, resulting in 'extremly' — a common typo where the 'e' is omitted.",
+      "classification": {
+        "label": "orthography_and_word_form.omission",
+        "parent": "orthography_and_word_form",
+        "child": "omission",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "omission",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "this change can be extremly cost-effective – no additional inputs",
+        "replace": "this change can be extremely cost-effective – no additional inputs"
+      }
+    },
+    {
+      "id": "issue-17",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "ieLedX",
+      "description": "Semantic anomaly: 'costly' is replaced with 'easy', creating a contradiction with 'bring the entire education system to fruition' and contradicting the intended meaning of the passage.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "we have seen that it is easy to bring the entire education system to fruition",
+        "replace": "we have seen that it is costly to bring the entire education system to fruition"
+      }
+    },
+    {
+      "id": "issue-18",
+      "category": "punctuation_and_boundaries.quotation_or_delimiter_error",
+      "paragraphId": "pOknGb",
+      "description": "Incorrect use of quotation marks: opening quotation mark is missing before the title of the podcast episode, creating a delimiter mismatch.",
+      "classification": {
+        "label": "punctuation_and_boundaries.quotation_or_delimiter_error",
+        "parent": "punctuation_and_boundaries",
+        "child": "quotation_or_delimiter_error",
+        "severity": "major",
+        "editScope": "clause",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "It is called A year's worth of education for under a dollar and other 'best buys' in development, from the UK aid agency's Chief Economist\".",
+        "replace": "It is called \"A year's worth of education for under a dollar and other 'best buys' in development, from the UK aid agency's Chief Economist\"."
+      }
+    },
+    {
+      "id": "issue-19",
+      "category": "orthography_and_word_form.nonword_spelling_error",
+      "paragraphId": "Xd4TWS",
+      "description": "Misspelling of 'harmonized' as 'harmonzied' — a transposition/omission typo creating a nonword.",
+      "classification": {
+        "label": "orthography_and_word_form.nonword_spelling_error",
+        "parent": "orthography_and_word_form",
+        "child": "nonword_spelling_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "to obtain a global perspective through harmonzied test scores.",
+        "replace": "to obtain a global perspective through harmonized test scores."
+      }
+    },
+    {
+      "id": "issue-20",
+      "category": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+      "paragraphId": "pwI0aM",
+      "description": "The word 'continuum' is replaced with the near-neighbor 'continuous', creating a grammatically awkward and semantically incorrect phrase. The correct expression is 'distributed along a continuum' (a noun), not 'distributed along a continuous' (an adjective used where a noun is needed).",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homograph_or_near_neighbor_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "a skill that is distributed along a continuous, to turn it",
+        "replace": "a skill that is distributed along a continuum, to turn it"
+      }
+    },
+    {
+      "id": "issue-21",
+      "category": "grammar_and_syntax.negation_scope_error",
+      "paragraphId": "hrPj5J",
+      "description": "Negation scope error: 'none of which have their own script' incorrectly negates 'have' when it should negate the entire clause about having a script, but the corruption places 'not all of which' changing the scope from universal negation to partial negation, altering meaning.",
+      "classification": {
+        "label": "grammar_and_syntax.negation_scope_error",
+        "parent": "grammar_and_syntax",
+        "child": "negation_scope_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "multiple languages are spoken, not all of which have their own script",
+        "replace": "multiple languages are spoken, none of which have their own script"
+      }
+    },
+    {
+      "id": "issue-22",
+      "category": "grammar_and_syntax.extra_word",
+      "paragraphId": "aeYZx8",
+      "description": "An unnecessary article 'the' is inserted before 'Guinea-Bissau', which is a proper noun that does not take an article.",
+      "classification": {
+        "label": "grammar_and_syntax.extra_word",
+        "parent": "grammar_and_syntax",
+        "child": "extra_word",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "insertion",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "countries that are richer than the Guinea-Bissau can adopt it.",
+        "replace": "countries that are richer than Guinea-Bissau can adopt it."
+      }
+    },
+    {
+      "id": "issue-23",
+      "category": "semantics_discourse_and_style.cross_sentence_tense_inconsistency",
+      "paragraphId": "NyW28I",
+      "description": "The verb 'tried' is in past tense, but the surrounding context uses present tense 'can be' in the preceding sentence. Changing 'tried' to 'tries' creates a tense inconsistency error — the original past tense is correct because it refers to a completed research study, while 'tries' incorrectly suggests an ongoing or habitual action.",
+      "classification": {
+        "label": "semantics_discourse_and_style.cross_sentence_tense_inconsistency",
+        "parent": "semantics_discourse_and_style",
+        "child": "cross_sentence_tense_inconsistency",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "Research in Kenya tries to identify exactly what of the Tusome program was crucial",
+        "replace": "Research in Kenya tried to identify exactly what of the Tusome program was crucial"
+      }
+    },
+    {
+      "id": "issue-24",
+      "category": "orthography_and_word_form.omission",
+      "paragraphId": "yJvkha",
+      "description": "A needed preposition 'on' is omitted before 'this' in the phrase 'On its cost-effectiveness:', changing to a context where 'on' before 'this see' is dropped, creating a preposition error.",
+      "classification": {
+        "label": "orthography_and_word_form.omission",
+        "parent": "orthography_and_word_form",
+        "child": "omission",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "omission",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "Interesting in this context is also the evidence on 'Direct Instruction' – this see",
+        "replace": "Interesting in this context is also the evidence on 'Direct Instruction' – on this see"
+      }
+    },
+    {
+      "id": "issue-25",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "paragraphId": "2e5DlA",
+      "description": "Homophone confusion: 'cite' (to reference) replaced with 'sight' (to see), which is a same-sounding word used incorrectly.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homophone_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "Angrist et al. (2020) also sight other studies on whether these types",
+        "replace": "Angrist et al. (2020) also cite other studies on whether these types"
+      }
+    },
+    {
+      "id": "issue-26",
+      "category": "orthography_and_word_form.fat_finger_typo",
+      "paragraphId": "2e5DlA",
+      "description": "Fat-finger typo: 'effectiveness' is mistyped as 'effectivness' by accidentally omitting the second 'e' in '-eness', a plausible keyboard slip.",
+      "classification": {
+        "label": "orthography_and_word_form.fat_finger_typo",
+        "parent": "orthography_and_word_form",
+        "child": "fat_finger_typo",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "omission",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "so that effectiveness can be established, but the cost-effectivness is unknown",
+        "replace": "so that effectiveness can be established, but the cost-effectiveness is unknown"
+      }
+    },
+    {
+      "id": "issue-27",
+      "category": "lexical_choice_and_confusability.eggcorn",
+      "paragraphId": "pDvdVx",
+      "description": "The eggcorn 'take into account' is replaced with 'take into a count', a plausible mishearing where 'account' is reanalyzed as 'a count' — making some surface-level semantic sense (a count of something) but is clearly wrong in this idiom.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.eggcorn",
+        "parent": "lexical_choice_and_confusability",
+        "child": "eggcorn",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "therefore doesn't take the recent literature into a count.",
+        "replace": "therefore doesn't take the recent literature into account."
+      }
+    },
+    {
+      "id": "issue-28",
+      "category": "grammar_and_syntax.pronoun_agreement",
+      "paragraphId": "P6dMTp",
+      "description": "The pronoun 'these' should be 'this' to agree with its singular antecedent 'any medium'. The original correctly uses 'these' to refer back to 'visualizations, data, and code', but changing it to 'this' creates a pronoun agreement error where the singular pronoun doesn't match the plural antecedent.",
+      "classification": {
+        "label": "grammar_and_syntax.pronoun_agreement",
+        "parent": "grammar_and_syntax",
+        "child": "pronoun_agreement",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "reproduce this in any medium, provided the source and authors are credited",
+        "replace": "reproduce these in any medium, provided the source and authors are credited"
+      }
+    }
+  ]
+}

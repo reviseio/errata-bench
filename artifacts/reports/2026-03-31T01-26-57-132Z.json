@@ -1,0 +1,77 @@
+{
+  "version": "v1",
+  "runId": "2026-03-31T01-26-57-132Z",
+  "createdAt": "2026-03-31T01:27:02.931Z",
+  "summary": {
+    "totalCases": 1,
+    "exactDocumentMatches": 0,
+    "casesWithFullIssueCoverage": 0,
+    "totalIssues": 5,
+    "correctedIssues": 4,
+    "averageIssueCoverage": 0.8,
+    "totalOutputTokens": 178,
+    "averageOutputTokensPerCase": 178,
+    "correctionsPerOutputToken": 0.02247191011235955
+  },
+  "cases": [
+    {
+      "caseId": "tool-editing-silly-001",
+      "exactDocumentMatch": false,
+      "correctedIssueCount": 4,
+      "totalIssueCount": 5,
+      "issueCoverage": 0.8,
+      "outputTokens": 178,
+      "promptTokens": 4026,
+      "correctionsPerOutputToken": 0.02247191011235955,
+      "tokensPerCorrectedIssue": 44.5,
+      "expectedChangedParagraphIds": [
+        "p1",
+        "p2"
+      ],
+      "actualChangedParagraphIds": [
+        "p1",
+        "p2"
+      ],
+      "unexpectedParagraphChanges": [],
+      "issues": [
+        {
+          "issueId": "issue-p1-dinasaur",
+          "category": "non_word_typo",
+          "paragraphId": "p1",
+          "description": "Correct dinasaur to dinosaur.",
+          "corrected": true
+        },
+        {
+          "issueId": "issue-p1-teh",
+          "category": "non_word_typo",
+          "paragraphId": "p1",
+          "description": "Correct teh to the.",
+          "corrected": true
+        },
+        {
+          "issueId": "issue-p2-has-wrote",
+          "category": "verb_form",
+          "paragraphId": "p2",
+          "description": "Correct has wrote to wrote.",
+          "corrected": false
+        },
+        {
+          "issueId": "issue-p2-a-apology",
+          "category": "article",
+          "paragraphId": "p2",
+          "description": "Correct a apology to an apology.",
+          "corrected": true
+        },
+        {
+          "issueId": "issue-p2-sound",
+          "category": "agreement",
+          "paragraphId": "p2",
+          "description": "Correct sound to sounds.",
+          "corrected": true
+        }
+      ],
+      "finalDocumentHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"p2\">I have written an apology note, but it still sounds ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+      "expectedDocumentHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"p2\">I wrote an apology note, but it still sounds ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>"
+    }
+  ]
+}

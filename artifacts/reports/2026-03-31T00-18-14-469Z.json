@@ -1,0 +1,46 @@
+{
+  "version": "v1",
+  "runId": "2026-03-31T00-18-14-469Z",
+  "createdAt": "2026-03-31T00:18:14.469Z",
+  "summary": {
+    "totalCases": 1,
+    "exactMatches": 1,
+    "averageCorrectionCoverage": 0.8
+  },
+  "cases": [
+    {
+      "caseId": "silly-dino-001",
+      "exactMatch": true,
+      "correctionCoverage": 0.8,
+      "appliedCorrections": [
+        {
+          "from": "dinasaur",
+          "to": "dinosaur"
+        },
+        {
+          "from": "eated",
+          "to": "ate"
+        },
+        {
+          "from": "teh",
+          "to": "the"
+        },
+        {
+          "from": "brekfast",
+          "to": "breakfast"
+        }
+      ],
+      "missedCorrections": [
+        {
+          "from": "befor",
+          "to": "before"
+        }
+      ],
+      "lingeringTypos": [
+        "befor"
+      ],
+      "modelOutput": "My pet dinosaur ate the homework before breakfast.",
+      "expectedOutput": "My pet dinosaur ate the homework before breakfast."
+    }
+  ]
+}

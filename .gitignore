@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+v1/.env
+v1/artifacts/runs/*.json
+v1/artifacts/reports/*.json
+v1/artifacts/matrix/*.json

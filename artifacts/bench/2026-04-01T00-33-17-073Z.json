@@ -1,0 +1,139 @@
+{
+  "version": "v1",
+  "matrixId": "2026-04-01T00-33-17-073Z",
+  "createdAt": "2026-04-01T00:34:01.727Z",
+  "datasetPath": "/Users/artur/work/errata-bench/datasets/v1/generated/sherlock-red-headed-league.json",
+  "judgeModel": null,
+  "runs": 1,
+  "models": [
+    "deepseek/deepseek-v3.2"
+  ],
+  "attempts": [
+    {
+      "model": "deepseek/deepseek-v3.2",
+      "runNumber": 1,
+      "succeeded": true,
+      "error": null,
+      "runId": "2026-04-01T00-33-17-075Z",
+      "runArtifact": "/Users/artur/work/errata-bench/artifacts/runs/2026-04-01T00-33-17-075Z--sherlock-red-headed-league--deepseek-deepseek-v3-2.json",
+      "reportArtifact": "/Users/artur/work/errata-bench/artifacts/reports/2026-04-01T00-33-17-075Z--sherlock-red-headed-league--deepseek-deepseek-v3-2.json",
+      "correctedIssues": 13,
+      "totalIssues": 25,
+      "fullIssueCoverageCases": 0,
+      "totalCases": 1,
+      "totalOutputTokens": 1228,
+      "totalDurationMs": 44513,
+      "correctionsPerOutputToken": 0.010586319218241042,
+      "judgePassedCases": null,
+      "judgeResolvedIssues": null,
+      "judgeTotalIssues": null,
+      "judgeUnnecessaryChanges": null,
+      "judgeCollateralDamage": null,
+      "judgeAverageRestraintScore": null,
+      "judgeAverageResolvedIssuesPer100OutputTokens": null,
+      "judgeAverageQualityScore": null,
+      "judgeAverageBenchmarkScore": null,
+      "qualityAxis": 0.52,
+      "restraintAxis": null,
+      "efficiencyAxis": 1.0586319218241043,
+      "speedAxis": 17.522970817513983,
+      "candidateCostUsd": 0.02258614,
+      "judgeCostUsd": 0,
+      "totalCostUsd": 0.02258614
+    }
+  ],
+  "aggregates": [
+    {
+      "model": "deepseek/deepseek-v3.2",
+      "totalRuns": 1,
+      "succeededRuns": 1,
+      "failedRuns": 0,
+      "successRate": 1,
+      "runIds": [
+        "2026-04-01T00-33-17-075Z"
+      ],
+      "runScoreSeries": [
+        null
+      ],
+      "runQualitySeries": [
+        0.52
+      ],
+      "meanCorrectedIssues": 13,
+      "meanTotalIssues": 25,
+      "meanFullIssueCoverageCases": 0,
+      "meanTotalCases": 1,
+      "meanTotalOutputTokens": 1228,
+      "meanTotalDurationMs": 44513,
+      "meanCorrectionsPerOutputToken": 0.010586319218241042,
+      "meanJudgePassedCases": null,
+      "meanJudgeResolvedIssues": null,
+      "meanJudgeTotalIssues": null,
+      "meanJudgeUnnecessaryChanges": null,
+      "meanJudgeCollateralDamage": null,
+      "meanJudgeAverageRestraintScore": null,
+      "meanJudgeAverageResolvedIssuesPer100OutputTokens": null,
+      "meanJudgeAverageQualityScore": null,
+      "meanJudgeAverageBenchmarkScore": null,
+      "meanCandidateCostUsd": 0.02258614,
+      "meanJudgeCostUsd": 0,
+      "meanTotalCostUsd": 0.02258614,
+      "qualityAxis": 0.52,
+      "restraintAxis": null,
+      "efficiencyAxis": 1.0586319218241043,
+      "speedAxis": 17.522970817513983,
+      "costAxisUsd": 0.02258614,
+      "stabilityAxis": 1,
+      "stdevJudgeAverageQualityScore": 0,
+      "stdevJudgeAverageBenchmarkScore": null,
+      "bestJudgeAverageBenchmarkScore": null,
+      "worstJudgeAverageBenchmarkScore": null
+    }
+  ],
+  "ranking": [
+    {
+      "model": "deepseek/deepseek-v3.2",
+      "totalRuns": 1,
+      "succeededRuns": 1,
+      "failedRuns": 0,
+      "successRate": 1,
+      "runIds": [
+        "2026-04-01T00-33-17-075Z"
+      ],
+      "runScoreSeries": [
+        null
+      ],
+      "runQualitySeries": [
+        0.52
+      ],
+      "meanCorrectedIssues": 13,
+      "meanTotalIssues": 25,
+      "meanFullIssueCoverageCases": 0,
+      "meanTotalCases": 1,
+      "meanTotalOutputTokens": 1228,
+      "meanTotalDurationMs": 44513,
+      "meanCorrectionsPerOutputToken": 0.010586319218241042,
+      "meanJudgePassedCases": null,
+      "meanJudgeResolvedIssues": null,
+      "meanJudgeTotalIssues": null,
+      "meanJudgeUnnecessaryChanges": null,
+      "meanJudgeCollateralDamage": null,
+      "meanJudgeAverageRestraintScore": null,
+      "meanJudgeAverageResolvedIssuesPer100OutputTokens": null,
+      "meanJudgeAverageQualityScore": null,
+      "meanJudgeAverageBenchmarkScore": null,
+      "meanCandidateCostUsd": 0.02258614,
+      "meanJudgeCostUsd": 0,
+      "meanTotalCostUsd": 0.02258614,
+      "qualityAxis": 0.52,
+      "restraintAxis": null,
+      "efficiencyAxis": 1.0586319218241043,
+      "speedAxis": 17.522970817513983,
+      "costAxisUsd": 0.02258614,
+      "stabilityAxis": 1,
+      "stdevJudgeAverageQualityScore": 0,
+      "stdevJudgeAverageBenchmarkScore": null,
+      "bestJudgeAverageBenchmarkScore": null,
+      "worstJudgeAverageBenchmarkScore": null
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+For many children, schools do not live up to their promise: in many schools, children learn very little.
+
+This is a problem in rich countries. By the end of primary school, about 9% of children in high-income countries cannot read with comprehension.1
+
+But it tends to be a much larger problem in poorer countries. This is what the chart below shows. The education researcher Joāo Pedro Azevedo and his colleagues estimate that in the very poorest countries of the world, 90% of children are not able to read with comprehension when they reach the end of primary school.
+
+Many of these children do eventually learn how to read, but the problem of poor learning persists: these children are already behind by the end of primary school, and the issue compounds over the years so that many of them leave school with a poor education.
+
+The same data also shows that it doesn't have to be this way: in the best-off countries, the share of children that fail to learn how to read with comprehension at that age is less than 2%.2
+
+Children need to learn to read so that they can read learn. When we fail to provide this to the next generation, they have fewer opportunities to lead rich and interesting lives that a good education offers. It crucially also leaves them in a poorer position to solve the problems of tomorrow.
+
+What explains this large problem, and how can we do better?
+
+One obvious reason why many children don't learn is that they are not in school or that they drop out; this is the case for 8% of the world's children, and I discussed this problem before here.
+
+But the problem is bigger than that. Many children who don't learn are in school.
+
+What the research shows is that getting children into the classroom is only half the battle. Many education systems are failing to ensure that the children who arrive at school every morning actually learn.
+
+For this, we need data. However, the international statistics on education have not yet caught up with this reality. They still very much focus on school attendance.3 Even the most prominent index measure of development – the UN's Human Development Index – only captures attendance.4 The statistics don't capture whether or not children learn.
+
+To be clear, we should also keep tracking access to schools. Schools are not just about learning – it is where children socialize, they provide safety and often food, and they make it possible for parents to work.
+
+We need the statistics to capture both aspects: the quantity of education – how many years a child spends at school –, but also the quality of education.
+
+One way of assessing which schools live up to their promise is to study test scores. I think that an excessive emphasis on tests in school education is misplaced. But I also believe that the vast differences in test scores that this data reveals tell us something important about the world. It offers us the opportunity to understand why some schools are failing and how we can do better.
+
+In recent years, several research teams have done the hard work of piecing together test results to produce global data on learning outcomes.5
+
+The one that I rely on was produced by researchers Dev Patel and Justin Sandefur.6
+
+The bar chart at the beginning showed the large differences in learning outcomes between rich and poor countries. The data by Patel and Sandefur also reveals the differences within countries. Their data also complements the literacy scores above with the other basic educational skill: numeracy.
+
+In the large visualization below, I show all of their data on test scores in mathematics. But to see clearly what this data tells us, let's go through it step by step – first for one country, then for several, until we arrive at the global picture.
+
+The sloping line in the small chart below shows the distribution of test scores in Brazil. It plots the students' mathematics scores on the vertical axis against their family's incomes on the horizontal axis.
+
+It shows the large inequality in incomes within Brazil, and it shows that the learning outcomes of Brazilian children map onto this economic inequality. The average students form rich households achieve much better scores than the average poor students.
+
+The fact that educational outcomes correlate with the household's income doesn't mean that income is the only variable that matters. This is because income itself is correlated with other aspects that matter, for example, the education of the parents.7
+
+It also doesn't mean that children from poor families cannot possibly achieve a very good education. The data shows the averages along the income distribution and makes clear that poor children face much stepper odds.
+
+Let's add more countries to the chart.
+
+At the center of this next plot, we see again the data for Brazil, but now we can compare it with the results in six other countries.
+
+This data shows that the differences between countries are often much larger than the differences within countries:
+
+Another insight from this chart is that some of the most successful countries – including Finland – avoid educational inequalities along the income distribution almost entirely. The steepness of the line indicates how unequal the learning outcomes in a particular country are: a steep line shows a high inequality between the poorest and richest kids in terms of learning outcomes, while a flatter line – like the line for Finland – indicates that kids from all family backgrounds do similarly well.
+
+Finally, let's also add the data for the other 58 countries for which data is available.
+
+For most countries, the lines slope upwards: students from richer families do better in maths. Patel and Sandefur document that these within-country differences in learning outcomes are particularly large in those countries with the largest economic inequalities. Brazil is one of them.
+
+Because test scores are such an abstract metric, it is hard to grasp how very large the disparities between countries are – it's hard for anyone to relate to a test score of 380 (the score of the richest children in Cote d'Ivoire) or a score of 545 (the score of the poorest children in the UK).
+
+One way to make such a 165-point difference understandable is to compare it with the inequality within countries. The difference in test scores between the richest and poorest students in the US is 53 points. This tells us that the differences between countries are several times larger than the difference within countries, even a highly unequal country like the US.8
+
+This is one of the main insights from this data: the differences between countries are enormous.
+
+There is a second key insight from this research that is worth highlighting: the average income level of the country is more important for a student's learning than the income of the particular family within that country.9
+
+For example, look at the test results of the poorest students in Korea or Finland. The poorest Korean or finnish students are poorer than the rich students in Brazil, but their math scores are much higher.
+
+Or compare the scores of students whose families have an annual income of $5,000. You find a range from as low as 350 points in poorer countries all the way up to 600 points.
+
+Let's think about the implications of this.
+
+In some of the world's richest countries, like Finland, the education system is an equalizing force – it gives every child a chance, no matter what there family background is.
+
+But in most places – and even more so in a global perspective – these educational differences are actually perpetrating the high levels of inequality. Children from richer backgrounds tend to learn much more and grow up to become more skilled and productive and make themselves and their countries richer in turn.10
+
+If we want to stop inequality perpetrating itself through education, we have to raise the quality of education for hundreds of millions of children. The most successful countries show that it is possible.
+
+We send two regular newsletters so you can stay up to date on our work and receive curated highlights from across Our World in Data.
+
+Now that we have an idea of the problem, let's see what can be done to provide better education to the world's children,
+
+The fact that every morning, millions of children go to schools in which they learn very little is a massive challenge. I can't blame you if you feel disheartened when you consider how we can overcome this.
+
+But I do think it is possible to make progress. Let me explain why.
+
+Just as in my recent articles on child mortality, indoor air pollution, and smoking, I won't pretend that I can lay out an exact plan for how we should solve it. Particularly for education, this very much depends on the local situation. But I want to explain why I am optimistic about change being possible.
+
+Today, many of the world's children get a poor education. But until recently, almost every child had a terrible education.
+
+We know that change is possible because it has already happened. If we look at the places where children now get a good education, nearly everyone was illiterate until recently.
+
+Even basic skills – such as reading and writing – were only attainable for a small elite. This chart brings together estimates of basic literacy from around the world to show how this has changed.11
+
+→ You can explore this data in detail in the interactive version of this chart.
+
+And the world isn't just making progress in learning basic skills. The fact that many children learn very little is often referred to as the "learning crisis". But I think this is a misnomer. The word "crisis" suggests that we are in an extraordinary period, worse than before. But this isn't the case. Learning was worse in the past, in the majority of countries, children are learning more now than some years ago, and the world is making progress.12
+
+The change that we are seeing makes clear that there are ways forward.
+
+It's not only schools that matter for how much children learn. Many children struggle to learn because they suffer from poor nutrition, poverty, and poor health.13
+
+What we've seen above – that those children in richer countries and those from richer families do much better in school – is also due to the differences in living conditions more broadly.
+
+It is also the case that the educational progress that countries achieved was made possible by their much broader development. In the big chart above, Singapore is at the very top of the international comparison. A century ago, one in three children in Singapore died, and the country had a GDP per capita of just $3,000. Without its large improvements in child health and growth, the country could not have achieved this.
+
+Better health, less poverty, and a more nutritious diet can often do more for a child's education than the best teacher. This is why progress against poverty, poor child health, and malnutrition is key to improving the education of the next generation.
+
+The fact that the world is making progress against these problems is a big reason why I am optimistic about the future of education.
+
+Looking at the evidence so far might have convinced you that improvements have been possible, but you may raise the skeptical question of whether this implies that further improvements can be achieved. What needs to happen to achieve a good education in those places where children learn so very little today?
+
+There are studies that set out to answer this question.
+
+One of the countries with the poorest education today is Guinea-Bissau.14 A study in the rural parts of this small West African country found that most children do not learn to read and write. They cannot learn it from their parents, as less than 3% of mothers can pass a simple literacy test, this study concluded that the quality of teaching was poor because "teachers are isolated, underequipped, receive salaries after long delays, and have little training."
+
+A recent study by Ila Fazzio and her colleagues set itself the goal see what can be done when these constraints are lifted.15
+
+The researchers went to the most difficult places within the country – those regions with the lowest learning levels – and worked with the people there for set up simple primary schools.16
+
+The study's schools trained teachers, provided scripted lessons, monitored children and teachers regularly, involved the village communities, and provided adequate resources to support all operations. To see whether these well-resourced schools made a difference, they set up a randomized controlled trial: they compared how much the children learned in the study's schools with children in the control group (schools that carried on with their teaching as they did before).
+
+After 4 years, they compared whether children learned more in the study's schools.
+
+In the control group, the results were very poor: after 4 years, only 0.09% of children were able to read. Among those children that attended the study's school, learning was much better: 64% of them had learned how to read.
+
+The chart below shows the overall test scores, which also take into account the kids' numerical skills. Overall test scores increased hugely – by 59 percentage points.
+
+Other recent studies also show that it is possible to achieve very large improvements in those places where young children are otherwise illiterate and innumerate.17
+
+Even in the most challenging places – extreme poverty, very low education of parents, almost no infrastructure (no internet, no electricity, no roads) – it is possible to teach primary school children to read fluently and do a basic math very well.
+
+If it is possible to run schools in which children learn very successfully, what is the catch?
+
+It is expensive. The cost of these schools amounts to $425 per student per year. This is about 70% of the average income (GDP per capita) in Guinea-Bissau and, therefore, far beyond what the country can possibly afford to spend on primary schools.18
+
+This highlights one reason why a country's prosperity is so important for its education. What a rich country spends annually per primary school student is about 10 times as much as the average income in a poor country.
+
+Countries need to become much richer to build schools that are as well-resourced as those in this study. Big change is possible, but it requires large increases in prosperity.
+
+Education in those places where children learn very well is expensive. High-income countries spend more than 150-times as much on the education of each child than poor countries.19
+
+In the long run, countries will hopefully have achieved the growth they need to afford better schools, but is there anything they can do right now?
+
+To answer this question, researchers have made a big effort in recent years to identify the most cost-effective ways to improve schools.
+
+Instead of trying to change the entire school system, as in the study above, this research tries to find out what exactly it is that mean that children learn little in a particular place and to change those things that have the biggest possible impact for the smallest cost.20
+
+Because the problems that hold children back differ from place to place, there are no universal solutions. What works in one context might not work in another.21
+
+The research on cost-effectiveness in education shows that the best interventions can be extremely costeffective. The most cost-effective programs deliver the equivalent of three additional years of high-quality schooling – that is, three years of schooling at a quality comparable to the highest-performing education systems in the world – for just $100 per child.22
+
+What are the changes that can achieve so much with so little? The recent review by Noam Angrist and colleagues highlights three in particular.22
+
+Perhaps somewhat paradoxically, one reason why children in some countries learn very little is that the school curricula are too ambitious. Instead of being aligned to the students' learning levels, most of the content goes over the students' heads.23
+
+The suggested solution is simple: match the teaching to the learning level of the students. The kids do a test, and the teaching they receive then depends on how much they already know.
+
+In places where overly ambitious curricula are a problem, this change can be extremly cost-effective – no additional inputs are needed, it is just a change in how teaching is done. These 'teaching at the right level'-approaches are the changes that were found to result in the aforementioned three additional years of high-quality schooling for just $100.
+
+Another problem in many places is that teachers are left to fend for themselves. They are isolated, have little training, and on top of the teaching, they have to write their own daily lesson plans.
+
+In such situations, it has been shown to be very cost-effective to introduce structured educational programs in which teachers receive support and are provided with structured lesson plans.24
+
+There are also encouraging studies that show that the work of teachers can be complemented by technology-aided instruction programs.25
+
+A third cost-effective approach is to simply inform people about how very high the returns from a better education are.
+
+Some parents and students are not aware of the enormous pay-offs of having a good education. Learning this can increase the demand for education and improve children's learning for very little cost.26
+
+In the previous section, we have seen that it is easy to bring the entire education system to fruition. In this section, the takeaway is that there are some possibilities to achieve a lot with very little. There are some very low-hanging fruits in global education.
+
+The first insight from this research is that schooling is not the same as learning. The new data on global learning outcomes makes clear just how big of a problem this is.
+
+The second insight is that it doesn't have to be like this – we can change this. All children can learn.
+
+We have a huge opportunity. The world has made big strides in getting children into schools. These children are no longer isolated; teachers are in contact with them. At the same time, researchers have identified low-cost ways to improve their learning outcomes. Taken together, this gives us the possibility to turn schooling into learning.
+
+The evidence also shows that poor schooling is not only a problem in poor countries. Some of the most striking data discussed above showed how very unequal learning outcomes in most countries are – while some other countries show that it doesn't have to be that way.
+
+Much is at stake here: humanity solves problems by understanding the world and implementing ideas for how to do better. Whether tomorrow's generation continues to make progress against disease, poverty, poor nutrition, and environmental problems will depend on their understanding.27 Those of us who dedicate our lives to teaching therefore, have the responsibility – and opportunity – to enable the next generation to develop these new ideas and grow up to lead a fulfilling life.
+
+Many thanks to Hannah Ritchie, Noam Angrist, Bastian Herre, Dev Patel, Pablo Rosado, and Edouard Mathieu, who provided feedback, help, and data.
+
+In addition to the referenced research in this article, I recommend listening to the 80,000 hours podcast episode with Rachel Glennerster. It is called A year's worth of education for under a dollar and other 'best buys' in development, from the UK aid agency's Chief Economist".
+
+The Rise Programme at the Blavatnik School of Government at the University of Oxford is dedicated to finding solutions to poor learning. Plenty of research articles, background information, blogs and more can be found on their site.
+
+And overall, the literature on how to improve teaching is fascinating – at the footnote you find many additional references.28
+
+This figure and the figures in the following bar chart are from João Pedro Azevedo, Diana Goldemberg, Silvia Montoya, Reema Nayar, Halsey Rogers, Jaime Saavedra, Brian William Stacy (2021) – "Will Every Child Be Able to Read by 2030? Why Eliminating Learning Poverty Will Be Harder Than You Think, and What to Do About It." World Bank Policy Research Working Paper 9588, March 2021.
+
+You find these estimates for particular countries in the previously cited study and updates for some countries can be found in João Pedro Azevedo, Silvia Montoya, Maryam Akmal, Yi Ning Wong, Laura Gregory, Koen Martijn Geven, Marie-Helene Cloutier, Syedah Aroob Iqbal, Adolfo Gustavo Imhof, Natasha de Andrade Falcão, Cristelle Kouame, Mahesh Dahal, Tihtina Zenebe Gebre, and Maria Jose Vargas Mancera (2021) – Learning Poverty Updates and Revisions What's New?. July 2021
+
+One country that does very well is the Netherlands. 98.4% of all children read with comprehension by the end of primary school. Other countries also have a very low share (2-3%) of children who don't learn how to read with comprehension by that age: Austria, Finland, Hong Kong, Italy, Kazakhstan, Lithuania, Russia, Sweden, Singapore, and the UK are among them.
+
+Lant Pritchett (2013) – The Rebirth of Education: Schooling ain't Learning (CGD Books, 2013).
+
+You can find the UNDP's page on the Human Development Index and our own site on the HDI.
+
+Existing large testing efforts are restricted to particular world regions [To give two examples: SACMEQ – the Southern and Eastern Africa Consortium for Monitoring Education Quality – focuses on that region of the world while the OECD's PISA test focuses largely on high-income countries.]. The key difficulty that these researchers have to find solutions for is to bring these regional results together to obtain a global perspective through harmonzied test scores.
+
+Three recent key efforts in this area are:
+
+Dev Patel and Justin Sandefur (2020) – A Rosetta Stone for Human Capital. Working Paper.
+
+Data and Code for this research paper are made available by Dev Patel on his website. The authors also summarized their findings in a blog post. Many thanks to Dev Patel, who helped me to access and understand the data.
+
+On this aspect, see for example: Alex Bell, Raj Chetty, Xavier Jaravel, Neviana Petkova, and John Van Reenen (2019) – Who Becomes an Inventor in America? The Importance of Exposure to Innovation. In The Quarterly Journal of Economics, Volume 134, Issue 2, May 2019, Pages 647–713, https://doi.org/10.1093/qje/qjy028. Alex Bell makes the research available on his website.
+
+See my summary of this research article in Talent is everywhere, Opportunity is not.
+
+Another way to make these test score differences understandable is to relate them to changes over time. Patel and Sandefur have converted the international data on test scores into the TIMSS scale. Most countries have made progress in the TIMSS study. The US average score for students in grade 4 increased by 23 points over the course of the last generation (from 492 points in 1995 to 515 points in 2019). This means that a 165-point difference is more than 7-times larger than the progress the US made in the last generation.
+
+The strength of these country effects is very large. Patel and Sandefur write: "Controlling for a household income as flexibly as possible, we still find that country fixed effects explain over half of the pupil-level variation in reading scores and about two-thirds of the variation in math scores."
+
+The evidence shows that it is education in the form of skills and learning – rather than mere school attendance – that matters for individual earnings and economic growth.
+
+On the impact of education on economic growth, see the research by Hanushek and Woessman:
+
+Eric A Hanushek and Ludger Woessmann (2008) – The Role of Cognitive Skills in Economic Development. In Journal of Economic Literature 46 (3): 607–68.
+
+Eric A. Hanushek, Ludger Woessmann (2010) – Education and Economic Growth. In Economics of Education (Amsterdam: Elsevier, 2010), Pages: pp. 60-67
+
+Eric A Hanushek and Ludger Woessmann (2012) – Do Better Schools Lead to More Growth? Cognitive Skills, Economic Outcomes, and Causation. In Journal of Economic Growth 17 (4): 267–321.
+
+And for a more detailed account: Eric A Hanushek and Ludger Woessmann (2015) – The Knowledge Capital of Nations: Education and the Economics of Growth. MIT Press.
+
+See also:
+
+Pritchett, L. (2006) – Chapter 11 Does learning to add up add up? The returns to schooling in aggregate data. Handb. Econ. Educ. 1, 635–695 (2006).
+
+Alan B. Krueger and Lindahl, M. (2001) – Education for growth: why and for whom? In J. Econ. Lit. 39, 1101–1136 (2001).
+
+And our section Education outcomes predict economic growth.
+
+Literacy is a skill that is distributed along a continuous, to turn it into a binary variable, a cutoff has to be chosen, and there are different reasonable ways to choose that cutoff. In this statistic here the cutoff for what it means to be literate is lower than in the study that I cited first in this text (that's why I emphasized the comprehension aspect in that study there). We explain this in more detail in How is literacy measured?
+
+Find the relevant section in the post 'Global education quality in 4 charts' by my colleague Esteban Ortiz-Ospina.
+
+And for more recent data, read this paper in Nature: Angrist, N., Djankov, S., Goldberg, P.K. et al. (2021) – Measuring human capital using global learning data. In Nature 592, 403–408 (2021). doi.org/10.1038/s41586-021-03323-7
+
+McCoy, Dana Charles, Evan D. Peet, Majid Ezzati, Goodarz Danaei, Maureen M. Black, Christopher R. Sudfeld, Wafaie Fawzi, et al. (2016) – Early Childhood Developmental Status in Low- and Middle-Income Countries: National, Regional, and Global Prevalence Estimates Using Predictive Modeling. PLOS Medicine 13 (6): e1002034.
+
+Walker, Susan P., Theodore D. Wachs, Julie Meeks Gardner, Betsy Lozoff, Gail A. Wasserman, Ernesto Pollitt, Julie A. Carter, et al. (2007) – Child Development: Risk Factors for Adverse Outcomes in Developing Countries. In Lancet 369 (9556): 145–57. For an overview, take a look at "SPOTLIGHT 2 – Poverty hinders biological development and undermines learning" in World Bank (2018) – World Development Report 2018: Learning to Realize Education's Promise. Washington, DC: World Bank. doi:10.1596/978-1-4648-1096-1.
+
+Peter Boone, Ila Fazzio, Kameshwari Jandhyala, Chitra Jayanty, Gangadhar Jayanty, Simon Johnson, Vimala Ramachandrin, Filipa Silva & Zhaoguo Zhan (2013) – The Surprisingly Dire Situation of Children's Education in Rural West Africa: Results from the CREO Study in Guinea-Bissau (Comprehensive Review of Education Outcomes). NBER Working Paper 18971. They have also summarized their findings in an article for VoxEU.
+
+Fazzio, I., Eble, A., Lumsdaine, R. L., Boone, P., Bouy, B., Hsieh, P.-T. J., Jayanty, C., Johnson, S., & Silva, A. F. (2021) – Large learning gains in pockets of extreme poverty: Experimental evidence from Guinea Bissau. In Journal of Public Economics, 199, 104385.
+
+In these places, teaching has to come from the school, there is little chance for parents to reinforce learning, and the literacy rates among parents are very low. What makes the situation additionally hard is that in this region, multiple languages are spoken, not all of which have their own script. The students in this study, therefore, first learned Portuguese (the country's official language) in the first year of the program before they attended three years of primary school within the study's schools.
+
+Eble, A., Frost, C., Camara, A., Bouy, B., Bah, M., Sivaraman, M., Hsieh, P.-T. J., Jayanty, C., Brady, T., Gawron, P., Vansteelandt, S., Boone, P., & Elbourne, D. (2021) – How much can we remedy very low learning levels in rural parts of low-income countries? Impact and generalizability of a multi-pronged para-teacher intervention from a cluster-randomized trial in the Gambia. Journal of Development Economics, 148, 102539.
+
+Banerjee, Abhijit, Rukmini Banerji, James Berry, Esther Duflo, Harini Kannan, Shobhini Mukerji, Marc Shotland, and Michael Walton (2017) – From Proof of Concept to Scalable Policies: Challenges and Solutions, with an Application. In Journal of Economic Perspectives, 31 (4): 73-102.
+
+Gertler, Paul J., James J. Heckman, Rodrigo Pinto, Arianna Zanolini, Christel Vermeersch, Susan Walker, Susan M. Chang, et al. (2014) – Labor Market Returns to an Early Childhood Stimulation Intervention in Jamaica. In Science 344 (6187): 998–1001.
+
+The authors find the intervention to be cost-effective, which could mean that some well-resourced organizations and governments in some countries that are richer than the Guinea-Bissau can adopt it. The authors also suggest that it would be valuable to find out exactly which aspect of these schools was so very important. That might offer the opportunity to leave out some expensive yet less-important aspects of the school program and achieve similar results for a smaller cost. This connects to the next section in my text that focuses on cost-effective small interventions rather than the bundled intervention that this study conducted.
+
+The differences in spending on education are vast. According to the latest data, Guinea-Bissau spends about int.-$ 66 per primary school student per year. High-income countries spend more than 150 times more on each child.
+
+The latest data for Guinea-Bissau is for 2010, a long time ago, but unfortunately, the country has only had very little economic growth since then. Back then, the government spending per primary school student was international-$ 66.41. In a high-income country like Austria, the spending at the same time was international-$ 10,469 per student per year. The ratio is 10,469/66.41=157.6. Other high-income countries spend even more than Austria.
+
+Large implementations like the one in Guinea-Bissau can be a first step in that direction. Research in Kenya tries to identify exactly what of the Tusome program was crucial. Piper, B., Destefano, J., Kinyanjui, E.M. et al. (2018) – Scaling up successfully: Lessons from Kenya's Tusome national literacy program. J Educ Change 19, 293–321 (2018). https://doi.org/10.1007/s10833-018-9325-4
+
+On the point that many social science findings don't generalize well, see the research by Eva Vivalt.
+
+Noam Angrist; Evans, David K.; Filmer, Deon; Glennerster, Rachel; Rogers, F. Halsey; Sabarwal, Shwetlena (2020) – How to Improve Education Outcomes Most Efficiently? A Comparison of 150 Interventions Using the New Learning-Adjusted Years of Schooling Metric. Policy Research Working Paper; No. 9450. World Bank.
+
+There is a very wide literature on this fact. For a recent major paper, see the following (and the references therein): Banerjee, Abhijit, Rukmini Banerji, James Berry, Esther Duflo, Harini Kannan, Shobhini Mukerji, Marc Shotland, and Michael Walton (2017) – From Proof of Concept to Scalable Policies: Challenges and Solutions, with an Application. In Journal of Economic Perspectives, 31 (4): 73-102.
+
+And see the references in the previously cited Angrist et al. (2020) paper.
+
+On 'Structured Pedagogy': Chakera, S., Haffner, D., Harrop, E., (2020) – UNICEF Eastern and Southern Africa Region Working Paper – Structured Pedagogy: For Real-Time Equitable Improvements in Learning Outcomes. UNICEF: Nairobi.
+
+On its cost-effectiveness: Angrist, Noam; Evans, David K.; Filmer, Deon; Glennerster, Rachel; Rogers, F. Halsey; Sabarwal, Shwetlena (2020) – How to Improve Education Outcomes Most Efficiently? A Comparison of 150 Interventions Using the New Learning-Adjusted Years of Schooling Metric. Policy Research Working Paper; No. 9450. World Bank.
+
+Interesting in this context is also the evidence on 'Direct Instruction' – this see José Luis Ricón's On Bloom's two sigma problem: A systematic review of the effectiveness of mastery learning, tutoring, and direct instruction
+
+Muralidharan, Karthik, Abhijeet Singh, and Alejandro J. Ganimian – (2019) – Disrupting Education? Experimental Evidence on Technology-Aided Instruction in India. In American Economic Review, 109 (4): 1426-60.
+
+Angrist et al. (2020) for the overview.Robert Jensen (2010) – The (perceived) returns to education and the demand for schooling. In The Quarterly Journal of Economics 125 (2), 515-548
+
+Trang Nguyen (2008) – Information, Role Models and Perceived Returns to Education: Experimental Evidence from Madagascar
+
+Angrist et al. (2020) also sight other studies on whether these types of interventions work (for these they unfortunately lack information on costs so that effectiveness can be established, but the cost-effectivness is unknown): Tahir Andrabi, Jishnu Das, and Asim Ijaz Khwaja (2017) – Report Cards: The Impact of Providing School and Child Test Scores on Educational Markets. In American Economic Review vol. 107, no. 6, June 2017 (pp. 1535-63).
+
+On this point, I recommend the excellent book by David Deutsch. Deutsch (2011) – The Beginning of Infinity: Explanations that Transform the World.
+
+Two texts that give a background on the overall problem are:
+
+Michael Kremer, Conner Brannen, Rachel Glennerster (2013) – The challenge of education and learning in the developing world. In Science, 340 (6130) (2013), pp. 297-300
+
+Lant Pritchett (2013) – The Rebirth of Education: Schooling Ain't Learning. CGD Books.
+
+More recent literature on specific interventions or overviews that are relevant:
+
+Paul Glewwe, Karthik Muralidharan (2016) – Improving education outcomes in developing countries: evidence, knowledge gaps, and policy implications. In Handbook of the Economics of Education, 5, Elsevier, Amsterdam, Holland (2016), pp. 653-743
+
+Bold, Tessa, Kimenyi, Mwangi, Mwabu, Germano, Ng'ang'a, Alice, Sandefur, Justin (2018) – Experimental evidence on scaling up education reforms in Kenya. J. Public Econ. 168 (December): 1–20.
+
+Abhijit Banerjee, Rukmini Banerji, James Berry, Esther Duflo, Harini Kannan, Shobhini Mukerji, Marc Shotland, Michael Walton (2017) – From proof of concept to scalable policies: challenges and solutions, with an application. J. Econ. Perspect., 31 (4) (2017), pp. 73-102
+
+Dana Burde, Linden, L. Leigh (2013) – Bringing education to Afghan girls: a randomized controlled trial of village-based schools. In Am. Econ. J.: Appl. Econ., 5 (3) (2013), pp. 27-40
+
+GiveWell has studied the cost-effectiveness of programs that focus on 'Education in developing countries'. It was written in 2018 and, therefore doesn't take the recent literature into a count.
+
+Our articles and data visualizations rely on work from many different people and organizations. When citing this article, please also cite the underlying data sources. This article can be cited as:
+
+BibTeX citation
+
+All visualizations, data, and code produced by Our World in Data are completely open access under the Creative Commons BY license. You have the permission to use, distribute, and reproduce this in any medium, provided the source and authors are credited.
+
+The data produced by third parties and made available by Our World in Data is subject to the license terms from the original third-party authors. We will always indicate the original source of the data in our documentation, so you should always check the license of any such third-party data before use and redistribution.

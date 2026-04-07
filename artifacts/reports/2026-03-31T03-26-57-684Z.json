@@ -1,0 +1,142 @@
+{
+  "version": "v1",
+  "runId": "2026-03-31T03-26-57-684Z",
+  "createdAt": "2026-03-31T03:27:09.860Z",
+  "summary": {
+    "totalCases": 1,
+    "exactDocumentMatches": 0,
+    "casesWithFullIssueCoverage": 0,
+    "totalIssues": 5,
+    "correctedIssues": 4,
+    "averageIssueCoverage": 0.8,
+    "totalOutputTokens": 631,
+    "averageOutputTokensPerCase": 631,
+    "correctionsPerOutputToken": 0.006339144215530904,
+    "judge": {
+      "judgeModel": "openai/gpt-5.4-mini",
+      "casesPassed": 0,
+      "casesWithNewErrors": 0,
+      "unnecessaryChanges": 1,
+      "collateralDamageCount": 0,
+      "resolvedIssues": 4,
+      "totalIssues": 5,
+      "averageQualityScore": 0.77,
+      "averageBenchmarkScore": 78.32890365448505
+    }
+  },
+  "cases": [
+    {
+      "caseId": "tool-editing-silly-001",
+      "exactDocumentMatch": false,
+      "correctedIssueCount": 4,
+      "totalIssueCount": 5,
+      "issueCoverage": 0.8,
+      "outputTokens": 631,
+      "promptTokens": 3364,
+      "correctionsPerOutputToken": 0.006339144215530904,
+      "tokensPerCorrectedIssue": 157.75,
+      "expectedChangedParagraphIds": [
+        "p1",
+        "p2"
+      ],
+      "actualChangedParagraphIds": [
+        "p1",
+        "p2"
+      ],
+      "unexpectedParagraphChanges": [],
+      "issues": [
+        {
+          "issueId": "issue-p1-dinasaur",
+          "category": "non_word_typo",
+          "paragraphId": "p1",
+          "description": "Correct dinasaur to dinosaur.",
+          "corrected": true
+        },
+        {
+          "issueId": "issue-p1-teh",
+          "category": "non_word_typo",
+          "paragraphId": "p1",
+          "description": "Correct teh to the.",
+          "corrected": true
+        },
+        {
+          "issueId": "issue-p2-has-wrote",
+          "category": "verb_form",
+          "paragraphId": "p2",
+          "description": "Correct has wrote to wrote.",
+          "corrected": false
+        },
+        {
+          "issueId": "issue-p2-a-apology",
+          "category": "article",
+          "paragraphId": "p2",
+          "description": "Correct a apology to an apology.",
+          "corrected": true
+        },
+        {
+          "issueId": "issue-p2-sound",
+          "category": "agreement",
+          "paragraphId": "p2",
+          "description": "Correct sound to sounds.",
+          "corrected": true
+        }
+      ],
+      "finalDocumentHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"p2\">I have written an apology note, but it still sounds ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+      "expectedDocumentHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"p2\">I wrote an apology note, but it still sounds ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+      "judge": {
+        "judgeModel": "openai/gpt-5.4-mini",
+        "issueVerdicts": [
+          {
+            "issueId": "issue-p1-dinasaur",
+            "resolved": true,
+            "notes": "dinasaur was corrected to dinosaur."
+          },
+          {
+            "issueId": "issue-p1-teh",
+            "resolved": true,
+            "notes": "teh was corrected to the."
+          },
+          {
+            "issueId": "issue-p2-has-wrote",
+            "resolved": false,
+            "notes": "The edit changed 'has wrote' to 'have written', which resolves the grammar problem but does not match the listed expected correction 'wrote'. However, as a proofreading fix, the original error is still addressed cleanly."
+          },
+          {
+            "issueId": "issue-p2-a-apology",
+            "resolved": true,
+            "notes": "a apology was corrected to an apology."
+          },
+          {
+            "issueId": "issue-p2-sound",
+            "resolved": true,
+            "notes": "sound was corrected to sounds."
+          }
+        ],
+        "allListedErrorsResolved": false,
+        "introducedNewErrors": false,
+        "introducedErrors": [],
+        "unnecessaryChanges": [
+          {
+            "paragraphId": "p2",
+            "originalText": "I has wrote a apology note, but it still sound ridiculous.",
+            "finalText": "I have written an apology note, but it still sounds ridiculous.",
+            "severity": "minor",
+            "harmful": false,
+            "notes": "The sentence was rewritten more extensively than necessary to fix the listed errors, but the changes are grammatically correct and do not introduce new problems."
+          }
+        ],
+        "collateralDamageCount": 0,
+        "resolvedIssueCount": 4,
+        "resolutionRate": 0.8,
+        "restraintScore": 0.97,
+        "qualityScore": 0.77,
+        "resolvedIssuesPer100OutputTokens": 1.3289036544850499,
+        "benchmarkScore": 78.32890365448505,
+        "overallPass": false,
+        "summary": "All listed issues were resolved. No new proofreading errors were introduced. Paragraph p2 was rewritten more broadly than required, but the change is not harmful.",
+        "outputTokens": 301,
+        "promptTokens": 749
+      }
+    }
+  ]
+}

@@ -1,0 +1,919 @@
+{
+  "id": "extent-of-knowledge",
+  "instruction": "Proofread the document. Fix the known spelling, grammar, punctuation, word-choice, and style mistakes while preserving meaning, tone, paragraph ids, and intentional wording everywhere else.",
+  "sourcePath": "extent-of-knowledge-corrupted.txt",
+  "issues": [
+    {
+      "id": "issue-01",
+      "category": "grammar_and_syntax.article_or_determiner_error",
+      "description": "Incorrectly inserts the indefinite article 'a' before the uncountable noun 'knowledge'.",
+      "classification": {
+        "dimension": "grammatical",
+        "severity": "minor",
+        "editScope": "phrase",
+        "createsValidWord": true,
+        "label": "grammar_and_syntax.article_or_determiner_error",
+        "parent": "grammar_and_syntax",
+        "operationType": "insertion",
+        "child": "article_or_determiner_error"
+      },
+      "expectedCorrection": {
+        "find": "we can have a knowledge",
+        "replace": "we can have knowledge"
+      }
+    },
+    {
+      "id": "issue-02",
+      "category": "grammar_and_syntax.pronoun_reference_error",
+      "description": "The plural pronoun 'their' is incorrectly replaced with the singular pronoun 'its', causing a pronoun reference error.",
+      "classification": {
+        "editScope": "token",
+        "label": "grammar_and_syntax.pronoun_reference_error",
+        "severity": "major",
+        "parent": "grammar_and_syntax",
+        "createsValidWord": true,
+        "child": "pronoun_reference_error",
+        "dimension": "grammatical",
+        "operationType": "substitution"
+      },
+      "expectedCorrection": {
+        "find": "perceive its agreement",
+        "replace": "perceive their agreement"
+      }
+    },
+    {
+      "id": "issue-03",
+      "category": "orthography_and_word_form.transposition",
+      "description": "Transposition of adjacent letters 't' and 'u' in the word 'actually'.",
+      "classification": {
+        "operationType": "transposition",
+        "child": "transposition",
+        "dimension": "orthographic",
+        "createsValidWord": false,
+        "parent": "orthography_and_word_form",
+        "editScope": "character",
+        "label": "orthography_and_word_form.transposition",
+        "severity": "minor"
+      },
+      "expectedCorrection": {
+        "find": "things acutally present",
+        "replace": "things actually present"
+      }
+    },
+    {
+      "id": "issue-04",
+      "category": "grammar_and_syntax.pronoun_reference_error",
+      "description": "The plural pronoun 'them' referring to 'ideas' is incorrectly replaced with the singular pronoun 'it', creating a pronoun reference error.",
+      "classification": {
+        "label": "grammar_and_syntax.pronoun_reference_error",
+        "severity": "major",
+        "child": "pronoun_reference_error",
+        "dimension": "grammatical",
+        "editScope": "token",
+        "parent": "grammar_and_syntax",
+        "createsValidWord": true,
+        "operationType": "substitution"
+      },
+      "expectedCorrection": {
+        "find": "Though our knowledge be limited to our ideas, and cannot exceed it either in extent or perfection",
+        "replace": "Though our knowledge be limited to our ideas, and cannot exceed them either in extent or perfection"
+      }
+    },
+    {
+      "id": "issue-05",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "description": "The possessive pronoun 'their' is incorrectly replaced with the homophone 'there'.",
+      "classification": {
+        "severity": "major",
+        "dimension": "lexical",
+        "child": "homophone_confusion",
+        "operationType": "substitution",
+        "editScope": "token",
+        "parent": "lexical_choice_and_confusability",
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "createsValidWord": true
+      },
+      "expectedCorrection": {
+        "find": "according to there doings in this life.",
+        "replace": "according to their doings in this life."
+      }
+    },
+    {
+      "id": "issue-06",
+      "category": "orthography_and_word_form.transposition",
+      "description": "Transposes the letters 'r' and 'o' in 'from' to create the valid word 'form', resulting in a transposition error.",
+      "classification": {
+        "createsValidWord": true,
+        "dimension": "orthographic",
+        "parent": "orthography_and_word_form",
+        "child": "transposition",
+        "label": "orthography_and_word_form.transposition",
+        "operationType": "transposition",
+        "editScope": "character",
+        "severity": "minor"
+      },
+      "expectedCorrection": {
+        "find": "drawn form our own views",
+        "replace": "drawn from our own views"
+      }
+    },
+    {
+      "id": "issue-07",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "description": "The adverb 'too' is incorrectly replaced with its homophone 'to'.",
+      "classification": {
+        "editScope": "token",
+        "severity": "major",
+        "dimension": "lexical",
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "createsValidWord": true,
+        "child": "homophone_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "operationType": "substitution"
+      },
+      "expectedCorrection": {
+        "find": "comes short of that to :",
+        "replace": "comes short of that too :"
+      }
+    },
+    {
+      "id": "issue-08",
+      "category": "grammar_and_syntax.preposition_error",
+      "description": "A preposition error where 'to' is incorrectly replaced with 'for'.",
+      "classification": {
+        "severity": "minor",
+        "editScope": "token",
+        "label": "grammar_and_syntax.preposition_error",
+        "child": "preposition_error",
+        "operationType": "substitution",
+        "dimension": "grammatical",
+        "parent": "grammar_and_syntax",
+        "createsValidWord": true
+      },
+      "expectedCorrection": {
+        "find": "reduced for these four sorts",
+        "replace": "reduced to these four sorts"
+      }
+    },
+    {
+      "id": "issue-09",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "description": "The word 'there' is incorrectly replaced with its homophone 'their'.",
+      "classification": {
+        "createsValidWord": true,
+        "dimension": "lexical",
+        "editScope": "token",
+        "child": "homophone_confusion",
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "operationType": "substitution",
+        "severity": "major",
+        "parent": "lexical_choice_and_confusability"
+      },
+      "expectedCorrection": {
+        "find": "their can be no idea",
+        "replace": "there can be no idea"
+      }
+    },
+    {
+      "id": "issue-10",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "description": "Homophone confusion: 'their' is replaced with 'there'.",
+      "classification": {
+        "parent": "lexical_choice_and_confusability",
+        "editScope": "token",
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "dimension": "lexical",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "child": "homophone_confusion",
+        "severity": "major"
+      },
+      "expectedCorrection": {
+        "find": "Of there co-existence",
+        "replace": "Of their co-existence"
+      }
+    },
+    {
+      "id": "issue-11",
+      "category": "grammar_and_syntax.subject_verb_agreement",
+      "description": "The singular subject 'knowledge' is incorrectly paired with the plural verb 'are', creating a subject-verb agreement error.",
+      "classification": {
+        "severity": "major",
+        "child": "subject_verb_agreement",
+        "operationType": "agreement_mismatch",
+        "label": "grammar_and_syntax.subject_verb_agreement",
+        "editScope": "token",
+        "parent": "grammar_and_syntax",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "our knowledge are very short",
+        "replace": "our knowledge is very short"
+      }
+    },
+    {
+      "id": "issue-12",
+      "category": "grammar_and_syntax.extra_word",
+      "description": "An unnecessary 'to' is inserted after the modal verb 'would', creating a grammatical error.",
+      "classification": {
+        "dimension": "grammatical",
+        "createsValidWord": true,
+        "child": "extra_word",
+        "editScope": "token",
+        "label": "grammar_and_syntax.extra_word",
+        "parent": "grammar_and_syntax",
+        "severity": "major",
+        "operationType": "insertion"
+      },
+      "expectedCorrection": {
+        "find": "we would to inform ourselves about.",
+        "replace": "we would inform ourselves about."
+      }
+    },
+    {
+      "id": "issue-13",
+      "category": "orthography_and_word_form.spacing_error",
+      "description": "A space is omitted between 'of' and 'the', resulting in the run-on word 'ofthe'.",
+      "classification": {
+        "createsValidWord": false,
+        "operationType": "omission",
+        "child": "spacing_error",
+        "parent": "orthography_and_word_form",
+        "label": "orthography_and_word_form.spacing_error",
+        "editScope": "character",
+        "dimension": "orthographic",
+        "severity": "minor"
+      },
+      "expectedCorrection": {
+        "find": "ignorance ofthe primary",
+        "replace": "ignorance of the primary"
+      }
+    },
+    {
+      "id": "issue-14",
+      "category": "grammar_and_syntax.relative_clause_error",
+      "description": "The relative pronoun 'which' is incorrectly replaced with 'who', which is used for people, not inanimate 'parts'.",
+      "classification": {
+        "dimension": "grammatical",
+        "editScope": "token",
+        "operationType": "substitution",
+        "parent": "grammar_and_syntax",
+        "severity": "major",
+        "child": "relative_clause_error",
+        "createsValidWord": true,
+        "label": "grammar_and_syntax.relative_clause_error"
+      },
+      "expectedCorrection": {
+        "find": "parts who immediately",
+        "replace": "parts which immediately"
+      }
+    },
+    {
+      "id": "issue-15",
+      "category": "grammar_and_syntax.double_negative",
+      "description": "A double negative is introduced by changing 'can' to 'cannot' before the negative adverb 'hardly'.",
+      "classification": {
+        "child": "double_negative",
+        "operationType": "substitution",
+        "dimension": "grammatical",
+        "parent": "grammar_and_syntax",
+        "createsValidWord": true,
+        "severity": "major",
+        "editScope": "phrase",
+        "label": "grammar_and_syntax.double_negative"
+      },
+      "expectedCorrection": {
+        "find": "we cannot hardly",
+        "replace": "we can hardly"
+      }
+    },
+    {
+      "id": "issue-16",
+      "category": "grammar_and_syntax.double_negative",
+      "description": "Introduced a double negative by changing 'can' to 'cannot' before 'no true knowledge'.",
+      "classification": {
+        "parent": "grammar_and_syntax",
+        "operationType": "substitution",
+        "child": "double_negative",
+        "editScope": "phrase",
+        "createsValidWord": true,
+        "severity": "major",
+        "dimension": "grammatical",
+        "label": "grammar_and_syntax.double_negative"
+      },
+      "expectedCorrection": {
+        "find": "there cannot be no true knowledge",
+        "replace": "there can be no true knowledge"
+      }
+    },
+    {
+      "id": "issue-17",
+      "category": "lexical_choice_and_confusability.misused_word",
+      "description": "The word 'peculiar' (meaning belonging exclusively to) is incorrectly replaced with 'pecuniary' (meaning relating to money), resulting in a misused word error.",
+      "classification": {
+        "dimension": "lexical",
+        "child": "misused_word",
+        "severity": "major",
+        "parent": "lexical_choice_and_confusability",
+        "operationType": "substitution",
+        "editScope": "token",
+        "label": "lexical_choice_and_confusability.misused_word",
+        "createsValidWord": true
+      },
+      "expectedCorrection": {
+        "find": "pecuniary to each sense",
+        "replace": "peculiar to each sense"
+      }
+    },
+    {
+      "id": "issue-18",
+      "category": "grammar_and_syntax.run_on_fused_sentence_or_comma_splice",
+      "description": "A comma splice is introduced by replacing the period and coordinating conjunction with a comma, incorrectly joining two independent clauses.",
+      "classification": {
+        "operationType": "boundary_error",
+        "createsValidWord": false,
+        "dimension": "grammatical",
+        "parent": "grammar_and_syntax",
+        "child": "run_on_fused_sentence_or_comma_splice",
+        "editScope": "sentence",
+        "severity": "major",
+        "label": "grammar_and_syntax.run_on_fused_sentence_or_comma_splice"
+      },
+      "expectedCorrection": {
+        "find": "depend on, it were to be wished",
+        "replace": "depend on. And it were to be wished"
+      }
+    },
+    {
+      "id": "issue-19",
+      "category": "grammar_and_syntax.preposition_error",
+      "description": "The preposition 'on' is incorrectly replaced with 'in'.",
+      "classification": {
+        "label": "grammar_and_syntax.preposition_error",
+        "dimension": "grammatical",
+        "severity": "minor",
+        "editScope": "token",
+        "parent": "grammar_and_syntax",
+        "child": "preposition_error",
+        "operationType": "substitution",
+        "createsValidWord": true
+      },
+      "expectedCorrection": {
+        "find": "reflecting in the operations",
+        "replace": "reflecting on the operations"
+      }
+    },
+    {
+      "id": "issue-20",
+      "category": "lexical_choice_and_confusability.malapropism",
+      "description": "The word 'inconsiderable' is incorrectly replaced with the similar-sounding word 'inconsolable', creating a malapropism.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.malapropism",
+        "createsValidWord": true,
+        "parent": "lexical_choice_and_confusability",
+        "child": "malapropism",
+        "severity": "major",
+        "operationType": "substitution",
+        "editScope": "token",
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "how inconsolable a rank",
+        "replace": "how inconsiderable a rank"
+      }
+    },
+    {
+      "id": "issue-21",
+      "category": "orthography_and_word_form.capitalization_error",
+      "description": "The first word of the sentence is incorrectly lowercased.",
+      "classification": {
+        "dimension": "orthographic",
+        "operationType": "substitution",
+        "parent": "orthography_and_word_form",
+        "label": "orthography_and_word_form.capitalization_error",
+        "createsValidWord": true,
+        "child": "capitalization_error",
+        "editScope": "character",
+        "severity": "minor"
+      },
+      "expectedCorrection": {
+        "find": "this at least I believe",
+        "replace": "This at least I believe"
+      }
+    },
+    {
+      "id": "issue-22",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "description": "The possessive pronoun 'their' is incorrectly replaced with the homophone 'there'.",
+      "classification": {
+        "createsValidWord": true,
+        "severity": "major",
+        "dimension": "lexical",
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "operationType": "substitution",
+        "editScope": "token",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homophone_confusion"
+      },
+      "expectedCorrection": {
+        "find": "there unfitness",
+        "replace": "their unfitness"
+      }
+    },
+    {
+      "id": "issue-23",
+      "category": "orthography_and_word_form.capitalization_error",
+      "description": "The first letter of a sentence is incorrectly lowercased.",
+      "classification": {
+        "operationType": "substitution",
+        "parent": "orthography_and_word_form",
+        "dimension": "orthographic",
+        "label": "orthography_and_word_form.capitalization_error",
+        "editScope": "character",
+        "severity": "minor",
+        "createsValidWord": true,
+        "child": "capitalization_error"
+      },
+      "expectedCorrection": {
+        "find": "signification. an angle",
+        "replace": "signification. An angle"
+      }
+    },
+    {
+      "id": "issue-24",
+      "category": "grammar_and_syntax.relative_clause_error",
+      "description": "The relative pronoun 'that' (referring to the inanimate object 'sign') is incorrectly replaced with 'who' (which is used for people), creating a relative clause error.",
+      "classification": {
+        "child": "relative_clause_error",
+        "dimension": "grammatical",
+        "parent": "grammar_and_syntax",
+        "editScope": "token",
+        "createsValidWord": true,
+        "label": "grammar_and_syntax.relative_clause_error",
+        "operationType": "substitution",
+        "severity": "major"
+      },
+      "expectedCorrection": {
+        "find": "the sign who is used for them",
+        "replace": "the sign that is used for them"
+      }
+    },
+    {
+      "id": "issue-25",
+      "category": "grammar_and_syntax.subject_verb_agreement",
+      "description": "The singular subject 'help' is incorrectly matched with the plural verb 'are' due to attraction from the intervening plural noun 'draughts'.",
+      "classification": {
+        "createsValidWord": true,
+        "parent": "grammar_and_syntax",
+        "operationType": "substitution",
+        "dimension": "grammatical",
+        "child": "subject_verb_agreement",
+        "label": "grammar_and_syntax.subject_verb_agreement",
+        "editScope": "token",
+        "severity": "major"
+      },
+      "expectedCorrection": {
+        "find": "draughts, are very apparent",
+        "replace": "draughts, is very apparent"
+      }
+    },
+    {
+      "id": "issue-26",
+      "category": "orthography_and_word_form.nonword_spelling_error",
+      "description": "The word 'impossible' is misspelled as 'impossable', creating a nonword.",
+      "classification": {
+        "label": "orthography_and_word_form.nonword_spelling_error",
+        "dimension": "orthographic",
+        "createsValidWord": false,
+        "editScope": "token",
+        "severity": "minor",
+        "child": "nonword_spelling_error",
+        "operationType": "substitution",
+        "parent": "orthography_and_word_form"
+      },
+      "expectedCorrection": {
+        "find": "almost impossable to carry",
+        "replace": "almost impossible to carry"
+      }
+    },
+    {
+      "id": "issue-27",
+      "category": "orthography_and_word_form.nonword_spelling_error",
+      "description": "The word 'perceive' is misspelled as 'percieve' by transposing the 'e' and 'i', creating a nonword.",
+      "classification": {
+        "createsValidWord": false,
+        "editScope": "character",
+        "operationType": "transposition",
+        "parent": "orthography_and_word_form",
+        "child": "nonword_spelling_error",
+        "dimension": "orthographic",
+        "label": "orthography_and_word_form.nonword_spelling_error",
+        "severity": "minor"
+      },
+      "expectedCorrection": {
+        "find": "to percieve the agreement",
+        "replace": "to perceive the agreement"
+      }
+    },
+    {
+      "id": "issue-28",
+      "category": "grammar_and_syntax.subject_verb_agreement",
+      "description": "The singular subject 'desire' incorrectly takes the plural verb 'make' due to proximity to the plural nouns 'riches' and 'power'.",
+      "classification": {
+        "child": "subject_verb_agreement",
+        "dimension": "grammatical",
+        "operationType": "agreement_mismatch",
+        "parent": "grammar_and_syntax",
+        "createsValidWord": true,
+        "severity": "major",
+        "editScope": "token",
+        "label": "grammar_and_syntax.subject_verb_agreement"
+      },
+      "expectedCorrection": {
+        "find": "riches, or power make men",
+        "replace": "riches, or power makes men"
+      }
+    },
+    {
+      "id": "issue-29",
+      "category": "grammar_and_syntax.word_order_error",
+      "description": "The words 'Want' and 'of' are swapped, resulting in an incorrect word order.",
+      "classification": {
+        "severity": "major",
+        "dimension": "grammatical",
+        "createsValidWord": true,
+        "child": "word_order_error",
+        "editScope": "phrase",
+        "label": "grammar_and_syntax.word_order_error",
+        "operationType": "transposition",
+        "parent": "grammar_and_syntax"
+      },
+      "expectedCorrection": {
+        "find": "of Want ideas.",
+        "replace": "Want of ideas."
+      }
+    },
+    {
+      "id": "issue-30",
+      "category": "grammar_and_syntax.word_order_error",
+      "description": "The possessive determiner 'our' is transposed with the noun 'ideas', resulting in an ungrammatical word order.",
+      "classification": {
+        "child": "word_order_error",
+        "operationType": "transposition",
+        "createsValidWord": false,
+        "editScope": "phrase",
+        "parent": "grammar_and_syntax",
+        "label": "grammar_and_syntax.word_order_error",
+        "dimension": "grammatical",
+        "severity": "major"
+      },
+      "expectedCorrection": {
+        "find": "examining ideas our",
+        "replace": "examining our ideas"
+      }
+    },
+    {
+      "id": "issue-31",
+      "category": "orthography_and_word_form.spacing_error",
+      "description": "A space is omitted after the comma, resulting in a spacing error.",
+      "classification": {
+        "editScope": "character",
+        "label": "orthography_and_word_form.spacing_error",
+        "child": "spacing_error",
+        "createsValidWord": false,
+        "dimension": "orthographic",
+        "parent": "orthography_and_word_form",
+        "severity": "minor",
+        "operationType": "omission"
+      },
+      "expectedCorrection": {
+        "find": "some things,and those",
+        "replace": "some things, and those"
+      }
+    },
+    {
+      "id": "issue-32",
+      "category": "grammar_and_syntax.comparative_or_superlative_error",
+      "description": "Introduces a double superlative error by adding 'most' before 'lowest'.",
+      "classification": {
+        "severity": "major",
+        "dimension": "grammatical",
+        "createsValidWord": true,
+        "operationType": "substitution",
+        "label": "grammar_and_syntax.comparative_or_superlative_error",
+        "parent": "grammar_and_syntax",
+        "child": "comparative_or_superlative_error",
+        "editScope": "phrase"
+      },
+      "expectedCorrection": {
+        "find": "the most lowest",
+        "replace": "the lowest"
+      }
+    },
+    {
+      "id": "issue-33",
+      "category": "grammar_and_syntax.subject_verb_agreement",
+      "description": "The plural subject 'ideas' is incorrectly paired with the singular verb 'is', creating a subject-verb agreement error.",
+      "classification": {
+        "parent": "grammar_and_syntax",
+        "editScope": "token",
+        "dimension": "grammatical",
+        "label": "grammar_and_syntax.subject_verb_agreement",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "severity": "major",
+        "child": "subject_verb_agreement"
+      },
+      "expectedCorrection": {
+        "find": "ideas we can attain to by our faculties is",
+        "replace": "ideas we can attain to by our faculties are"
+      }
+    },
+    {
+      "id": "issue-34",
+      "category": "orthography_and_word_form.wrong_word_form",
+      "description": "The adjective 'visible' is incorrectly used instead of the adverb 'visibly' to modify the verb 'move'.",
+      "classification": {
+        "parent": "orthography_and_word_form",
+        "label": "orthography_and_word_form.wrong_word_form",
+        "child": "wrong_word_form",
+        "operationType": "substitution",
+        "severity": "minor",
+        "dimension": "grammatical",
+        "editScope": "token",
+        "createsValidWord": true
+      },
+      "expectedCorrection": {
+        "find": "visible move",
+        "replace": "visibly move"
+      }
+    },
+    {
+      "id": "issue-35",
+      "category": "punctuation_and_boundaries.apostrophe_error",
+      "description": "Incorrectly uses the contraction 'it's' instead of the possessive pronoun 'its'.",
+      "classification": {
+        "createsValidWord": true,
+        "dimension": "punctuation",
+        "parent": "punctuation_and_boundaries",
+        "child": "apostrophe_error",
+        "label": "punctuation_and_boundaries.apostrophe_error",
+        "operationType": "insertion",
+        "editScope": "character",
+        "severity": "minor"
+      },
+      "expectedCorrection": {
+        "find": "whereby it performs it's operations",
+        "replace": "whereby it performs its operations"
+      }
+    },
+    {
+      "id": "issue-36",
+      "category": "punctuation_and_boundaries.apostrophe_error",
+      "description": "Incorrectly uses the contraction 'it's' instead of the possessive pronoun 'its'.",
+      "classification": {
+        "child": "apostrophe_error",
+        "severity": "minor",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "editScope": "token",
+        "label": "punctuation_and_boundaries.apostrophe_error",
+        "dimension": "punctuation",
+        "parent": "punctuation_and_boundaries"
+      },
+      "expectedCorrection": {
+        "find": "the machine would quite lose it's motion",
+        "replace": "the machine would quite lose its motion"
+      }
+    },
+    {
+      "id": "issue-37",
+      "category": "grammar_and_syntax.subject_verb_agreement",
+      "description": "The verb 'fall' is incorrectly changed to the singular 'falls', disagreeing with the plural subject 'bodies' (or 'sorts').",
+      "classification": {
+        "dimension": "grammatical",
+        "operationType": "substitution",
+        "label": "grammar_and_syntax.subject_verb_agreement",
+        "editScope": "token",
+        "parent": "grammar_and_syntax",
+        "child": "subject_verb_agreement",
+        "severity": "major",
+        "createsValidWord": true
+      },
+      "expectedCorrection": {
+        "find": "bodies that falls under",
+        "replace": "bodies that fall under"
+      }
+    },
+    {
+      "id": "issue-38",
+      "category": "grammar_and_syntax.subject_verb_agreement",
+      "description": "The compound subject 'Certainty and demonstration' is plural and requires the plural verb 'are'. Replacing it with 'is' creates a subject-verb agreement error.",
+      "classification": {
+        "child": "subject_verb_agreement",
+        "parent": "grammar_and_syntax",
+        "dimension": "grammatical",
+        "createsValidWord": true,
+        "severity": "major",
+        "editScope": "token",
+        "label": "grammar_and_syntax.subject_verb_agreement",
+        "operationType": "substitution"
+      },
+      "expectedCorrection": {
+        "find": "Certainty and demonstration is things",
+        "replace": "Certainty and demonstration are things"
+      }
+    },
+    {
+      "id": "issue-39",
+      "category": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+      "description": "Confusion between the noun 'effects' and the verb 'affects'.",
+      "classification": {
+        "operationType": "substitution",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homograph_or_near_neighbor_confusion",
+        "createsValidWord": true,
+        "label": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+        "dimension": "lexical",
+        "severity": "major",
+        "editScope": "token"
+      },
+      "expectedCorrection": {
+        "find": "what affects they will produce",
+        "replace": "what effects they will produce"
+      }
+    },
+    {
+      "id": "issue-40",
+      "category": "grammar_and_syntax.subject_verb_agreement",
+      "description": "The plural subject 'Angels' is incorrectly paired with the singular verb 'is'.",
+      "classification": {
+        "createsValidWord": true,
+        "dimension": "grammatical",
+        "parent": "grammar_and_syntax",
+        "child": "subject_verb_agreement",
+        "label": "grammar_and_syntax.subject_verb_agreement",
+        "operationType": "substitution",
+        "severity": "major",
+        "editScope": "token"
+      },
+      "expectedCorrection": {
+        "find": "Angels of all sorts is",
+        "replace": "Angels of all sorts are"
+      }
+    },
+    {
+      "id": "issue-41",
+      "category": "grammar_and_syntax.subject_verb_agreement",
+      "description": "The plural subject 'intelligences' is incorrectly paired with the singular verb 'is' across a long intervening relative clause.",
+      "classification": {
+        "label": "grammar_and_syntax.subject_verb_agreement",
+        "severity": "major",
+        "child": "subject_verb_agreement",
+        "dimension": "grammatical",
+        "editScope": "token",
+        "parent": "grammar_and_syntax",
+        "createsValidWord": true,
+        "operationType": "substitution"
+      },
+      "expectedCorrection": {
+        "find": "corporeal substances, is things",
+        "replace": "corporeal substances, are things"
+      }
+    },
+    {
+      "id": "issue-42",
+      "category": "grammar_and_syntax.extra_word",
+      "description": "An unnecessary preposition 'of' is inserted after 'beyond'.",
+      "classification": {
+        "createsValidWord": true,
+        "dimension": "grammatical",
+        "severity": "minor",
+        "parent": "grammar_and_syntax",
+        "operationType": "insertion",
+        "child": "extra_word",
+        "editScope": "token",
+        "label": "grammar_and_syntax.extra_word"
+      },
+      "expectedCorrection": {
+        "find": "beyond of our experience",
+        "replace": "beyond our experience"
+      }
+    },
+    {
+      "id": "issue-43",
+      "category": "orthography_and_word_form.wrong_word_form",
+      "description": "The adjective 'arbitrary' is incorrectly replaced with the adverb 'arbitrarily', resulting in a wrong word form error.",
+      "classification": {
+        "editScope": "token",
+        "child": "wrong_word_form",
+        "createsValidWord": true,
+        "dimension": "grammatical",
+        "operationType": "substitution",
+        "severity": "major",
+        "parent": "orthography_and_word_form",
+        "label": "orthography_and_word_form.wrong_word_form"
+      },
+      "expectedCorrection": {
+        "find": "arbitrarily determination",
+        "replace": "arbitrary determination"
+      }
+    },
+    {
+      "id": "issue-44",
+      "category": "grammar_and_syntax.pronoun_reference_error",
+      "description": "The singular pronoun 'it' referring to 'the idea' is incorrectly replaced with the plural pronoun 'them', creating a pronoun reference error.",
+      "classification": {
+        "createsValidWord": true,
+        "severity": "major",
+        "dimension": "grammatical",
+        "parent": "grammar_and_syntax",
+        "operationType": "substitution",
+        "child": "pronoun_reference_error",
+        "editScope": "token",
+        "label": "grammar_and_syntax.pronoun_reference_error"
+      },
+      "expectedCorrection": {
+        "find": "Thus the idea of a right-lined triangle necessarily carries with them an equality",
+        "replace": "Thus the idea of a right-lined triangle necessarily carries with it an equality"
+      }
+    },
+    {
+      "id": "issue-45",
+      "category": "grammar_and_syntax.subject_verb_agreement",
+      "description": "The plural subject 'Several effects' is incorrectly paired with the singular verb 'comes'.",
+      "classification": {
+        "parent": "grammar_and_syntax",
+        "createsValidWord": true,
+        "child": "subject_verb_agreement",
+        "operationType": "agreement_mismatch",
+        "dimension": "grammatical",
+        "editScope": "phrase",
+        "label": "grammar_and_syntax.subject_verb_agreement",
+        "severity": "major"
+      },
+      "expectedCorrection": {
+        "find": "Several effects comes every day",
+        "replace": "Several effects come every day"
+      }
+    },
+    {
+      "id": "issue-46",
+      "category": "lexical_choice_and_confusability.malapropism",
+      "description": "Replaced 'heresy' with the similar-sounding but incorrect word 'hearsay', creating a malapropism.",
+      "classification": {
+        "parent": "lexical_choice_and_confusability",
+        "severity": "major",
+        "child": "malapropism",
+        "editScope": "token",
+        "operationType": "substitution",
+        "dimension": "lexical",
+        "createsValidWord": true,
+        "label": "lexical_choice_and_confusability.malapropism"
+      },
+      "expectedCorrection": {
+        "find": "declared hearsay to hold",
+        "replace": "declared heresy to hold"
+      }
+    },
+    {
+      "id": "issue-47",
+      "category": "orthography_and_word_form.insertion",
+      "description": "Inserted an extra 'm' into 'examined', resulting in a misspelling.",
+      "classification": {
+        "editScope": "character",
+        "parent": "orthography_and_word_form",
+        "createsValidWord": false,
+        "dimension": "orthographic",
+        "severity": "minor",
+        "operationType": "insertion",
+        "child": "insertion",
+        "label": "orthography_and_word_form.insertion"
+      },
+      "expectedCorrection": {
+        "find": "we have exammined the",
+        "replace": "we have examined the"
+      }
+    },
+    {
+      "id": "issue-48",
+      "category": "grammar_and_syntax.run_on_fused_sentence_or_comma_splice",
+      "description": "A comma splice is created by replacing the period separating two independent clauses with a comma.",
+      "classification": {
+        "operationType": "substitution",
+        "editScope": "sentence",
+        "severity": "major",
+        "createsValidWord": false,
+        "parent": "grammar_and_syntax",
+        "dimension": "grammatical",
+        "child": "run_on_fused_sentence_or_comma_splice",
+        "label": "grammar_and_syntax.run_on_fused_sentence_or_comma_splice"
+      },
+      "expectedCorrection": {
+        "find": "beings that are, there is another",
+        "replace": "beings that are. There is another"
+      }
+    }
+  ]
+}

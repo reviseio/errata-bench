@@ -1,0 +1,867 @@
+{
+  "id": "owid-what-is-economic-growth",
+  "instruction": "Proofread the document. Fix the known spelling, grammar, punctuation, word-choice, and style mistakes while preserving meaning, tone, paragraph ids, and intentional wording everywhere else.",
+  "sourcePath": "owid-what-is-economic-growth-corrupted.txt",
+  "issues": [
+    {
+      "id": "issue-01",
+      "category": "orthography_and_word_form.transposition",
+      "paragraphId": "Qj2Hvt",
+      "description": "Transposition of letters in 'from' to 'form', swapping 'r' and 'o' positions.",
+      "classification": {
+        "label": "orthography_and_word_form.transposition",
+        "parent": "orthography_and_word_form",
+        "child": "transposition",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "transposition",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "the device you are reading this on, the electricity that powers it, the furnitrue around you",
+        "replace": "the device you are reading this on, the electricity that powers it, the furniture around you"
+      }
+    },
+    {
+      "id": "issue-02",
+      "category": "grammar_and_syntax.auxiliary_or_modal_error",
+      "paragraphId": "qMHZm8",
+      "description": "Missing auxiliary verb 'do' in the sentence, changing 'The majority did not have access' to 'The majority not have access', which is grammatically incorrect.",
+      "classification": {
+        "label": "grammar_and_syntax.auxiliary_or_modal_error",
+        "parent": "grammar_and_syntax",
+        "child": "auxiliary_or_modal_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "The majority not have access to the most basic goods",
+        "replace": "The majority did not have access to the most basic goods"
+      }
+    },
+    {
+      "id": "issue-03",
+      "category": "lexical_choice_and_confusability.idiom_error",
+      "paragraphId": "3xfaOn",
+      "description": "The idiom 'at the heart of' is altered to the incorrect 'at the core of many of these aspects', but more precisely, the idiomatic expression 'word-for-word' is changed to the incorrect 'word-by-word', which is a misremembered/altered idiom.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.idiom_error",
+        "parent": "lexical_choice_and_confusability",
+        "child": "idiom_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "the only way to produce a book was for a scribe to copy it word-by-word by hand",
+        "replace": "the only way to produce a book was for a scribe to copy it word-for-word by hand"
+      }
+    },
+    {
+      "id": "issue-04",
+      "category": "grammar_and_syntax.incorrect_tense",
+      "paragraphId": "xlUlZZ",
+      "description": "Changed 'spread' (past tense) to 'spreads' (present tense), creating a tense inconsistency with the surrounding past-tense narrative about historical events.",
+      "classification": {
+        "label": "grammar_and_syntax.incorrect_tense",
+        "parent": "grammar_and_syntax",
+        "child": "incorrect_tense",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "As the printing press spreads across Europe, book production soared.",
+        "replace": "As the printing press spread across Europe, book production soared."
+      }
+    },
+    {
+      "id": "issue-05",
+      "category": "grammar_and_syntax.countability_error",
+      "paragraphId": "Uh6CgD",
+      "description": "The noun 'heating' is a mass/uncountable noun in this context (referring to a utility/service like electricity or air conditioning). Changing it to 'heatings' incorrectly treats it as a countable noun, which is a clear countability error.",
+      "classification": {
+        "label": "grammar_and_syntax.countability_error",
+        "parent": "grammar_and_syntax",
+        "child": "countability_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "a shower; vacuum cleaner; fridge; heatings; air conditioning",
+        "replace": "a shower; vacuum cleaner; fridge; heating; air conditioning"
+      }
+    },
+    {
+      "id": "issue-06",
+      "category": "orthography_and_word_form.wrong_word_form",
+      "paragraphId": "ZxNflo",
+      "description": "Wrong word form: the adjective 'affordable' is incorrectly replaced with the adverb 'affordably', which does not fit as a predicate adjective after 'become'.",
+      "classification": {
+        "label": "orthography_and_word_form.wrong_word_form",
+        "parent": "orthography_and_word_form",
+        "child": "wrong_word_form",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "but which become more affordably as a society becomes more prosperous",
+        "replace": "but which become more affordable as a society becomes more prosperous"
+      }
+    },
+    {
+      "id": "issue-07",
+      "category": "grammar_and_syntax.pronoun_agreement",
+      "paragraphId": "Nlqb3p",
+      "description": "Pronoun 'them' incorrectly changed to 'it', creating a pronoun agreement mismatch with the plural antecedent 'goods and services'.",
+      "classification": {
+        "label": "grammar_and_syntax.pronoun_agreement",
+        "parent": "grammar_and_syntax",
+        "child": "pronoun_agreement",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "not all goods that people produce for each other are good for it",
+        "replace": "not all goods that people produce for each other are good for them"
+      }
+    },
+    {
+      "id": "issue-08",
+      "category": "orthography_and_word_form.incorrect_conjugation",
+      "paragraphId": "SRDvhN",
+      "description": "The verb 'broke' should be 'break' (base form) after the conjunction 'after' in the context of a past narrative retelling. Actually, the correct corruption here is to change the verb inflection to create an incorrect conjugation. Changing 'broke' to 'broken' without an auxiliary creates a clearly incorrect verb form.",
+      "classification": {
+        "label": "orthography_and_word_form.incorrect_conjugation",
+        "parent": "orthography_and_word_form",
+        "child": "incorrect_conjugation",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "After I broken my leg, I needed the service of nurses and doctors.",
+        "replace": "After I broke my leg, I needed the service of nurses and doctors."
+      }
+    },
+    {
+      "id": "issue-09",
+      "category": "grammar_and_syntax.preposition_error",
+      "paragraphId": "CJ3yXw",
+      "description": "Wrong preposition: 'per head of the population over a period of time' should use 'of' but the corruption changes 'of' to 'in', creating a preposition error.",
+      "classification": {
+        "label": "grammar_and_syntax.preposition_error",
+        "parent": "grammar_and_syntax",
+        "child": "preposition_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "an increase in the amount of goods and services produced per head in the population over a period of time.",
+        "replace": "an increase in the amount of goods and services produced per head of the population over a period of time."
+      }
+    },
+    {
+      "id": "issue-10",
+      "category": "orthography_and_word_form.wrong_word_form",
+      "paragraphId": "bwkBSS",
+      "description": "Wrong word form: 'production' (noun) should be 'productive' or similar adjective form is not the issue here; rather, 'quantity' (noun) is incorrectly replaced with 'quantitative' (adjective), creating a derivational form error.",
+      "classification": {
+        "label": "orthography_and_word_form.wrong_word_form",
+        "parent": "orthography_and_word_form",
+        "child": "wrong_word_form",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "increase in the quantitative and quality of the economic goods",
+        "replace": "increase in the quantity and quality of the economic goods"
+      }
+    },
+    {
+      "id": "issue-11",
+      "category": "grammar_and_syntax.incorrect_tense",
+      "paragraphId": "IL31TW",
+      "description": "The verb 'brushed' is incorrectly changed to present tense 'brush', creating a tense mismatch with the surrounding past/present perfect context ('once we've ... and made ourselves toast, we have already produced').",
+      "classification": {
+        "label": "grammar_and_syntax.incorrect_tense",
+        "parent": "grammar_and_syntax",
+        "child": "incorrect_tense",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "once we've brush our teeth and made ourselves toast",
+        "replace": "once we've brushed our teeth and made ourselves toast"
+      }
+    },
+    {
+      "id": "issue-12",
+      "category": "grammar_and_syntax.extra_word",
+      "paragraphId": "IL31TW",
+      "description": "An unnecessary article 'the' is inserted before 'economic production', creating an extra word error.",
+      "classification": {
+        "label": "grammar_and_syntax.extra_word",
+        "parent": "grammar_and_syntax",
+        "child": "extra_word",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "duplication",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "Should we count the tooth-brushing and the toast-making towards the the economic production of the country",
+        "replace": "Should we count the tooth-brushing and the toast-making towards the economic production of the country"
+      }
+    },
+    {
+      "id": "issue-13",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "5wvUdB",
+      "description": "The word 'scarce' is replaced with 'abundant', creating a semantic contradiction: economic goods are defined as scarce in relation to demand, not abundant.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "Economic goods and services are those that can be produced and that are abundant in relation to the demand for them.",
+        "replace": "Economic goods and services are those that can be produced and that are scarce in relation to the demand for them."
+      }
+    },
+    {
+      "id": "issue-14",
+      "category": "punctuation_and_boundaries.quotation_or_delimiter_error",
+      "paragraphId": "to2ZnO",
+      "description": "Incorrect delimiter: closing parenthesis replaced with closing bracket, creating a mismatched delimiter pair.",
+      "classification": {
+        "label": "punctuation_and_boundaries.quotation_or_delimiter_error",
+        "parent": "punctuation_and_boundaries",
+        "child": "quotation_or_delimiter_error",
+        "severity": "major",
+        "editScope": "character",
+        "operationType": "substitution",
+        "createsValidWord": false,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "Account figures (like GDP] do include important",
+        "replace": "Account figures (like GDP) do include important"
+      }
+    },
+    {
+      "id": "issue-15",
+      "category": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+      "paragraphId": "k2PSWk",
+      "description": "The idiom 'talk past one another' has been altered to the incorrect 'talk passed one another', confusing the preposition 'past' with the visually similar word 'passed'.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homograph_or_near_neighbor_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "People often talk passed one another.",
+        "replace": "People often talk past one another."
+      }
+    },
+    {
+      "id": "issue-16",
+      "category": "orthography_and_word_form.real_word_spelling_error",
+      "paragraphId": "24LL65",
+      "description": "Changed 'express' to 'excess', producing a real-word spelling error that substitutes a valid but incorrect word in place of the intended verb.",
+      "classification": {
+        "label": "orthography_and_word_form.real_word_spelling_error",
+        "parent": "orthography_and_word_form",
+        "child": "real_word_spelling_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "you have to find a way to excess a huge amount of relevant information",
+        "replace": "you have to find a way to express a huge amount of relevant information"
+      }
+    },
+    {
+      "id": "issue-17",
+      "category": "orthography_and_word_form.incorrect_pluralization",
+      "paragraphId": "euKvsb",
+      "description": "Incorrect pluralization: 'considerations' should be 'consideration' (singular), but actually the error introduced is changing the correct plural 'reasons' to incorrect singular 'reason' in context where plural is needed to match the parallel structure with ethical reasons.",
+      "classification": {
+        "label": "orthography_and_word_form.incorrect_pluralization",
+        "parent": "orthography_and_word_form",
+        "child": "incorrect_pluralization",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "but this is usually not done for both practical and ethical consideration:",
+        "replace": "but this is usually not done for both practical and ethical considerations:"
+      }
+    },
+    {
+      "id": "issue-18",
+      "category": "semantics_discourse_and_style.discourse_coherence_error",
+      "paragraphId": "UBX98r",
+      "description": "The connective 'therefore' is replaced with 'however', which contradicts the logical flow. The paragraph is drawing a consequence ('therefore') from the preceding discussion about how tracking all products would be impractical, so 'however' introduces an inappropriate logical relationship.",
+      "classification": {
+        "label": "semantics_discourse_and_style.discourse_coherence_error",
+        "parent": "semantics_discourse_and_style",
+        "child": "discourse_coherence_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "any attempt to measure growth as access to particular products, however, means that you look only at",
+        "replace": "any attempt to measure growth as access to particular products, therefore, means that you look only at"
+      }
+    },
+    {
+      "id": "issue-19",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "paragraphId": "pUDIRl",
+      "description": "Homophone confusion: 'means' (signifies/implies) replaced with 'meens' — wait, that's not a real homophone. Let me reconsider. Replace 'their' with 'there' in 'compare their income with the prices' — 'their' (possessive) confused with 'there' (location).",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homophone_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "we have to compare there income with the prices of the goods",
+        "replace": "we have to compare their income with the prices of the goods"
+      }
+    },
+    {
+      "id": "issue-20",
+      "category": "grammar_and_syntax.missing_word",
+      "paragraphId": "xvlcvO",
+      "description": "Missing required word 'of' in the phrase 'the price of one particular good', creating a grammatically incomplete prepositional phrase.",
+      "classification": {
+        "label": "grammar_and_syntax.missing_word",
+        "parent": "grammar_and_syntax",
+        "child": "missing_word",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "we measured growth as the ratio between income and the price one particular good.",
+        "replace": "we measured growth as the ratio between income and the price of one particular good."
+      }
+    },
+    {
+      "id": "issue-21",
+      "category": "grammar_and_syntax.missing_word",
+      "paragraphId": "NwQRVi",
+      "description": "The required article 'a' is omitted before 'means to many ends', creating a grammatically incomplete sentence. The original correctly reads 'A means to many ends' as a sentence fragment, but the corruption drops the article 'A'.",
+      "classification": {
+        "label": "grammar_and_syntax.missing_word",
+        "parent": "grammar_and_syntax",
+        "child": "missing_word",
+        "severity": "major",
+        "editScope": "sentence",
+        "operationType": "omission",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "Means to many ends, in fact.",
+        "replace": "A means to many ends, in fact."
+      }
+    },
+    {
+      "id": "issue-22",
+      "category": "grammar_and_syntax.run_on_fused_sentence_or_comma_splice",
+      "paragraphId": "uVSUnU",
+      "description": "Two independent clauses are fused with no conjunction or proper punctuation between them, creating a comma splice. The sentence 'If all the things you buy suddenly get 20-times more expensive your real income is 20-times lower' should have a comma or conjunction separating the clauses, but in the corrupted version a comma splice is introduced at a different junction.",
+      "classification": {
+        "label": "grammar_and_syntax.run_on_fused_sentence_or_comma_splice",
+        "parent": "grammar_and_syntax",
+        "child": "run_on_fused_sentence_or_comma_splice",
+        "severity": "major",
+        "editScope": "sentence",
+        "operationType": "substitution",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "If all the things you buy suddenly get 20-times more expensive your real income is 20-times lower, a loaf of bread doesn't cost $2 but $40",
+        "replace": "If all the things you buy suddenly get 20-times more expensive your real income is 20-times lower. A loaf of bread doesn't cost $2 but $40"
+      }
+    },
+    {
+      "id": "issue-23",
+      "category": "punctuation_and_boundaries.sentence_boundary_error",
+      "paragraphId": "WC3vFL",
+      "description": "Incorrect sentence boundary: a period is replaced with a comma, merging two independent sentences into one run-on sentence.",
+      "classification": {
+        "label": "punctuation_and_boundaries.sentence_boundary_error",
+        "parent": "punctuation_and_boundaries",
+        "child": "sentence_boundary_error",
+        "severity": "major",
+        "editScope": "sentence",
+        "operationType": "substitution",
+        "createsValidWord": null,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "It shows us that the economic options for billions of people are very low, the majority of the world",
+        "replace": "It shows us that the economic options for billions of people are very low. The majority of the world"
+      }
+    },
+    {
+      "id": "issue-24",
+      "category": "orthography_and_word_form.incorrect_pluralization",
+      "paragraphId": "NMoMJl",
+      "description": "Changed 'services' (plural) to 'service' (singular), creating an incorrect pluralization where the context clearly requires the plural form as part of the standard phrase 'goods and services'.",
+      "classification": {
+        "label": "orthography_and_word_form.incorrect_pluralization",
+        "parent": "orthography_and_word_form",
+        "child": "incorrect_pluralization",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "the economic goods and service that a society produces",
+        "replace": "the economic goods and services that a society produces"
+      }
+    },
+    {
+      "id": "issue-25",
+      "category": "orthography_and_word_form.insertion",
+      "paragraphId": "NMoMJl",
+      "description": "An extra word 'the' is inserted, creating a redundant article that a proofreader would flag.",
+      "classification": {
+        "label": "orthography_and_word_form.insertion",
+        "parent": "orthography_and_word_form",
+        "child": "insertion",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "insertion",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "the average income corresponds to the the level of average production, so the average income",
+        "replace": "the average income corresponds to the level of average production, so the average income"
+      }
+    },
+    {
+      "id": "issue-26",
+      "category": "grammar_and_syntax.article_or_determiner_error",
+      "paragraphId": "SI4nnD",
+      "description": "Missing article 'the' before 'production side', which requires a definite article since it refers to a specific, previously established concept.",
+      "classification": {
+        "label": "grammar_and_syntax.article_or_determiner_error",
+        "parent": "grammar_and_syntax",
+        "child": "article_or_determiner_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "we can describe the same reality from production side: the global production",
+        "replace": "we can describe the same reality from the production side: the global production"
+      }
+    },
+    {
+      "id": "issue-27",
+      "category": "grammar_and_syntax.extra_word",
+      "paragraphId": "9QsYYZ",
+      "description": "An extra word 'very' is inserted before 'large inequality', creating a redundant duplication since 'very large' already appears earlier in the sentence, making the inserted 'very' unnecessary and grammatically incorrect in this context.",
+      "classification": {
+        "label": "grammar_and_syntax.extra_word",
+        "parent": "grammar_and_syntax",
+        "child": "extra_word",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "insertion",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "you see again the very very large inequality between different parts of the world today. You now also see the history",
+        "replace": "you see again the very large inequality between different parts of the world today. You now also see the history"
+      }
+    },
+    {
+      "id": "issue-28",
+      "category": "orthography_and_word_form.nonword_spelling_error",
+      "paragraphId": "8JXkd8",
+      "description": "Misspelling of 'reconstructions' as 'reconstrucitons' — a transposition typo creating a nonword.",
+      "classification": {
+        "label": "orthography_and_word_form.nonword_spelling_error",
+        "parent": "orthography_and_word_form",
+        "child": "nonword_spelling_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "we see the reconstrucitons of GDP per capita in the UK",
+        "replace": "we see the reconstructions of GDP per capita in the UK"
+      }
+    },
+    {
+      "id": "issue-29",
+      "category": "grammar_and_syntax.preposition_error",
+      "paragraphId": "8RS01L",
+      "description": "Wrong preposition 'on' used instead of 'in' with 'inequality in the world today'. The correct preposition is 'in' when referring to inequality existing within the world.",
+      "classification": {
+        "label": "grammar_and_syntax.preposition_error",
+        "parent": "grammar_and_syntax",
+        "child": "preposition_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "understand the inequality on the world today. When incomes",
+        "replace": "understand the inequality in the world today. When incomes"
+      }
+    },
+    {
+      "id": "issue-30",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "8RS01L",
+      "description": "Semantic anomaly: 'live' should be 'lived' to match the past-tense historical context. Using present tense 'live' creates a semantic contradiction, as the passage is describing conditions when incomes were 20 times lower in the past, not the present day.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "including in today's richest countries, live in deep prosperity.",
+        "replace": "including in today's richest countries, live in deep poverty."
+      }
+    },
+    {
+      "id": "issue-31",
+      "category": "lexical_choice_and_confusability.malapropism",
+      "paragraphId": "P3ltg3",
+      "description": "The word 'induce' is replaced with 'induse', a malapropism-like error where a similar-sounding but incorrect word 'reduce' is substituted, changing the meaning. Actually, a better malapropism: 'induce' replaced with 'produce' — both sound somewhat similar and are common verbs, but 'produce malnutrition' is wrong in this context where the intended meaning is 'cause/bring about malnutrition' via the specific mechanism of inadequate food. Let me reconsider: a classic malapropism would be replacing a word with one that sounds similar but means something different. Replacing 'induce' with 'reduce' fits well — they sound similar (both end in '-duce') but 'reduce malnutrition' means the opposite of the intended meaning.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.malapropism",
+        "parent": "lexical_choice_and_confusability",
+        "child": "malapropism",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "food that would not reduce malnutrition, and some minimum heating capacity",
+        "replace": "food that would not induce malnutrition, and some minimum heating capacity"
+      }
+    },
+    {
+      "id": "issue-32",
+      "category": "orthography_and_word_form.incorrect_pluralization",
+      "paragraphId": "V1bDdb",
+      "description": "Incorrect pluralization: 'centuries' should be singular 'century' since the phrase refers to 'the last two centuries' but instead we corrupt it to 'the last two century', which is a singular/plural mismatch.",
+      "classification": {
+        "label": "orthography_and_word_form.incorrect_pluralization",
+        "parent": "orthography_and_word_form",
+        "child": "incorrect_pluralization",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "The last two century were the first time in human history",
+        "replace": "The last two centuries were the first time in human history"
+      }
+    },
+    {
+      "id": "issue-33",
+      "category": "lexical_choice_and_confusability.eggcorn",
+      "paragraphId": "9cbXae",
+      "description": "The phrase 'could not afford' is replaced with the eggcorn 'could not a ford', which is a classic eggcorn reanalysis. However, a better eggcorn here: 'induce malnutrition' → 'induce malnourishment' is not quite right either. Let me find a proper eggcorn opportunity. The phrase 'in the early stages' can become 'in the early stagers' — no. Better: 'sustained economic growth' — no good eggcorn. The phrase 'it also has a direction' — no. The phrase 'long way to go' → 'long ways to go' — not an eggcorn. The phrase 'the extent of global poverty' → 'the extant of global poverty' — 'extant' is a real word meaning 'still existing', reanalyzed from 'extent' (degree/scope). This is a classic eggcorn where 'extent' (the degree of something) is replaced by 'extant' (still in existence), creating a plausible-seeming but wrong reanalysis.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.eggcorn",
+        "parent": "lexical_choice_and_confusability",
+        "child": "eggcorn",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "are not aware of the extant of global poverty",
+        "replace": "are not aware of the extent of global poverty"
+      }
+    },
+    {
+      "id": "issue-34",
+      "category": "grammar_and_syntax.negation_scope_error",
+      "paragraphId": "kwtfCd",
+      "description": "Negation scope error: 'not enough to increase overall production' should negate 'overall production' alone, but the corrupted version 'enough to not increase overall production' places the negation over the verb 'increase', changing the meaning to suggest we should avoid increasing production.",
+      "classification": {
+        "label": "grammar_and_syntax.negation_scope_error",
+        "parent": "grammar_and_syntax",
+        "child": "negation_scope_error",
+        "severity": "major",
+        "editScope": "clause",
+        "operationType": "transposition",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "it is enough to not increase overall production. We also need",
+        "replace": "it is not enough to increase overall production. We also need"
+      }
+    },
+    {
+      "id": "issue-35",
+      "category": "grammar_and_syntax.comparative_or_superlative_error",
+      "paragraphId": "IdPWFb",
+      "description": "The word 'do' should be 'don't' — the sentence means people obviously don't just care about the number of goods (they also care about quality). Changing 'do' to 'don't' would fix it, but the error here is the opposite: the original text already contains 'do just care' which appears to be a pre-existing error. However, re-reading the chunk, the text says 'People obviously do just care about the number of goods' — this seems like an intentional error already present. Let me re-read... Actually, this is the original text as given. I need to introduce a new error. Let me choose a different span and apply a comparative/superlative error.",
+      "classification": {
+        "label": "grammar_and_syntax.comparative_or_superlative_error",
+        "parent": "grammar_and_syntax",
+        "child": "comparative_or_superlative_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "production time per bible was even longest than 8 months",
+        "replace": "production time per bible was even longer than 8 months"
+      }
+    },
+    {
+      "id": "issue-36",
+      "category": "grammar_and_syntax.parallelism_error",
+      "paragraphId": "0NL8Ow",
+      "description": "Incorrect lowercase 'do' should be 'don't' — but the target class is parallelism_error. Let me reconsider. Looking at the chunk for a good parallelism error candidate... The sentence 'People obviously do just care about the number of goods' seems like it should be 'don't' but that's semantic. Let me look for a parallelism opportunity.\n\nActually, looking more carefully at the sentence: 'People obviously do just care about the number of goods, and in the literature on growth, the measurement of changes in quality is a central question.' — this doesn't have a parallelism issue.\n\nLet me find a better spot. The sentence 'Whether some good is considered to be part of the domestic product depends on whether it is a good that some people want, not whether you or I want it.' has parallel structure 'whether...want, not whether...want it'.\n\nLet me look at: 'illegal drugs add $108 billion to measured nominal GDP in 2017, illegal prostitution adds $10 billion, illegal gambling adds $4 billion, and theft from businesses adds $109 billion' — here 'add' vs 'adds' is already inconsistent. Not the best.\n\nActually the best candidate is: 'Economic growth is an increase in the production of economic goods and services, compared from one period of time to another' — this is a quote so I shouldn't change it.\n\nLet me reconsider. A good parallelism error: 'the increase in the inflation-adjusted market value of the goods and services produced by an economy over time.' — quote, skip.\n\n'someone is managing the payment of the disability benefits etc.' — not great.\n\n'I've relied on several sources to produce this list.' — not parallel.\n\nOK: 'Helpful references that discuss how the production boundary is drawn (and how it changed over time) are:' — 'is drawn' and 'changed' are parallel passives but 'is drawn' is present passive, 'changed' is past active/passive. Actually this is already potentially questionable but let me find something clearer.\n\nThe sentence: 'Whether some good is considered to be part of the domestic product depends on whether it is a good that some people want, not whether you or I want it.' has nice parallel 'whether...want, not whether...want'. I could break this by changing the second clause.\n\nActually, the best target: 'Many definitions speak more broadly about the 'value' of the goods and services that are produced, but I think it is worth emphasizing that growth is also concerned with a rise in the quality of goods and services.' — not clearly parallel.\n\nLet me try: 'this can either be the person themselves or society more broadly' — 'either...or' parallel structure: 'the person themselves' / 'society more broadly'. I can break parallelism by changing to a non-parallel form like 'the person themselves or for society more broadly' — adding a preposition to one but not the other.\n\nActually a cleaner parallelism break: 'An increase in the nation's capacity to produce goods and services.' — quote.\n\nLet me go with the 'either...or' construction: 'this can either be the person themselves or society more broadly' → 'this can either be the person themselves or more broadly society' — that's awkward phrasing, not parallelism.\n\nBetter: change 'the person themselves or society more broadly' to 'the person themselves or more broadly for society' — breaks parallel noun phrases.\n\nActually simplest parallelism error in the list: 'illegal drugs add $108 billion to measured nominal GDP in 2017, illegal prostitution adds $10 billion, illegal gambling adds $4 billion, and theft from businesses adds $109 billion' — the first verb is 'add' (plural for drugs) and the rest are 'adds' (singular). This is already correct subject-verb agreement. I could break parallelism by changing one noun phrase structure.\n\nLet me try the sentence with 'Whether some good is considered to be part of the domestic product depends on whether it is a good that some people want, not whether you or I want it.' I'll change 'not whether you or I want it' to 'not that you or I want it' — breaking the parallel 'whether...whether' structure.",
+      "classification": {
+        "label": "grammar_and_syntax.parallelism_error",
+        "parent": "grammar_and_syntax",
+        "child": "parallelism_error",
+        "severity": "major",
+        "editScope": "clause",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "depends on whether it is a good that some people want, not that you or I want it",
+        "replace": "depends on whether it is a good that some people want, not whether you or I want it"
+      }
+    },
+    {
+      "id": "issue-37",
+      "category": "punctuation_and_boundaries.sentence_boundary_error",
+      "paragraphId": "V4KO7n",
+      "description": "The word 'do' should be 'don't' — the sentence currently says people 'do just care about the number of goods' when the intended meaning (clear from context about quality being important) is that people 'don't just care about the number of goods.'  However, the requested class is coordination_or_subordination_error, so instead I will introduce an error where a subordinating conjunction is incorrectly replaced, breaking the linking structure between clauses.",
+      "classification": {
+        "label": "punctuation_and_boundaries.sentence_boundary_error",
+        "parent": "punctuation_and_boundaries",
+        "child": "sentence_boundary_error",
+        "severity": "major",
+        "editScope": "sentence",
+        "operationType": "substitution",
+        "createsValidWord": null,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "just like life expectancy is a measure of population health and hardly the definition of population health, I will get back to this mistake further below in this text.",
+        "replace": "just like life expectancy is a measure of population health and hardly the definition of population health. I will get back to this mistake further below in this text."
+      }
+    },
+    {
+      "id": "issue-38",
+      "category": "orthography_and_word_form.incorrect_conjugation",
+      "paragraphId": "7bGAC6",
+      "description": "Incorrect verb conjugation: 'do' should be 'don't' to maintain the intended meaning, but instead I'll introduce a verb inflection error by changing 'do' to 'does' which breaks subject-verb agreement with the plural subject 'People'.",
+      "classification": {
+        "label": "orthography_and_word_form.incorrect_conjugation",
+        "parent": "orthography_and_word_form",
+        "child": "incorrect_conjugation",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "People obviously does just care about the number of goods",
+        "replace": "People obviously do just care about the number of goods"
+      }
+    },
+    {
+      "id": "issue-39",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "paragraphId": "k6fYff",
+      "description": "Homophone confusion: 'there' (location/existence) replaced with 'their' (possessive pronoun). These are classic homophones, and 'their were' is clearly wrong in this context.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homophone_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "Google counted their were 129,864,880 different books",
+        "replace": "Google counted there were 129,864,880 different books"
+      }
+    },
+    {
+      "id": "issue-40",
+      "category": "grammar_and_syntax.preposition_error",
+      "paragraphId": "dVp34r",
+      "description": "The preposition 'in' is incorrectly used where 'of' is needed. The phrase should be 'in terms of money' but later 'measured against goods or services' is correct. The error is introduced in 'adjusted for the changes in prices of goods' where 'in' is changed to 'on'.",
+      "classification": {
+        "label": "grammar_and_syntax.preposition_error",
+        "parent": "grammar_and_syntax",
+        "child": "preposition_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "it is adjusted for the changes on prices of goods and services",
+        "replace": "it is adjusted for the changes in prices of goods and services"
+      }
+    },
+    {
+      "id": "issue-41",
+      "category": "orthography_and_word_form.omission",
+      "paragraphId": "uuXuBx",
+      "description": "Omitted the letter 'r' in 'translates', creating the misspelling 'tanslates'.",
+      "classification": {
+        "label": "orthography_and_word_form.omission",
+        "parent": "orthography_and_word_form",
+        "child": "omission",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "omission",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "Whether economic growth tanslates into the reduction of poverty",
+        "replace": "Whether economic growth translates into the reduction of poverty"
+      }
+    },
+    {
+      "id": "issue-42",
+      "category": "orthography_and_word_form.nonword_spelling_error",
+      "paragraphId": "xKjPNb",
+      "description": "Misspelling of 'complementary' as 'complimentary', creating a nonword error in context (though 'complimentary' is a valid word, it is the wrong word here; however, the target class is nonword spelling error, so I'll choose a different span). Actually, let me pick a clear nonword misspelling.",
+      "classification": {
+        "label": "orthography_and_word_form.nonword_spelling_error",
+        "parent": "orthography_and_word_form",
+        "child": "nonword_spelling_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "the necessary data to operationalize this approach alongisde imputation methods",
+        "replace": "the necessary data to operationalize this approach alongside imputation methods"
+      }
+    },
+    {
+      "id": "issue-43",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "xKjPNb",
+      "description": "Misused word: 'reduction' replaced with 'production', creating a semantic anomaly where 'poverty production accelerated' contradicts the intended meaning of poverty decreasing.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "In the early 21st century, global poverty production accelerated",
+        "replace": "In the early 21st century, global poverty reduction accelerated"
+      }
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+Please send teh final invoice to Jae at jae@example.com before Friday.
+
+The environment variable is OPENROUTER_API_KEY, and the docs live at https://openrouter.ai/docs.

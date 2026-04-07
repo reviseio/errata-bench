@@ -1,0 +1,967 @@
+{
+  "id": "reznor-heater",
+  "instruction": "Proofread the document. Fix the known spelling, grammar, punctuation, word-choice, and style mistakes while preserving meaning, tone, paragraph ids, and intentional wording everywhere else.",
+  "sourcePath": "reznor-heater-corrupted.txt",
+  "issues": [
+    {
+      "id": "issue-01",
+      "category": "orthography_and_word_form.insertion",
+      "paragraphId": "lsWRDB",
+      "description": "Insert an extra letter into a word within a long, unique sentence anchor to create a realistic orthographic typo.",
+      "classification": {
+        "label": "orthography_and_word_form.insertion",
+        "parent": "orthography_and_word_form",
+        "child": "insertion",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "insertion",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "Immediately call your gas supplier from a neighborr's phone.",
+        "replace": "Immediately call your gas supplier from a neighbor's phone."
+      }
+    },
+    {
+      "id": "issue-02",
+      "category": "orthography_and_word_form.nonword_spelling_error",
+      "paragraphId": "hOt9aq",
+      "description": "Introduce a single nonword misspelling in the sentence about code availability by misspelling 'available' as 'availabel'.",
+      "classification": {
+        "label": "orthography_and_word_form.nonword_spelling_error",
+        "parent": "orthography_and_word_form",
+        "child": "nonword_spelling_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "These codes are availabel from CSA Information Services",
+        "replace": "These codes are available from CSA Information Services"
+      }
+    },
+    {
+      "id": "issue-03",
+      "category": "grammar_and_syntax.preposition_error",
+      "paragraphId": "1y6noO",
+      "description": "Replace the correct preposition in a fixed expression with an incorrect one.",
+      "classification": {
+        "label": "grammar_and_syntax.preposition_error",
+        "parent": "grammar_and_syntax",
+        "child": "preposition_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "agency installing this heater is responsible of the installation.",
+        "replace": "agency installing this heater is responsible for the installation."
+      }
+    },
+    {
+      "id": "issue-04",
+      "category": "grammar_and_syntax.extra_word",
+      "paragraphId": "yEoVcU",
+      "description": "Insert an unnecessary repeated article to create a realistic extra-word error.",
+      "classification": {
+        "label": "grammar_and_syntax.extra_word",
+        "parent": "grammar_and_syntax",
+        "child": "extra_word",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "insertion",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "select a location on the the heater access panel.",
+        "replace": "select a location on the heater access panel."
+      }
+    },
+    {
+      "id": "issue-05",
+      "category": "orthography_and_word_form.insertion",
+      "paragraphId": "jAURcv",
+      "description": "Insert an extra letter into a word to create a realistic misspelling.",
+      "classification": {
+        "label": "orthography_and_word_form.insertion",
+        "parent": "orthography_and_word_form",
+        "child": "insertion",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "insertion",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "check with the local gas companny or any",
+        "replace": "check with the local gas company or any"
+      }
+    },
+    {
+      "id": "issue-06",
+      "category": "orthography_and_word_form.capitalization_error",
+      "paragraphId": "9lvEGy",
+      "description": "Introduced an incorrect internal capitalization by capitalizing a common noun within the sentence.",
+      "classification": {
+        "label": "orthography_and_word_form.capitalization_error",
+        "parent": "orthography_and_word_form",
+        "child": "capitalization_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "the Pressure switch is shipped separately.",
+        "replace": "the pressure switch is shipped separately."
+      }
+    },
+    {
+      "id": "issue-07",
+      "category": "orthography_and_word_form.insertion",
+      "paragraphId": "9mGKTr",
+      "description": "Insert an extra letter into a word, creating a realistic spelling error within a longer unique span.",
+      "classification": {
+        "label": "orthography_and_word_form.insertion",
+        "parent": "orthography_and_word_form",
+        "child": "insertion",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "insertion",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "to replace that exhausted througgh the heater vent system.",
+        "replace": "to replace that exhausted through the heater vent system."
+      }
+    },
+    {
+      "id": "issue-08",
+      "category": "orthography_and_word_form.spacing_error",
+      "paragraphId": "4YfkA7",
+      "description": "Introduce a missing-space error by joining two adjacent words in a unique sentence about ventilation openings.",
+      "classification": {
+        "label": "orthography_and_word_form.spacing_error",
+        "parent": "orthography_and_word_form",
+        "child": "spacing_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "boundary_error",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "the floor and ceiling for ventilation andair for combustion.",
+        "replace": "the floor and ceiling for ventilation and air for combustion."
+      }
+    },
+    {
+      "id": "issue-09",
+      "category": "grammar_and_syntax.extra_word",
+      "paragraphId": "LdJCkI",
+      "description": "Insert an unnecessary duplicated auxiliary verb to create a clear extra-word proofreading error.",
+      "classification": {
+        "label": "grammar_and_syntax.extra_word",
+        "parent": "grammar_and_syntax",
+        "child": "extra_word",
+        "severity": "minor",
+        "editScope": "phrase",
+        "operationType": "insertion",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "internal heater surfaces that are are accessible from outside the heater",
+        "replace": "internal heater surfaces that are accessible from outside the heater"
+      }
+    },
+    {
+      "id": "issue-10",
+      "category": "orthography_and_word_form.transposition",
+      "paragraphId": "e3oKeg",
+      "description": "Transpose letters in 'from' to create the common misspelling 'form' within a long unique anchor span.",
+      "classification": {
+        "label": "orthography_and_word_form.transposition",
+        "parent": "orthography_and_word_form",
+        "child": "transposition",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "transposition",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "toward the source of cold air form a distance",
+        "replace": "toward the source of cold air from a distance"
+      }
+    },
+    {
+      "id": "issue-11",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "paragraphId": "9HqHDg",
+      "description": "Introduce a homophone confusion by replacing 'weight' with the same-sounding but incorrect 'wait'.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homophone_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "to support the wait of the unit.",
+        "replace": "to support the weight of the unit."
+      }
+    },
+    {
+      "id": "issue-12",
+      "category": "orthography_and_word_form.spacing_error",
+      "paragraphId": "53liGA",
+      "description": "Introduce a missing-space typo by merging two adjacent words in a long unique span from the final paragraph.",
+      "classification": {
+        "label": "orthography_and_word_form.spacing_error",
+        "parent": "orthography_and_word_form",
+        "child": "spacing_error",
+        "severity": "minor",
+        "editScope": "phrase",
+        "operationType": "boundary_error",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "should conform with goodpractice and with local codes.",
+        "replace": "should conform with good practice and with local codes."
+      }
+    },
+    {
+      "id": "issue-13",
+      "category": "orthography_and_word_form.spacing_error",
+      "paragraphId": "jwpboo",
+      "description": "Introduce a missing space by joining two adjacent words in a gas-line installation instruction.",
+      "classification": {
+        "label": "orthography_and_word_form.spacing_error",
+        "parent": "orthography_and_word_form",
+        "child": "spacing_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "boundary_error",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "joint union and manualshutoff valve upstream of the unit",
+        "replace": "joint union and manual shutoff valve upstream of the unit"
+      }
+    },
+    {
+      "id": "issue-14",
+      "category": "orthography_and_word_form.spacing_error",
+      "paragraphId": "tGS8ml",
+      "description": "Omit the space between two words to create a realistic spacing error.",
+      "classification": {
+        "label": "orthography_and_word_form.spacing_error",
+        "parent": "orthography_and_word_form",
+        "child": "spacing_error",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "omission",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "included in the steps of the \"Check-Test-Start\" procedurein Paragraph 24.",
+        "replace": "included in the steps of the \"Check-Test-Start\" procedure in Paragraph 24."
+      }
+    },
+    {
+      "id": "issue-15",
+      "category": "orthography_and_word_form.insertion",
+      "paragraphId": "vfIovW",
+      "description": "Insert an extra letter into a word within a long unique span.",
+      "classification": {
+        "label": "orthography_and_word_form.insertion",
+        "parent": "orthography_and_word_form",
+        "child": "insertion",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "insertion",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "If natural gas supply pressure is too low, contact yourr gas supplier.",
+        "replace": "If natural gas supply pressure is too low, contact your gas supplier."
+      }
+    },
+    {
+      "id": "issue-16",
+      "category": "lexical_choice_and_confusability.misused_word",
+      "paragraphId": "aCDCxU",
+      "description": "Replace the intended verb with a confusable but incorrect valid word.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.misused_word",
+        "parent": "lexical_choice_and_confusability",
+        "child": "misused_word",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "If unsure of the elevation, contract the local gas supplier.",
+        "replace": "If unsure of the elevation, contact the local gas supplier."
+      }
+    },
+    {
+      "id": "issue-17",
+      "category": "orthography_and_word_form.capitalization_error",
+      "paragraphId": "ZoOTBs",
+      "description": "Introduce a capitalization error by lowercasing the sentence-initial parenthetical cue word.",
+      "classification": {
+        "label": "orthography_and_word_form.capitalization_error",
+        "parent": "orthography_and_word_form",
+        "child": "capitalization_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "Turn up the thermostat. (note: On Model UDAS, depress and hold",
+        "replace": "Turn up the thermostat. (NOTE: On Model UDAS, depress and hold"
+      }
+    },
+    {
+      "id": "issue-18",
+      "category": "orthography_and_word_form.insertion",
+      "paragraphId": "YIQld3",
+      "description": "Inserted an extra letter into the word \"specified,\" creating a typical typographical error.",
+      "classification": {
+        "label": "orthography_and_word_form.insertion",
+        "parent": "orthography_and_word_form",
+        "child": "insertion",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "insertion",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "the inlet pressure is not within the specifiedd range",
+        "replace": "the inlet pressure is not within the specified range"
+      }
+    },
+    {
+      "id": "issue-19",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "paragraphId": "0QQd7U",
+      "description": "Introduce a homophone confusion by replacing the correct directional verb with a same-sounding but incorrect noun.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homophone_confusion",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "service; sea Maintenance Section for removal instructions.",
+        "replace": "service; see Maintenance Section for removal instructions."
+      }
+    },
+    {
+      "id": "issue-20",
+      "category": "orthography_and_word_form.nonword_spelling_error",
+      "paragraphId": "howugx",
+      "description": "Introduce a realistic nonword misspelling within a long unique span in the first paragraph.",
+      "classification": {
+        "label": "orthography_and_word_form.nonword_spelling_error",
+        "parent": "orthography_and_word_form",
+        "child": "nonword_spelling_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "To maintain the sealing feature of the eletrical box",
+        "replace": "To maintain the sealing feature of the electrical box"
+      }
+    },
+    {
+      "id": "issue-21",
+      "category": "grammar_and_syntax.article_or_determiner_error",
+      "paragraphId": "GSAOQm",
+      "description": "Omit the definite article in a noun phrase, creating a determiner error.",
+      "classification": {
+        "label": "grammar_and_syntax.article_or_determiner_error",
+        "parent": "grammar_and_syntax",
+        "child": "article_or_determiner_error",
+        "severity": "minor",
+        "editScope": "phrase",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "thermostat when using unit mounted thermostat bracket.",
+        "replace": "thermostat when using the unit mounted thermostat bracket."
+      }
+    },
+    {
+      "id": "issue-22",
+      "category": "grammar_and_syntax.extra_word",
+      "paragraphId": "glNkIl",
+      "description": "Insert an unnecessary pronoun to create a clear extra-word grammatical error within the clause about Option CL32.",
+      "classification": {
+        "label": "grammar_and_syntax.extra_word",
+        "parent": "grammar_and_syntax",
+        "child": "extra_word",
+        "severity": "minor",
+        "editScope": "clause",
+        "operationType": "insertion",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "Option CL32 which is the relay assembly only it must be added",
+        "replace": "Option CL32 which is the relay assembly only must be added"
+      }
+    },
+    {
+      "id": "issue-23",
+      "category": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+      "paragraphId": "XFEHSd",
+      "description": "Replace the verb 'off' with the visually similar but incorrect word 'of', creating a near-neighbor lexical confusion.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homograph_or_near_neighbor_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "20 minutes), the sensing pressure levels of.",
+        "replace": "20 minutes), the sensing pressure levels off."
+      }
+    },
+    {
+      "id": "issue-24",
+      "category": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+      "paragraphId": "mTQSJ5",
+      "description": "A visually similar valid word replaces the intended term, creating a realistic near-neighbor confusion error.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homograph_or_near_neighbor_confusion",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "for information on probable clauses and instructions on resetting",
+        "replace": "for information on probable causes and instructions on resetting"
+      }
+    },
+    {
+      "id": "issue-25",
+      "category": "grammar_and_syntax.subject_verb_agreement",
+      "paragraphId": "I1UwZh",
+      "description": "Introduce a subject-verb agreement error by changing the singular verb to its plural/base form within a unique sentence span.",
+      "classification": {
+        "label": "grammar_and_syntax.subject_verb_agreement",
+        "parent": "grammar_and_syntax",
+        "child": "subject_verb_agreement",
+        "severity": "major",
+        "editScope": "clause",
+        "operationType": "agreement_mismatch",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "If the pressure switch is open, the control proceed to prepurge.",
+        "replace": "If the pressure switch is open, the control proceeds to prepurge."
+      }
+    },
+    {
+      "id": "issue-26",
+      "category": "orthography_and_word_form.incorrect_pluralization",
+      "paragraphId": "qYUIpv",
+      "description": "Introduce an incorrect singular noun form by changing a required plural noun to singular within the existing sentence.",
+      "classification": {
+        "label": "orthography_and_word_form.incorrect_pluralization",
+        "parent": "orthography_and_word_form",
+        "child": "incorrect_pluralization",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "after a blower off delay as selected by the dip switch.",
+        "replace": "after a blower off delay as selected by the dip switches."
+      }
+    },
+    {
+      "id": "issue-27",
+      "category": "orthography_and_word_form.nonword_spelling_error",
+      "paragraphId": "FMjoB1",
+      "description": "Introduce a realistic nonword misspelling in a technical verb.",
+      "classification": {
+        "label": "orthography_and_word_form.nonword_spelling_error",
+        "parent": "orthography_and_word_form",
+        "child": "nonword_spelling_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "the control will de-enerigize the gas valve, run the",
+        "replace": "the control will de-energize the gas valve, run the"
+      }
+    },
+    {
+      "id": "issue-28",
+      "category": "semantics_discourse_and_style.wordiness_or_redundancy",
+      "paragraphId": "KQeJCd",
+      "description": "Introduce a redundant duplicated word within a long unique span to create a clear wordiness error.",
+      "classification": {
+        "label": "semantics_discourse_and_style.wordiness_or_redundancy",
+        "parent": "semantics_discourse_and_style",
+        "child": "wordiness_or_redundancy",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "duplication",
+        "createsValidWord": true,
+        "dimension": "stylistic"
+      },
+      "expectedCorrection": {
+        "find": "The control then re-energizes the gas valve and spark and initiates another another trial",
+        "replace": "The control then re-energizes the gas valve and spark and initiates another trial"
+      }
+    },
+    {
+      "id": "issue-29",
+      "category": "grammar_and_syntax.incorrect_tense",
+      "paragraphId": "8xs9Mz",
+      "description": "Introduce an incorrect tense by changing the future auxiliary construction to past tense in a conditional instruction.",
+      "classification": {
+        "label": "grammar_and_syntax.incorrect_tense",
+        "parent": "grammar_and_syntax",
+        "child": "incorrect_tense",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "the control responded to the loss of flame.",
+        "replace": "the control will respond to the loss of flame."
+      }
+    },
+    {
+      "id": "issue-30",
+      "category": "punctuation_and_boundaries.quotation_or_delimiter_error",
+      "paragraphId": "aqhuA0",
+      "description": "Remove a closing quotation mark around a terminal label, creating an incorrect delimiter usage.",
+      "classification": {
+        "label": "punctuation_and_boundaries.quotation_or_delimiter_error",
+        "parent": "punctuation_and_boundaries",
+        "child": "quotation_or_delimiter_error",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "allow the \"G terminal to energize slightly before \"Y\"",
+        "replace": "allow the \"G\" terminal to energize slightly before \"Y\""
+      }
+    },
+    {
+      "id": "issue-31",
+      "category": "grammar_and_syntax.article_or_determiner_error",
+      "paragraphId": "PzqQni",
+      "description": "Omit the definite article before \"gas valve,\" creating a determiner error.",
+      "classification": {
+        "label": "grammar_and_syntax.article_or_determiner_error",
+        "parent": "grammar_and_syntax",
+        "child": "article_or_determiner_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "If the control senses gas valve as energized for more than one second",
+        "replace": "If the control senses the gas valve as energized for more than one second"
+      }
+    },
+    {
+      "id": "issue-32",
+      "category": "orthography_and_word_form.transposition",
+      "paragraphId": "5NOsef",
+      "description": "Introduce a realistic letter transposition typo in a unique sentence span.",
+      "classification": {
+        "label": "orthography_and_word_form.transposition",
+        "parent": "orthography_and_word_form",
+        "child": "transposition",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "transposition",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "Lockotu shall automatically reset after one hour.",
+        "replace": "Lockout shall automatically reset after one hour."
+      }
+    },
+    {
+      "id": "issue-33",
+      "category": "orthography_and_word_form.wrong_word_form",
+      "paragraphId": "812yu7",
+      "description": "Replace the adverb with the adjective form, creating a wrong word form error in the sentence about the ignition device.",
+      "classification": {
+        "label": "orthography_and_word_form.wrong_word_form",
+        "parent": "orthography_and_word_form",
+        "child": "wrong_word_form",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "an ignition device which automatic lights the burner. Do not",
+        "replace": "an ignition device which automatically lights the burner. Do not"
+      }
+    },
+    {
+      "id": "issue-34",
+      "category": "grammar_and_syntax.word_order_error",
+      "paragraphId": "jUdEek",
+      "description": "Introduces an unnatural constituent order in the second clause by moving the prepositional phrase before the object noun phrase.",
+      "classification": {
+        "label": "grammar_and_syntax.word_order_error",
+        "parent": "grammar_and_syntax",
+        "child": "word_order_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "transposition",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "Do not touch any electrical switch; do not use in your building any phone.",
+        "replace": "Do not touch any electrical switch; do not use any phone in your building."
+      }
+    },
+    {
+      "id": "issue-35",
+      "category": "orthography_and_word_form.nonword_spelling_error",
+      "paragraphId": "JubHis",
+      "description": "Introduce a nonword spelling error by misspelling a content word within a longer unique span.",
+      "classification": {
+        "label": "orthography_and_word_form.nonword_spelling_error",
+        "parent": "orthography_and_word_form",
+        "child": "nonword_spelling_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "vent system to be sure that it is instaled",
+        "replace": "vent system to be sure that it is installed"
+      }
+    },
+    {
+      "id": "issue-36",
+      "category": "orthography_and_word_form.incorrect_pluralization",
+      "paragraphId": "ls7AXq",
+      "description": "Introduce an incorrect singular noun form in a plural context.",
+      "classification": {
+        "label": "orthography_and_word_form.incorrect_pluralization",
+        "parent": "orthography_and_word_form",
+        "child": "incorrect_pluralization",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "Seal any unused opening in the venting system.",
+        "replace": "Seal any unused openings in the venting system."
+      }
+    },
+    {
+      "id": "issue-37",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "paragraphId": "28aV2V",
+      "description": "Replace the possessive pronoun with its homophone, creating a clear same-sounding word confusion.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homophone_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "fireplace dampers to there previous conditions.",
+        "replace": "fireplace dampers to their previous conditions."
+      }
+    },
+    {
+      "id": "issue-38",
+      "category": "grammar_and_syntax.preposition_error",
+      "paragraphId": "yqV5tv",
+      "description": "Replace the correct preposition after \"comply\" with an incorrect one.",
+      "classification": {
+        "label": "grammar_and_syntax.preposition_error",
+        "parent": "grammar_and_syntax",
+        "child": "preposition_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "Always comply to the combustion air requirements in the installation codes",
+        "replace": "Always comply with the combustion air requirements in the installation codes"
+      }
+    },
+    {
+      "id": "issue-39",
+      "category": "orthography_and_word_form.spacing_error",
+      "paragraphId": "q7ABG6",
+      "description": "Introduce a missing-space typo by merging the two words in a unique phrase within one paragraph.",
+      "classification": {
+        "label": "orthography_and_word_form.spacing_error",
+        "parent": "orthography_and_word_form",
+        "child": "spacing_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "boundary_error",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "If a crack or hole is observed, replace the heatexchanger.",
+        "replace": "If a crack or hole is observed, replace the heat exchanger."
+      }
+    },
+    {
+      "id": "issue-40",
+      "category": "grammar_and_syntax.run_on_fused_sentence_or_comma_splice",
+      "paragraphId": "JKdOXg",
+      "description": "Replaces the sentence boundary with a comma, incorrectly joining two independent imperative clauses into a comma splice.",
+      "classification": {
+        "label": "grammar_and_syntax.run_on_fused_sentence_or_comma_splice",
+        "parent": "grammar_and_syntax",
+        "child": "run_on_fused_sentence_or_comma_splice",
+        "severity": "major",
+        "editScope": "sentence",
+        "operationType": "boundary_error",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "mark the location (top and bottom) of each baffle, remove all baffles.",
+        "replace": "mark the location (top and bottom) of each baffle. Remove all baffles."
+      }
+    },
+    {
+      "id": "issue-41",
+      "category": "grammar_and_syntax.preposition_error",
+      "paragraphId": "OjEszQ",
+      "description": "Omit the preposition \"from\" in a long unique span to create a clear preposition error.",
+      "classification": {
+        "label": "grammar_and_syntax.preposition_error",
+        "parent": "grammar_and_syntax",
+        "child": "preposition_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "burner assembly so that any foreign material will fall away the burner, use a stiff bristle brush",
+        "replace": "burner assembly so that any foreign material will fall away from the burner, use a stiff bristle brush"
+      }
+    },
+    {
+      "id": "issue-42",
+      "category": "lexical_choice_and_confusability.eggcorn",
+      "paragraphId": "bfHky7",
+      "description": "Replace the technical term with a plausible-sounding misheard alternative to create an eggcorn error.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.eggcorn",
+        "parent": "lexical_choice_and_confusability",
+        "child": "eggcorn",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "so that the office adapter is through the bracket.",
+        "replace": "so that the orifice adapter is through the bracket."
+      }
+    },
+    {
+      "id": "issue-43",
+      "category": "punctuation_and_boundaries.quotation_or_delimiter_error",
+      "paragraphId": "0Y9SY6",
+      "description": "Remove the closing parenthesis in the parenthetical appositive, creating a delimiter error.",
+      "classification": {
+        "label": "punctuation_and_boundaries.quotation_or_delimiter_error",
+        "parent": "punctuation_and_boundaries",
+        "child": "quotation_or_delimiter_error",
+        "severity": "minor",
+        "editScope": "phrase",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "DSI Integrated Control Module (circuit board - The module monitors",
+        "replace": "DSI Integrated Control Module (circuit board) - The module monitors"
+      }
+    },
+    {
+      "id": "issue-44",
+      "category": "orthography_and_word_form.capitalization_error",
+      "paragraphId": "f9FbSV",
+      "description": "Introduce an incorrect mid-sentence capitalization in a noun within the warning paragraph.",
+      "classification": {
+        "label": "orthography_and_word_form.capitalization_error",
+        "parent": "orthography_and_word_form",
+        "child": "capitalization_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "the brown ground wire must remain attached to the Ignitor.",
+        "replace": "the brown ground wire must remain attached to the ignitor."
+      }
+    },
+    {
+      "id": "issue-45",
+      "category": "orthography_and_word_form.transposition",
+      "paragraphId": "DeJB2A",
+      "description": "Introduce a realistic letter-transposition typo in the word \"clearance\" within a longer unique sentence span.",
+      "classification": {
+        "label": "orthography_and_word_form.transposition",
+        "parent": "orthography_and_word_form",
+        "child": "transposition",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "transposition",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "Rotate the fan blade to check for adequate clearnace.",
+        "replace": "Rotate the fan blade to check for adequate clearance."
+      }
+    },
+    {
+      "id": "issue-46",
+      "category": "lexical_choice_and_confusability.misused_word",
+      "paragraphId": "lkpUyO",
+      "description": "Replace the context-appropriate verb \"mark\" with the valid but incorrect word \"make,\" creating a clear lexical misuse in the instruction.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.misused_word",
+        "parent": "lexical_choice_and_confusability",
+        "child": "misused_word",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "At the gas valve, make and disconnect the wires.",
+        "replace": "At the gas valve, mark and disconnect the wires."
+      }
+    },
+    {
+      "id": "issue-47",
+      "category": "orthography_and_word_form.wrong_word_form",
+      "paragraphId": "Bw6pIU",
+      "description": "Introduced a wrong word form by replacing the adjective with an adverb in a maintenance instruction.",
+      "classification": {
+        "label": "orthography_and_word_form.wrong_word_form",
+        "parent": "orthography_and_word_form",
+        "child": "wrong_word_form",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "except carefully removal of external dirt accumulation and checking",
+        "replace": "except careful removal of external dirt accumulation and checking"
+      }
+    },
+    {
+      "id": "issue-48",
+      "category": "grammar_and_syntax.relative_clause_error",
+      "paragraphId": "OJowqx",
+      "description": "Malformed the relative marker by replacing the standard relative pronoun with a nonstandard one.",
+      "classification": {
+        "label": "grammar_and_syntax.relative_clause_error",
+        "parent": "grammar_and_syntax",
+        "child": "relative_clause_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "only the factory-authorized replacement part what is designed for that size",
+        "replace": "only the factory-authorized replacement part that is designed for that size"
+      }
+    }
+  ]
+}

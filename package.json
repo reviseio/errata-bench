@@ -1,0 +1,35 @@
+{
+  "name": "erratabench-v1",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "demo": "node --import tsx src/eval.ts --mock",
+    "eval": "node --import tsx src/eval.ts",
+    "score": "node --import tsx src/score.ts",
+    "bench": "node --import tsx src/bench.ts",
+    "view:rankings": "node --import tsx src/cmd-rankings.ts",
+    "view:scatterplot": "node --import tsx src/cmd-scatter.ts",
+    "bench:dataset-view": "node --import tsx src/view-results-datasets.ts",
+    "bench:categories": "node --import tsx src/analyze-dataset-categories.ts",
+    "bench:runs": "node --import tsx src/analyze-results-runs.ts",
+    "bench:issues": "node --import tsx src/analyze-results-issues.ts",
+    "bench:alternative-misses": "node --import tsx src/analyze-results-alternative-misses.ts",
+    "bench:rescore": "node --import tsx src/rescore-results.ts",
+    "bench:refresh": "node --import tsx src/refresh-results.ts",
+    "bench:prune": "node --import tsx src/prune-results.ts",
+    "dataset:disqualify-issues": "node --import tsx src/disqualify-dataset-issues.ts",
+    "generate:corrupted": "node --import tsx src/generate-corrupted-case.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}

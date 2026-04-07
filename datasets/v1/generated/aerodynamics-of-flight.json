@@ -1,0 +1,727 @@
+{
+  "id": "aerodynamics-of-flight",
+  "instruction": "Proofread the document. Fix the known spelling, grammar, punctuation, word-choice, and style mistakes while preserving meaning, tone, paragraph ids, and intentional wording everywhere else.",
+  "sourcePath": "aerodynamics-of-flight-corrupted.txt",
+  "issues": [
+    {
+      "id": "issue-01",
+      "category": "orthography_and_word_form.real_word_spelling_error",
+      "paragraphId": "v5zS1s",
+      "description": "Introduce a real-word spelling error by changing 'flight' to the valid but incorrect word 'fight' within a long unique span.",
+      "classification": {
+        "label": "orthography_and_word_form.real_word_spelling_error",
+        "parent": "orthography_and_word_form",
+        "child": "real_word_spelling_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "This chapter discusses the aerodynamics of fight - how",
+        "replace": "This chapter discusses the aerodynamics of flight - how"
+      }
+    },
+    {
+      "id": "issue-02",
+      "category": "orthography_and_word_form.fat_finger_typo",
+      "paragraphId": "PYJFqy",
+      "description": "Introduce a single accidental keyboard typo in one word within a long unique span.",
+      "classification": {
+        "label": "orthography_and_word_form.fat_finger_typo",
+        "parent": "orthography_and_word_form",
+        "child": "fat_finger_typo",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "substitution",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "drag opposes thrust and acts rearward parallel to the relatove wind.",
+        "replace": "drag opposes thrust and acts rearward parallel to the relative wind."
+      }
+    },
+    {
+      "id": "issue-03",
+      "category": "punctuation_and_boundaries.sentence_boundary_error",
+      "paragraphId": "hHAPiZ",
+      "description": "Merge two independent sentences with a comma, creating an incorrect sentence boundary.",
+      "classification": {
+        "label": "punctuation_and_boundaries.sentence_boundary_error",
+        "parent": "punctuation_and_boundaries",
+        "child": "sentence_boundary_error",
+        "severity": "major",
+        "editScope": "sentence",
+        "operationType": "boundary_error",
+        "createsValidWord": null,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "It does not mean the four forces are equal, it means the opposing forces",
+        "replace": "It does not mean the four forces are equal. It means the opposing forces"
+      }
+    },
+    {
+      "id": "issue-04",
+      "category": "orthography_and_word_form.duplication",
+      "paragraphId": "CZKNOG",
+      "description": "Introduce an unintended repeated word within a sentence to create a realistic duplication error.",
+      "classification": {
+        "label": "orthography_and_word_form.duplication",
+        "parent": "orthography_and_word_form",
+        "child": "duplication",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "duplication",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "In slow flight, thrust has has an upward component.",
+        "replace": "In slow flight, thrust has an upward component."
+      }
+    },
+    {
+      "id": "issue-05",
+      "category": "lexical_choice_and_confusability.mondegreen",
+      "paragraphId": "QgAq86",
+      "description": "Introduces a mondegreen by replacing the fixed phrase \"point of fact\" with the misheard \"point of fax.\"",
+      "classification": {
+        "label": "lexical_choice_and_confusability.mondegreen",
+        "parent": "lexical_choice_and_confusability",
+        "child": "mondegreen",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "In point of fax, considering only level flight,",
+        "replace": "In point of fact, considering only level flight,"
+      }
+    },
+    {
+      "id": "issue-06",
+      "category": "punctuation_and_boundaries.punctuation_error",
+      "paragraphId": "bLDkqp",
+      "description": "Insert an extraneous comma between the subject and verb, creating a clear punctuation error.",
+      "classification": {
+        "label": "punctuation_and_boundaries.punctuation_error",
+        "parent": "punctuation_and_boundaries",
+        "child": "punctuation_error",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "insertion",
+        "createsValidWord": null,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "Likewise, if the engine power is increased, thrust, becomes greater than drag",
+        "replace": "Likewise, if the engine power is increased, thrust becomes greater than drag"
+      }
+    },
+    {
+      "id": "issue-07",
+      "category": "orthography_and_word_form.incorrect_conjugation",
+      "paragraphId": "Zsun92",
+      "description": "Introduce an incorrect verb inflection by changing the bare infinitive verb after 'will' to a conjugated form.",
+      "classification": {
+        "label": "orthography_and_word_form.incorrect_conjugation",
+        "parent": "orthography_and_word_form",
+        "child": "incorrect_conjugation",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "lift will become less than weight and the aircraft will starts to descend.",
+        "replace": "lift will become less than weight and the aircraft will start to descend."
+      }
+    },
+    {
+      "id": "issue-08",
+      "category": "orthography_and_word_form.omission",
+      "paragraphId": "jTB8A7",
+      "description": "Omit a letter from a content word to create a realistic spelling mistake.",
+      "classification": {
+        "label": "orthography_and_word_form.omission",
+        "parent": "orthography_and_word_form",
+        "child": "omission",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "omission",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "If speed decreases enough, the requird AOA will increase",
+        "replace": "If speed decreases enough, the required AOA will increase"
+      }
+    },
+    {
+      "id": "issue-09",
+      "category": "grammar_and_syntax.sentence_fragment",
+      "paragraphId": "kn16de",
+      "description": "Create a sentence fragment by omitting the independent clause after the introductory dependent clause.",
+      "classification": {
+        "label": "grammar_and_syntax.sentence_fragment",
+        "parent": "grammar_and_syntax",
+        "child": "sentence_fragment",
+        "severity": "major",
+        "editScope": "sentence",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "When the aircraft reaches the maximum AOA.",
+        "replace": "When the aircraft reaches the maximum AOA, lift begins to diminish rapidly."
+      }
+    },
+    {
+      "id": "issue-10",
+      "category": "grammar_and_syntax.article_or_determiner_error",
+      "paragraphId": "qwQPHZ",
+      "description": "Remove the required article before 'same airplane' to create a clear determiner error.",
+      "classification": {
+        "label": "grammar_and_syntax.article_or_determiner_error",
+        "parent": "grammar_and_syntax",
+        "child": "article_or_determiner_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "has four times the lift as same airplane traveling at 100 knots",
+        "replace": "has four times the lift as the same airplane traveling at 100 knots"
+      }
+    },
+    {
+      "id": "issue-11",
+      "category": "lexical_choice_and_confusability.mondegreen",
+      "paragraphId": "Nx009s",
+      "description": "A likely homophone mishearing writes the technical term \"lift\" as the valid but incorrect word \"left.\"",
+      "classification": {
+        "label": "lexical_choice_and_confusability.mondegreen",
+        "parent": "lexical_choice_and_confusability",
+        "child": "mondegreen",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "will result in four times the left. As a result,",
+        "replace": "will result in four times the lift. As a result,"
+      }
+    },
+    {
+      "id": "issue-12",
+      "category": "grammar_and_syntax.missing_word",
+      "paragraphId": "XmBfCK",
+      "description": "Omit the auxiliary verb \"is\" to create a grammatical missing-word error.",
+      "classification": {
+        "label": "grammar_and_syntax.missing_word",
+        "parent": "grammar_and_syntax",
+        "child": "missing_word",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "if the velocity increased. The lift would increase",
+        "replace": "if the velocity is increased. The lift would increase"
+      }
+    },
+    {
+      "id": "issue-13",
+      "category": "grammar_and_syntax.pronoun_case_error",
+      "paragraphId": "IqOsvm",
+      "description": "Introduce a pronoun case error by replacing the subject-form pronoun with an object-form pronoun in a clause about pilot control.",
+      "classification": {
+        "label": "grammar_and_syntax.pronoun_case_error",
+        "parent": "grammar_and_syntax",
+        "child": "pronoun_case_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "the airspeed or the AOA because them are controlled directly",
+        "replace": "the airspeed or the AOA because these are controlled directly"
+      }
+    },
+    {
+      "id": "issue-14",
+      "category": "grammar_and_syntax.auxiliary_or_modal_error",
+      "paragraphId": "EU51zS",
+      "description": "Omit the auxiliary verb 'is' from a clause, creating a clear auxiliary omission error.",
+      "classification": {
+        "label": "grammar_and_syntax.auxiliary_or_modal_error",
+        "parent": "grammar_and_syntax",
+        "child": "auxiliary_or_modal_error",
+        "severity": "major",
+        "editScope": "clause",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "when the pilot wishes to land as slowly as practical, it necessary to increase AOA",
+        "replace": "when the pilot wishes to land as slowly as practical, it is necessary to increase AOA"
+      }
+    },
+    {
+      "id": "issue-15",
+      "category": "semantics_discourse_and_style.wordiness_or_redundancy",
+      "paragraphId": "8f1iUb",
+      "description": "Introduced an unnecessary repeated phrase, making the sentence verbose and redundant.",
+      "classification": {
+        "label": "semantics_discourse_and_style.wordiness_or_redundancy",
+        "parent": "semantics_discourse_and_style",
+        "child": "wordiness_or_redundancy",
+        "severity": "minor",
+        "editScope": "phrase",
+        "operationType": "duplication",
+        "createsValidWord": null,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "Aircraft with higher L/D ratios are more efficient than those with lower L/D ratios L/D ratios.",
+        "replace": "Aircraft with higher L/D ratios are more efficient than those with lower L/D ratios."
+      }
+    },
+    {
+      "id": "issue-16",
+      "category": "punctuation_and_boundaries.apostrophe_error",
+      "paragraphId": "oeinqn",
+      "description": "Introduces an incorrect apostrophe in a plural noun.",
+      "classification": {
+        "label": "punctuation_and_boundaries.apostrophe_error",
+        "parent": "punctuation_and_boundaries",
+        "child": "apostrophe_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "insertion",
+        "createsValidWord": true,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "all of the variable's, aside from the coefficients, cancel out.",
+        "replace": "all of the variables, aside from the coefficients, cancel out."
+      }
+    },
+    {
+      "id": "issue-17",
+      "category": "orthography_and_word_form.omission",
+      "paragraphId": "ciIxlh",
+      "description": "Omit a letter from a word to create a realistic spelling omission error within a long unique span.",
+      "classification": {
+        "label": "orthography_and_word_form.omission",
+        "parent": "orthography_and_word_form",
+        "child": "omission",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "omission",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "curve (red) reches its maximum for this particular wing",
+        "replace": "curve (red) reaches its maximum for this particular wing"
+      }
+    },
+    {
+      "id": "issue-18",
+      "category": "grammar_and_syntax.missing_word",
+      "paragraphId": "M0HazW",
+      "description": "Omit the required auxiliary verb \"is\" to create a grammatical missing-word error.",
+      "classification": {
+        "label": "grammar_and_syntax.missing_word",
+        "parent": "grammar_and_syntax",
+        "child": "missing_word",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "Parasite drag comprised of all the forces that work",
+        "replace": "Parasite drag is comprised of all the forces that work"
+      }
+    },
+    {
+      "id": "issue-19",
+      "category": "punctuation_and_boundaries.punctuation_error",
+      "paragraphId": "JqPoer",
+      "description": "Omit the hyphen in the figure number, creating a clear punctuation error in the reference.",
+      "classification": {
+        "label": "punctuation_and_boundaries.punctuation_error",
+        "parent": "punctuation_and_boundaries",
+        "child": "punctuation_error",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "the flat plate in Figure 57 causes the air to swirl",
+        "replace": "the flat plate in Figure 5-7 causes the air to swirl"
+      }
+    },
+    {
+      "id": "issue-20",
+      "category": "grammar_and_syntax.relative_clause_error",
+      "paragraphId": "Y1ezz8",
+      "description": "Omit the relative marker in a restrictive relative clause, creating an ungrammatical clause attachment.",
+      "classification": {
+        "label": "grammar_and_syntax.relative_clause_error",
+        "parent": "grammar_and_syntax",
+        "child": "relative_clause_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "remove any irregularities may protrude above the wing surface",
+        "replace": "remove any irregularities that may protrude above the wing surface"
+      }
+    },
+    {
+      "id": "issue-21",
+      "category": "grammar_and_syntax.comparative_or_superlative_error",
+      "paragraphId": "ZrSwMM",
+      "description": "Introduces an incorrect superlative in a correlative comparison.",
+      "classification": {
+        "label": "grammar_and_syntax.comparative_or_superlative_error",
+        "parent": "grammar_and_syntax",
+        "child": "comparative_or_superlative_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "the most downwash you have, the more your relative wind points downward",
+        "replace": "the more downwash you have, the more your relative wind points downward"
+      }
+    },
+    {
+      "id": "issue-22",
+      "category": "grammar_and_syntax.auxiliary_or_modal_error",
+      "paragraphId": "0iC8Vh",
+      "description": "Omit the auxiliary in a passive construction after the modal to create a clear auxiliary/modal error.",
+      "classification": {
+        "label": "grammar_and_syntax.auxiliary_or_modal_error",
+        "parent": "grammar_and_syntax",
+        "child": "auxiliary_or_modal_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "the airfoil can inclined to a higher AOA",
+        "replace": "the airfoil can be inclined to a higher AOA"
+      }
+    },
+    {
+      "id": "issue-23",
+      "category": "semantics_discourse_and_style.wordiness_or_redundancy",
+      "paragraphId": "0L9cSR",
+      "description": "Introduces an accidental duplicated phrase, making the sentence unnecessarily redundant.",
+      "classification": {
+        "label": "semantics_discourse_and_style.wordiness_or_redundancy",
+        "parent": "semantics_discourse_and_style",
+        "child": "wordiness_or_redundancy",
+        "severity": "minor",
+        "editScope": "phrase",
+        "operationType": "duplication",
+        "createsValidWord": true,
+        "dimension": "stylistic"
+      },
+      "expectedCorrection": {
+        "find": "the total drag increases rapidly due to due to the sharp increase of parasite drag.",
+        "replace": "the total drag increases rapidly due to the sharp increase of parasite drag."
+      }
+    },
+    {
+      "id": "issue-24",
+      "category": "punctuation_and_boundaries.sentence_boundary_error",
+      "paragraphId": "KGCaCg",
+      "description": "Introduces an incorrect sentence merge by replacing the period between two sentences with a comma.",
+      "classification": {
+        "label": "punctuation_and_boundaries.sentence_boundary_error",
+        "parent": "punctuation_and_boundaries",
+        "child": "sentence_boundary_error",
+        "severity": "major",
+        "editScope": "sentence",
+        "operationType": "boundary_error",
+        "createsValidWord": null,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "pressure (CP) will travel, it is important to understand",
+        "replace": "pressure (CP) will travel. It is important to understand"
+      }
+    },
+    {
+      "id": "issue-25",
+      "category": "orthography_and_word_form.fat_finger_typo",
+      "paragraphId": "ie1I3o",
+      "description": "Introduce a single fat-finger typo by replacing one letter in a content word with an adjacent keyboard letter.",
+      "classification": {
+        "label": "orthography_and_word_form.fat_finger_typo",
+        "parent": "orthography_and_word_form",
+        "child": "fat_finger_typo",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "substitution",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "Lift is required to counteract the aircraft's weoght.",
+        "replace": "Lift is required to counteract the aircraft's weight."
+      }
+    },
+    {
+      "id": "issue-26",
+      "category": "punctuation_and_boundaries.punctuation_error",
+      "paragraphId": "8FfRAy",
+      "description": "Omit the comma before the participial phrase, creating a realistic punctuation error.",
+      "classification": {
+        "label": "punctuation_and_boundaries.punctuation_error",
+        "parent": "punctuation_and_boundaries",
+        "child": "punctuation_error",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "results in \"spillage\" over the tips thereby setting up a whirlpool",
+        "replace": "results in \"spillage\" over the tips, thereby setting up a whirlpool"
+      }
+    },
+    {
+      "id": "issue-27",
+      "category": "orthography_and_word_form.omission",
+      "paragraphId": "29z4yN",
+      "description": "Introduce a single orthographic omission by deleting one letter from a word within a longer unique span.",
+      "classification": {
+        "label": "orthography_and_word_form.omission",
+        "parent": "orthography_and_word_form",
+        "child": "omission",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "omission",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "increase drag becuse of energy spent in",
+        "replace": "increase drag because of energy spent in"
+      }
+    },
+    {
+      "id": "issue-28",
+      "category": "grammar_and_syntax.sentence_fragment",
+      "paragraphId": "uTCQ6i",
+      "description": "Omit the main verb in the opening sentence, turning it into a sentence fragment.",
+      "classification": {
+        "label": "grammar_and_syntax.sentence_fragment",
+        "parent": "grammar_and_syntax",
+        "child": "sentence_fragment",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "Wingtip vortices greatest when the generating aircraft is",
+        "replace": "Wingtip vortices are greatest when the generating aircraft is"
+      }
+    },
+    {
+      "id": "issue-29",
+      "category": "orthography_and_word_form.incorrect_pluralization",
+      "paragraphId": "HcGo8Z",
+      "description": "Change a plural noun to an incorrect singular form after a plural quantifier.",
+      "classification": {
+        "label": "orthography_and_word_form.incorrect_pluralization",
+        "parent": "orthography_and_word_form",
+        "child": "incorrect_pluralization",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "comes within several foot of the surface, ground or water",
+        "replace": "comes within several feet of the surface, ground or water"
+      }
+    },
+    {
+      "id": "issue-30",
+      "category": "orthography_and_word_form.wrong_word_form",
+      "paragraphId": "Gs16Yk",
+      "description": "Replace an adjective with a noun in a technical phrase, creating a wrong derivational word form error.",
+      "classification": {
+        "label": "orthography_and_word_form.wrong_word_form",
+        "parent": "orthography_and_word_form",
+        "child": "wrong_word_form",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "It is true that reduction pressure on top of an airfoil",
+        "replace": "It is true that reduced pressure on top of an airfoil"
+      }
+    },
+    {
+      "id": "issue-31",
+      "category": "orthography_and_word_form.fat_finger_typo",
+      "paragraphId": "S6sm2j",
+      "description": "Introduce a single realistic keyboard typo by replacing one letter in 'pressure' within a long unique span.",
+      "classification": {
+        "label": "orthography_and_word_form.fat_finger_typo",
+        "parent": "orthography_and_word_form",
+        "child": "fat_finger_typo",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "substitution",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "ground effect causes an increase in the local pressire",
+        "replace": "ground effect causes an increase in the local pressure"
+      }
+    },
+    {
+      "id": "issue-32",
+      "category": "orthography_and_word_form.duplication",
+      "paragraphId": "rbxPg9",
+      "description": "Duplicate the word \"just\" within a long, unique span in the second paragraph.",
+      "classification": {
+        "label": "orthography_and_word_form.duplication",
+        "parent": "orthography_and_word_form",
+        "child": "duplication",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "duplication",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "An aircraft leaving ground effect after takeoff encounters just just the reverse",
+        "replace": "An aircraft leaving ground effect after takeoff encounters just the reverse"
+      }
+    },
+    {
+      "id": "issue-33",
+      "category": "orthography_and_word_form.incorrect_conjugation",
+      "paragraphId": "xCYHC2",
+      "description": "Introduce an incorrect verb inflection by changing the singular verb to its base form within a long unique span.",
+      "classification": {
+        "label": "orthography_and_word_form.incorrect_conjugation",
+        "parent": "orthography_and_word_form",
+        "child": "incorrect_conjugation",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "Whenever an aircraft change its flight attitude or position in flight",
+        "replace": "Whenever an aircraft changes its flight attitude or position in flight"
+      }
+    },
+    {
+      "id": "issue-34",
+      "category": "grammar_and_syntax.incorrect_tense",
+      "paragraphId": "wxi1Wb",
+      "description": "Introduces an incorrect past-tense verb in a present-tense definition, creating a tense mismatch with the surrounding explanatory context.",
+      "classification": {
+        "label": "grammar_and_syntax.incorrect_tense",
+        "parent": "grammar_and_syntax",
+        "child": "incorrect_tense",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "Yaw was the left and right movement of the aircraft's nose.",
+        "replace": "Yaw is the left and right movement of the aircraft's nose."
+      }
+    },
+    {
+      "id": "issue-35",
+      "category": "grammar_and_syntax.incorrect_tense",
+      "paragraphId": "FYPW6y",
+      "description": "Introduce a tense mismatch by changing the present-tense verb in an otherwise present-tense technical description to past tense.",
+      "classification": {
+        "label": "grammar_and_syntax.incorrect_tense",
+        "parent": "grammar_and_syntax",
+        "child": "incorrect_tense",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "The principle at work held that the cell pressure is greater",
+        "replace": "The principle at work holds that the cell pressure is greater"
+      }
+    },
+    {
+      "id": "issue-36",
+      "category": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+      "paragraphId": "koSoYu",
+      "description": "Replace a technical noun with a visually similar but incorrect near-neighbor word.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homograph_or_near_neighbor_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "the greatest control is the size and location of the trail.",
+        "replace": "the greatest control is the size and location of the tail."
+      }
+    }
+  ]
+}

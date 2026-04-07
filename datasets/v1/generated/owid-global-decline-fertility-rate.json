@@ -1,0 +1,1127 @@
+{
+  "id": "owid-global-decline-fertility-rate",
+  "instruction": "Proofread the document. Fix the known spelling, grammar, punctuation, word-choice, and style mistakes while preserving meaning, tone, paragraph ids, and intentional wording everywhere else.",
+  "sourcePath": "owid-global-decline-fertility-rate-corrupted.txt",
+  "issues": [
+    {
+      "id": "issue-01",
+      "category": "grammar_and_syntax.countability_error",
+      "paragraphId": "O6JNtY",
+      "description": "The mass noun 'data' is incorrectly treated as a count noun by adding an article 'a' before it, creating a countability error.",
+      "classification": {
+        "label": "grammar_and_syntax.countability_error",
+        "parent": "grammar_and_syntax",
+        "child": "countability_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "insertion",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "and many other countries for which we have a data.",
+        "replace": "and many other countries for which we have data."
+      }
+    },
+    {
+      "id": "issue-02",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "paragraphId": "5taaHL",
+      "description": "Homophone confusion: 'course' replaced with 'coarse', which sounds the same but means something entirely different (rough/textured vs. path/progression).",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homophone_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "rather than over the life coarse of a generation of women",
+        "replace": "rather than over the life course of a generation of women"
+      }
+    },
+    {
+      "id": "issue-03",
+      "category": "grammar_and_syntax.run_on_fused_sentence_or_comma_splice",
+      "paragraphId": "ygGqbk",
+      "description": "A comma splice joins two independent clauses ('The number has halved to below 2.5 children per woman' and 'You can also add any country...') — but more directly, within the paragraph about Iran, two independent clauses are fused with a comma splice. Specifically, the sentence about Thailand uses a semicolon correctly, but I will introduce a comma splice in the paragraph about the global fertility rate decline.",
+      "classification": {
+        "label": "grammar_and_syntax.run_on_fused_sentence_or_comma_splice",
+        "parent": "grammar_and_syntax",
+        "child": "run_on_fused_sentence_or_comma_splice",
+        "severity": "major",
+        "editScope": "sentence",
+        "operationType": "boundary_error",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "The global fertility rate was 5 children per woman up to 1965, since then, we have seen an unprecedented change.",
+        "replace": "The global fertility rate was 5 children per woman up to 1965. Since then, we have seen an unprecedented change."
+      }
+    },
+    {
+      "id": "issue-04",
+      "category": "grammar_and_syntax.preposition_error",
+      "paragraphId": "VFEgxr",
+      "description": "Wrong preposition: 'in check' should be 'in check', but 'population growth in check' was changed to use 'on' instead of 'in', which is the wrong preposition in the fixed expression 'keep in check'.",
+      "classification": {
+        "label": "grammar_and_syntax.preposition_error",
+        "parent": "grammar_and_syntax",
+        "child": "preposition_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "very high mortality that kept population growth on check. In the new balance",
+        "replace": "very high mortality that kept population growth in check. In the new balance"
+      }
+    },
+    {
+      "id": "issue-05",
+      "category": "orthography_and_word_form.capitalization_error",
+      "paragraphId": "VQl8Sq",
+      "description": "Capitalization error: 'tiny' should be capitalized to 'Tiny' as it incorrectly appears in lowercase when referring to a country descriptor mid-sentence, but more precisely, 'Luxembourg' is a proper noun and 'tiny' is just an adjective—however, introducing an error by lowercasing the proper noun 'Luxembourg' to 'luxembourg' creates a clear capitalization mistake.",
+      "classification": {
+        "label": "orthography_and_word_form.capitalization_error",
+        "parent": "orthography_and_word_form",
+        "child": "capitalization_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "there was only one country in the world with a fertility rate below 2: tiny luxembourg.",
+        "replace": "there was only one country in the world with a fertility rate below 2: tiny Luxembourg."
+      }
+    },
+    {
+      "id": "issue-06",
+      "category": "grammar_and_syntax.comparative_or_superlative_error",
+      "paragraphId": "WfBLdl",
+      "description": "Incorrect comparative form: 'more than 5 children' changed to 'most than 5 children', creating a comparative/superlative error by confusing 'more' with 'most'.",
+      "classification": {
+        "label": "grammar_and_syntax.comparative_or_superlative_error",
+        "parent": "grammar_and_syntax",
+        "child": "comparative_or_superlative_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "where women, on average, have still most than 5 children.",
+        "replace": "where women, on average, have still more than 5 children."
+      }
+    },
+    {
+      "id": "issue-07",
+      "category": "grammar_and_syntax.extra_word",
+      "paragraphId": "QRNENv",
+      "description": "An unnecessary article 'the' is inserted before 'fertility' where the original text correctly omits it, creating a grammatical error with an extra word.",
+      "classification": {
+        "label": "grammar_and_syntax.extra_word",
+        "parent": "grammar_and_syntax",
+        "child": "extra_word",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "insertion",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "It took Iran only 10 years for the fertility to fall from more than 6 children",
+        "replace": "It took Iran only 10 years for fertility to fall from more than 6 children"
+      }
+    },
+    {
+      "id": "issue-08",
+      "category": "grammar_and_syntax.subject_verb_agreement",
+      "paragraphId": "W9aElY",
+      "description": "The verb 'take' is in present tense but the sentence describes a historical pattern observed in the 19th century, which requires past tense 'took' to be consistent with the surrounding past-tense discourse.",
+      "classification": {
+        "label": "grammar_and_syntax.subject_verb_agreement",
+        "parent": "grammar_and_syntax",
+        "child": "subject_verb_agreement",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "those countries that first experienced social change takes much longer for transitions",
+        "replace": "those countries that first experience social change take much longer for transitions"
+      }
+    },
+    {
+      "id": "issue-09",
+      "category": "orthography_and_word_form.incorrect_conjugation",
+      "paragraphId": "W9aElY",
+      "description": "The verb 'catch' is incorrectly conjugated as the past tense 'caught' instead of the present tense 'catch' in the phrase 'those who catch up later'. By changing 'catch' to 'caught', it creates an incorrect tense that doesn't match the present-tense framing of the general pattern being described.",
+      "classification": {
+        "label": "orthography_and_word_form.incorrect_conjugation",
+        "parent": "orthography_and_word_form",
+        "child": "incorrect_conjugation",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "than those who caught up later. Countries that were catching",
+        "replace": "than those who catch up later. Countries that were catching"
+      }
+    },
+    {
+      "id": "issue-10",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "paragraphId": "BPOFpN",
+      "description": "Homophone confusion: 'borne' (meaning carried/endured) is replaced with 'born' (meaning brought into existence), which sounds the same but is incorrect in this context.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homophone_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "the opportunity costs in particular are mostly born on the mother's part",
+        "replace": "the opportunity costs in particular are mostly borne on the mother's part"
+      }
+    },
+    {
+      "id": "issue-11",
+      "category": "grammar_and_syntax.pronoun_agreement",
+      "paragraphId": "Gdkxpx",
+      "description": "The pronoun 'who' is used to refer to 'countries' (which are not people), so it should be 'that'. However, the target class is pronoun_agreement, and a clearer error is changing 'their' to 'its' to create a pronoun-antecedent agreement mismatch with the plural 'women'.",
+      "classification": {
+        "label": "grammar_and_syntax.pronoun_agreement",
+        "parent": "grammar_and_syntax",
+        "child": "pronoun_agreement",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "better-educated women to reduce the gap between her desired number of children",
+        "replace": "better-educated women to reduce the gap between their desired number of children"
+      }
+    },
+    {
+      "id": "issue-12",
+      "category": "grammar_and_syntax.preposition_error",
+      "paragraphId": "Ftuh8R",
+      "description": "Wrong preposition: 'associated with' is the correct collocation, but 'associated to' is used, which is a common preposition error.",
+      "classification": {
+        "label": "grammar_and_syntax.preposition_error",
+        "parent": "grammar_and_syntax",
+        "child": "preposition_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "higher education for women is associated to lower fertility",
+        "replace": "higher education for women is associated with lower fertility"
+      }
+    },
+    {
+      "id": "issue-13",
+      "category": "grammar_and_syntax.pronoun_agreement",
+      "paragraphId": "sCF6m1",
+      "description": "The pronoun 'they' is changed to 'it', creating a pronoun agreement error where the singular pronoun 'it' does not match the plural antecedent 'women'.",
+      "classification": {
+        "label": "grammar_and_syntax.pronoun_agreement",
+        "parent": "grammar_and_syntax",
+        "child": "pronoun_agreement",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "As we would expect from the theory above, it have had much fewer children.",
+        "replace": "As we would expect from the theory above, they have had much fewer children."
+      }
+    },
+    {
+      "id": "issue-14",
+      "category": "orthography_and_word_form.transposition",
+      "paragraphId": "d5OLLI",
+      "description": "Transposition of letters in the word 'from' resulting in 'form', a classic letter-swap typo.",
+      "classification": {
+        "label": "orthography_and_word_form.transposition",
+        "parent": "orthography_and_word_form",
+        "child": "transposition",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "transposition",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "far form conclusive evidence that education actually",
+        "replace": "far from conclusive evidence that education actually"
+      }
+    },
+    {
+      "id": "issue-15",
+      "category": "grammar_and_syntax.negation_scope_error",
+      "paragraphId": "kn8zgk",
+      "description": "Negation scope error: 'not only look at two variables but also control for' should scope the negation over the limitation (only looking at two variables), but the corrupted version moves the negation to scope over the controlling action, reversing which part of the sentence is negated.",
+      "classification": {
+        "label": "grammar_and_syntax.negation_scope_error",
+        "parent": "grammar_and_syntax",
+        "child": "negation_scope_error",
+        "severity": "major",
+        "editScope": "clause",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "they only look at two variables but also do not control for possibly confounding variables",
+        "replace": "they not only look at two variables but also control for possibly confounding variables"
+      }
+    },
+    {
+      "id": "issue-16",
+      "category": "grammar_and_syntax.subject_verb_agreement",
+      "paragraphId": "AzB8W1",
+      "description": "The verb 'have' does not agree with the singular subject 'A substantial reason'. It should be 'has' to match the singular noun phrase.",
+      "classification": {
+        "label": "grammar_and_syntax.subject_verb_agreement",
+        "parent": "grammar_and_syntax",
+        "child": "subject_verb_agreement",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "A substantial reason why the fertility rates in these countries are so very high are just that very few women have",
+        "replace": "A substantial reason why the fertility rates in these countries are so very high is just that very few women have"
+      }
+    },
+    {
+      "id": "issue-17",
+      "category": "lexical_choice_and_confusability.idiom_error",
+      "paragraphId": "274VaY",
+      "description": "The idiom 'laid out above' is garbled to 'laid down above', mixing up the phrasal verb. The correct idiom for presenting/explaining something is 'laid out', not 'laid down'.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.idiom_error",
+        "parent": "lexical_choice_and_confusability",
+        "child": "idiom_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "by the same framework proposed by Gary Becker that I laid down above.",
+        "replace": "by the same framework proposed by Gary Becker that I laid out above."
+      }
+    },
+    {
+      "id": "issue-18",
+      "category": "orthography_and_word_form.transposition",
+      "paragraphId": "XwI51j",
+      "description": "The word 'from' is transposed to 'form', a classic letter-swap typo.",
+      "classification": {
+        "label": "orthography_and_word_form.transposition",
+        "parent": "orthography_and_word_form",
+        "child": "transposition",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "transposition",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "women to work in professions form which women were previously",
+        "replace": "women to work in professions from which women were previously"
+      }
+    },
+    {
+      "id": "issue-19",
+      "category": "grammar_and_syntax.parallelism_error",
+      "paragraphId": "ljl4q8",
+      "description": "Parallelism error: In a list of coordinated elements ('to either enter the labor market or obtain more education'), the infinitive structure is parallel. However, changing 'obtain' to 'obtaining' breaks the parallel structure with the preceding infinitive 'enter'.",
+      "classification": {
+        "label": "grammar_and_syntax.parallelism_error",
+        "parent": "grammar_and_syntax",
+        "child": "parallelism_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "young women chose to either enter the labor market or obtaining more education",
+        "replace": "young women chose to either enter the labor market or obtain more education"
+      }
+    },
+    {
+      "id": "issue-20",
+      "category": "lexical_choice_and_confusability.misused_word",
+      "paragraphId": "n6Xc8f",
+      "description": "The word 'outside' is replaced with 'outisde', but more fittingly, the phrase 'outside options for having more children' uses the wrong preposition/word. Actually, let me reconsider. The target class is 'misused_word'. The phrase 'With more outside options for having more children' should use a different word than 'for' — the intended meaning is that having more children competes with outside options, so 'for' should be something like 'than' or 'to'. But wait, looking more carefully, the original text says 'With more outside options for having more children' — I need to corrupt it with a misused word. Let me change 'outside' to 'outsize' which is a real word but wrong here.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.misused_word",
+        "parent": "lexical_choice_and_confusability",
+        "child": "misused_word",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "With more outsize options for having more children, women have increasingly",
+        "replace": "With more outside options for having more children, women have increasingly"
+      }
+    },
+    {
+      "id": "issue-21",
+      "category": "lexical_choice_and_confusability.eggcorn",
+      "paragraphId": "6IoaQu",
+      "description": "Eggcorn: 'virtuous cycles' is replaced with 'virtual cycles', a plausible-seeming folk reanalysis where 'virtual' (meaning near/almost) replaces 'virtuous' (meaning morally good/beneficial). This is a classic eggcorn where the substituted form has its own semantic logic.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.eggcorn",
+        "parent": "lexical_choice_and_confusability",
+        "child": "eggcorn",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "This can lead to virtual cycles since lower fertility",
+        "replace": "This can lead to virtuous cycles since lower fertility"
+      }
+    },
+    {
+      "id": "issue-22",
+      "category": "punctuation_and_boundaries.sentence_boundary_error",
+      "paragraphId": "smnIzA",
+      "description": "A period is replaced with a comma, incorrectly merging two separate sentences into one run-on sentence. The second sentence ('This makes clear...') is improperly joined to the first.",
+      "classification": {
+        "label": "punctuation_and_boundaries.sentence_boundary_error",
+        "parent": "punctuation_and_boundaries",
+        "child": "sentence_boundary_error",
+        "severity": "major",
+        "editScope": "sentence",
+        "operationType": "boundary_error",
+        "createsValidWord": null,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "desirable in their own right, this makes clear that one",
+        "replace": "desirable in their own right. This makes clear that one"
+      }
+    },
+    {
+      "id": "issue-23",
+      "category": "orthography_and_word_form.nonword_spelling_error",
+      "paragraphId": "r1lQsJ",
+      "description": "Misspelling of 'correlation' as 'corrlation', creating a nonword.",
+      "classification": {
+        "label": "orthography_and_word_form.nonword_spelling_error",
+        "parent": "orthography_and_word_form",
+        "child": "nonword_spelling_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "omission",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "we can see the corrlation that we expect. Countries with high",
+        "replace": "we can see the correlation that we expect. Countries with high"
+      }
+    },
+    {
+      "id": "issue-24",
+      "category": "orthography_and_word_form.nonword_spelling_error",
+      "paragraphId": "slDGvt",
+      "description": "Misspelling of 'emphasized' as 'empahsized', creating a nonword through transposition of letters.",
+      "classification": {
+        "label": "orthography_and_word_form.nonword_spelling_error",
+        "parent": "orthography_and_word_form",
+        "child": "nonword_spelling_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "An aspect empahsized already is that the high number",
+        "replace": "An aspect emphasized already is that the high number"
+      }
+    },
+    {
+      "id": "issue-25",
+      "category": "orthography_and_word_form.omission",
+      "paragraphId": "GUmWlE",
+      "description": "Omission of the letter 'l' in 'closely', resulting in the misspelling 'closey'.",
+      "classification": {
+        "label": "orthography_and_word_form.omission",
+        "parent": "orthography_and_word_form",
+        "child": "omission",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "omission",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "Technological changes were closey tied to political changes.",
+        "replace": "Technological changes were closely tied to political changes."
+      }
+    },
+    {
+      "id": "issue-26",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "paragraphId": "O9m99Z",
+      "description": "Homophone confusion: 'led' (past tense of 'lead') replaced with 'lead' (a different word that sounds the same in some pronunciations but is incorrect here as past tense).",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homophone_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "These government policies reduced the fertility rate and lead to faster economic growth",
+        "replace": "These government policies reduced the fertility rate and led to faster economic growth"
+      }
+    },
+    {
+      "id": "issue-27",
+      "category": "grammar_and_syntax.missing_word",
+      "paragraphId": "QsHZ1T",
+      "description": "The required article 'the' is omitted before 'decline' in the phrase 'contributed to the decline of fertility rates', creating a missing word error.",
+      "classification": {
+        "label": "grammar_and_syntax.missing_word",
+        "parent": "grammar_and_syntax",
+        "child": "missing_word",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "rising education contributed to decline of fertility rates derives again",
+        "replace": "rising education contributed to the decline of fertility rates derives again"
+      }
+    },
+    {
+      "id": "issue-28",
+      "category": "grammar_and_syntax.article_or_determiner_error",
+      "paragraphId": "xIOju3",
+      "description": "The article 'the' is incorrectly changed to 'a', creating a determiner error. The text refers to a specific tradeoff that was just described, so the definite article 'the' is required.",
+      "classification": {
+        "label": "grammar_and_syntax.article_or_determiner_error",
+        "parent": "grammar_and_syntax",
+        "child": "article_or_determiner_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "This tradeoff is described in a literature as parents' choice between",
+        "replace": "This tradeoff is described in the literature as parents' choice between"
+      }
+    },
+    {
+      "id": "issue-29",
+      "category": "grammar_and_syntax.preposition_error",
+      "paragraphId": "vvp4iG",
+      "description": "The preposition 'on' is incorrectly used instead of 'in' when referring to investments in education.",
+      "classification": {
+        "label": "grammar_and_syntax.preposition_error",
+        "parent": "grammar_and_syntax",
+        "child": "preposition_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "the value of investing on a child's education.",
+        "replace": "the value of investing in a child's education."
+      }
+    },
+    {
+      "id": "issue-30",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "paragraphId": "jpZeps",
+      "description": "Homophone confusion: 'back' replaced with 'bach', but more fittingly, 'lack' replaced with the homophone-like 'lacked' doesn't work. Instead, replacing 'role' with 'roll' — a classic homophone confusion.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homophone_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "this argument cannot have played a large roll before the onset",
+        "replace": "this argument cannot have played a large role before the onset"
+      }
+    },
+    {
+      "id": "issue-31",
+      "category": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+      "paragraphId": "LM63ad",
+      "description": "The word 'back' is confused with the near-neighbor 'bark', creating a visually similar but incorrect word choice.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homograph_or_near_neighbor_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "noted a lack of substantial empirical evidence to bark this widely accepted notion",
+        "replace": "noted a lack of substantial empirical evidence to back this widely accepted notion"
+      }
+    },
+    {
+      "id": "issue-32",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "CB0kGq",
+      "description": "Semantic anomaly: 'low' is replaced with 'high', making mortality described as high during the demographic transition period when the text specifically refers to a time when mortality had already fallen (low mortality + high fertility = population growth). This creates a factual/semantic contradiction.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "During the demographic transition — when mortality was high, and fertility was high",
+        "replace": "During the demographic transition — when mortality was low, and fertility was high"
+      }
+    },
+    {
+      "id": "issue-33",
+      "category": "lexical_choice_and_confusability.eggcorn",
+      "paragraphId": "yns2W8",
+      "description": "Eggcorn: 'in stark contrast' is corrupted to 'in start contrast', a misheard reanalysis where 'stark' (meaning 'complete/utter') is replaced by 'start' (beginning), which has a plausible-seeming folk-etymological motivation as the 'starting point' of a contrast.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.eggcorn",
+        "parent": "lexical_choice_and_confusability",
+        "child": "eggcorn",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "depicted in television shows are in start contrast to reality at home",
+        "replace": "depicted in television shows are in stark contrast to reality at home"
+      }
+    },
+    {
+      "id": "issue-34",
+      "category": "orthography_and_word_form.wrong_word_form",
+      "paragraphId": "3LzXFn",
+      "description": "Wrong word form: the adverb 'sharply' (modifying the verb 'contrasted') is incorrectly replaced with the adjective 'sharp', which cannot properly modify a verb.",
+      "classification": {
+        "label": "orthography_and_word_form.wrong_word_form",
+        "parent": "orthography_and_word_form",
+        "child": "wrong_word_form",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "which contrasted sharp with Brazil's actual fertility rate",
+        "replace": "which contrasted sharply with Brazil's actual fertility rate"
+      }
+    },
+    {
+      "id": "issue-35",
+      "category": "orthography_and_word_form.incorrect_conjugation",
+      "paragraphId": "A168ol",
+      "description": "Incorrect verb conjugation: 'describes' should be 'describe' to agree with the quoted subject phrase 'Family planning' used as a term being defined, but more precisely, the verb 'played' is changed to 'play' (present tense), breaking the past tense conjugation required by the context.",
+      "classification": {
+        "label": "orthography_and_word_form.incorrect_conjugation",
+        "parent": "orthography_and_word_form",
+        "child": "incorrect_conjugation",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "France was not just a pioneer in experiencing fertility decline but also play a crucial role",
+        "replace": "France was not just a pioneer in experiencing fertility decline but also played a crucial role"
+      }
+    },
+    {
+      "id": "issue-36",
+      "category": "orthography_and_word_form.duplication",
+      "paragraphId": "mTkaoT",
+      "description": "Unintentional duplication of the word 'the' in a sentence about fertility decline timing.",
+      "classification": {
+        "label": "orthography_and_word_form.duplication",
+        "parent": "orthography_and_word_form",
+        "child": "duplication",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "duplication",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "affected the timing of the the decline of the total fertility rate",
+        "replace": "affected the timing of the decline of the total fertility rate"
+      }
+    },
+    {
+      "id": "issue-37",
+      "category": "lexical_choice_and_confusability.idiom_error",
+      "paragraphId": "Qh0Jl8",
+      "description": "The idiom 'be fruitful and multiply' is a well-known biblical phrase. Replacing 'fruitful' with 'faithful' corrupts the idiom by substituting a similar-sounding but incorrect word, creating a misremembered idiomatic expression.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.idiom_error",
+        "parent": "lexical_choice_and_confusability",
+        "child": "idiom_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "teaches to \"be faithful and multiply and fill the earth and subdue it\"",
+        "replace": "teaches to \"be fruitful and multiply and fill the earth and subdue it\""
+      }
+    },
+    {
+      "id": "issue-38",
+      "category": "grammar_and_syntax.missing_word",
+      "paragraphId": "FwWDcx",
+      "description": "Missing required word 'of' omitted from the phrase 'the number of children they want', creating a grammatically incomplete construction.",
+      "classification": {
+        "label": "grammar_and_syntax.missing_word",
+        "parent": "grammar_and_syntax",
+        "child": "missing_word",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "all active efforts by individuals to choose the number children they want",
+        "replace": "all active efforts by individuals to choose the number of children they want"
+      }
+    },
+    {
+      "id": "issue-39",
+      "category": "orthography_and_word_form.incorrect_pluralization",
+      "paragraphId": "jzRrb1",
+      "description": "Incorrect pluralization: 'decades' should be singular 'decade' since the phrase 'at least two decades' is correct, but here the error is introduced elsewhere. Actually, let me reconsider. The phrase 'fertility rates in China had already more than halved' is fine. Let me find a better target. The phrase 'methods of contraception are available that are called \"modern contraceptive methods\"' — changing 'methods' to 'method' creates a clear pluralization error with the plural verb 'are' and the context.",
+      "classification": {
+        "label": "orthography_and_word_form.incorrect_pluralization",
+        "parent": "orthography_and_word_form",
+        "child": "incorrect_pluralization",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "a range of method of contraception are available that are called",
+        "replace": "a range of methods of contraception are available that are called"
+      }
+    },
+    {
+      "id": "issue-40",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "gLzR1S",
+      "description": "The word 'declining' is replaced with 'inclining', which is semantically incompatible with the context about fertility rates going down in Bangladesh.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "studied the inclining fertility rate in Bangladesh",
+        "replace": "studied the declining fertility rate in Bangladesh"
+      }
+    },
+    {
+      "id": "issue-41",
+      "category": "lexical_choice_and_confusability.misused_word",
+      "paragraphId": "gLzR1S",
+      "description": "The word 'feasibility' is replaced with 'visibility', which is semantically incompatible in this context. The sentence discusses attitudes toward whether birth control is practical and achievable (feasibility), not whether it can be seen (visibility).",
+      "classification": {
+        "label": "lexical_choice_and_confusability.misused_word",
+        "parent": "lexical_choice_and_confusability",
+        "child": "misused_word",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "changes in attitudes toward the visibility and acceptability of birth control were pivotal",
+        "replace": "changes in attitudes toward the feasibility and acceptability of birth control were pivotal"
+      }
+    },
+    {
+      "id": "issue-42",
+      "category": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+      "paragraphId": "Z3e6Or",
+      "description": "The idiom 'take into account' is corrupted to 'take into affect', misusing a near-neighbor word in the idiomatic expression.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homograph_or_near_neighbor_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "If one takes into affect the substantial impact of modern contraceptive methods",
+        "replace": "If one takes into account the substantial impact of modern contraceptive methods"
+      }
+    },
+    {
+      "id": "issue-43",
+      "category": "orthography_and_word_form.hyphenation_or_compounding_error",
+      "paragraphId": "9OsUQ5",
+      "description": "The compound adjective 'one-child' modifying 'policy' should be hyphenated, but the hyphen has been removed, creating a compounding error.",
+      "classification": {
+        "label": "orthography_and_word_form.hyphenation_or_compounding_error",
+        "parent": "orthography_and_word_form",
+        "child": "hyphenation_or_compounding_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "boundary_error",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "China promoted family planning policy in the 1960s and 70s, but the one child policy was implemented",
+        "replace": "China promoted family planning policy in the 1960s and 70s, but the one-child policy was implemented"
+      }
+    },
+    {
+      "id": "issue-44",
+      "category": "grammar_and_syntax.relative_clause_error",
+      "paragraphId": "tlGMKE",
+      "description": "Incorrect subordination: 'that' is replaced with 'which' without a comma, creating a malformed relative clause that conflates restrictive and non-restrictive usage incorrectly.",
+      "classification": {
+        "label": "grammar_and_syntax.relative_clause_error",
+        "parent": "grammar_and_syntax",
+        "child": "relative_clause_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "fertility rates in China had already more than halved. The huge reduction in fertility happened irrespective of the one-child policy. Child mortality — who we saw as an important determinant of fertility — had already halved from 12% in 1969 to 6% in 1980.",
+        "replace": "fertility rates in China had already more than halved. The huge reduction in fertility happened irrespective of the one-child policy. Child mortality — which we saw as an important determinant of fertility — had already halved from 12% in 1969 to 6% in 1980."
+      }
+    },
+    {
+      "id": "issue-45",
+      "category": "grammar_and_syntax.incorrect_tense",
+      "paragraphId": "JAvyYa",
+      "description": "The verb tense 'decline' is incorrectly changed to 'declined' (past tense), which does not fit the present-tense generalization being made about what happens as a country develops. The surrounding context uses present tense ('develops', 'grow') to describe a general pattern, so past tense 'declined' is clearly wrong.",
+      "classification": {
+        "label": "grammar_and_syntax.incorrect_tense",
+        "parent": "grammar_and_syntax",
+        "child": "incorrect_tense",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "child mortality declines and incomes grow — fertility rates declined rapidly",
+        "replace": "child mortality declines and incomes grow — fertility rates decline rapidly"
+      }
+    },
+    {
+      "id": "issue-46",
+      "category": "orthography_and_word_form.fat_finger_typo",
+      "paragraphId": "Shvt5y",
+      "description": "Fat finger typo: 'ameliorating' is mistyped as 'amelioratin' by accidentally hitting 'n' instead of 'ng' at the end, creating a nonword.",
+      "classification": {
+        "label": "orthography_and_word_form.fat_finger_typo",
+        "parent": "orthography_and_word_form",
+        "child": "fat_finger_typo",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "substitution",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "has the potential to slow the rates of population aging, thereby amelioratinf the social",
+        "replace": "has the potential to slow the rates of population aging, thereby ameliorating the social"
+      }
+    },
+    {
+      "id": "issue-47",
+      "category": "orthography_and_word_form.incorrect_conjugation",
+      "paragraphId": "iGxl99",
+      "description": "The verb 'was' is incorrectly conjugated as 'were', creating a subject-verb agreement error with the singular subject 'woman'.",
+      "classification": {
+        "label": "orthography_and_word_form.incorrect_conjugation",
+        "parent": "orthography_and_word_form",
+        "child": "incorrect_conjugation",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "the representative woman were to survive from birth through the end",
+        "replace": "the representative woman was to survive from birth through the end"
+      }
+    },
+    {
+      "id": "issue-48",
+      "category": "punctuation_and_boundaries.quotation_or_delimiter_error",
+      "paragraphId": "PxaAcV",
+      "description": "Missing closing parenthesis in the delimiter pair around 'i.e., one year', creating a quotation/delimiter error.",
+      "classification": {
+        "label": "punctuation_and_boundaries.quotation_or_delimiter_error",
+        "parent": "punctuation_and_boundaries",
+        "child": "quotation_or_delimiter_error",
+        "severity": "major",
+        "editScope": "character",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "age-specific mortality rates at one point in time (i.e., one year and then ask:",
+        "replace": "age-specific mortality rates at one point in time (i.e., one year) and then ask:"
+      }
+    },
+    {
+      "id": "issue-49",
+      "category": "grammar_and_syntax.relative_clause_error",
+      "paragraphId": "XCiEN6",
+      "description": "The relative clause uses an incorrect relative marker 'who' instead of 'that' to refer to 'countries', creating a malformed relative clause. While 'who' is used for people, 'countries' requires 'that' or 'where' depending on the construction.",
+      "classification": {
+        "label": "grammar_and_syntax.relative_clause_error",
+        "parent": "grammar_and_syntax",
+        "child": "relative_clause_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "lives in countries who each woman has, on average, fewer than 2 children",
+        "replace": "lives in countries where each woman has, on average, fewer than 2 children"
+      }
+    },
+    {
+      "id": "issue-50",
+      "category": "orthography_and_word_form.insertion",
+      "paragraphId": "OHo5AH",
+      "description": "An extra word 'the' is inserted before 'fertility', creating an ungrammatical phrase 'analyzing the effects of mortality on the fertility'.",
+      "classification": {
+        "label": "orthography_and_word_form.insertion",
+        "parent": "orthography_and_word_form",
+        "child": "insertion",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "insertion",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "analyzing the effects of mortality on the fertility.\" Journal of Population",
+        "replace": "analyzing the effects of mortality on fertility.\" Journal of Population"
+      }
+    },
+    {
+      "id": "issue-51",
+      "category": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+      "paragraphId": "tZA78a",
+      "description": "The word 'Explorations' is replaced with 'Explanations', a visually similar word that is incorrect as the journal name.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homograph_or_near_neighbor_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "Old-Age Security Motives, Labor Markets, and Farm Family Fertility in Antebellum American.\" Explanations in Economic History 25, no. 2",
+        "replace": "Old-Age Security Motives, Labor Markets, and Farm Family Fertility in Antebellum American.\" Explorations in Economic History 25, no. 2"
+      }
+    },
+    {
+      "id": "issue-52",
+      "category": "grammar_and_syntax.incorrect_tense",
+      "paragraphId": "h0hpIh",
+      "description": "Incorrect tense: 'was published' should be 'were published' to agree with the plural subject 'data'. However, the more natural error here is changing the past tense 'was published' to present tense 'is published', which does not fit the discourse context describing a historical event (publication in 1986).",
+      "classification": {
+        "label": "grammar_and_syntax.incorrect_tense",
+        "parent": "grammar_and_syntax",
+        "child": "incorrect_tense",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "The original data is published by Coale and Watkins (1986).",
+        "replace": "The original data was published by Coale and Watkins (1986)."
+      }
+    },
+    {
+      "id": "issue-53",
+      "category": "grammar_and_syntax.pronoun_agreement",
+      "paragraphId": "rWLr3Y",
+      "description": "The pronoun 'it' referring to 'the year 2012' is fine, but the pronoun 'These' referring to '85 million pregnancies' should be 'This' since the sentence is about the count (a singular concept). However, a more clearly wrong pronoun agreement error can be introduced by changing 'those' (referring to plural 'pregnancies/births') to 'that' in the final paragraph.",
+      "classification": {
+        "label": "grammar_and_syntax.pronoun_agreement",
+        "parent": "grammar_and_syntax",
+        "child": "pronoun_agreement",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "Unplanned births include that occurring two or more years sooner than desired",
+        "replace": "Unplanned births include those occurring two or more years sooner than desired"
+      }
+    },
+    {
+      "id": "issue-54",
+      "category": "punctuation_and_boundaries.apostrophe_error",
+      "paragraphId": "IkTJ10",
+      "description": "Apostrophe error: the possessive 'Women's' in the title is corrupted to 'Womens' (missing apostrophe).",
+      "classification": {
+        "label": "punctuation_and_boundaries.apostrophe_error",
+        "parent": "punctuation_and_boundaries",
+        "child": "apostrophe_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "omission",
+        "createsValidWord": false,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "Family Planning and Womens and Children's Health: Long-Term Consequences",
+        "replace": "Family Planning and Women's and Children's Health: Long-Term Consequences"
+      }
+    },
+    {
+      "id": "issue-55",
+      "category": "orthography_and_word_form.real_word_spelling_error",
+      "paragraphId": "oU88pG",
+      "description": "The word 'reverse' is replaced with 'reserve', a real-word spelling error that changes the meaning. The original states that advances in development 'reverse' fertility declines, but 'reserve' is a different valid word that makes no sense in this context.",
+      "classification": {
+        "label": "orthography_and_word_form.real_word_spelling_error",
+        "parent": "orthography_and_word_form",
+        "child": "real_word_spelling_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "Advances in development reserve fertility declines. Nature 460",
+        "replace": "Advances in development reverse fertility declines. Nature 460"
+      }
+    },
+    {
+      "id": "issue-56",
+      "category": "grammar_and_syntax.coordination_or_subordination_error",
+      "paragraphId": "joCYGZ",
+      "description": "Changed 'and' to 'but' between two coordinated clauses that should be linked with a simple additive conjunction, creating an incorrect subordination/coordination relationship.",
+      "classification": {
+        "label": "grammar_and_syntax.coordination_or_subordination_error",
+        "parent": "grammar_and_syntax",
+        "child": "coordination_or_subordination_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "You have the permission to use, distribute, but reproduce these in any medium, provided the source and authors are credited.",
+        "replace": "You have the permission to use, distribute, and reproduce these in any medium, provided the source and authors are credited."
+      }
+    }
+  ]
+}

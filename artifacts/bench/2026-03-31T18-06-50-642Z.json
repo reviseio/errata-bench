@@ -1,0 +1,139 @@
+{
+  "version": "v1",
+  "matrixId": "2026-03-31T18-06-50-642Z",
+  "createdAt": "2026-03-31T18:06:53.097Z",
+  "datasetPath": "/Users/artur/work/errata-bench/datasets/v1/tool-editing-baseline.json",
+  "judgeModel": null,
+  "runs": 1,
+  "models": [
+    "openai/gpt-5.4-mini"
+  ],
+  "attempts": [
+    {
+      "model": "openai/gpt-5.4-mini",
+      "runNumber": 1,
+      "succeeded": true,
+      "error": null,
+      "runId": "2026-03-31T18-06-50-643Z",
+      "runArtifact": "/Users/artur/work/errata-bench/artifacts/runs/2026-03-31T18-06-50-643Z--tool-editing-baseline--openai-gpt-5-4-mini.json",
+      "reportArtifact": "/Users/artur/work/errata-bench/artifacts/reports/2026-03-31T18-06-50-643Z--tool-editing-baseline--openai-gpt-5-4-mini.json",
+      "correctedIssues": 5,
+      "totalIssues": 5,
+      "fullIssueCoverageCases": 1,
+      "totalCases": 1,
+      "totalOutputTokens": 160,
+      "totalDurationMs": 2447,
+      "correctionsPerOutputToken": 0.03125,
+      "judgePassedCases": null,
+      "judgeResolvedIssues": null,
+      "judgeTotalIssues": null,
+      "judgeUnnecessaryChanges": null,
+      "judgeCollateralDamage": null,
+      "judgeAverageRestraintScore": null,
+      "judgeAverageResolvedIssuesPer100OutputTokens": null,
+      "judgeAverageQualityScore": null,
+      "judgeAverageBenchmarkScore": null,
+      "qualityAxis": 1,
+      "restraintAxis": null,
+      "efficiencyAxis": 3.125,
+      "speedAxis": 122.59910093992644,
+      "candidateCostUsd": 0.00187725,
+      "judgeCostUsd": 0,
+      "totalCostUsd": 0.00187725
+    }
+  ],
+  "aggregates": [
+    {
+      "model": "openai/gpt-5.4-mini",
+      "totalRuns": 1,
+      "succeededRuns": 1,
+      "failedRuns": 0,
+      "successRate": 1,
+      "runIds": [
+        "2026-03-31T18-06-50-643Z"
+      ],
+      "runScoreSeries": [
+        null
+      ],
+      "runQualitySeries": [
+        1
+      ],
+      "meanCorrectedIssues": 5,
+      "meanTotalIssues": 5,
+      "meanFullIssueCoverageCases": 1,
+      "meanTotalCases": 1,
+      "meanTotalOutputTokens": 160,
+      "meanTotalDurationMs": 2447,
+      "meanCorrectionsPerOutputToken": 0.03125,
+      "meanJudgePassedCases": null,
+      "meanJudgeResolvedIssues": null,
+      "meanJudgeTotalIssues": null,
+      "meanJudgeUnnecessaryChanges": null,
+      "meanJudgeCollateralDamage": null,
+      "meanJudgeAverageRestraintScore": null,
+      "meanJudgeAverageResolvedIssuesPer100OutputTokens": null,
+      "meanJudgeAverageQualityScore": null,
+      "meanJudgeAverageBenchmarkScore": null,
+      "meanCandidateCostUsd": 0.00187725,
+      "meanJudgeCostUsd": 0,
+      "meanTotalCostUsd": 0.00187725,
+      "qualityAxis": 1,
+      "restraintAxis": null,
+      "efficiencyAxis": 3.125,
+      "speedAxis": 122.59910093992644,
+      "costAxisUsd": 0.00187725,
+      "stabilityAxis": 1,
+      "stdevJudgeAverageQualityScore": 0,
+      "stdevJudgeAverageBenchmarkScore": null,
+      "bestJudgeAverageBenchmarkScore": null,
+      "worstJudgeAverageBenchmarkScore": null
+    }
+  ],
+  "ranking": [
+    {
+      "model": "openai/gpt-5.4-mini",
+      "totalRuns": 1,
+      "succeededRuns": 1,
+      "failedRuns": 0,
+      "successRate": 1,
+      "runIds": [
+        "2026-03-31T18-06-50-643Z"
+      ],
+      "runScoreSeries": [
+        null
+      ],
+      "runQualitySeries": [
+        1
+      ],
+      "meanCorrectedIssues": 5,
+      "meanTotalIssues": 5,
+      "meanFullIssueCoverageCases": 1,
+      "meanTotalCases": 1,
+      "meanTotalOutputTokens": 160,
+      "meanTotalDurationMs": 2447,
+      "meanCorrectionsPerOutputToken": 0.03125,
+      "meanJudgePassedCases": null,
+      "meanJudgeResolvedIssues": null,
+      "meanJudgeTotalIssues": null,
+      "meanJudgeUnnecessaryChanges": null,
+      "meanJudgeCollateralDamage": null,
+      "meanJudgeAverageRestraintScore": null,
+      "meanJudgeAverageResolvedIssuesPer100OutputTokens": null,
+      "meanJudgeAverageQualityScore": null,
+      "meanJudgeAverageBenchmarkScore": null,
+      "meanCandidateCostUsd": 0.00187725,
+      "meanJudgeCostUsd": 0,
+      "meanTotalCostUsd": 0.00187725,
+      "qualityAxis": 1,
+      "restraintAxis": null,
+      "efficiencyAxis": 3.125,
+      "speedAxis": 122.59910093992644,
+      "costAxisUsd": 0.00187725,
+      "stabilityAxis": 1,
+      "stdevJudgeAverageQualityScore": 0,
+      "stdevJudgeAverageBenchmarkScore": null,
+      "bestJudgeAverageBenchmarkScore": null,
+      "worstJudgeAverageBenchmarkScore": null
+    }
+  ]
+}

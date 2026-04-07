@@ -1,0 +1,62 @@
+{
+  "version": "v1",
+  "runId": "2026-03-31T00-59-28-648Z",
+  "createdAt": "2026-03-31T00:59:33.639Z",
+  "summary": {
+    "totalCases": 1,
+    "exactDocumentMatches": 0,
+    "totalIssues": 3,
+    "correctedIssues": 2,
+    "averageIssueCoverage": 0.6666666666666666,
+    "totalOutputTokens": 204,
+    "averageOutputTokensPerCase": 204,
+    "correctionsPerOutputToken": 0.00980392156862745
+  },
+  "cases": [
+    {
+      "caseId": "tool-editing-silly-001",
+      "exactDocumentMatch": false,
+      "correctedIssueCount": 2,
+      "totalIssueCount": 3,
+      "issueCoverage": 0.6666666666666666,
+      "outputTokens": 204,
+      "promptTokens": 4026,
+      "correctionsPerOutputToken": 0.00980392156862745,
+      "tokensPerCorrectedIssue": 102,
+      "expectedChangedParagraphIds": [
+        "p1",
+        "p2"
+      ],
+      "actualChangedParagraphIds": [
+        "p1",
+        "p2"
+      ],
+      "unexpectedParagraphChanges": [],
+      "issues": [
+        {
+          "issueId": "issue-p1-dinasaur",
+          "category": "non_word_typo",
+          "paragraphId": "p1",
+          "description": "Correct dinasaur to dinosaur.",
+          "corrected": true
+        },
+        {
+          "issueId": "issue-p1-teh",
+          "category": "non_word_typo",
+          "paragraphId": "p1",
+          "description": "Correct teh to the.",
+          "corrected": true
+        },
+        {
+          "issueId": "issue-p2-grammar",
+          "category": "paragraph_rewrite",
+          "paragraphId": "p2",
+          "description": "Repair the paragraph's grammar without changing its meaning.",
+          "corrected": false
+        }
+      ],
+      "finalDocumentHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"p2\">I have written an apology note, but it still sounds ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+      "expectedDocumentHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"p2\">I wrote an apology note, but it still sounds ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>"
+    }
+  ]
+}

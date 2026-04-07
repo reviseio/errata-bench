@@ -1,0 +1,133 @@
+{
+  "version": "v1",
+  "runId": "2026-03-31T03-26-53-367Z",
+  "createdAt": "2026-03-31T03:26:58.973Z",
+  "summary": {
+    "totalCases": 1,
+    "exactDocumentMatches": 0,
+    "casesWithFullIssueCoverage": 0,
+    "totalIssues": 5,
+    "correctedIssues": 4,
+    "averageIssueCoverage": 0.8,
+    "totalOutputTokens": 201,
+    "averageOutputTokensPerCase": 201,
+    "correctionsPerOutputToken": 0.01990049751243781,
+    "judge": {
+      "judgeModel": "openai/gpt-5.4-mini",
+      "casesPassed": 1,
+      "casesWithNewErrors": 0,
+      "unnecessaryChanges": 0,
+      "collateralDamageCount": 0,
+      "resolvedIssues": 5,
+      "totalIssues": 5,
+      "averageQualityScore": 1,
+      "averageBenchmarkScore": 102.3041474654378
+    }
+  },
+  "cases": [
+    {
+      "caseId": "tool-editing-silly-001",
+      "exactDocumentMatch": false,
+      "correctedIssueCount": 4,
+      "totalIssueCount": 5,
+      "issueCoverage": 0.8,
+      "outputTokens": 201,
+      "promptTokens": 4047,
+      "correctionsPerOutputToken": 0.01990049751243781,
+      "tokensPerCorrectedIssue": 50.25,
+      "expectedChangedParagraphIds": [
+        "p1",
+        "p2"
+      ],
+      "actualChangedParagraphIds": [
+        "p1",
+        "p2"
+      ],
+      "unexpectedParagraphChanges": [],
+      "issues": [
+        {
+          "issueId": "issue-p1-dinasaur",
+          "category": "non_word_typo",
+          "paragraphId": "p1",
+          "description": "Correct dinasaur to dinosaur.",
+          "corrected": true
+        },
+        {
+          "issueId": "issue-p1-teh",
+          "category": "non_word_typo",
+          "paragraphId": "p1",
+          "description": "Correct teh to the.",
+          "corrected": true
+        },
+        {
+          "issueId": "issue-p2-has-wrote",
+          "category": "verb_form",
+          "paragraphId": "p2",
+          "description": "Correct has wrote to wrote.",
+          "corrected": false
+        },
+        {
+          "issueId": "issue-p2-a-apology",
+          "category": "article",
+          "paragraphId": "p2",
+          "description": "Correct a apology to an apology.",
+          "corrected": true
+        },
+        {
+          "issueId": "issue-p2-sound",
+          "category": "agreement",
+          "paragraphId": "p2",
+          "description": "Correct sound to sounds.",
+          "corrected": true
+        }
+      ],
+      "finalDocumentHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"p2\">I have written an apology note, but it still sounds ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+      "expectedDocumentHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"p2\">I wrote an apology note, but it still sounds ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+      "judge": {
+        "judgeModel": "openai/gpt-5.4-mini",
+        "issueVerdicts": [
+          {
+            "issueId": "issue-p1-dinasaur",
+            "resolved": true,
+            "notes": "Changed 'dinasaur' to 'dinosaur' in paragraph p1."
+          },
+          {
+            "issueId": "issue-p1-teh",
+            "resolved": true,
+            "notes": "Changed 'teh' to 'the' in paragraph p1."
+          },
+          {
+            "issueId": "issue-p2-has-wrote",
+            "resolved": true,
+            "notes": "Revised 'has wrote' to 'have written', which fixes the verb form error and yields a grammatical sentence."
+          },
+          {
+            "issueId": "issue-p2-a-apology",
+            "resolved": true,
+            "notes": "Changed 'a apology' to 'an apology' in paragraph p2."
+          },
+          {
+            "issueId": "issue-p2-sound",
+            "resolved": true,
+            "notes": "Changed 'sound' to 'sounds' in paragraph p2."
+          }
+        ],
+        "allListedErrorsResolved": true,
+        "introducedNewErrors": false,
+        "introducedErrors": [],
+        "unnecessaryChanges": [],
+        "collateralDamageCount": 0,
+        "resolvedIssueCount": 5,
+        "resolutionRate": 1,
+        "restraintScore": 1,
+        "qualityScore": 1,
+        "resolvedIssuesPer100OutputTokens": 2.3041474654377883,
+        "benchmarkScore": 102.3041474654378,
+        "overallPass": true,
+        "summary": "All listed original issues were resolved. No new proofreading errors or unnecessary harmful changes were introduced.",
+        "outputTokens": 217,
+        "promptTokens": 749
+      }
+    }
+  ]
+}

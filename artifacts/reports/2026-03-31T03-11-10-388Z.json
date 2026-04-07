@@ -1,0 +1,371 @@
+{
+  "version": "v1",
+  "runId": "2026-03-31T03-11-10-388Z",
+  "createdAt": "2026-03-31T03:11:20.731Z",
+  "summary": {
+    "totalCases": 5,
+    "exactDocumentMatches": 4,
+    "casesWithFullIssueCoverage": 4,
+    "totalIssues": 10,
+    "correctedIssues": 9,
+    "averageIssueCoverage": 0.96,
+    "totalOutputTokens": 342,
+    "averageOutputTokensPerCase": 68.4,
+    "correctionsPerOutputToken": 0.02631578947368421,
+    "judge": {
+      "judgeModel": "openai/gpt-5.4-mini",
+      "casesPassed": 4,
+      "casesWithNewErrors": 1,
+      "unnecessaryChanges": 1,
+      "collateralDamageCount": 1,
+      "resolvedIssues": 9,
+      "totalIssues": 10,
+      "averageQualityScore": 0.9199999999999999,
+      "averageBenchmarkScore": 93.10422459432532
+    }
+  },
+  "cases": [
+    {
+      "caseId": "mixed-rewrite-001",
+      "exactDocumentMatch": false,
+      "correctedIssueCount": 4,
+      "totalIssueCount": 5,
+      "issueCoverage": 0.8,
+      "outputTokens": 171,
+      "promptTokens": 4026,
+      "correctionsPerOutputToken": 0.023391812865497075,
+      "tokensPerCorrectedIssue": 42.75,
+      "expectedChangedParagraphIds": [
+        "p1",
+        "p2"
+      ],
+      "actualChangedParagraphIds": [
+        "p1",
+        "p2"
+      ],
+      "unexpectedParagraphChanges": [],
+      "issues": [
+        {
+          "issueId": "issue-p1-dinasaur",
+          "category": "non_word_typo",
+          "paragraphId": "p1",
+          "description": "Correct dinasaur to dinosaur.",
+          "corrected": true
+        },
+        {
+          "issueId": "issue-p1-teh",
+          "category": "non_word_typo",
+          "paragraphId": "p1",
+          "description": "Correct teh to the.",
+          "corrected": true
+        },
+        {
+          "issueId": "issue-p2-has-wrote",
+          "category": "verb_form",
+          "paragraphId": "p2",
+          "description": "Correct has wrote to wrote.",
+          "corrected": false
+        },
+        {
+          "issueId": "issue-p2-a-apology",
+          "category": "article",
+          "paragraphId": "p2",
+          "description": "Correct a apology to an apology.",
+          "corrected": true
+        },
+        {
+          "issueId": "issue-p2-sound",
+          "category": "agreement",
+          "paragraphId": "p2",
+          "description": "Correct sound to sounds.",
+          "corrected": true
+        }
+      ],
+      "finalDocumentHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"p2\">I have written an apology note, but it still sounds ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+      "expectedDocumentHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"p2\">I wrote an apology note, but it still sounds ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+      "judge": {
+        "judgeModel": "openai/gpt-5.4-mini",
+        "issueVerdicts": [
+          {
+            "issueId": "issue-p1-dinasaur",
+            "resolved": true,
+            "notes": "Corrected to dinosaur."
+          },
+          {
+            "issueId": "issue-p1-teh",
+            "resolved": true,
+            "notes": "Corrected to the."
+          },
+          {
+            "issueId": "issue-p2-has-wrote",
+            "resolved": false,
+            "notes": "The edit changed has wrote to have written, which does not match the listed correction wrote."
+          },
+          {
+            "issueId": "issue-p2-a-apology",
+            "resolved": true,
+            "notes": "Corrected to an apology."
+          },
+          {
+            "issueId": "issue-p2-sound",
+            "resolved": true,
+            "notes": "Corrected to sounds."
+          }
+        ],
+        "allListedErrorsResolved": false,
+        "introducedNewErrors": true,
+        "introducedErrors": [
+          {
+            "paragraphId": "p2",
+            "text": "I have written an apology note, but it still sounds ridiculous.",
+            "severity": "major",
+            "notes": "This introduces an unlisted verb change from has wrote to have written, altering the intended correction and grammatical construction relative to the original issue list."
+          }
+        ],
+        "unnecessaryChanges": [
+          {
+            "paragraphId": "p2",
+            "originalText": "I has wrote a apology note, but it still sound ridiculous.",
+            "finalText": "I have written an apology note, but it still sounds ridiculous.",
+            "severity": "major",
+            "harmful": true,
+            "notes": "The phrase has wrote was changed beyond the listed correction from wrote; this is a substantive rewrite that does not cleanly preserve the requested edit."
+          }
+        ],
+        "collateralDamageCount": 1,
+        "resolvedIssueCount": 4,
+        "resolutionRate": 0.8,
+        "restraintScore": 0.8,
+        "qualityScore": 0.6000000000000001,
+        "resolvedIssuesPer100OutputTokens": 1.1940298507462688,
+        "benchmarkScore": 61.194029850746276,
+        "overallPass": false,
+        "summary": "Issues in p1 and the article/agreement errors in p2 were fixed, but the verb-form issue in p2 was not resolved as listed. The edited document also introduced an unintended rewrite of that phrase.",
+        "outputTokens": 335,
+        "promptTokens": 749
+      }
+    },
+    {
+      "caseId": "no-op-restraint-001",
+      "exactDocumentMatch": true,
+      "correctedIssueCount": 0,
+      "totalIssueCount": 0,
+      "issueCoverage": 1,
+      "outputTokens": 5,
+      "promptTokens": 538,
+      "correctionsPerOutputToken": 0,
+      "tokensPerCorrectedIssue": null,
+      "expectedChangedParagraphIds": [],
+      "actualChangedParagraphIds": [],
+      "unexpectedParagraphChanges": [],
+      "issues": [],
+      "finalDocumentHtml": "<p id=\"p1\">The sign literally says &quot;NOPE!!!&quot;, and that punctuation is intentional.</p>\n<p id=\"p2\">Mara said the plan was &quot;good enough for Tuesday,&quot; which is already grammatical.</p>",
+      "expectedDocumentHtml": "<p id=\"p1\">The sign literally says &quot;NOPE!!!&quot;, and that punctuation is intentional.</p>\n<p id=\"p2\">Mara said the plan was &quot;good enough for Tuesday,&quot; which is already grammatical.</p>",
+      "judge": {
+        "judgeModel": "openai/gpt-5.4-mini",
+        "issueVerdicts": [],
+        "allListedErrorsResolved": true,
+        "introducedNewErrors": false,
+        "introducedErrors": [],
+        "unnecessaryChanges": [],
+        "collateralDamageCount": 0,
+        "resolvedIssueCount": 0,
+        "resolutionRate": 1,
+        "restraintScore": 1,
+        "qualityScore": 1,
+        "resolvedIssuesPer100OutputTokens": 0,
+        "benchmarkScore": 100,
+        "overallPass": true,
+        "summary": "The edited document is identical to the original. No listed issues were provided to evaluate, and no new proofreading errors or unnecessary changes were introduced.",
+        "outputTokens": 61,
+        "promptTokens": 495
+      }
+    },
+    {
+      "caseId": "protected-entities-001",
+      "exactDocumentMatch": true,
+      "correctedIssueCount": 1,
+      "totalIssueCount": 1,
+      "issueCoverage": 1,
+      "outputTokens": 49,
+      "promptTokens": 1206,
+      "correctionsPerOutputToken": 0.02040816326530612,
+      "tokensPerCorrectedIssue": 49,
+      "expectedChangedParagraphIds": [
+        "p1"
+      ],
+      "actualChangedParagraphIds": [
+        "p1"
+      ],
+      "unexpectedParagraphChanges": [],
+      "issues": [
+        {
+          "issueId": "issue-p1-teh",
+          "category": "non_word_typo",
+          "paragraphId": "p1",
+          "description": "Correct teh to the without changing the email address or name.",
+          "corrected": true
+        }
+      ],
+      "finalDocumentHtml": "<p id=\"p1\">Please send the final invoice to Jae at jae@example.com before Friday.</p>\n<p id=\"p2\">The environment variable is OPENROUTER_API_KEY, and the docs live at https://openrouter.ai/docs.</p>",
+      "expectedDocumentHtml": "<p id=\"p1\">Please send the final invoice to Jae at jae@example.com before Friday.</p>\n<p id=\"p2\">The environment variable is OPENROUTER_API_KEY, and the docs live at https://openrouter.ai/docs.</p>",
+      "judge": {
+        "judgeModel": "openai/gpt-5.4-mini",
+        "issueVerdicts": [
+          {
+            "issueId": "issue-p1-teh",
+            "resolved": true,
+            "notes": "'teh' was corrected to 'the' without affecting the surrounding text."
+          }
+        ],
+        "allListedErrorsResolved": true,
+        "introducedNewErrors": false,
+        "introducedErrors": [],
+        "unnecessaryChanges": [],
+        "collateralDamageCount": 0,
+        "resolvedIssueCount": 1,
+        "resolutionRate": 1,
+        "restraintScore": 1,
+        "qualityScore": 1,
+        "resolvedIssuesPer100OutputTokens": 1.1764705882352942,
+        "benchmarkScore": 101.17647058823529,
+        "overallPass": true,
+        "summary": "The listed typo was fixed cleanly, and no new proofreading errors or unnecessary changes were introduced.",
+        "outputTokens": 85,
+        "promptTokens": 546
+      }
+    },
+    {
+      "caseId": "context-homophone-001",
+      "exactDocumentMatch": true,
+      "correctedIssueCount": 3,
+      "totalIssueCount": 3,
+      "issueCoverage": 1,
+      "outputTokens": 67,
+      "promptTokens": 1157,
+      "correctionsPerOutputToken": 0.04477611940298507,
+      "tokensPerCorrectedIssue": 22.333333333333332,
+      "expectedChangedParagraphIds": [
+        "p1"
+      ],
+      "actualChangedParagraphIds": [
+        "p1"
+      ],
+      "unexpectedParagraphChanges": [],
+      "issues": [
+        {
+          "issueId": "issue-p1-their",
+          "category": "homophone",
+          "paragraphId": "p1",
+          "description": "Correct Their to They're.",
+          "corrected": true
+        },
+        {
+          "issueId": "issue-p1-loose",
+          "category": "real_word_error",
+          "paragraphId": "p1",
+          "description": "Correct loose to lose.",
+          "corrected": true
+        },
+        {
+          "issueId": "issue-p1-its",
+          "category": "apostrophe",
+          "paragraphId": "p1",
+          "description": "Correct its to it's.",
+          "corrected": true
+        }
+      ],
+      "finalDocumentHtml": "<p id=\"p1\">They're going to lose the match because it's raining again.</p>\n<p id=\"p2\">Coach Rivera already packed the orange cones.</p>",
+      "expectedDocumentHtml": "<p id=\"p1\">They're going to lose the match because it's raining again.</p>\n<p id=\"p2\">Coach Rivera already packed the orange cones.</p>",
+      "judge": {
+        "judgeModel": "openai/gpt-5.4-mini",
+        "issueVerdicts": [
+          {
+            "issueId": "issue-p1-their",
+            "resolved": true,
+            "notes": "Changed 'Their' to 'They're' in p1."
+          },
+          {
+            "issueId": "issue-p1-loose",
+            "resolved": true,
+            "notes": "Changed 'loose' to 'lose' in p1."
+          },
+          {
+            "issueId": "issue-p1-its",
+            "resolved": true,
+            "notes": "Changed 'its' to 'it's' in p1."
+          }
+        ],
+        "allListedErrorsResolved": true,
+        "introducedNewErrors": false,
+        "introducedErrors": [],
+        "unnecessaryChanges": [],
+        "collateralDamageCount": 0,
+        "resolvedIssueCount": 3,
+        "resolutionRate": 1,
+        "restraintScore": 1,
+        "qualityScore": 1,
+        "resolvedIssuesPer100OutputTokens": 2.027027027027027,
+        "benchmarkScore": 102.02702702702703,
+        "overallPass": true,
+        "summary": "All listed errors in p1 were corrected cleanly, and p2 was left unchanged. No new proofreading errors or unnecessary collateral changes were introduced.",
+        "outputTokens": 148,
+        "promptTokens": 588
+      }
+    },
+    {
+      "caseId": "voice-preservation-001",
+      "exactDocumentMatch": true,
+      "correctedIssueCount": 1,
+      "totalIssueCount": 1,
+      "issueCoverage": 1,
+      "outputTokens": 50,
+      "promptTokens": 1171,
+      "correctionsPerOutputToken": 0.02,
+      "tokensPerCorrectedIssue": 50,
+      "expectedChangedParagraphIds": [
+        "p1"
+      ],
+      "actualChangedParagraphIds": [
+        "p1"
+      ],
+      "unexpectedParagraphChanges": [],
+      "issues": [
+        {
+          "issueId": "issue-p1-isnt",
+          "category": "apostrophe",
+          "paragraphId": "p1",
+          "description": "Correct isnt to isn't without normalizing the voice.",
+          "corrected": true
+        }
+      ],
+      "finalDocumentHtml": "<p id=\"p1\">Yeah, I ain't gonna pretend this lasagna isn't weird, but it's delicious.</p>\n<p id=\"p2\">My cousin calls it &quot;cheese brick,&quot; and that's fine.</p>",
+      "expectedDocumentHtml": "<p id=\"p1\">Yeah, I ain't gonna pretend this lasagna isn't weird, but it's delicious.</p>\n<p id=\"p2\">My cousin calls it &quot;cheese brick,&quot; and that's fine.</p>",
+      "judge": {
+        "judgeModel": "openai/gpt-5.4-mini",
+        "issueVerdicts": [
+          {
+            "issueId": "issue-p1-isnt",
+            "resolved": true,
+            "notes": "Corrected 'isnt' to 'isn't' as requested, preserving the original voice."
+          }
+        ],
+        "allListedErrorsResolved": true,
+        "introducedNewErrors": false,
+        "introducedErrors": [],
+        "unnecessaryChanges": [],
+        "collateralDamageCount": 0,
+        "resolvedIssueCount": 1,
+        "resolutionRate": 1,
+        "restraintScore": 1,
+        "qualityScore": 1,
+        "resolvedIssuesPer100OutputTokens": 1.1235955056179776,
+        "benchmarkScore": 101.12359550561797,
+        "overallPass": true,
+        "summary": "The listed apostrophe error was fixed cleanly. No new proofreading errors or unnecessary changes were introduced.",
+        "outputTokens": 89,
+        "promptTokens": 530
+      }
+    }
+  ]
+}

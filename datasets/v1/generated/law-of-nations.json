@@ -1,0 +1,1565 @@
+{
+  "id": "law-of-nations",
+  "instruction": "Proofread the document. Fix the known spelling, grammar, punctuation, word-choice, and style mistakes while preserving meaning, tone, paragraph ids, and intentional wording everywhere else.",
+  "sourcePath": "law-of-nations-corrupted.txt",
+  "issues": [
+    {
+      "id": "issue-01",
+      "category": "punctuation_and_boundaries.quotation_or_delimiter_error",
+      "description": "An unmatched quotation mark is inserted, creating a delimiter error.",
+      "classification": {
+        "editScope": "character",
+        "createsValidWord": false,
+        "child": "quotation_or_delimiter_error",
+        "label": "punctuation_and_boundaries.quotation_or_delimiter_error",
+        "severity": "minor",
+        "operationType": "insertion",
+        "parent": "punctuation_and_boundaries",
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "Every law imports, \"that something is to be done;",
+        "replace": "Every law imports, that something is to be done;"
+      }
+    },
+    {
+      "id": "issue-02",
+      "category": "grammar_and_syntax.article_or_determiner_error",
+      "description": "A plural determiner 'these' is incorrectly replaced with the singular determiner 'this' before a plural noun.",
+      "classification": {
+        "dimension": "grammatical",
+        "severity": "major",
+        "createsValidWord": true,
+        "child": "article_or_determiner_error",
+        "operationType": "agreement_mismatch",
+        "label": "grammar_and_syntax.article_or_determiner_error",
+        "editScope": "token",
+        "parent": "grammar_and_syntax"
+      },
+      "expectedCorrection": {
+        "find": "Of this conditions",
+        "replace": "Of these conditions"
+      }
+    },
+    {
+      "id": "issue-03",
+      "category": "orthography_and_word_form.nonword_spelling_error",
+      "description": "Misspelling 'supposed' as 'suposed', creating a nonword.",
+      "classification": {
+        "parent": "orthography_and_word_form",
+        "child": "nonword_spelling_error",
+        "operationType": "omission",
+        "createsValidWord": false,
+        "severity": "minor",
+        "editScope": "character",
+        "dimension": "orthographic",
+        "label": "orthography_and_word_form.nonword_spelling_error"
+      },
+      "expectedCorrection": {
+        "find": "it is suposed, ought",
+        "replace": "it is supposed, ought"
+      }
+    },
+    {
+      "id": "issue-04",
+      "category": "grammar_and_syntax.word_order_error",
+      "description": "The subject and auxiliary verb are incorrectly ordered after the negative word 'Neither', failing to apply the required subject-auxiliary inversion.",
+      "classification": {
+        "editScope": "phrase",
+        "operationType": "transposition",
+        "dimension": "grammatical",
+        "parent": "grammar_and_syntax",
+        "label": "grammar_and_syntax.word_order_error",
+        "severity": "major",
+        "child": "word_order_error",
+        "createsValidWord": false
+      },
+      "expectedCorrection": {
+        "find": "Neither it can properly be said",
+        "replace": "Neither can it properly be said"
+      }
+    },
+    {
+      "id": "issue-05",
+      "category": "grammar_and_syntax.comparative_or_superlative_error",
+      "description": "Incorrectly forms a double superlative by adding '-est' to an adjective that is already modified by 'most'.",
+      "classification": {
+        "child": "comparative_or_superlative_error",
+        "operationType": "substitution",
+        "createsValidWord": false,
+        "editScope": "phrase",
+        "severity": "minor",
+        "label": "grammar_and_syntax.comparative_or_superlative_error",
+        "parent": "grammar_and_syntax",
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "most liablest",
+        "replace": "most liable"
+      }
+    },
+    {
+      "id": "issue-06",
+      "category": "orthography_and_word_form.spacing_error",
+      "description": "A space is missing between 'ever' and 'combine'.",
+      "classification": {
+        "editScope": "token",
+        "createsValidWord": false,
+        "label": "orthography_and_word_form.spacing_error",
+        "child": "spacing_error",
+        "dimension": "orthographic",
+        "parent": "orthography_and_word_form",
+        "severity": "minor",
+        "operationType": "boundary_error"
+      },
+      "expectedCorrection": {
+        "find": "hardly evercombine",
+        "replace": "hardly ever combine"
+      }
+    },
+    {
+      "id": "issue-07",
+      "category": "punctuation_and_boundaries.quotation_or_delimiter_error",
+      "description": "An unmatched opening quotation mark is incorrectly inserted before 'extraordinary'.",
+      "classification": {
+        "parent": "punctuation_and_boundaries",
+        "editScope": "character",
+        "dimension": "punctuation",
+        "severity": "minor",
+        "label": "punctuation_and_boundaries.quotation_or_delimiter_error",
+        "createsValidWord": false,
+        "operationType": "insertion",
+        "child": "quotation_or_delimiter_error"
+      },
+      "expectedCorrection": {
+        "find": "this \"extraordinary hypothesis.",
+        "replace": "this extraordinary hypothesis."
+      }
+    },
+    {
+      "id": "issue-08",
+      "category": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+      "description": "Replaces 'affectation' with the visually similar but semantically incorrect word 'affection'.",
+      "classification": {
+        "createsValidWord": true,
+        "dimension": "lexical",
+        "editScope": "token",
+        "child": "homograph_or_near_neighbor_confusion",
+        "label": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+        "severity": "major",
+        "operationType": "substitution",
+        "parent": "lexical_choice_and_confusability"
+      },
+      "expectedCorrection": {
+        "find": "mere affection and impertinence",
+        "replace": "mere affectation and impertinence"
+      }
+    },
+    {
+      "id": "issue-09",
+      "category": "punctuation_and_boundaries.apostrophe_error",
+      "description": "An apostrophe is incorrectly added to the plural noun 'nations', creating a false possessive.",
+      "classification": {
+        "createsValidWord": true,
+        "parent": "punctuation_and_boundaries",
+        "child": "apostrophe_error",
+        "dimension": "punctuation",
+        "label": "punctuation_and_boundaries.apostrophe_error",
+        "severity": "minor",
+        "operationType": "insertion",
+        "editScope": "character"
+      },
+      "expectedCorrection": {
+        "find": "intercourse of nation's should",
+        "replace": "intercourse of nations should"
+      }
+    },
+    {
+      "id": "issue-10",
+      "category": "grammar_and_syntax.extra_word",
+      "description": "An unnecessary resumptive pronoun 'it' is inserted after the relative pronoun 'which'.",
+      "classification": {
+        "operationType": "insertion",
+        "dimension": "grammatical",
+        "label": "grammar_and_syntax.extra_word",
+        "parent": "grammar_and_syntax",
+        "severity": "major",
+        "child": "extra_word",
+        "editScope": "token",
+        "createsValidWord": true
+      },
+      "expectedCorrection": {
+        "find": "power which it can be applied",
+        "replace": "power which can be applied"
+      }
+    },
+    {
+      "id": "issue-11",
+      "category": "lexical_choice_and_confusability.malapropism",
+      "description": "The word 'sentiments' is incorrectly replaced with the similar-sounding word 'sediments', creating a malapropism.",
+      "classification": {
+        "child": "malapropism",
+        "label": "lexical_choice_and_confusability.malapropism",
+        "createsValidWord": true,
+        "severity": "major",
+        "dimension": "lexical",
+        "operationType": "substitution",
+        "editScope": "token",
+        "parent": "lexical_choice_and_confusability"
+      },
+      "expectedCorrection": {
+        "find": "favourable sediments of other men",
+        "replace": "favourable sentiments of other men"
+      }
+    },
+    {
+      "id": "issue-12",
+      "category": "grammar_and_syntax.auxiliary_or_modal_error",
+      "description": "The auxiliary verb 'have' is omitted, resulting in a grammatical error.",
+      "classification": {
+        "child": "auxiliary_or_modal_error",
+        "operationType": "omission",
+        "createsValidWord": true,
+        "editScope": "token",
+        "severity": "major",
+        "label": "grammar_and_syntax.auxiliary_or_modal_error",
+        "parent": "grammar_and_syntax",
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "who been educated",
+        "replace": "who have been educated"
+      }
+    },
+    {
+      "id": "issue-13",
+      "category": "grammar_and_syntax.coordination_or_subordination_error",
+      "description": "Inserting the subordinating conjunction 'that' before the interrogative pronoun 'what' creates an ungrammatical double subordinator (complementizer) for the embedded clause, resulting in a clear subordination error.",
+      "classification": {
+        "operationType": "insertion",
+        "editScope": "token",
+        "dimension": "grammatical",
+        "parent": "grammar_and_syntax",
+        "child": "coordination_or_subordination_error",
+        "severity": "major",
+        "createsValidWord": true,
+        "label": "grammar_and_syntax.coordination_or_subordination_error"
+      },
+      "expectedCorrection": {
+        "find": "inquire, that what dependence",
+        "replace": "inquire, what dependence"
+      }
+    },
+    {
+      "id": "issue-14",
+      "category": "lexical_choice_and_confusability.misused_word",
+      "description": "Replaces 'disposition' with the phonetically similar but semantically incorrect word 'deposition'.",
+      "classification": {
+        "severity": "major",
+        "dimension": "lexical",
+        "editScope": "token",
+        "label": "lexical_choice_and_confusability.misused_word",
+        "child": "misused_word",
+        "createsValidWord": true,
+        "parent": "lexical_choice_and_confusability",
+        "operationType": "substitution"
+      },
+      "expectedCorrection": {
+        "find": "his deposition either",
+        "replace": "his disposition either"
+      }
+    },
+    {
+      "id": "issue-15",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "description": "The word 'there' is incorrectly replaced with its homophone 'their'.",
+      "classification": {
+        "operationType": "substitution",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homophone_confusion",
+        "editScope": "token",
+        "dimension": "lexical",
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "createsValidWord": true,
+        "severity": "major"
+      },
+      "expectedCorrection": {
+        "find": "their is great inequality",
+        "replace": "there is great inequality"
+      }
+    },
+    {
+      "id": "issue-16",
+      "category": "grammar_and_syntax.coordination_or_subordination_error",
+      "description": "An incorrect coordinating conjunction ('and') is inserted before the relative pronoun ('on which'), creating a coordination error since there is no preceding relative clause to coordinate with.",
+      "classification": {
+        "child": "coordination_or_subordination_error",
+        "dimension": "grammatical",
+        "operationType": "insertion",
+        "parent": "grammar_and_syntax",
+        "createsValidWord": true,
+        "severity": "major",
+        "editScope": "token",
+        "label": "grammar_and_syntax.coordination_or_subordination_error"
+      },
+      "expectedCorrection": {
+        "find": "world, and on which",
+        "replace": "world, on which"
+      }
+    },
+    {
+      "id": "issue-17",
+      "category": "orthography_and_word_form.capitalization_error",
+      "description": "Incorrectly capitalizes the common noun 'execution' in the middle of a sentence.",
+      "classification": {
+        "child": "capitalization_error",
+        "createsValidWord": true,
+        "severity": "minor",
+        "editScope": "character",
+        "label": "orthography_and_word_form.capitalization_error",
+        "dimension": "orthographic",
+        "parent": "orthography_and_word_form",
+        "operationType": "substitution"
+      },
+      "expectedCorrection": {
+        "find": "prompt and accurate Execution",
+        "replace": "prompt and accurate execution"
+      }
+    },
+    {
+      "id": "issue-18",
+      "category": "grammar_and_syntax.extra_word",
+      "description": "An unnecessary word ('if') is inserted after 'whether', creating an ungrammatical sequence.",
+      "classification": {
+        "editScope": "token",
+        "child": "extra_word",
+        "createsValidWord": true,
+        "dimension": "grammatical",
+        "operationType": "insertion",
+        "label": "grammar_and_syntax.extra_word",
+        "parent": "grammar_and_syntax",
+        "severity": "major"
+      },
+      "expectedCorrection": {
+        "find": "whether if we speak",
+        "replace": "whether we speak"
+      }
+    },
+    {
+      "id": "issue-19",
+      "category": "orthography_and_word_form.incorrect_conjugation",
+      "description": "The past tense 'wrote' is incorrectly used instead of the past participle 'written'.",
+      "classification": {
+        "editScope": "token",
+        "severity": "major",
+        "operationType": "substitution",
+        "parent": "orthography_and_word_form",
+        "child": "incorrect_conjugation",
+        "createsValidWord": true,
+        "label": "orthography_and_word_form.incorrect_conjugation",
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "has been wrote",
+        "replace": "has been written"
+      }
+    },
+    {
+      "id": "issue-20",
+      "category": "grammar_and_syntax.pronoun_reference_error",
+      "description": "Replaced the plural pronoun 'They' (referring to 'nations') with the singular pronoun 'It', which incorrectly points to 'The case' and creates a pronoun reference error.",
+      "classification": {
+        "child": "pronoun_reference_error",
+        "operationType": "substitution",
+        "dimension": "grammatical",
+        "parent": "grammar_and_syntax",
+        "createsValidWord": true,
+        "severity": "major",
+        "editScope": "token",
+        "label": "grammar_and_syntax.pronoun_reference_error"
+      },
+      "expectedCorrection": {
+        "find": "It also can have rights",
+        "replace": "They also can have rights"
+      }
+    },
+    {
+      "id": "issue-21",
+      "category": "orthography_and_word_form.real_word_spelling_error",
+      "description": "The word 'peace' is misspelled as its homophone 'piece', resulting in a real-word spelling error.",
+      "classification": {
+        "parent": "orthography_and_word_form",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "child": "real_word_spelling_error",
+        "dimension": "orthographic",
+        "label": "orthography_and_word_form.real_word_spelling_error",
+        "createsValidWord": true
+      },
+      "expectedCorrection": {
+        "find": "In the state of piece",
+        "replace": "In the state of peace"
+      }
+    },
+    {
+      "id": "issue-22",
+      "category": "grammar_and_syntax.preposition_error",
+      "description": "The preposition 'of' is incorrectly replaced with 'for' after the adjective 'capable'.",
+      "classification": {
+        "dimension": "grammatical",
+        "createsValidWord": true,
+        "child": "preposition_error",
+        "parent": "grammar_and_syntax",
+        "editScope": "token",
+        "severity": "major",
+        "label": "grammar_and_syntax.preposition_error",
+        "operationType": "substitution"
+      },
+      "expectedCorrection": {
+        "find": "capable for redress",
+        "replace": "capable of redress"
+      }
+    },
+    {
+      "id": "issue-23",
+      "category": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+      "description": "The word 'property' is incorrectly replaced with its visually similar near-neighbor 'propriety', resulting in a semantic error since 'propriety' (correct behavior) cannot be physically removed to another country.",
+      "classification": {
+        "editScope": "token",
+        "createsValidWord": true,
+        "operationType": "substitution",
+        "label": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "severity": "major",
+        "dimension": "lexical",
+        "child": "homograph_or_near_neighbor_confusion"
+      },
+      "expectedCorrection": {
+        "find": "removed his propriety from",
+        "replace": "removed his property from"
+      }
+    },
+    {
+      "id": "issue-24",
+      "category": "grammar_and_syntax.pronoun_agreement",
+      "description": "Changes the plural pronoun 'they' to the singular 'it', causing a disagreement with its plural antecedent 'nations'.",
+      "classification": {
+        "parent": "grammar_and_syntax",
+        "createsValidWord": true,
+        "operationType": "substitution",
+        "child": "pronoun_agreement",
+        "editScope": "token",
+        "label": "grammar_and_syntax.pronoun_agreement",
+        "severity": "major",
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "the laws it should establish",
+        "replace": "the laws they should establish"
+      }
+    },
+    {
+      "id": "issue-25",
+      "category": "grammar_and_syntax.subject_verb_agreement",
+      "description": "The plural subject 'these two objects' is incorrectly paired with the singular verb 'is', creating a subject-verb agreement error.",
+      "classification": {
+        "label": "grammar_and_syntax.subject_verb_agreement",
+        "editScope": "token",
+        "severity": "major",
+        "createsValidWord": true,
+        "parent": "grammar_and_syntax",
+        "dimension": "grammatical",
+        "operationType": "agreement_mismatch",
+        "child": "subject_verb_agreement"
+      },
+      "expectedCorrection": {
+        "find": "these two objects is",
+        "replace": "these two objects are"
+      }
+    },
+    {
+      "id": "issue-26",
+      "category": "punctuation_and_boundaries.apostrophe_error",
+      "description": "An apostrophe is incorrectly inserted into the plural noun 'Portions', creating an erroneous possessive form.",
+      "classification": {
+        "editScope": "character",
+        "createsValidWord": true,
+        "severity": "minor",
+        "dimension": "punctuation",
+        "parent": "punctuation_and_boundaries",
+        "label": "punctuation_and_boundaries.apostrophe_error",
+        "child": "apostrophe_error",
+        "operationType": "insertion"
+      },
+      "expectedCorrection": {
+        "find": "Portion's of Land",
+        "replace": "Portions of Land"
+      }
+    },
+    {
+      "id": "issue-27",
+      "category": "lexical_choice_and_confusability.misused_word",
+      "description": "The word 'rights' is incorrectly replaced with its homophone 'rites', resulting in a misused word error.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.misused_word",
+        "operationType": "substitution",
+        "editScope": "token",
+        "severity": "major",
+        "parent": "lexical_choice_and_confusability",
+        "child": "misused_word",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "relate to the rites which",
+        "replace": "relate to the rights which"
+      }
+    },
+    {
+      "id": "issue-28",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "description": "Replaces 'rights' with its homophone 'rites'.",
+      "classification": {
+        "dimension": "lexical",
+        "createsValidWord": true,
+        "parent": "lexical_choice_and_confusability",
+        "severity": "major",
+        "operationType": "substitution",
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "editScope": "token",
+        "child": "homophone_confusion"
+      },
+      "expectedCorrection": {
+        "find": "definition of rites",
+        "replace": "definition of rights"
+      }
+    },
+    {
+      "id": "issue-29",
+      "category": "orthography_and_word_form.insertion",
+      "description": "Insert an extra 'c' into 'necessary' to create the common misspelling 'neccessary'.",
+      "classification": {
+        "editScope": "character",
+        "parent": "orthography_and_word_form",
+        "label": "orthography_and_word_form.insertion",
+        "operationType": "insertion",
+        "createsValidWord": false,
+        "severity": "minor",
+        "dimension": "orthographic",
+        "child": "insertion"
+      },
+      "expectedCorrection": {
+        "find": "It is neccessary, according",
+        "replace": "It is necessary, according"
+      }
+    },
+    {
+      "id": "issue-30",
+      "category": "grammar_and_syntax.run_on_fused_sentence_or_comma_splice",
+      "description": "Removing the preposition and relative pronoun 'in which' converts the dependent relative clause into an independent clause, resulting in a comma splice where two independent clauses are joined only by a comma.",
+      "classification": {
+        "label": "grammar_and_syntax.run_on_fused_sentence_or_comma_splice",
+        "editScope": "phrase",
+        "severity": "major",
+        "createsValidWord": true,
+        "parent": "grammar_and_syntax",
+        "operationType": "omission",
+        "dimension": "grammatical",
+        "child": "run_on_fused_sentence_or_comma_splice"
+      },
+      "expectedCorrection": {
+        "find": "composed, the rights",
+        "replace": "composed, in which the rights"
+      }
+    },
+    {
+      "id": "issue-31",
+      "category": "grammar_and_syntax.relative_clause_error",
+      "description": "Incorrect relative pronoun case ('whom' instead of 'who' as the subject of the relative clause).",
+      "classification": {
+        "operationType": "substitution",
+        "label": "grammar_and_syntax.relative_clause_error",
+        "severity": "major",
+        "parent": "grammar_and_syntax",
+        "editScope": "token",
+        "dimension": "grammatical",
+        "child": "relative_clause_error",
+        "createsValidWord": true
+      },
+      "expectedCorrection": {
+        "find": "those readers whom bear",
+        "replace": "those readers who bear"
+      }
+    },
+    {
+      "id": "issue-32",
+      "category": "lexical_choice_and_confusability.idiom_error",
+      "description": "The idiom 'in general' is incorrectly blended with 'at large' to form the incorrect phrase 'in large'.",
+      "classification": {
+        "editScope": "phrase",
+        "severity": "minor",
+        "dimension": "lexical",
+        "label": "lexical_choice_and_confusability.idiom_error",
+        "operationType": "substitution",
+        "parent": "lexical_choice_and_confusability",
+        "createsValidWord": true,
+        "child": "idiom_error"
+      },
+      "expectedCorrection": {
+        "find": "mankind in large",
+        "replace": "mankind in general"
+      }
+    },
+    {
+      "id": "issue-33",
+      "category": "grammar_and_syntax.word_order_error",
+      "description": "Incorrect word order: subject-auxiliary inversion is incorrectly applied in a dependent clause.",
+      "classification": {
+        "operationType": "transposition",
+        "dimension": "grammatical",
+        "child": "word_order_error",
+        "createsValidWord": false,
+        "parent": "grammar_and_syntax",
+        "severity": "major",
+        "label": "grammar_and_syntax.word_order_error",
+        "editScope": "phrase"
+      },
+      "expectedCorrection": {
+        "find": "which ought they to bear",
+        "replace": "which they ought to bear"
+      }
+    },
+    {
+      "id": "issue-34",
+      "category": "orthography_and_word_form.wrong_word_form",
+      "description": "The adjective 'present' is incorrectly replaced with the adverb 'presently', resulting in a wrong word form error where an adverb modifies a noun.",
+      "classification": {
+        "parent": "orthography_and_word_form",
+        "editScope": "token",
+        "label": "orthography_and_word_form.wrong_word_form",
+        "dimension": "grammatical",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "child": "wrong_word_form",
+        "severity": "major"
+      },
+      "expectedCorrection": {
+        "find": "presently purpose",
+        "replace": "present purpose"
+      }
+    },
+    {
+      "id": "issue-35",
+      "category": "grammar_and_syntax.word_order_error",
+      "description": "Incorrect subject-verb inversion in a declarative sentence.",
+      "classification": {
+        "createsValidWord": true,
+        "dimension": "grammatical",
+        "editScope": "phrase",
+        "operationType": "transposition",
+        "severity": "major",
+        "child": "word_order_error",
+        "label": "grammar_and_syntax.word_order_error",
+        "parent": "grammar_and_syntax"
+      },
+      "expectedCorrection": {
+        "find": "is the sea denominated",
+        "replace": "the sea is denominated"
+      }
+    },
+    {
+      "id": "issue-36",
+      "category": "grammar_and_syntax.run_on_fused_sentence_or_comma_splice",
+      "description": "Removes the period between two independent clauses and lowercases the following word, creating a clear fused sentence (run-on) without any punctuation.",
+      "classification": {
+        "operationType": "boundary_error",
+        "label": "grammar_and_syntax.run_on_fused_sentence_or_comma_splice",
+        "createsValidWord": false,
+        "severity": "major",
+        "child": "run_on_fused_sentence_or_comma_splice",
+        "editScope": "sentence",
+        "dimension": "grammatical",
+        "parent": "grammar_and_syntax"
+      },
+      "expectedCorrection": {
+        "find": "right to the use of it the utility of",
+        "replace": "right to the use of it. The utility of"
+      }
+    },
+    {
+      "id": "issue-37",
+      "category": "grammar_and_syntax.pronoun_reference_error",
+      "description": "Replaces the plural pronoun 'their' with the singular 'its', causing the pronoun to incorrectly refer to 'the sea' or 'use' instead of the correct entity, 'nations'.",
+      "classification": {
+        "editScope": "token",
+        "createsValidWord": true,
+        "child": "pronoun_reference_error",
+        "severity": "major",
+        "parent": "grammar_and_syntax",
+        "label": "grammar_and_syntax.pronoun_reference_error",
+        "dimension": "grammatical",
+        "operationType": "substitution"
+      },
+      "expectedCorrection": {
+        "find": "a passage for its ships.",
+        "replace": "a passage for their ships."
+      }
+    },
+    {
+      "id": "issue-38",
+      "category": "orthography_and_word_form.hyphenation_or_compounding_error",
+      "description": "Incorrectly splits the compound word 'wherever' into two words 'where ever'.",
+      "classification": {
+        "child": "hyphenation_or_compounding_error",
+        "editScope": "token",
+        "severity": "minor",
+        "createsValidWord": true,
+        "label": "orthography_and_word_form.hyphenation_or_compounding_error",
+        "operationType": "substitution",
+        "parent": "orthography_and_word_form",
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "where ever it is practicable.",
+        "replace": "wherever it is practicable."
+      }
+    },
+    {
+      "id": "issue-39",
+      "category": "grammar_and_syntax.countability_error",
+      "description": "The count noun 'instances' is incorrectly modified by 'much', which is used for mass nouns, instead of 'many'.",
+      "classification": {
+        "editScope": "phrase",
+        "child": "countability_error",
+        "severity": "major",
+        "parent": "grammar_and_syntax",
+        "label": "grammar_and_syntax.countability_error",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "in as much instances as possible",
+        "replace": "in as many instances as possible"
+      }
+    },
+    {
+      "id": "issue-40",
+      "category": "orthography_and_word_form.capitalization_error",
+      "description": "The first letter of the sentence is incorrectly lowercased.",
+      "classification": {
+        "operationType": "substitution",
+        "severity": "minor",
+        "child": "capitalization_error",
+        "createsValidWord": true,
+        "editScope": "character",
+        "dimension": "orthographic",
+        "label": "orthography_and_word_form.capitalization_error",
+        "parent": "orthography_and_word_form"
+      },
+      "expectedCorrection": {
+        "find": "having stated",
+        "replace": "Having stated"
+      }
+    },
+    {
+      "id": "issue-41",
+      "category": "orthography_and_word_form.duplication",
+      "description": "Unintentionally duplicated the word 'the'.",
+      "classification": {
+        "operationType": "duplication",
+        "severity": "minor",
+        "label": "orthography_and_word_form.duplication",
+        "createsValidWord": true,
+        "editScope": "token",
+        "child": "duplication",
+        "parent": "orthography_and_word_form",
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "either the the boundary",
+        "replace": "either the boundary"
+      }
+    },
+    {
+      "id": "issue-42",
+      "category": "grammar_and_syntax.run_on_fused_sentence_or_comma_splice",
+      "description": "Creates a comma splice by replacing the semicolon and coordinating conjunction with just a comma between two independent clauses.",
+      "classification": {
+        "createsValidWord": false,
+        "editScope": "sentence",
+        "child": "run_on_fused_sentence_or_comma_splice",
+        "dimension": "grammatical",
+        "severity": "major",
+        "operationType": "substitution",
+        "label": "grammar_and_syntax.run_on_fused_sentence_or_comma_splice",
+        "parent": "grammar_and_syntax"
+      },
+      "expectedCorrection": {
+        "find": "should be free, it would",
+        "replace": "should be free; but it would"
+      }
+    },
+    {
+      "id": "issue-43",
+      "category": "orthography_and_word_form.incorrect_pluralization",
+      "description": "Incorrectly uses the singular form 'condition' instead of the plural 'conditions' after the plural verb 'are'.",
+      "classification": {
+        "severity": "major",
+        "dimension": "grammatical",
+        "label": "orthography_and_word_form.incorrect_pluralization",
+        "parent": "orthography_and_word_form",
+        "editScope": "token",
+        "createsValidWord": true,
+        "operationType": "substitution",
+        "child": "incorrect_pluralization"
+      },
+      "expectedCorrection": {
+        "find": "What are the condition which",
+        "replace": "What are the conditions which"
+      }
+    },
+    {
+      "id": "issue-44",
+      "category": "grammar_and_syntax.pronoun_reference_error",
+      "description": "Replacing the singular pronoun 'it' (which correctly refers to 'war') with the plural pronoun 'them' creates a pronoun reference error. 'Them' grammatically points to the nearest plural noun, 'conditions', resulting in the nonsensical meaning 'conditions necessary to render conditions just'.",
+      "classification": {
+        "parent": "grammar_and_syntax",
+        "child": "pronoun_reference_error",
+        "operationType": "substitution",
+        "label": "grammar_and_syntax.pronoun_reference_error",
+        "editScope": "token",
+        "createsValidWord": true,
+        "dimension": "grammatical",
+        "severity": "major"
+      },
+      "expectedCorrection": {
+        "find": "render them just.",
+        "replace": "render it just."
+      }
+    },
+    {
+      "id": "issue-45",
+      "category": "grammar_and_syntax.double_negative",
+      "description": "Introduces a double negative by adding 'no' before 'rights' in a phrase already negated by 'no violation'.",
+      "classification": {
+        "parent": "grammar_and_syntax",
+        "dimension": "grammatical",
+        "child": "double_negative",
+        "editScope": "phrase",
+        "createsValidWord": true,
+        "severity": "major",
+        "operationType": "insertion",
+        "label": "grammar_and_syntax.double_negative"
+      },
+      "expectedCorrection": {
+        "find": "no violation of no rights",
+        "replace": "no violation of rights"
+      }
+    },
+    {
+      "id": "issue-46",
+      "category": "punctuation_and_boundaries.quotation_or_delimiter_error",
+      "description": "An unmatched closing parenthesis is incorrectly inserted.",
+      "classification": {
+        "editScope": "character",
+        "child": "quotation_or_delimiter_error",
+        "severity": "minor",
+        "parent": "punctuation_and_boundaries",
+        "label": "punctuation_and_boundaries.quotation_or_delimiter_error",
+        "operationType": "insertion",
+        "createsValidWord": false,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "according to circumstances not easy to define),",
+        "replace": "according to circumstances not easy to define,"
+      }
+    },
+    {
+      "id": "issue-47",
+      "category": "grammar_and_syntax.pronoun_reference_error",
+      "description": "Changing the plural pronoun 'them' (which correctly refers to 'injuries') to the singular 'it' creates a pronoun reference error, as 'it' now ambiguously points to the wrong entity (such as 'nation' or 'compensation').",
+      "classification": {
+        "parent": "grammar_and_syntax",
+        "child": "pronoun_reference_error",
+        "label": "grammar_and_syntax.pronoun_reference_error",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical",
+        "severity": "major"
+      },
+      "expectedCorrection": {
+        "find": "made for it.",
+        "replace": "made for them."
+      }
+    },
+    {
+      "id": "issue-48",
+      "category": "punctuation_and_boundaries.quotation_or_delimiter_error",
+      "description": "An unmatched quotation mark is incorrectly introduced at the beginning of the sentence.",
+      "classification": {
+        "dimension": "punctuation",
+        "editScope": "character",
+        "operationType": "insertion",
+        "severity": "minor",
+        "child": "quotation_or_delimiter_error",
+        "parent": "punctuation_and_boundaries",
+        "createsValidWord": false,
+        "label": "punctuation_and_boundaries.quotation_or_delimiter_error"
+      },
+      "expectedCorrection": {
+        "find": "\"As there can be no reason why",
+        "replace": "As there can be no reason why"
+      }
+    },
+    {
+      "id": "issue-49",
+      "category": "grammar_and_syntax.incorrect_tense",
+      "description": "The future tense 'will not make' is incorrectly changed to the past tense 'did not make', which contradicts the context of providing security against future hostile actions.",
+      "classification": {
+        "parent": "grammar_and_syntax",
+        "child": "incorrect_tense",
+        "operationType": "substitution",
+        "editScope": "phrase",
+        "severity": "major",
+        "dimension": "grammatical",
+        "label": "grammar_and_syntax.incorrect_tense",
+        "createsValidWord": true
+      },
+      "expectedCorrection": {
+        "find": "that it did not make a hostile use of them.",
+        "replace": "that it will not make a hostile use of them."
+      }
+    },
+    {
+      "id": "issue-50",
+      "category": "orthography_and_word_form.hyphenation_or_compounding_error",
+      "description": "Incorrectly compounds the phrasal verb 'lay down' into the single word 'laydown'.",
+      "classification": {
+        "dimension": "orthographic",
+        "createsValidWord": true,
+        "operationType": "substitution",
+        "label": "orthography_and_word_form.hyphenation_or_compounding_error",
+        "parent": "orthography_and_word_form",
+        "severity": "minor",
+        "child": "hyphenation_or_compounding_error",
+        "editScope": "phrase"
+      },
+      "expectedCorrection": {
+        "find": "may laydown, with",
+        "replace": "may lay down, with"
+      }
+    },
+    {
+      "id": "issue-51",
+      "category": "orthography_and_word_form.nonword_spelling_error",
+      "description": "The word 'separated' is misspelled as 'seperated', creating a nonword.",
+      "classification": {
+        "parent": "orthography_and_word_form",
+        "editScope": "token",
+        "dimension": "orthographic",
+        "label": "orthography_and_word_form.nonword_spelling_error",
+        "operationType": "substitution",
+        "createsValidWord": false,
+        "child": "nonword_spelling_error",
+        "severity": "minor"
+      },
+      "expectedCorrection": {
+        "find": "cannot be seperated from",
+        "replace": "cannot be separated from"
+      }
+    },
+    {
+      "id": "issue-52",
+      "category": "grammar_and_syntax.subject_verb_agreement",
+      "description": "The plural subject 'individuals who' is incorrectly matched with the singular verb 'forms' due to the intervening singular noun 'nation'.",
+      "classification": {
+        "parent": "grammar_and_syntax",
+        "operationType": "substitution",
+        "child": "subject_verb_agreement",
+        "editScope": "token",
+        "createsValidWord": true,
+        "severity": "major",
+        "dimension": "grammatical",
+        "label": "grammar_and_syntax.subject_verb_agreement"
+      },
+      "expectedCorrection": {
+        "find": "individuals who, composing the body of the nation, forms",
+        "replace": "individuals who, composing the body of the nation, form"
+      }
+    },
+    {
+      "id": "issue-53",
+      "category": "grammar_and_syntax.pronoun_agreement",
+      "description": "The plural pronoun 'they' is incorrectly replaced with the singular pronoun 'it', causing a disagreement with its plural antecedent 'these'.",
+      "classification": {
+        "dimension": "grammatical",
+        "severity": "major",
+        "child": "pronoun_agreement",
+        "operationType": "substitution",
+        "editScope": "token",
+        "label": "grammar_and_syntax.pronoun_agreement",
+        "parent": "grammar_and_syntax",
+        "createsValidWord": true
+      },
+      "expectedCorrection": {
+        "find": "or rather that it may not be made to contribute",
+        "replace": "or rather that they may not be made to contribute"
+      }
+    },
+    {
+      "id": "issue-54",
+      "category": "grammar_and_syntax.coordination_or_subordination_error",
+      "description": "Replaces the complementizer 'that' with the subordinating conjunction 'although', breaking the linking structure between the main clause and its extraposed subject clause.",
+      "classification": {
+        "createsValidWord": true,
+        "parent": "grammar_and_syntax",
+        "severity": "major",
+        "dimension": "grammatical",
+        "operationType": "substitution",
+        "editScope": "token",
+        "label": "grammar_and_syntax.coordination_or_subordination_error",
+        "child": "coordination_or_subordination_error"
+      },
+      "expectedCorrection": {
+        "find": "it must be allowed although the destruction",
+        "replace": "it must be allowed that the destruction"
+      }
+    },
+    {
+      "id": "issue-55",
+      "category": "punctuation_and_boundaries.punctuation_error",
+      "description": "Omission of the closing comma for the parenthetical phrase 'in settling the difficulties of international jurisprudence'.",
+      "classification": {
+        "parent": "punctuation_and_boundaries",
+        "operationType": "omission",
+        "label": "punctuation_and_boundaries.punctuation_error",
+        "createsValidWord": false,
+        "dimension": "punctuation",
+        "editScope": "character",
+        "child": "punctuation_error",
+        "severity": "minor"
+      },
+      "expectedCorrection": {
+        "find": "jurisprudence is not whether",
+        "replace": "jurisprudence, is not whether"
+      }
+    },
+    {
+      "id": "issue-56",
+      "category": "grammar_and_syntax.word_order_error",
+      "description": "The object pronoun 'us' is incorrectly placed before the main verb 'enable', creating a word order error.",
+      "classification": {
+        "parent": "grammar_and_syntax",
+        "severity": "major",
+        "createsValidWord": false,
+        "child": "word_order_error",
+        "editScope": "phrase",
+        "dimension": "grammatical",
+        "label": "grammar_and_syntax.word_order_error",
+        "operationType": "transposition"
+      },
+      "expectedCorrection": {
+        "find": "will us enable",
+        "replace": "will enable us"
+      }
+    },
+    {
+      "id": "issue-57",
+      "category": "grammar_and_syntax.missing_word",
+      "description": "The preposition 'to' is omitted from the phrase 'with regard to', resulting in a grammatical error.",
+      "classification": {
+        "createsValidWord": true,
+        "severity": "major",
+        "dimension": "grammatical",
+        "editScope": "token",
+        "child": "missing_word",
+        "operationType": "omission",
+        "label": "grammar_and_syntax.missing_word",
+        "parent": "grammar_and_syntax"
+      },
+      "expectedCorrection": {
+        "find": "with regard the property",
+        "replace": "with regard to the property"
+      }
+    },
+    {
+      "id": "issue-58",
+      "category": "grammar_and_syntax.pronoun_reference_error",
+      "description": "The relative pronoun 'which' is incorrectly changed to 'who', creating a pronoun reference error because 'who' must refer to a person, not an inanimate concept like 'parity'.",
+      "classification": {
+        "child": "pronoun_reference_error",
+        "severity": "minor",
+        "editScope": "token",
+        "createsValidWord": true,
+        "dimension": "grammatical",
+        "parent": "grammar_and_syntax",
+        "operationType": "substitution",
+        "label": "grammar_and_syntax.pronoun_reference_error"
+      },
+      "expectedCorrection": {
+        "find": "parity who appears",
+        "replace": "parity which appears"
+      }
+    },
+    {
+      "id": "issue-59",
+      "category": "semantics_discourse_and_style.cross_sentence_tense_inconsistency",
+      "description": "Introduces a tense inconsistency by changing the present/future modal 'may proceed' to the past tense 'proceeded', which conflicts with the hypothetical conditional 'If... we should suppose' established earlier in the sentence.",
+      "classification": {
+        "editScope": "phrase",
+        "label": "semantics_discourse_and_style.cross_sentence_tense_inconsistency",
+        "parent": "semantics_discourse_and_style",
+        "child": "cross_sentence_tense_inconsistency",
+        "severity": "major",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "we proceeded to consider",
+        "replace": "we may proceed to consider"
+      }
+    },
+    {
+      "id": "issue-60",
+      "category": "grammar_and_syntax.subject_verb_agreement",
+      "description": "The singular subject 'property' is incorrectly paired with the plural verb 'are' due to attraction from the plural noun 'individuals'.",
+      "classification": {
+        "label": "grammar_and_syntax.subject_verb_agreement",
+        "createsValidWord": true,
+        "parent": "grammar_and_syntax",
+        "editScope": "token",
+        "severity": "major",
+        "operationType": "agreement_mismatch",
+        "dimension": "grammatical",
+        "child": "subject_verb_agreement"
+      },
+      "expectedCorrection": {
+        "find": "the property of individuals upon the sea are allowed",
+        "replace": "the property of individuals upon the sea is allowed"
+      }
+    },
+    {
+      "id": "issue-61",
+      "category": "orthography_and_word_form.spacing_error",
+      "description": "A space is missing between 'of' and 'the'.",
+      "classification": {
+        "child": "spacing_error",
+        "parent": "orthography_and_word_form",
+        "createsValidWord": false,
+        "dimension": "orthographic",
+        "operationType": "omission",
+        "editScope": "phrase",
+        "severity": "minor",
+        "label": "orthography_and_word_form.spacing_error"
+      },
+      "expectedCorrection": {
+        "find": "part ofthe law",
+        "replace": "part of the law"
+      }
+    },
+    {
+      "id": "issue-62",
+      "category": "lexical_choice_and_confusability.idiom_error",
+      "description": "The idiomatic phrase 'at variance with' is incorrectly altered to 'in variance with'.",
+      "classification": {
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "severity": "minor",
+        "child": "idiom_error",
+        "parent": "lexical_choice_and_confusability",
+        "createsValidWord": true,
+        "label": "lexical_choice_and_confusability.idiom_error",
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "in variance with",
+        "replace": "at variance with"
+      }
+    },
+    {
+      "id": "issue-63",
+      "category": "semantics_discourse_and_style.discourse_coherence_error",
+      "description": "Replaced the correlative conjunction 'or' with 'nor', creating an inconsistent logical structure with 'either'.",
+      "classification": {
+        "editScope": "token",
+        "operationType": "substitution",
+        "parent": "semantics_discourse_and_style",
+        "child": "discourse_coherence_error",
+        "dimension": "semantic",
+        "label": "semantics_discourse_and_style.discourse_coherence_error",
+        "createsValidWord": true,
+        "severity": "major"
+      },
+      "expectedCorrection": {
+        "find": "nor from its merchant ships.",
+        "replace": "or from its merchant ships."
+      }
+    },
+    {
+      "id": "issue-64",
+      "category": "punctuation_and_boundaries.sentence_boundary_error",
+      "description": "Incorrectly splits a sentence by replacing a semicolon with a period, creating a sentence fragment.",
+      "classification": {
+        "label": "punctuation_and_boundaries.sentence_boundary_error",
+        "createsValidWord": false,
+        "child": "sentence_boundary_error",
+        "severity": "major",
+        "parent": "punctuation_and_boundaries",
+        "editScope": "sentence",
+        "operationType": "boundary_error",
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "appear to remain. That relating to",
+        "replace": "appear to remain; that relating to"
+      }
+    },
+    {
+      "id": "issue-65",
+      "category": "orthography_and_word_form.spacing_error",
+      "description": "A space is missing between 'and' and 'war'.",
+      "classification": {
+        "label": "orthography_and_word_form.spacing_error",
+        "child": "spacing_error",
+        "parent": "orthography_and_word_form",
+        "createsValidWord": false,
+        "operationType": "boundary_error",
+        "severity": "minor",
+        "dimension": "orthographic",
+        "editScope": "token"
+      },
+      "expectedCorrection": {
+        "find": "in peace andwar",
+        "replace": "in peace and war"
+      }
+    },
+    {
+      "id": "issue-66",
+      "category": "orthography_and_word_form.incorrect_pluralization",
+      "description": "The plural noun 'measures' is incorrectly changed to the singular 'measure' despite the plural modifier 'Two'.",
+      "classification": {
+        "child": "incorrect_pluralization",
+        "severity": "major",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "editScope": "token",
+        "label": "orthography_and_word_form.incorrect_pluralization",
+        "dimension": "grammatical",
+        "parent": "orthography_and_word_form"
+      },
+      "expectedCorrection": {
+        "find": "Two grand practical measure are",
+        "replace": "Two grand practical measures are"
+      }
+    },
+    {
+      "id": "issue-67",
+      "category": "orthography_and_word_form.wrong_word_form",
+      "description": "The adverb 'perfectly' is incorrectly replaced with the adjective 'perfect', resulting in a wrong word form error.",
+      "classification": {
+        "editScope": "token",
+        "label": "orthography_and_word_form.wrong_word_form",
+        "dimension": "grammatical",
+        "operationType": "substitution",
+        "child": "wrong_word_form",
+        "parent": "orthography_and_word_form",
+        "severity": "major",
+        "createsValidWord": true
+      },
+      "expectedCorrection": {
+        "find": "perfect evident",
+        "replace": "perfectly evident"
+      }
+    },
+    {
+      "id": "issue-68",
+      "category": "orthography_and_word_form.transposition",
+      "description": "Transposition of the letters 'e' and 'i' in the word 'their'.",
+      "classification": {
+        "parent": "orthography_and_word_form",
+        "severity": "minor",
+        "operationType": "transposition",
+        "label": "orthography_and_word_form.transposition",
+        "dimension": "orthographic",
+        "createsValidWord": false,
+        "child": "transposition",
+        "editScope": "character"
+      },
+      "expectedCorrection": {
+        "find": "regulating thier mutual",
+        "replace": "regulating their mutual"
+      }
+    },
+    {
+      "id": "issue-69",
+      "category": "lexical_choice_and_confusability.misused_word",
+      "description": "The word 'diffused' (meaning spread over a wide area) is incorrectly replaced with the phonetically similar word 'defused' (meaning to reduce danger or tension), resulting in a misused word error.",
+      "classification": {
+        "operationType": "substitution",
+        "dimension": "lexical",
+        "label": "lexical_choice_and_confusability.misused_word",
+        "child": "misused_word",
+        "createsValidWord": true,
+        "parent": "lexical_choice_and_confusability",
+        "severity": "major",
+        "editScope": "token"
+      },
+      "expectedCorrection": {
+        "find": "defused through the world",
+        "replace": "diffused through the world"
+      }
+    },
+    {
+      "id": "issue-70",
+      "category": "semantics_discourse_and_style.discourse_coherence_error",
+      "description": "The conditional conjunction 'if' is replaced with 'unless', reversing the logical condition and creating a discourse coherence error that contradicts the surrounding text.",
+      "classification": {
+        "severity": "major",
+        "parent": "semantics_discourse_and_style",
+        "createsValidWord": true,
+        "operationType": "substitution",
+        "dimension": "semantic",
+        "label": "semantics_discourse_and_style.discourse_coherence_error",
+        "editScope": "token",
+        "child": "discourse_coherence_error"
+      },
+      "expectedCorrection": {
+        "find": "must be lost, unless it is left destitute",
+        "replace": "must be lost, if it is left destitute"
+      }
+    },
+    {
+      "id": "issue-71",
+      "category": "orthography_and_word_form.insertion",
+      "description": "An extra 'e' is inserted into 'desirable', creating the misspelling 'desireable'.",
+      "classification": {
+        "operationType": "insertion",
+        "severity": "minor",
+        "editScope": "character",
+        "child": "insertion",
+        "parent": "orthography_and_word_form",
+        "createsValidWord": false,
+        "dimension": "orthographic",
+        "label": "orthography_and_word_form.insertion"
+      },
+      "expectedCorrection": {
+        "find": "what is desireable is",
+        "replace": "what is desirable is"
+      }
+    },
+    {
+      "id": "issue-72",
+      "category": "grammar_and_syntax.sentence_fragment",
+      "description": "Replaced a comma with a period before a relative clause, creating a sentence fragment.",
+      "classification": {
+        "createsValidWord": false,
+        "parent": "grammar_and_syntax",
+        "severity": "major",
+        "dimension": "grammatical",
+        "operationType": "boundary_error",
+        "editScope": "phrase",
+        "label": "grammar_and_syntax.sentence_fragment",
+        "child": "sentence_fragment"
+      },
+      "expectedCorrection": {
+        "find": "protection. Which to them",
+        "replace": "protection, which to them"
+      }
+    },
+    {
+      "id": "issue-73",
+      "category": "grammar_and_syntax.sentence_fragment",
+      "description": "Splits the sentence before an infinitive phrase, creating a sentence fragment.",
+      "classification": {
+        "parent": "grammar_and_syntax",
+        "label": "grammar_and_syntax.sentence_fragment",
+        "dimension": "grammatical",
+        "editScope": "sentence",
+        "createsValidWord": false,
+        "operationType": "boundary_error",
+        "child": "sentence_fragment",
+        "severity": "major"
+      },
+      "expectedCorrection": {
+        "find": "necessary. To show",
+        "replace": "necessary to show"
+      }
+    },
+    {
+      "id": "issue-74",
+      "category": "orthography_and_word_form.transposition",
+      "description": "Transposes 'l' and 'v' in 'involved' to create the typo 'invovled'.",
+      "classification": {
+        "severity": "minor",
+        "child": "transposition",
+        "createsValidWord": false,
+        "editScope": "character",
+        "operationType": "transposition",
+        "dimension": "orthographic",
+        "parent": "orthography_and_word_form",
+        "label": "orthography_and_word_form.transposition"
+      },
+      "expectedCorrection": {
+        "find": "parties invovled in the dispute",
+        "replace": "parties involved in the dispute"
+      }
+    },
+    {
+      "id": "issue-75",
+      "category": "punctuation_and_boundaries.apostrophe_error",
+      "description": "An apostrophe is incorrectly added to the plural noun 'delegates', creating a possessive form where a plural is required.",
+      "classification": {
+        "label": "punctuation_and_boundaries.apostrophe_error",
+        "dimension": "punctuation",
+        "createsValidWord": true,
+        "parent": "punctuation_and_boundaries",
+        "child": "apostrophe_error",
+        "editScope": "token",
+        "severity": "minor",
+        "operationType": "substitution"
+      },
+      "expectedCorrection": {
+        "find": "delegate's are",
+        "replace": "delegates are"
+      }
+    },
+    {
+      "id": "issue-76",
+      "category": "orthography_and_word_form.insertion",
+      "description": "Insertion of an extra 'n' in 'punishable'.",
+      "classification": {
+        "child": "insertion",
+        "editScope": "character",
+        "dimension": "orthographic",
+        "createsValidWord": false,
+        "parent": "orthography_and_word_form",
+        "operationType": "insertion",
+        "severity": "minor",
+        "label": "orthography_and_word_form.insertion"
+      },
+      "expectedCorrection": {
+        "find": "punnishable offence",
+        "replace": "punishable offence"
+      }
+    },
+    {
+      "id": "issue-77",
+      "category": "orthography_and_word_form.transposition",
+      "description": "Transposes the letters 'a' and 'i' in 'against' to create the typo 'agianst'.",
+      "classification": {
+        "parent": "orthography_and_word_form",
+        "createsValidWord": false,
+        "child": "transposition",
+        "dimension": "orthographic",
+        "operationType": "transposition",
+        "editScope": "character",
+        "label": "orthography_and_word_form.transposition",
+        "severity": "minor"
+      },
+      "expectedCorrection": {
+        "find": "party agianst which",
+        "replace": "party against which"
+      }
+    },
+    {
+      "id": "issue-78",
+      "category": "orthography_and_word_form.real_word_spelling_error",
+      "description": "A real-word spelling error where 'their' is misspelled as the homophone 'there'.",
+      "classification": {
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "child": "real_word_spelling_error",
+        "parent": "orthography_and_word_form",
+        "dimension": "orthographic",
+        "severity": "minor",
+        "editScope": "token",
+        "label": "orthography_and_word_form.real_word_spelling_error"
+      },
+      "expectedCorrection": {
+        "find": "of there disputes",
+        "replace": "of their disputes"
+      }
+    },
+    {
+      "id": "issue-79",
+      "category": "grammar_and_syntax.double_negative",
+      "description": "A double negative is introduced by adding 'didn't' after 'neither party', which already carries a negative meaning.",
+      "classification": {
+        "operationType": "substitution",
+        "parent": "grammar_and_syntax",
+        "editScope": "phrase",
+        "createsValidWord": true,
+        "child": "double_negative",
+        "label": "grammar_and_syntax.double_negative",
+        "dimension": "grammatical",
+        "severity": "major"
+      },
+      "expectedCorrection": {
+        "find": "If neither party didn't appear,",
+        "replace": "If neither party appeared,"
+      }
+    },
+    {
+      "id": "issue-80",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "description": "Replace 'effect' with its homophone 'affect'.",
+      "classification": {
+        "operationType": "substitution",
+        "child": "homophone_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "severity": "major",
+        "createsValidWord": true,
+        "editScope": "token",
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "spoken of the affect which",
+        "replace": "spoken of the effect which"
+      }
+    },
+    {
+      "id": "issue-81",
+      "category": "grammar_and_syntax.extra_word",
+      "description": "An unnecessary preposition 'to' is inserted at the end of the clause, creating a double preposition error since 'to' already appears at the beginning of the relative clause ('to which').",
+      "classification": {
+        "severity": "major",
+        "label": "grammar_and_syntax.extra_word",
+        "editScope": "token",
+        "dimension": "grammatical",
+        "operationType": "insertion",
+        "child": "extra_word",
+        "createsValidWord": true,
+        "parent": "grammar_and_syntax"
+      },
+      "expectedCorrection": {
+        "find": "those nations might be subjected to,",
+        "replace": "those nations might be subjected,"
+      }
+    },
+    {
+      "id": "issue-82",
+      "category": "lexical_choice_and_confusability.malapropism",
+      "description": "Replaced 'capable' with the similar-sounding but incorrect word 'culpable' (malapropism).",
+      "classification": {
+        "parent": "lexical_choice_and_confusability",
+        "label": "lexical_choice_and_confusability.malapropism",
+        "dimension": "lexical",
+        "operationType": "substitution",
+        "severity": "major",
+        "editScope": "token",
+        "createsValidWord": true,
+        "child": "malapropism"
+      },
+      "expectedCorrection": {
+        "find": "which is culpable of being done",
+        "replace": "which is capable of being done"
+      }
+    }
+  ]
+}

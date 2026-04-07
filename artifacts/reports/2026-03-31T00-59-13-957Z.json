@@ -1,0 +1,62 @@
+{
+  "version": "v1",
+  "runId": "2026-03-31T00-59-13-957Z",
+  "createdAt": "2026-03-31T00:59:13.958Z",
+  "summary": {
+    "totalCases": 1,
+    "exactDocumentMatches": 1,
+    "totalIssues": 3,
+    "correctedIssues": 3,
+    "averageIssueCoverage": 1,
+    "totalOutputTokens": 73,
+    "averageOutputTokensPerCase": 73,
+    "correctionsPerOutputToken": 0.0410958904109589
+  },
+  "cases": [
+    {
+      "caseId": "tool-editing-silly-001",
+      "exactDocumentMatch": true,
+      "correctedIssueCount": 3,
+      "totalIssueCount": 3,
+      "issueCoverage": 1,
+      "outputTokens": 73,
+      "promptTokens": 0,
+      "correctionsPerOutputToken": 0.0410958904109589,
+      "tokensPerCorrectedIssue": 24.333333333333332,
+      "expectedChangedParagraphIds": [
+        "p1",
+        "p2"
+      ],
+      "actualChangedParagraphIds": [
+        "p1",
+        "p2"
+      ],
+      "unexpectedParagraphChanges": [],
+      "issues": [
+        {
+          "issueId": "issue-p1-dinasaur",
+          "category": "non_word_typo",
+          "paragraphId": "p1",
+          "description": "Correct dinasaur to dinosaur.",
+          "corrected": true
+        },
+        {
+          "issueId": "issue-p1-teh",
+          "category": "non_word_typo",
+          "paragraphId": "p1",
+          "description": "Correct teh to the.",
+          "corrected": true
+        },
+        {
+          "issueId": "issue-p2-grammar",
+          "category": "paragraph_rewrite",
+          "paragraphId": "p2",
+          "description": "Repair the paragraph's grammar without changing its meaning.",
+          "corrected": true
+        }
+      ],
+      "finalDocumentHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"p2\">I wrote an apology note, but it still sounds ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+      "expectedDocumentHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"p2\">I wrote an apology note, but it still sounds ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>"
+    }
+  ]
+}

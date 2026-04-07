@@ -1,0 +1,331 @@
+{
+  "version": "v1",
+  "runId": "2026-03-31T02-21-09-761Z",
+  "createdAt": "2026-03-31T02:21:09.761Z",
+  "datasetPath": "/Users/artur/work/errata-bench/datasets/v1/starter-suite.json",
+  "mode": "openrouter",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "cases": [
+    {
+      "caseId": "mixed-rewrite-001",
+      "instruction": "Proofread the document. Fix spelling and obvious grammar mistakes while preserving meaning, tone, paragraph ids, and intentionally odd details.",
+      "initialDocumentHtml": "<p id=\"p1\">My pet dinasaur stole teh mayor's toast at dawn.</p>\n<p id=\"p2\">I has wrote a apology note, but it still sound ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+      "expectedDocumentHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"p2\">I wrote an apology note, but it still sounds ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+      "finalDocumentHtml": "<p id=\"p1\">My pet dinasaur stole teh mayor's toast at dawn.</p>\n<p id=\"p2\">I has wrote a apology note, but it still sound ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+      "issues": [
+        {
+          "id": "issue-p1-dinasaur",
+          "category": "non_word_typo",
+          "paragraphId": "p1",
+          "description": "Correct dinasaur to dinosaur.",
+          "expectedCorrection": {
+            "find": "dinasaur",
+            "replace": "dinosaur"
+          }
+        },
+        {
+          "id": "issue-p1-teh",
+          "category": "non_word_typo",
+          "paragraphId": "p1",
+          "description": "Correct teh to the.",
+          "expectedCorrection": {
+            "find": "teh",
+            "replace": "the"
+          }
+        },
+        {
+          "id": "issue-p2-has-wrote",
+          "category": "verb_form",
+          "paragraphId": "p2",
+          "description": "Correct has wrote to wrote.",
+          "expectedCorrection": {
+            "find": "has wrote",
+            "replace": "wrote"
+          }
+        },
+        {
+          "id": "issue-p2-a-apology",
+          "category": "article",
+          "paragraphId": "p2",
+          "description": "Correct a apology to an apology.",
+          "expectedCorrection": {
+            "find": "a apology",
+            "replace": "an apology"
+          }
+        },
+        {
+          "id": "issue-p2-sound",
+          "category": "agreement",
+          "paragraphId": "p2",
+          "description": "Correct sound to sounds.",
+          "expectedCorrection": {
+            "find": "still sound ridiculous",
+            "replace": "still sounds ridiculous"
+          }
+        }
+      ],
+      "passes": [
+        {
+          "passName": "proofread-pass-1",
+          "passInstruction": "Do one conservative proofreading pass over the document. This is pass 1 of at most 3.",
+          "startingDocumentHtml": "<p id=\"p1\">My pet dinasaur stole teh mayor's toast at dawn.</p>\n<p id=\"p2\">I has wrote a apology note, but it still sound ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+          "endingDocumentHtml": "<p id=\"p1\">My pet dinasaur stole teh mayor's toast at dawn.</p>\n<p id=\"p2\">I has wrote a apology note, but it still sound ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+          "toolExecutions": [],
+          "finalAssistantMessage": "1. **Paragraph p1**: Fix \"dinasaur\" to \"dinosaur\" and \"teh\" to \"the\".\n2. **Paragraph p2**: Fix \"has wrote\" to \"have written\" and \"sound\" to \"sounds\".\n3. **Paragraph p3**: No changes needed.\n\nHere are the tool calls to implement these fixes:\n\njson\n{\"find\": \"dinasaur\", \"paragraphId\": \"p1\", \"replace\": \"dinosaur\"}\n\njson\n{\"find\": \"teh\", \"paragraphId\": \"p1\", \"replace\": \"the\"}\n\njson\n{\"find\": \"has wrote\", \"paragraphId\": \"p2\", \"replace\": \"have written\"}\n\njson\n{\"find\": \"sound\", \"paragraphId\": \"p2\", \"replace\": \"sounds\"}\n\nCONTINUE to ensure no further fixes are needed.",
+          "decision": "unknown",
+          "outputTokens": 197,
+          "promptTokens": 663
+        }
+      ],
+      "finalAssistantMessage": "1. **Paragraph p1**: Fix \"dinasaur\" to \"dinosaur\" and \"teh\" to \"the\".\n2. **Paragraph p2**: Fix \"has wrote\" to \"have written\" and \"sound\" to \"sounds\".\n3. **Paragraph p3**: No changes needed.\n\nHere are the tool calls to implement these fixes:\n\njson\n{\"find\": \"dinasaur\", \"paragraphId\": \"p1\", \"replace\": \"dinosaur\"}\n\njson\n{\"find\": \"teh\", \"paragraphId\": \"p1\", \"replace\": \"the\"}\n\njson\n{\"find\": \"has wrote\", \"paragraphId\": \"p2\", \"replace\": \"have written\"}\n\njson\n{\"find\": \"sound\", \"paragraphId\": \"p2\", \"replace\": \"sounds\"}\n\nCONTINUE to ensure no further fixes are needed.",
+      "terminationReason": "invalid_decision",
+      "outputTokens": 197,
+      "promptTokens": 663
+    },
+    {
+      "caseId": "no-op-restraint-001",
+      "instruction": "Proofread the document. Preserve correct text exactly unless a change is actually needed for proofreading.",
+      "initialDocumentHtml": "<p id=\"p1\">The sign literally says &quot;NOPE!!!&quot;, and that punctuation is intentional.</p>\n<p id=\"p2\">Mara said the plan was &quot;good enough for Tuesday,&quot; which is already grammatical.</p>",
+      "expectedDocumentHtml": "<p id=\"p1\">The sign literally says &quot;NOPE!!!&quot;, and that punctuation is intentional.</p>\n<p id=\"p2\">Mara said the plan was &quot;good enough for Tuesday,&quot; which is already grammatical.</p>",
+      "finalDocumentHtml": "<p id=\"p1\">The sign literally says &quot;NOPE!!!&quot;, and that punctuation is intentional.</p>\n<p id=\"p2\">Mara said the plan was &quot;good enough for Tuesday,&quot; which is already grammatical.</p>",
+      "issues": [],
+      "passes": [
+        {
+          "passName": "proofread-pass-1",
+          "passInstruction": "Do one conservative proofreading pass over the document. This is pass 1 of at most 3.",
+          "startingDocumentHtml": "<p id=\"p1\">The sign literally says &quot;NOPE!!!&quot;, and that punctuation is intentional.</p>\n<p id=\"p2\">Mara said the plan was &quot;good enough for Tuesday,&quot; which is already grammatical.</p>",
+          "endingDocumentHtml": "<p id=\"p1\">The sign literally says &quot;NOPE!!!&quot;, and that punctuation is intentional.</p>\n<p id=\"p2\">Mara said the plan was &quot;good enough for Tuesday,&quot; which is already grammatical.</p>",
+          "toolExecutions": [],
+          "finalAssistantMessage": "The document appears to be correct as is. The intentional odd details (like the excessive punctuation in \"NOPE!!!\" and the informal phrasing in \"good enough for Tuesday\") are preserved, and there are no proofreading errors to fix.\n\nSTOP. No further passes needed.",
+          "decision": "unknown",
+          "outputTokens": 57,
+          "promptTokens": 652
+        }
+      ],
+      "finalAssistantMessage": "The document appears to be correct as is. The intentional odd details (like the excessive punctuation in \"NOPE!!!\" and the informal phrasing in \"good enough for Tuesday\") are preserved, and there are no proofreading errors to fix.\n\nSTOP. No further passes needed.",
+      "terminationReason": "invalid_decision",
+      "outputTokens": 57,
+      "promptTokens": 652
+    },
+    {
+      "caseId": "protected-entities-001",
+      "instruction": "Proofread the document. Fix proofreading mistakes, but preserve names, email addresses, URLs, environment variable names, and capitalization exactly unless they are clearly wrong.",
+      "initialDocumentHtml": "<p id=\"p1\">Please send teh final invoice to Jae at jae@example.com before Friday.</p>\n<p id=\"p2\">The environment variable is OPENROUTER_API_KEY, and the docs live at https://openrouter.ai/docs.</p>",
+      "expectedDocumentHtml": "<p id=\"p1\">Please send the final invoice to Jae at jae@example.com before Friday.</p>\n<p id=\"p2\">The environment variable is OPENROUTER_API_KEY, and the docs live at https://openrouter.ai/docs.</p>",
+      "finalDocumentHtml": "<p id=\"p1\">Please send teh final invoice to Jae at jae@example.com before Friday.</p>\n<p id=\"p2\">The environment variable is OPENROUTER_API_KEY, and the docs live at https://openrouter.ai/docs.</p>",
+      "issues": [
+        {
+          "id": "issue-p1-teh",
+          "category": "non_word_typo",
+          "paragraphId": "p1",
+          "description": "Correct teh to the without changing the email address or name.",
+          "expectedCorrection": {
+            "find": "teh",
+            "replace": "the"
+          }
+        }
+      ],
+      "passes": [
+        {
+          "passName": "proofread-pass-1",
+          "passInstruction": "Do one conservative proofreading pass over the document. This is pass 1 of at most 3.",
+          "startingDocumentHtml": "<p id=\"p1\">Please send teh final invoice to Jae at jae@example.com before Friday.</p>\n<p id=\"p2\">The environment variable is OPENROUTER_API_KEY, and the docs live at https://openrouter.ai/docs.</p>",
+          "endingDocumentHtml": "<p id=\"p1\">Please send teh final invoice to Jae at jae@example.com before Friday.</p>\n<p id=\"p2\">The environment variable is OPENROUTER_API_KEY, and the docs live at https://openrouter.ai/docs.</p>",
+          "toolExecutions": [],
+          "finalAssistantMessage": "(proofread-pass-1)\n\n1. Fix \"teh\" to \"the\" in paragraph p1.\n2. Paragraph p2 is correct as is.\n\nDecision: STOP",
+          "decision": "unknown",
+          "outputTokens": 37,
+          "promptTokens": 664
+        }
+      ],
+      "finalAssistantMessage": "(proofread-pass-1)\n\n1. Fix \"teh\" to \"the\" in paragraph p1.\n2. Paragraph p2 is correct as is.\n\nDecision: STOP",
+      "terminationReason": "invalid_decision",
+      "outputTokens": 37,
+      "promptTokens": 664
+    },
+    {
+      "caseId": "context-homophone-001",
+      "instruction": "Proofread the document. Use context to resolve grammar and homophone mistakes while preserving the intended meaning.",
+      "initialDocumentHtml": "<p id=\"p1\">Their going to loose the match because its raining again.</p>\n<p id=\"p2\">Coach Rivera already packed the orange cones.</p>",
+      "expectedDocumentHtml": "<p id=\"p1\">They're going to lose the match because it's raining again.</p>\n<p id=\"p2\">Coach Rivera already packed the orange cones.</p>",
+      "finalDocumentHtml": "<p id=\"p1\">They're going to lose the match because it's raining again.</p>\n<p id=\"p2\">Coach Rivera already packed the orange cones.</p>",
+      "issues": [
+        {
+          "id": "issue-p1-their",
+          "category": "homophone",
+          "paragraphId": "p1",
+          "description": "Correct Their to They're.",
+          "expectedCorrection": {
+            "find": "Their",
+            "replace": "They're"
+          }
+        },
+        {
+          "id": "issue-p1-loose",
+          "category": "real_word_error",
+          "paragraphId": "p1",
+          "description": "Correct loose to lose.",
+          "expectedCorrection": {
+            "find": "loose",
+            "replace": "lose"
+          }
+        },
+        {
+          "id": "issue-p1-its",
+          "category": "apostrophe",
+          "paragraphId": "p1",
+          "description": "Correct its to it's.",
+          "expectedCorrection": {
+            "find": "its",
+            "replace": "it's"
+          }
+        }
+      ],
+      "passes": [
+        {
+          "passName": "proofread-pass-1",
+          "passInstruction": "Do one conservative proofreading pass over the document. This is pass 1 of at most 3.",
+          "startingDocumentHtml": "<p id=\"p1\">Their going to loose the match because its raining again.</p>\n<p id=\"p2\">Coach Rivera already packed the orange cones.</p>",
+          "endingDocumentHtml": "<p id=\"p1\">They're going to lose the match because it's raining again.</p>\n<p id=\"p2\">Coach Rivera already packed the orange cones.</p>",
+          "toolExecutions": [
+            {
+              "step": 1,
+              "toolCallId": "call_144e3c2919d1408386257cad",
+              "toolName": "find_and_replace",
+              "arguments": {
+                "paragraphId": "p1",
+                "find": "Their",
+                "replace": "They're"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "p1",
+                "updatedParagraphHtml": "<p id=\"p1\">They're going to loose the match because its raining again.</p>",
+                "replacementsApplied": 1,
+                "message": "Replaced 1 occurrence(s) in paragraph \"p1\"."
+              }
+            },
+            {
+              "step": 2,
+              "toolCallId": "call_8f19680938554db291262547",
+              "toolName": "find_and_replace",
+              "arguments": {
+                "paragraphId": "p1",
+                "find": "loose",
+                "replace": "lose"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "p1",
+                "updatedParagraphHtml": "<p id=\"p1\">They're going to lose the match because its raining again.</p>",
+                "replacementsApplied": 1,
+                "message": "Replaced 1 occurrence(s) in paragraph \"p1\"."
+              }
+            },
+            {
+              "step": 3,
+              "toolCallId": "call_713a51a957d3426b96797a91",
+              "toolName": "find_and_replace",
+              "arguments": {
+                "paragraphId": "p1",
+                "find": "its",
+                "replace": "it's"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "p1",
+                "updatedParagraphHtml": "<p id=\"p1\">They're going to lose the match because it's raining again.</p>",
+                "replacementsApplied": 1,
+                "message": "Replaced 1 occurrence(s) in paragraph \"p1\"."
+              }
+            }
+          ],
+          "finalAssistantMessage": "CONTINUE - Additional proofreading pass may be needed to ensure all corrections are applied.",
+          "decision": "continue",
+          "outputTokens": 204,
+          "promptTokens": 1658
+        },
+        {
+          "passName": "proofread-pass-2",
+          "passInstruction": "Do one conservative proofreading pass over the document. This is pass 2 of at most 3.",
+          "startingDocumentHtml": "<p id=\"p1\">They're going to lose the match because it's raining again.</p>\n<p id=\"p2\">Coach Rivera already packed the orange cones.</p>",
+          "endingDocumentHtml": "<p id=\"p1\">They're going to lose the match because it's raining again.</p>\n<p id=\"p2\">Coach Rivera already packed the orange cones.</p>",
+          "toolExecutions": [],
+          "finalAssistantMessage": "CONTINUE The document appears correct, but another pass may catch subtle issues.",
+          "decision": "continue",
+          "outputTokens": 17,
+          "promptTokens": 633
+        },
+        {
+          "passName": "proofread-pass-3",
+          "passInstruction": "Do one conservative proofreading pass over the document. This is pass 3 of at most 3.",
+          "startingDocumentHtml": "<p id=\"p1\">They're going to lose the match because it's raining again.</p>\n<p id=\"p2\">Coach Rivera already packed the orange cones.</p>",
+          "endingDocumentHtml": "<p id=\"p1\">They're going to lose the match because it's raining again.</p>\n<p id=\"p2\">Coach Rivera already packed the orange cones.</p>",
+          "toolExecutions": [],
+          "finalAssistantMessage": "The document appears to be correct. No proofreading changes are needed. \n\nSTOP.",
+          "decision": "unknown",
+          "outputTokens": 19,
+          "promptTokens": 633
+        }
+      ],
+      "finalAssistantMessage": "The document appears to be correct. No proofreading changes are needed. \n\nSTOP.",
+      "terminationReason": "invalid_decision",
+      "outputTokens": 240,
+      "promptTokens": 2924
+    },
+    {
+      "caseId": "voice-preservation-001",
+      "instruction": "Proofread the document. Fix actual errors, but preserve intentional colloquial voice and quoted phrases.",
+      "initialDocumentHtml": "<p id=\"p1\">Yeah, I ain't gonna pretend this lasagna isnt weird, but it's delicious.</p>\n<p id=\"p2\">My cousin calls it &quot;cheese brick,&quot; and that's fine.</p>",
+      "expectedDocumentHtml": "<p id=\"p1\">Yeah, I ain't gonna pretend this lasagna isn't weird, but it's delicious.</p>\n<p id=\"p2\">My cousin calls it &quot;cheese brick,&quot; and that's fine.</p>",
+      "finalDocumentHtml": "<p id=\"p1\">Yeah, I ain't gonna pretend this lasagna isn't weird, but it's delicious.</p>\n<p id=\"p2\">My cousin calls it &quot;cheese brick,&quot; and that's fine.</p>",
+      "issues": [
+        {
+          "id": "issue-p1-isnt",
+          "category": "apostrophe",
+          "paragraphId": "p1",
+          "description": "Correct isnt to isn't without normalizing the voice.",
+          "expectedCorrection": {
+            "find": "isnt",
+            "replace": "isn't"
+          }
+        }
+      ],
+      "passes": [
+        {
+          "passName": "proofread-pass-1",
+          "passInstruction": "Do one conservative proofreading pass over the document. This is pass 1 of at most 3.",
+          "startingDocumentHtml": "<p id=\"p1\">Yeah, I ain't gonna pretend this lasagna isnt weird, but it's delicious.</p>\n<p id=\"p2\">My cousin calls it &quot;cheese brick,&quot; and that's fine.</p>",
+          "endingDocumentHtml": "<p id=\"p1\">Yeah, I ain't gonna pretend this lasagna isn't weird, but it's delicious.</p>\n<p id=\"p2\">My cousin calls it &quot;cheese brick,&quot; and that's fine.</p>",
+          "toolExecutions": [
+            {
+              "step": 1,
+              "toolCallId": "call_ff54a21b24ae4612bdfd2e4f",
+              "toolName": "find_and_replace",
+              "arguments": {
+                "paragraphId": "p1",
+                "find": "isnt",
+                "replace": "isn't"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "p1",
+                "updatedParagraphHtml": "<p id=\"p1\">Yeah, I ain't gonna pretend this lasagna isn't weird, but it's delicious.</p>",
+                "replacementsApplied": 1,
+                "message": "Replaced 1 occurrence(s) in paragraph \"p1\"."
+              }
+            }
+          ],
+          "finalAssistantMessage": "Paragraph \"p1\" was corrected by fixing the typo \"isnt\" to \"isn't\". The colloquial voice (\"ain't gonna\") was preserved as intentional.\n\nCONTINUE to ensure no further corrections are needed.",
+          "decision": "unknown",
+          "outputTokens": 105,
+          "promptTokens": 1444
+        }
+      ],
+      "finalAssistantMessage": "Paragraph \"p1\" was corrected by fixing the typo \"isnt\" to \"isn't\". The colloquial voice (\"ain't gonna\") was preserved as intentional.\n\nCONTINUE to ensure no further corrections are needed.",
+      "terminationReason": "invalid_decision",
+      "outputTokens": 105,
+      "promptTokens": 1444
+    }
+  ]
+}

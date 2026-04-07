@@ -1,0 +1,282 @@
+{
+  "version": "v1",
+  "runId": "2026-04-01T19-15-31-566Z",
+  "createdAt": "2026-04-01T19:16:25.912Z",
+  "summary": {
+    "totalCases": 5,
+    "exactDocumentMatches": 4,
+    "casesWithFullIssueCoverage": 5,
+    "totalIssues": 10,
+    "correctedIssues": 10,
+    "averageIssueCoverage": 1,
+    "totalOutputTokens": 1333,
+    "averageOutputTokensPerCase": 266.6,
+    "correctionsPerOutputToken": 0.007501875468867217,
+    "totalDurationMs": 54345,
+    "averageDurationMsPerCase": 10869,
+    "cost": {
+      "candidatePromptTokens": 11603,
+      "candidateOutputTokens": 1333,
+      "candidateCostUsd": 0.09134,
+      "judgePromptTokens": 1024,
+      "judgeOutputTokens": 263,
+      "judgeCostUsd": 0.011695,
+      "totalCostUsd": 0.103035
+    },
+    "axes": {
+      "quality": 1,
+      "restraint": null,
+      "efficiency": 97.05439899063425,
+      "speed": 11.040574109853713,
+      "costUsd": 0.103035,
+      "candidateCostUsd": 0.09134,
+      "judgeCostUsd": 0.011695
+    },
+    "judge": {
+      "judgeModel": "anthropic/claude-opus-4.6:low",
+      "casesPassed": 5,
+      "casesWithNewErrors": 0,
+      "unnecessaryChanges": 0,
+      "collateralDamageCount": 0,
+      "resolvedIssues": 1,
+      "totalIssues": 1,
+      "averageRestraintScore": 1,
+      "averageResolvedIssuesPerUsd": 9.705439899063425,
+      "averageQualityScore": 1,
+      "averageBenchmarkScore": 100
+    }
+  },
+  "cases": [
+    {
+      "caseId": "mixed-rewrite-001",
+      "exactDocumentMatch": false,
+      "correctedIssueCount": 5,
+      "totalIssueCount": 5,
+      "issueCoverage": 1,
+      "outputTokens": 436,
+      "promptTokens": 1364,
+      "correctionsPerOutputToken": 0.009174311926605505,
+      "tokensPerCorrectedIssue": 109,
+      "expectedChangedParagraphIds": [
+        "Xr6osk",
+        "CYklKQ"
+      ],
+      "actualChangedParagraphIds": [
+        "Xr6osk",
+        "CYklKQ"
+      ],
+      "unexpectedParagraphChanges": [],
+      "issues": [
+        {
+          "issueId": "issue-p1-dinasaur",
+          "category": "non_word_typo",
+          "paragraphId": "Xr6osk",
+          "description": "Correct dinasaur to dinosaur.",
+          "staticCorrected": true,
+          "alternativeCandidate": false,
+          "corrected": true,
+          "resolutionMethod": "exact"
+        },
+        {
+          "issueId": "issue-p1-teh",
+          "category": "non_word_typo",
+          "paragraphId": "Xr6osk",
+          "description": "Correct teh to the.",
+          "staticCorrected": true,
+          "alternativeCandidate": false,
+          "corrected": true,
+          "resolutionMethod": "exact"
+        },
+        {
+          "issueId": "issue-p2-has-wrote",
+          "category": "verb_form",
+          "paragraphId": "CYklKQ",
+          "description": "Correct has wrote to wrote.",
+          "staticCorrected": false,
+          "alternativeCandidate": true,
+          "corrected": true,
+          "resolutionMethod": "alternative_judge"
+        },
+        {
+          "issueId": "issue-p2-a-apology",
+          "category": "article",
+          "paragraphId": "CYklKQ",
+          "description": "Correct a apology to an apology.",
+          "staticCorrected": true,
+          "alternativeCandidate": false,
+          "corrected": true,
+          "resolutionMethod": "exact"
+        },
+        {
+          "issueId": "issue-p2-sound",
+          "category": "agreement",
+          "paragraphId": "CYklKQ",
+          "description": "Correct sound to sounds.",
+          "staticCorrected": true,
+          "alternativeCandidate": false,
+          "corrected": true,
+          "resolutionMethod": "exact"
+        }
+      ],
+      "finalDocumentHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I have written an apology note, but it still sounds ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>",
+      "expectedDocumentHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I wrote an apology note, but it still sounds ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>",
+      "judge": {
+        "judgeModel": "anthropic/claude-opus-4.6:low",
+        "issueVerdicts": [
+          {
+            "issueId": "issue-p2-has-wrote",
+            "resolved": true,
+            "notes": "The original error 'has wrote' was corrected to 'have written' in the edited text. While the canonical expected correction was 'wrote' (simple past), 'have written' (present perfect) is also a grammatically valid correction that fixes the verb form error. The original problem was the incorrect past participle 'wrote' used with the auxiliary 'has'; the edit fixes this by using the correct past participle 'written' with the auxiliary 'have' (also correcting subject-verb agreement with 'I'). This is a valid alternative resolution."
+          }
+        ],
+        "allListedErrorsResolved": true,
+        "introducedNewErrors": false,
+        "introducedErrors": [],
+        "unnecessaryChanges": [],
+        "collateralDamageCount": 0,
+        "resolvedIssueCount": 1,
+        "resolutionRate": 1,
+        "restraintScore": 1,
+        "qualityScore": 1,
+        "benchmarkScore": 100,
+        "overallPass": true,
+        "summary": "The verb form error 'has wrote' was resolved with 'have written' instead of the canonical 'wrote'. Both are grammatically correct fixes — the edit chose present perfect tense with proper subject-verb agreement ('I have written') rather than simple past ('I wrote'). The core issue of the incorrect verb form is fully resolved.",
+        "outputTokens": 263,
+        "promptTokens": 1024
+      }
+    },
+    {
+      "caseId": "no-op-restraint-001",
+      "exactDocumentMatch": true,
+      "correctedIssueCount": 0,
+      "totalIssueCount": 0,
+      "issueCoverage": 1,
+      "outputTokens": 93,
+      "promptTokens": 1339,
+      "correctionsPerOutputToken": 0,
+      "tokensPerCorrectedIssue": null,
+      "expectedChangedParagraphIds": [],
+      "actualChangedParagraphIds": [],
+      "unexpectedParagraphChanges": [],
+      "issues": [],
+      "finalDocumentHtml": "<p id=\"ypDjun\">The sign literally says \"NOPE!!!\", and that punctuation is intentional.</p>\n<p id=\"pTUIje\">Mara said the plan was \"good enough for Tuesday,\" which is already grammatical.</p>",
+      "expectedDocumentHtml": "<p id=\"ypDjun\">The sign literally says \"NOPE!!!\", and that punctuation is intentional.</p>\n<p id=\"pTUIje\">Mara said the plan was \"good enough for Tuesday,\" which is already grammatical.</p>"
+    },
+    {
+      "caseId": "protected-entities-001",
+      "exactDocumentMatch": true,
+      "correctedIssueCount": 1,
+      "totalIssueCount": 1,
+      "issueCoverage": 1,
+      "outputTokens": 220,
+      "promptTokens": 2975,
+      "correctionsPerOutputToken": 0.004545454545454545,
+      "tokensPerCorrectedIssue": 220,
+      "expectedChangedParagraphIds": [
+        "AQpZkX"
+      ],
+      "actualChangedParagraphIds": [
+        "AQpZkX"
+      ],
+      "unexpectedParagraphChanges": [],
+      "issues": [
+        {
+          "issueId": "issue-p1-teh",
+          "category": "non_word_typo",
+          "paragraphId": "AQpZkX",
+          "description": "Correct teh to the without changing the email address or name.",
+          "staticCorrected": true,
+          "alternativeCandidate": false,
+          "corrected": true,
+          "resolutionMethod": "exact"
+        }
+      ],
+      "finalDocumentHtml": "<p id=\"AQpZkX\">Please send the final invoice to Jae at jae@example.com before Friday.</p>\n<p id=\"RRWvsf\">The environment variable is OPENROUTER_API_KEY, and the docs live at https://openrouter.ai/docs.</p>",
+      "expectedDocumentHtml": "<p id=\"AQpZkX\">Please send the final invoice to Jae at jae@example.com before Friday.</p>\n<p id=\"RRWvsf\">The environment variable is OPENROUTER_API_KEY, and the docs live at https://openrouter.ai/docs.</p>"
+    },
+    {
+      "caseId": "context-homophone-001",
+      "exactDocumentMatch": true,
+      "correctedIssueCount": 3,
+      "totalIssueCount": 3,
+      "issueCoverage": 1,
+      "outputTokens": 319,
+      "promptTokens": 2970,
+      "correctionsPerOutputToken": 0.009404388714733543,
+      "tokensPerCorrectedIssue": 106.33333333333333,
+      "expectedChangedParagraphIds": [
+        "QNrOzc"
+      ],
+      "actualChangedParagraphIds": [
+        "QNrOzc"
+      ],
+      "unexpectedParagraphChanges": [],
+      "issues": [
+        {
+          "issueId": "issue-p1-their",
+          "category": "homophone",
+          "paragraphId": "QNrOzc",
+          "description": "Correct Their to They're.",
+          "staticCorrected": true,
+          "alternativeCandidate": false,
+          "corrected": true,
+          "resolutionMethod": "exact"
+        },
+        {
+          "issueId": "issue-p1-loose",
+          "category": "real_word_error",
+          "paragraphId": "QNrOzc",
+          "description": "Correct loose to lose.",
+          "staticCorrected": true,
+          "alternativeCandidate": false,
+          "corrected": true,
+          "resolutionMethod": "exact"
+        },
+        {
+          "issueId": "issue-p1-its",
+          "category": "apostrophe",
+          "paragraphId": "QNrOzc",
+          "description": "Correct its to it's.",
+          "staticCorrected": true,
+          "alternativeCandidate": false,
+          "corrected": true,
+          "resolutionMethod": "exact"
+        }
+      ],
+      "finalDocumentHtml": "<p id=\"QNrOzc\">They're going to lose the match because it's raining again.</p>\n<p id=\"7eLM0y\">Coach Rivera already packed the orange cones.</p>",
+      "expectedDocumentHtml": "<p id=\"QNrOzc\">They're going to lose the match because it's raining again.</p>\n<p id=\"7eLM0y\">Coach Rivera already packed the orange cones.</p>"
+    },
+    {
+      "caseId": "voice-preservation-001",
+      "exactDocumentMatch": true,
+      "correctedIssueCount": 1,
+      "totalIssueCount": 1,
+      "issueCoverage": 1,
+      "outputTokens": 265,
+      "promptTokens": 2955,
+      "correctionsPerOutputToken": 0.0037735849056603774,
+      "tokensPerCorrectedIssue": 265,
+      "expectedChangedParagraphIds": [
+        "xuRzNZ"
+      ],
+      "actualChangedParagraphIds": [
+        "xuRzNZ"
+      ],
+      "unexpectedParagraphChanges": [],
+      "issues": [
+        {
+          "issueId": "issue-p1-isnt",
+          "category": "apostrophe",
+          "paragraphId": "xuRzNZ",
+          "description": "Correct isnt to isn't without normalizing the voice.",
+          "staticCorrected": true,
+          "alternativeCandidate": false,
+          "corrected": true,
+          "resolutionMethod": "exact"
+        }
+      ],
+      "finalDocumentHtml": "<p id=\"xuRzNZ\">Yeah, I ain't gonna pretend this lasagna isn't weird, but it's delicious.</p>\n<p id=\"BxcKxl\">My cousin calls it \"cheese brick,\" and that's fine.</p>",
+      "expectedDocumentHtml": "<p id=\"xuRzNZ\">Yeah, I ain't gonna pretend this lasagna isn't weird, but it's delicious.</p>\n<p id=\"BxcKxl\">My cousin calls it \"cheese brick,\" and that's fine.</p>"
+    }
+  ]
+}

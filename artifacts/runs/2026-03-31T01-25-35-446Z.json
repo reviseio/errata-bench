@@ -1,0 +1,117 @@
+{
+  "version": "v1",
+  "runId": "2026-03-31T01-25-35-446Z",
+  "createdAt": "2026-03-31T01:25:35.446Z",
+  "datasetPath": "/Users/artur/work/errata-bench/datasets/v1/tool-editing-baseline.json",
+  "mode": "mock",
+  "model": "mock-proofreader",
+  "cases": [
+    {
+      "caseId": "tool-editing-silly-001",
+      "instruction": "Proofread the document. Fix spelling and obvious grammar mistakes while preserving meaning, tone, paragraph ids, and intentionally odd details.",
+      "initialDocumentHtml": "<p id=\"p1\">My pet dinasaur stole teh mayor's toast at dawn.</p>\n<p id=\"p2\">I has wrote a apology note, but it still sound ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+      "expectedDocumentHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"p2\">I wrote an apology note, but it still sounds ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+      "finalDocumentHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"p2\">I wrote an apology note, but it still sounds ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+      "issues": [
+        {
+          "id": "issue-p1-dinasaur",
+          "category": "non_word_typo",
+          "paragraphId": "p1",
+          "description": "Correct dinasaur to dinosaur.",
+          "expectedCorrection": {
+            "find": "dinasaur",
+            "replace": "dinosaur"
+          }
+        },
+        {
+          "id": "issue-p1-teh",
+          "category": "non_word_typo",
+          "paragraphId": "p1",
+          "description": "Correct teh to the.",
+          "expectedCorrection": {
+            "find": "teh",
+            "replace": "the"
+          }
+        },
+        {
+          "id": "issue-p2-has-wrote",
+          "category": "verb_form",
+          "paragraphId": "p2",
+          "description": "Correct has wrote to wrote.",
+          "expectedCorrection": {
+            "find": "has wrote",
+            "replace": "wrote"
+          }
+        },
+        {
+          "id": "issue-p2-a-apology",
+          "category": "article",
+          "paragraphId": "p2",
+          "description": "Correct a apology to an apology.",
+          "expectedCorrection": {
+            "find": "a apology",
+            "replace": "an apology"
+          }
+        },
+        {
+          "id": "issue-p2-sound",
+          "category": "agreement",
+          "paragraphId": "p2",
+          "description": "Correct sound to sounds.",
+          "expectedCorrection": {
+            "find": "still sound ridiculous",
+            "replace": "still sounds ridiculous"
+          }
+        }
+      ],
+      "passes": [
+        {
+          "passName": "proofread-pass-1",
+          "passInstruction": "Do one conservative proofreading pass over the document. This is pass 1 of at most 3.",
+          "startingDocumentHtml": "<p id=\"p1\">My pet dinasaur stole teh mayor's toast at dawn.</p>\n<p id=\"p2\">I has wrote a apology note, but it still sound ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+          "endingDocumentHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"p2\">I wrote an apology note, but it still sounds ridiculous.</p>\n<p id=\"p3\">This paragraph is already correct and should stay exactly the same.</p>",
+          "toolExecutions": [
+            {
+              "step": 1,
+              "toolCallId": "mock-call-proofread-pass-1-1",
+              "toolName": "replace_paragraph",
+              "arguments": {
+                "paragraphId": "p1",
+                "newParagraphHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "p1",
+                "updatedParagraphHtml": "<p id=\"p1\">My pet dinosaur stole the mayor's toast at dawn.</p>",
+                "message": "Paragraph \"p1\" was replaced."
+              }
+            },
+            {
+              "step": 2,
+              "toolCallId": "mock-call-proofread-pass-1-2",
+              "toolName": "replace_paragraph",
+              "arguments": {
+                "paragraphId": "p2",
+                "newParagraphHtml": "<p id=\"p2\">I wrote an apology note, but it still sounds ridiculous.</p>"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "p2",
+                "updatedParagraphHtml": "<p id=\"p2\">I wrote an apology note, but it still sounds ridiculous.</p>",
+                "message": "Paragraph \"p2\" was replaced."
+              }
+            }
+          ],
+          "finalAssistantMessage": "STOP: Applied the proofreading edits. The document is now clean.",
+          "decision": "stop",
+          "outputTokens": 72,
+          "promptTokens": 0
+        }
+      ],
+      "finalAssistantMessage": "STOP: Applied the proofreading edits. The document is now clean.",
+      "terminationReason": "model_stop",
+      "outputTokens": 72,
+      "promptTokens": 0
+    }
+  ]
+}

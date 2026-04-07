@@ -1,0 +1,39 @@
+{
+  "version": "v1",
+  "runId": "2026-03-31T00-18-14-469Z",
+  "createdAt": "2026-03-31T00:18:14.469Z",
+  "datasetPath": "/Users/artur/work/errata-bench/datasets/v1/silly-basic.jsonl",
+  "mode": "mock",
+  "model": "mock-proofreader",
+  "cases": [
+    {
+      "caseId": "silly-dino-001",
+      "instruction": "Fix spelling and obvious grammar mistakes. Keep the meaning and tone the same. Return only the corrected sentence.",
+      "input": "My pet dinasaur eated teh homework befor brekfast.",
+      "expectedOutput": "My pet dinosaur ate the homework before breakfast.",
+      "expectedCorrections": [
+        {
+          "from": "dinasaur",
+          "to": "dinosaur"
+        },
+        {
+          "from": "eated",
+          "to": "ate"
+        },
+        {
+          "from": "teh",
+          "to": "the"
+        },
+        {
+          "from": "befor",
+          "to": "before"
+        },
+        {
+          "from": "brekfast",
+          "to": "breakfast"
+        }
+      ],
+      "modelOutput": "My pet dinosaur ate the homework before breakfast."
+    }
+  ]
+}

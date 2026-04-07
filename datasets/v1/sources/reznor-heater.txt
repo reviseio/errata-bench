@@ -1,0 +1,613 @@
+APPLIES TO: Models UDAP and UDAS Series Fan-Type Unit Heaters
+
+FOR YOUR SAFETY
+
+What to do if you smell gas:
+
+Do not try to light any appliance.
+
+Do not touch any electrical switch; do not use any phone in your building.
+
+Immediately call your gas supplier from a neighbor's phone. Follow the gas supplier's instructions.
+
+If you cannot reach your gas supplier, call your fire department.
+
+FOR YOUR SAFETY
+
+Do not store or use gasoline or other flammable vapors and liquids in the vicinity of this or any other appliance.
+
+WARNING: Improper installation, adjustment, alteration, service, or maintenance can cause property damage, injury, or death. Read the installation, operation, and maintenance instructions thoroughly before installing or servicing this equipment.
+
+WARNING: Gas-fired appliances are not designed for use in hazardous atmospheres containing flammable vapors or combustible dust, in atmospheres containing chlorinated or halogenated hydrocarbons, or in applications with airborne silicone substances. See Hazard Levels, page 2.
+
+WARNING: Should overheating occur, or the gas supply fail to shut off, shut off the manual gas valve to the appliance before shutting off the electrical supply.
+
+WARNING: Do not use this appliance if any part has been under water. Immediately call a qualified service technician to inspect the appliance and replace any gas control that has been under water.
+
+HAZARD INTENSITY LEVELS
+
+1. DANGER: Failure to comply will result in severe personal injury or death and/or property damage.
+
+2. WARNING: Failure to comply could result in severe personal injury or death and/or property damage.
+
+3. CAUTION: Failure to comply could result in minor personal injury and/or property damage.
+
+These units must be installed in accordance with local building codes. In the absence of local codes, in the United States, the unit must be installed in accordance with the National Fuel Gas Code, ANSI Z223.1. A Canadian installation must be in accordance with the CAN/CGA B149 Installation Codes. These codes are available from CSA Information Services, 1-800-463-6727. Local authorities having jurisdiction should be consulted before installation is made to verify local codes and installation procedure requirements.
+
+Model UDAP 30 to 125 and Model UDAS 30 to 125 are design certified by the Canadian Standards Association for use in residential, industrial, and commercial installations. Models UDAP 150 to 400 and UDAS 150 to 400 are design certified by the Canadian Standards Association for use in industrial and commercial installations only. All models and sizes are available for use with either natural or propane gas. The type of gas, the input rate and the electrical supply requirement is shown on the heater’s rating plate. Check the rating plate to determine if the heater is appropriate for the intended installation.
+
+Installation requires both this manual AND the venting manual.
+
+Both this installation manual and the appropriate venting manual are shipped with the heater. Verify that the literature is correct for the heater being installed. If either manual is missing or incorrect, contact your distributor before beginning installation.
+
+The instructions in this manual apply only to the models listed.
+
+Installation should be done by a qualified agency in accordance with these instructions. The qualified service agency installing this heater is responsible for the installation.
+
+Installations in aircraft hangars should be in accordance with ANSI/NFPA No. 409 (latest edition), Standard for Aircraft Hangars; in public garages in accordance with ANSI/NFPA No. 88A (latest edition), Standard for Parking Structures; and for repair garages in accordance with ANSI/NFPA No. 88B (latest edition), Standard for Repair Garages. In Canada, installations in aircraft hangars should be in accordance with the requirements of the enforcing authorities, and in public garages in accordance with CAN/CGA B149 codes.
+
+If the heater is being installed in the state of California, the installer MUST attach a warning label on the outside of the access door. The California Warning label is shipped in the owner’s envelope along with this manual, the warranty form, and any other paperwork that applies.
+
+If installation is in California, select a location on the heater access panel. Be sure the surface is clean and dry and adhere the label.
+
+Refer to the limited warranty information on the Warranty Card in the "Owner's Envelope".
+
+Warranty is void if ...
+
+a. Wiring is not in accordance with the diagram furnished with the heater.
+
+b. The unit is installed without proper clearance to combustible materials.
+
+c. A fan model is connected to a duct system or if the air delivery system is modified.
+
+This unit was test operated and inspected at the factory prior to crating and was in operating condition. If the heater has incurred any damage in shipment, document the damage with the transporting agency and contact an authorized Reznor Distributor. If you are an authorized Distributor, follow the FOB freight policy procedures as published by Thomas & Betts for Reznor products.
+
+Check the rating plate for the gas specifications and electrical characteristics of the heater to be sure that they are compatible with the gas and electric supplies at the installation site.
+
+Read this booklet and become familiar with the installation requirements of your particular heater. If you do not have knowledge of local requirements, check with the local gas company or any other local agencies who might have requirements concerning this installation.
+
+Before beginning, make preparations for necessary supplies, tools, and manpower.
+
+If the installation includes optional vertical louvers, downturn nozzle, ceiling mounting bracket, hanger kit, high altitude kit, multiple heater control, and/or stepdown transformer, install these options before the heater is suspended. Follow the instructions included in the option package; option packages are shipped separately.
+
+Other shipped separate items could include a vent/combustion air kit, high temperature tape, a thermostat bracket kit, a thermostat, and/or a thermostat guard. Be sure all options ordered are at the installation site.
+
+If the heater is being installed at an elevation above 2000 ft (610M), the input rate will have to be derated. This is done by adjusting the valve outlet pressure.
+
+In addition, if the heater is being installed at an altitude above 6000 ft (1830M), the pressure switch will have to be changed. If ordered with the unit as Option DJ20 or DJ21, the pressure switch is shipped separately.
+
+Adjusting the valve outlet pressure is done after the heater is in operation; follow the instructions in Paragraph 12. Capacities and inputs for derated units are also listed in Paragraph 12.
+
+If the pressure switch needs changed, do that before the heater is operated.
+
+Units must be installed so that the clearances in the table are provided for combustion air space, inspection and service, and for proper spacing from combustible construction. Clearance to combustibles is defined as the minimum distance from the heater to a surface or object that is necessary to ensure that a surface temperature of 90°F above the surrounding ambient temperature is not exceeded.
+
+This heater must be supplied with the air that enters into the combustion process and is then vented to the outdoors. Sufficient air must enter the equipment location to replace that exhausted through the heater vent system. In the past, the infiltration of outside air assumed in heat loss calculations (one air change per hour) was assumed to be sufficient. However, current construction methods using more insulation, vapor barriers, tighter fitting and gasketed doors and windows, weatherstripping, and/or mechanical exhaust fans may now require the introduction of outside air through wall openings or ducts.
+
+The requirements for combustion and ventilation air depend upon whether the unit is located in a confined or unconfined space. An "unconfined space" is defined as a space whose volume is not less than 50 cubic feet per 1000 BTUH of the installed appliance. Under ALL conditions, enough air must be provided to ensure there will not be a negative pressure condition within the equipment room or space.
+
+WARNING: Model UDAP and UDAP-CV power-vented unit heaters are designed to take combustion air from the space in which the unit is installed and are not designed for connection to outside combustion air intake ducts. Connecting outside air ducts voids the warranty and could cause hazardous operation. See Hazard Levels, page 2.
+
+Do not install a unit in a confined space without providing wall openings leading to and from the space.
+
+Provide openings near the floor and ceiling for ventilation and air for combustion.
+
+Air from inside the building -- openings 1 square inch free area per 1000 BTUH. Never less than 100 square inches free area for each opening.
+
+Air from outside through duct -- openings 1 square inch free area per 2000 BTUH.
+
+Air direct from outside -- openings 1 square inch free area per 4000 BTUH.
+
+NOTE: For further details on supplying combustion air to a confined space, see the National Fuel Gas Code ANSI Z223.1a (latest edition).
+
+Locate the heater so that it is a minimum of five feet (1.5M) above the floor and in compliance with the clearances in Paragraph 8.
+
+WARNING: If touched, the vent pipe and internal heater surfaces that are accessible from outside the heater will cause burns. Suspend the heater a minimum of 5 feet (1.5M) above the floor.
+
+Use the clearances in Paragraph 8; the combustion air requirements in Paragraph 9; the throw tables, mounting height requirements, and location recommendations below; the weights in Paragraph 11; and the venting requirements in the Venting Manual to determine where to suspend the heater.
+
+For best results, the heater should be placed with certain rules in mind. In general, a unit should be located from 8 to 12 feet (2.4-3.7M) above the floor. Units should always be arranged to blow toward or along exposed wall surfaces, if possible. Where two or more units are installed in the same room, a general scheme of air circulation should be maintained for best results.
+
+Suspended heaters are most effective when located as close to the working zone as possible, and this fact should be kept in mind when determining the mounting heights to be used. However, care should be exercised to avoid directing the discharged air directly on the room occupants.
+
+Partitions, columns, counters, or other obstructions should be taken into consideration when locating the unit heater so that a minimum quantity of airflow will be deflected by such obstacles.
+
+When units are located in the center of the space to be heated, the air should be discharged toward the exposed walls. In large areas, units should be located to discharge air along exposed walls with extra units provided to discharge air in toward the center of the area.
+
+At those points where infiltration of cold air is excessive, such as at entrance doors and shipping doors, it is desirable to locate the unit so that it will discharge directly toward the source of cold air from a distance of 15 to 20 feet (4.6-6.1M).
+
+CAUTION: Do not locate the heater where it may be exposed to water spray, rain, or dripping water.
+
+The presence of chlorine vapors in the combustion air of gas-fired heating equipment presents a potential corrosion hazard. Chlorine found usually in the form of freon or degreaser vapors, when exposed to flame will precipitate from the compound, and go into solution with any condensation that is present in the heat exchanger or associated parts. The result is hydrochloric acid which readily attacks all metals including 300 grade stainless steel. Care should be taken to separate these vapors from the combustion process. This may be done by wise location of the unit vent and combustion air terminals with regard to exhausters or prevailing wind directions. Chlorine is heavier than air. Keep these facts in mind when determining installation location of the heater in relation to building exhaust systems.
+
+When the heater is lifted for suspension, support the bottom of the heater with plywood or other appropriately placed material. If the bottom is not supported, damage could occur. Before hanging, verify that all screws used for holding shipping brackets were re-installed in the cabinet.
+
+The heater is equipped for either two-point or four-point suspension. A 3/8"-16 threaded nut retainer is located at each suspension point.
+
+Before suspending the heater, check the supporting structure to be used to verify that it has sufficient load-carrying capacity to support the weight of the unit.
+
+If ordered with swivel connectors for 1” pipe, Option CK8 or CK10, attach the swivels at the threaded nut retainers. Suspend with 1” pipe.
+
+If ordered with a ceiling suspension kit, Option CK22, follow the illustrated instructions in the kit.
+
+Model UDAS - Whether using the suspension points or the hanger kit, when installing a Model UDAS, the unused suspension points on the control side of the heater MUST be plugged. Plug these holes with the 3/8”-16 bolts and flat washers shipped in the bag with the heater.
+
+WARNING: Unit must be level for proper operation. Do not place or add additional weight to the suspended heater. Hazard Levels, page 2.
+
+WARNING: This appliance is equipped for a maximum gas supply pressure of 1/2 pound, 8 ounces, or 14 inches water column. Supply pressure higher than 1/2 pound requires installation of an additional lockup-type service regulator external to the unit.
+
+WARNING: PRESSURE TESTING SUPPLY PIPING
+
+Test Pressures Above 1/2 PSI: Disconnect the heater and manual valve from the gas supply line which is to be tested. Cap or plug the supply line.
+
+Test Pressures Below 1/2 PSI: Before testing, close the manual valve on the heater.
+
+All piping must be in accordance with requirements outlined in the National Fuel Gas Code ANSI/Z223.1a (latest edition) or CAN/CGA-B149.1 and B149.2 (See Paragraph 2). Gas supply piping installation should conform with good practice and with local codes. Support gas piping with pipe hangers, metal strapping, or other suitable material; do not rely on the heater to support the gas pipe.
+
+The heater is orificed for operation with natural gas having a heating value of 1000 (+/- 50) BTUH per cubic ft or propane gas with a heating value of 2500 (+/- 100) BTUH per cubic ft. If the gas at the installation does not meet these specifications, consult the factory for proper orificing.
+
+Pipe joint compounds (pipe dope) shall be resistant to the action of liquefied petroleum gas or any other chemical constituents of the gas being supplied.
+
+Install a ground joint union and manual shutoff valve upstream of the unit control system. The 1/8" plugged tapping in the shutoff valve provides connection for a supply line pressure test gauge. Installation of a trap with a minimum 3" (76mm) drip leg is required.
+
+The unit is equipped with a nipple that extends outside the cabinet. The gas connection is either 1/2” or 3/4”.
+
+WARNING: All components of a gas supply system must be leak tested prior to placing equipment in service. NEVER TEST FOR LEAKS WITH AN OPEN FLAME. Failure to comply could result in personal injury, property damage or death.
+
+Measuring valve outlet gas pressure cannot be done until the heater is in operation. It is included in the steps of the "Check-Test-Start" procedure in Paragraph 24. The following warnings and instructions apply.
+
+WARNING: Valve outlet gas pressure must never exceed 3.5" w.c. for natural gas and 10" w.c. for propane gas.
+
+For Natural Gas: When the heater leaves the factory, the combination gas valve is set so that the valve outlet gas pressure for a single stage valve or high fire of a two stage valve is regulated to 3.5" w.c. Inlet supply pressure to the valve for natural gas must be a minimum of 5" w.c. or as noted on the rating plate and a maximum of 14" w.c.
+
+For Propane Gas: When the heater leaves the factory, the combination gas valve is set so that the valve outlet gas pressure for a single stage valve or high fire of a two stage valve is regulated to 10" w.c. Inlet supply pressure to the valve for propane gas must be a minimum of 11" w.c. and a maximum of 14" w.c.
+
+Before attempting to measure or adjust valve outlet gas pressure, the inlet supply pressure must be within the specified range both when the heater is in operation and on standby. Incorrect inlet pressure could cause excessive valve outlet gas pressure immediately or at some future time. If natural gas supply pressure is too high, install a regulator in the supply line before it reaches the heater. If natural gas supply pressure is too low, contact your gas supplier.
+
+Instructions
+
+1) Locate the 1/8” output pressure tap on the valve. With the manual valve turned off to prevent flow to the gas valve, connect a manometer to the 1/8" pipe outlet pressure tap in the valve. NOTE: A manometer (fluid-filled gauge) is recommended rather than a spring type gauge due to the difficulty of maintaining calibration of a spring type gauge.
+
+2) Open the manual valve and operate the heater. (NOTE: On Model UDAS, depress and hold the door safety switch.) Measure the outlet pressure of the gas valve. Normally when operating at sea level, adjustments should not be necessary to the factory setting. (For high altitude settings, see next paragraph.)
+
+If adjustment is necessary, remove the cap from the adjustment screw(s). Set pressure to correct settings by turning the regulator screw IN (clockwise) to increase pressure. Turn regulator screw OUT (counterclockwise) to decrease pressure.
+
+Leak-test all connections by brushing on a leak-detecting solution.
+
+NOTE: Gas Conversion Kits are available for changing from propane gas to natural gas or natural gas to propane gas. A factory-authorized conversion kit MUST be used.
+
+Instructions for High Altitude Derate
+
+1. Determine the required valve outlet pressure for the elevation where the heater will be operating. If unsure of the elevation, contact the local gas supplier.
+
+2. Locate the 1/8” output pressure tap on the valve. Turn the knob on the top of the valve to "OFF". Connect a manometer to the 1/8" pipe outlet pressure tap in the valve. Use a water column manometer that is readable to the nearest tenth of an inch.
+
+3. Single Stage and Two Stage High Fire - Turn the knob on the top of the valve to "ON". Remove the cap from the pressure adjusting screw and adjust the gas train pressure to the pressure selected from the applicable table. Adjust pressure by turning the regulator screw IN (clockwise) to increase pressure or OUT (counterclockwise) to decrease pressure.
+
+Two Stage Low Fire - Disconnect the wire from the "HI" terminal on the gas valve and check the low fire pressure. Turn the regulator screw to adjust the low fire outlet pressure to the "Low Fire" pressure selected from the table. Reconnect the wire to the gas valve.
+
+4. Turn up the thermostat. (NOTE: On Model UDAS, depress and hold the door safety switch.) Cycle the burner once or twice to properly seat the adjustment spring in the valve.
+
+Re-check the pressure(s). When the outlet pressure is right for the installation, remove the manometer and replace the cap.
+
+Check for leak at the pressure tap fitting.
+
+5. With the heater operating determine that the inlet pressure to the heater for natural gas is between 5 and 13.5 inches w.c. and for propane between 10 and 13.5 inches w.c. Take this reading as close as possible to the heater. If the inlet pressure is not within the specified range, the inlet pressure must be corrected and Steps 3 and 4 repeated.
+
+6. Find the High Altitude Adjustment label in the plastic bag that contained these instructions. Using a permanent marker, fill-in the appropriate information from the tables on page 15. Select a location for the label on the outside of the heater access panel so that it will be conspicuous to anyone operating or servicing the unit. Be sure the surface is clean and dry and adhere the label.
+
+The input and/or the capacity of the heater changes with the derate. The tables list inputs and capacities at altitudes from sea level to 9000 ft.
+
+This heater has a one-piece TCORE2® burner assembly (patent pending) designed to provide controlled flame stability without lifting or flashback with either natural or propane gas.
+
+The burner can be removed as a unit for inspection or service; see Maintenance Section for removal instructions.
+
+All electrical wiring and connections, including electrical grounding MUST be made in accordance with the National Electric Code ANSI/NFPA No. 70 (latest edition) or, in Canada, with CSA Standard C22.1. In addition, the installer should be aware of any local ordinances or gas company requirements that might apply.
+
+Check the rating plate on the heater for the supply voltage and current requirements. A dedicated line voltage supply with disconnect switch should be run directly from the main electrical panel to the heater. All external wiring must be within approved conduit and have a minimum temperature rise rating of 60°C. Conduit must be run so as not to interfere with the heater access panel. If the installation requires a stepdown transformer (Option CG), follow the instructions shipped with the option package for attaching the transformer to the heater.
+
+The electrical supply enters at the rear of the heater. Model UDAS includes a built-in disconnect switch (20A @ 115V; 10A @ 230V Rating). Model UDAS supply wiring connects to leads located inside a sealed electrical box. To maintain the sealing feature of the electrical box, always replace the cover plate. Model UDAP supply wiring connects directly to leads on the integrated circuit board.
+
+The circuit board is located inside on the bottom of the control compartment. The circuit board is polarity sensitive. It is advisable to check the electrical supply to be certain that the black wire is the "hot" wire and that the white wire is the neutral wire. The supply connection made to "L1" on the circuit board must be the "hot" wire.
+
+For all models, the terminal strip for 24 volt thermostat connections is located on the outside of the cabinet at the back of the heater. Wires from the terminal strip are factory wired to the circuit board.
+
+Use either an optional thermostat available with the heater or a field-supplied 24-volt thermostat. Install according to the thermostat manufacturer's instructions, paying particular attention to the requirements regarding the location of the thermostat.
+
+Make sure that the heat anticipator setting on the thermostat is 0.6 amps (or in accordance with the amperage value noted on the wiring diagram of your heater).
+
+Make thermostat connections at the terminal strip on the back of the heater. The strip has four terminals, R, G, W1, and W2; refer to the wiring diagram.
+
+If the heater was ordered with Option CM3, a kit for mounting the thermostat on the rear of the heater is shipped separately. Follow the instructions in the option package to attach the bracket.
+
+Select a snap-action thermostat when using the unit mounted thermostat bracket. Do not use a mercury switch thermostat because the vibration may cause excessive unit cycling. Be careful with the thermostat leads; shorting the thermostat wires to a metal surface will cause the transformer to fail.
+
+If the heater was ordered with a multiple heater control option, one thermostat can be used to control up to six heaters. The option includes a 40VA transformer that replaces the standard transformer in the "master" unit and a relay assembly that attaches to the "slave" unit. Option CL31 provides for control of two heaters. If control of additional heaters is desired (up to six total), Option CL32 which is the relay assembly only must be added to each of the "slave" heaters.
+
+The option packages are shipped separately and include complete instructions on installation and wiring.
+
+The combustion air proving switch is a pressure sensitive switch that monitors air pressure to ensure that proper combustion airflow is available. On Model UDAP, the switch is a single pole/normally open device which closes when a negative pressure is sensed in the venter housing. On Model UDAS, the switch senses the differential pressure between the negative pressure in the venter housing and the pressure in the cabinet.
+
+On startup when the heater is cold, the sensing pressure is at the most negative level, and as the heater and flue system warm up, the sensing pressure becomes less negative. After the system has reached equilibrium (about 20 minutes), the sensing pressure levels off.
+
+If a restriction or excessive flue length or turns cause the sensing pressure to be outside the switch setpoint, the pressure switch will function to shutoff the main burner. The main burner will remain off until the system has cooled and/or the flue system resistance is reduced.
+
+All units are equipped with a temperature activated auto reset limit control. The control is factory set and is non-adjustable. If the setpoint is reached, the limit control will interrupt the electric supply to the gas valve. This safety device provides protection in the case of motor failure or lack of airflow due to a restriction at the inlet or outlet.
+
+CAUTION: The auto reset limit control will continue to shut down the heater until the cause is corrected. Never bypass the limit control; hazardous conditions could result. See Hazard Intensity Levels, page 2.
+
+Sizes 30-125 are equipped with a temperature activated manually reset flame rollout switch. The flame rollout switch is located at the top of the burner assembly. It is factory set and is non-adjustable. If the setpoint is reached, the flame rollout acts to interrupt the electric supply to the gas valve. If the flame rollout switch activates, identify and correct the cause before resetting the switch. Refer to the Maintenance Section for information on probable causes and instructions on resetting the flame rollout switch.
+
+DANGER: If the manual reset flame rollout switch activates, identify and correct the cause before resetting the switch. Never bypass the flame rollout switch; hazardous conditions could result. See Hazard Intensity Levels, page 2.
+
+All sizes of Model UDAS heaters are equipped with a door switch which prevents the heater from operating when the service door panel is open. The service panel of a Model UDAS is equipped with a pliable gasket material that fully seals the door to provide added protection from building air entering the combustion zone of the heater.
+
+This heater is equipped with a direct spark integrated control module (circuit board). The module monitors the safety devices and controls the operation of the fan and venter motors and the gas valve between heat cycles.
+
+Normal Heat Cycle Operating Sequence
+
+1) Call for Heat - The thermostat calls for heat by energizing the "W" terminal. The control checks to see that the limit switch is closed and the pressure switch is open. If the limit switch is open, the control responds as defined in the "Abnormal Heat Cycle, Limit Switch Operation". If the pressure switch is closed, the control will do four flashes on the green LED and wait indefinitely for the pressure switch to open. If the pressure switch is open, the control proceeds to prepurge.
+
+2) Prepurge - The control energizes the venter motor and waits for the pressure switch to close. If the pressure switch does not close within 30 seconds of the venter motor energizing, the control will do two flashes on the green LED. The control will leave the venter motor energized indefinitely as long as the call for heat remains and the pressure switch is open.
+
+When the pressure switch is proven closed, the control begins the prepurge time. If flame is present any time while in prepurge, the prepurge time is restarted. If flame is present long enough to cause lockout, the control responds as defined in "Fault Modes, Undesired Flame".
+
+The control runs the venter motor for a 20 second prepurge time, then proceeds to the ignition trial period.
+
+3) Ignition Trial Period - The control energizes the spark and main gas valve. The venter remains energized. If flame is sensed during the first 10 seconds, the spark is de-energized and the control proceeds to heat fan/blower on delay. If flame has not been sensed during the first 10 seconds, the control de-energizes the spark output and keeps the gas valve energized for an additional one second flame proving period. If flame is not present after the flame proving period, the control de-energizes the gas valve and proceeds with ignition re-tries as specified in "Abnormal Heat Cycle, Ignition Re-try". If flame is present, the control proceeds to the fan/blower on delay.
+
+4) Fan/Blower On Delay - The control waits for 30 seconds from the time the gas valve opened and then energizes the fan/blower motor. The gas valve and venter motor remain energized. The control proceeds to steady heat mode.
+
+5) Steady Heat - Control inputs are continuously monitored to ensure limit and pressure switches are closed, flame is established, and the thermostat call for heat remains. When the thermostat call for heat is removed, the control de-energizes the gas valve and begins post-purge and fan/blower off delay timing.
+
+6) Post Purge - The venter motor output remains on for a 45 second post-purge period after the thermostat is satisfied.
+
+7) Fan/Blower Off Delay - The fan/blower motor is de-energized after a blower off delay as selected by the dip switches. Timing begins when the thermostat is satisfied.
+
+Interrupted Thermostat Call for Heat - If the thermostat demand for heat is removed before the flame is recognized, the control will run the venter motor for the post purge period and de-energize all outputs.
+
+If the thermostat demand for heat is removed after successful ignition, the control will de-energize the gas valve, run the venter motor through post purge, and run the fan/blower motor on heat speed for the selected delay off time.
+
+Ignition Retry - If flame is not established on the first trial for ignition period, the control de-energizes the gas valve and the venter motor remains energized for an inter-purge period of 10 seconds. The spark and gas valve are then re-energized, and the control initiates another trial for ignition.
+
+If flame is not established on the second trial for ignition, the control de-energizes the gas valve, energizes the fan/blower motor on heat speed, and venter motor remains energized. The fan/blower motor is shut off after the longest selectable fan delay time (180 seconds). When the fan/blower motor de-energizes, the spark and gas valve are re-energized and the control initiates another trial for ignition. (This fan delay is self-healing feature for an open auxiliary limit switch).
+
+If flame is not established on the third trial for ignition period, the control de-energizes the gas valve, and the venter motor remains energized for an inter-purge period of 10 seconds. The control then re-energizes the gas valve and spark and initiates another trial for ignition.
+
+If flame is not established on the fourth trial for ignition (initial try plus 3 re-tries), the control de-energizes the gas valve and goes into lockout. The control goes to one flash on the green LED to indicate ignition failure lockout.
+
+Limit Switch Operation - The limit switch is ignored unless a call for heat is present (W energized). If the limit switch is open and a call for heat is present, the control de-energizes the gas valve and turns the fan/blower motor on heat speed and runs the venter motor.
+
+When the switch re-closes or the call for heat is lost, the control runs the venter motor through post purge and runs the blower/fan motor through the selected fan off delay. The control will return to normal operation after fan off delay is completed.
+
+Pressure Switch - If the pressure switch opens before the trial for ignition period, the venter motor will run through the pressure switch recognition delay (2 seconds), the gas valve will be de-energized, and the venter motor will run through the postpurge time. The control will re-start the heat cycle at the pressure switch proving state if the call for heat still exists.
+
+Pressure switch opening for less than 2 seconds during the trial for ignition period shall not interrupt the heat cycle. (Gas valve will de-energize while the pressure switch is open.)
+
+If the pressure switch opens after a successful ignition, the control will de-energize the gas valve. If flame is lost before the end of the 2 second pressure switch recognition delay, the control will respond to the loss of flame. If the pressure switch remains open for 2 seconds and the flame remains, the control de-energizes the gas valve, the venter motor runs through post-purge, and the fan/blower motor runs on heat speed through the selected fan off delay. When the fan off delay is over, the fan/blower motor is de-energized, and a heat cycle is begun if the call for heat still exists.
+
+When the thermostat calls for continuous fan (G) without a call for heat, the fan motor is energized after a .25 second delay. NOTE: This brief on delay is to allow the "G" terminal to energize slightly before "Y" and an external changeover relay to switch from "G" to "W" without causing momentary glitches in the fan/blower output. The fan remains energized as long as the call for fan remains without a call for heat.
+
+If a call for heat (W) occurs during continuous fan, the fan/blower will de-energize.
+
+A call for fan is ignored while in lockout.
+
+Undesired Flame - If flame is sensed longer than 10 seconds while the gas valve is de-energized, the control shall energize the venter motor and fan/blower motor on heat speed. When flame is no longer sensed, the venter motor will run through postpurge, and the fan/blower motor will run through the selected heat fan off delay time. The control will do a soft lockout, but will still respond to open limit and flame. The FLAME (yellow) LED shall flash rapidly when lockout is due to undesired flame.
+
+Gas Valve Relay Fault - If the control senses the gas valve as energized for more than one second when the control is not attempting to energize the gas valve, or the gas valve is sensed as not energized when it is supposed to be energized, then the control will lockout with green LED off. The control assumes either the contacts of the relay driving the gas valve have welded shut, or the sensing circuit has failed. The venter motor is forced off to open the pressure switch to stop gas flow unless flame is present.
+
+If the gas valve was sensed as closed when it should be open, and has not de-energized after the venter motor was shutoff for 15 seconds, then the venter motor is re-energized to vent the unburned gas.
+
+Soft Lockout - The control shall not initiate a call for heat or call for continuous fan while in lockout. The control will still respond to an open limit and undesired flame. Lockout shall automatically reset after one hour. Lockout may be manually reset by removing power from the control for more than one second or removing the thermostat call for heat for more than one and less than 20 seconds.
+
+Hard Lockout - If the control detects a fault on the control board, the status LED will be de-energized, and the control will lockout as long as the fault remains. A hard lockout will automatically reset if the hardware fault clears.
+
+Power Interruption - During a momentary power interruption or at voltage levels below the minimum operating voltage (line voltage or low voltage) the system will self-recover without lockout when voltage returns to the operating range.
+
+Power interruptions of less than 80mS shall not cause the control to change operating states. Power interruptions greater than 80mS may cause the control to interrupt the current operating cycle and re-start.
+
+The main operating gas valve is powered by the 24-volt control circuit through the thermostat and safety controls. The main control valve is of the diaphragm type providing regulated gas flow preset at the factory.
+
+WARNING: The operating valve is the prime safety shutoff. All gas supply lines must be free of dirt or scale before connecting the unit to ensure positive closure. See Hazard Levels, page 2.
+
+The fan motor is equipped with thermal overload protection of the automatic reset type. Should the motor refuse to run, it may be because of improper current characteristics. Make certain that the correct voltage is available at the motor.
+
+NOTE: If the unit is equipped with an optional totally enclosed motor or optional voltage, the horsepower may be larger than the standard motor. Refer to the motor nameplate to verify horsepower.
+
+WARNINGS: For your safety, read before operating. If you do not follow these instructions exactly, a fire or explosion may result causing property damage, personal injury, or loss of life.
+
+This appliance does not have a pilot. It is equipped with an ignition device which automatically lights the burner. Do not try to light the burner by hand.
+
+Before operating, smell all around the appliance area for gas. Be sure to smell next to the floor because some gas is heavier than air and will settle on the floor.
+
+WHAT TO DO IF YOU SMELL GAS
+
+Do not try to light any appliance.
+
+Do not touch any electrical switch; do not use any phone in your building.
+
+Immediately call your gas supplier from a neighbor's phone. Follow the gas supplier's instructions.
+
+If you cannot reach your gas supplier, call your fire department.
+
+Use only your hand to turn the gas control ON/OFF knob on the gas valve. Never use tools. If the valve ON/OFF knob will not turn by hand, do not try to repair it. Call a qualified service technician. Force or attempted repair may result in a fire or explosion.
+
+Should overheating occur, or the gas supply fail to shut off, turn off the manual gas valve to the appliance before shutting off the electrical supply.
+
+Do not use this appliance if any part has been under water. Immediately call a qualified service technician to inspect the appliance and to replace any part of the control system and any gas control which has been under water.
+
+Check the installation prior to startup:
+
+Check to be sure that all screws used to hold shipping brackets were re-installed in the heater cabinet.
+
+Check suspension. Unit must be secure and level.
+
+Check clearances from combustibles.
+
+Check vent system to be sure that it is installed according to the instructions in the appropriate Vent Installation Manual.
+
+Check piping for leaks and proper gas line pressure. Bleed gas lines of trapped air.
+
+Check electrical wiring. Be sure all wire gauges are as recommended. A service disconnect switch should be used. Verify that fusing or circuit breakers are adequate for the load use.
+
+Check polarity. Verify that line voltage exists between the black "L1" and earth ground.
+
+If installed in California, verify that California Warning Label is displayed.
+
+Heater Startup: Operating Instructions and Operating Sequence
+
+1. Set thermostat at lowest setting.
+
+2. Turn off all electric power to the appliance.
+
+3. This appliance is equipped with an ignition device which automatically lights the burner. Do not try to light the burner by hand. Open the access door and locate the gas control (ON/OFF) knob on the gas valve.
+
+4. Turn the gas control knob clockwise to "OFF".
+
+5. Wait five (5) minutes to clear out any gas. Then smell for gas, including near the floor. If you smell gas, STOP! and follow the steps in the WARNINGS printed above or on the Operating Label on the heater. If you do not smell gas, proceed to the next step.
+
+6. Turn the gas control knob counterclockwise to "ON".
+
+7. Close the access door.
+
+8. Turn on the electric power to the heater.
+
+9. Set the thermostat to the desired setting.
+
+NOTE: If the appliance does not operate, follow the instructions "To Turn Off Gas to Appliance" printed below (and on the Operating Label on the heater) and call your service technician.
+
+10. Thermostat calls for heat, energizing the venter motor.
+
+11. Venter pressure switch closes, firing the unit.
+
+12. Burner flame is sensed and in 30 seconds after the gas valve is energized, the fan motor is energized.
+
+13. If the flame is extinguished during the main burner operation, the integrated control system closes the main valve and must be reset by interrupting power to the control circuit.
+
+TO TURN OFF GAS TO THE APPLIANCE
+
+1) Set thermostat to lowest setting.
+
+2) If service is to be performed, turn off all electric power to the appliance.
+
+3) Open the access door.
+
+4) Turn the gas control knob clockwise to "OFF". Do not force.
+
+5) Close the access door.
+
+Check installation after startup:
+
+Vent System Testing Procedure - Model UDAP
+
+1. Seal any unused openings in the venting system.
+
+2. Inspect the venting system for proper size and horizontal pitch, as required in the National Fuel Gas Code, ANSI Z223.1 or CAN/CGA B149.1 and B149.2, Installation Code for Gas Burning Appliances and Equipment, and the venting installation manual. Determine that there is no blockage or restriction, leakage, corrosion or other deficiencies that could cause an unsafe condition.
+
+3. In so far as practical, close all building doors and windows and all doors between the space where the heater is and other spaces of the building. Turn on clothes dryers and exhaust fans, such as range hoods and bathroom exhausts, so they shall operate at maximum speed. Do not operate a summer exhaust fan. Close fireplace dampers.
+
+4. Light the heater following the lighting instructions. Adjust the thermostat for continued operation. Verify that combustion products are venting properly. After determining that the heater vents properly, return doors, windows, exhaust fans, and fireplace dampers to their previous conditions. If improper venting is observed, the venting system must be corrected.
+
+With the unit in operation, measure valve outlet gas pressure. If operated at high altitude, adjust outlet gas pressure for altitude.
+
+MAINTENANCE AND SERVICE
+
+WARNING: If you turn off the power supply, turn off the gas. See Hazard Levels, page 2.
+
+The material contained in the MAINTENANCE AND SERVICE Section of this manual is designed to aid a qualified service person in maintaining and servicing this equipment. This heater will operate with a minimum of maintenance. To ensure long life and satisfactory performance, a heater that is operated under normal conditions should be inspected and cleaned at the start of each heating season. If the heater is operating in an area where an unusual amount of dust or soot or other impurities are present in the air, more frequent maintenance is recommended.
+
+When any service is completed, be careful to reassemble correctly to ensure that no unsafe conditions are created. When re-lighting, always follow the lighting instructions on the heater.
+
+Maintenance Schedule - The following procedures should be carried out at least annually:
+
+Clean all dirt, lint, and grease from the combustion air opening (UDAP) and venter assembly.
+
+Clean all dirt, lint, and grease from the fan blade, fan guard, and motor.
+
+Check the heat exchanger both internally and externally.
+
+Check the burner for scale, dust, or lint accumulation. Clean if needed.
+
+Check the vent or vent/combustion air system for soundness. Clean openings. Replace any parts that do not appear sound.
+
+Check the wiring for any damaged wire. Replace damaged wiring.
+
+NOTE: If replacement parts are required, use only factory-authorized parts.
+
+DANGER: The gas burner in this gas-fired equipment is designed and equipped to provide safe controlled complete combustion. However, if the installation does not permit the burner to receive the proper supply of combustion air, complete combustion may not occur. The result is incomplete combustion which produces carbon monoxide, a poisonous gas that can cause death.
+
+Safe operation of indirect-fired gas burning equipment requires a properly operating vent system that vents all flue products to the outside atmosphere. FAILURE TO PROVIDE PROPER VENTING WILL RESULT IN A HEALTH HAZARD WHICH COULD CAUSE SERIOUS PERSONAL INJURY OR DEATH.
+
+Always comply with the combustion air requirements in the installation codes and in Paragraph 9. Combustion air at the burner should be regulated only by manufacturer-provided equipment.
+
+NEVER RESTRICT OR OTHERWISE ALTER THE SUPPLY OF COMBUSTION AIR TO ANY HEATER. Model UDAP units installed in a confined space must be supplied with air for combustion as required by Code and in Paragraph 9 of this heater installation manual.
+
+MAINTAIN THE VENT OR VENT/COMBUSTION AIR SYSTEM IN STRUCTURALLY SOUND AND PROPER OPERATING CONDITION.
+
+This heater is equipped with a TCORE2® heat exchanger (patent pending).
+
+Remove any external dirt or dust accumulation. Visually check the heat exchanger for cracks and holes. If a crack or hole is observed, replace the heat exchanger.
+
+NOTE: Inspection of the lower portion of the heat exchanger is done with the burner removed. See the Burner Service section below for information on inspecting the lower portion of the heat exchanger.
+
+This heater is equipped with a TCORE2® burner (patent pending).
+
+Inspect the burner/control compartment annually to determine if cleaning is necessary. If there is an accumulation of dirt, dust, and/or lint, clean the compartment and follow the instructions below to remove and clean the burner.
+
+CAUTION: Use of eye protection is recommended.
+
+1. Outside the cabinet, shut the gas supply off at the manual valve ahead of the union.
+
+2. Turn off electric supply.
+
+3. Disconnect the gas supply at the union outside of the cabinet.
+
+4. Remove the access panel.
+
+5. Disconnect the Gas Train and Move Out of the Way - At the gas valve, mark and disconnect the wires. Carefully remove the burner orifice and orifice adapter locking nut. Slide the orifice adapter out through the bracket on the burner pushing the gas train to the right. This will move the gas train out of the way.
+
+6. Move the Control Assembly - Remove the two screws holding the control assembly bracket. Being careful not to disconnect any wires, slide the control assembly to the right.
+
+7. Remove Secondary Air Baffles (Sizes 60-400 only) - Vertical along the right side of the burner, locate the flat plate(s) identified as the secondary air baffle(s). The quantity of baffles could be one to four depending on heater size. Each baffle is held in place by one screw. For re-assembly, on the secondary air shield, mark the location (top and bottom) of each baffle. Remove all baffles.
+
+8. Remove Burner Assembly
+
+a) Locate the burner body supports. Depending on the size, the burner will have two or more supports. At each support, remove the one screw that attaches it to the secondary air shield.
+
+b) Holding the venturi tube, slide the entire burner assembly slightly to the right to disengage the burner from the supports on the left. Then rotate the open end of the venturi tube inward toward the heater. Carefully pull the burner assembly out of the cabinet.
+
+With the burner assembly removed, shine a flashlight on the burner ribbons. Look for carbon buildup, scale, dust, lint, and/or anything that might restrict flow through the spaces between the burner ribbons. Holding the burner assembly so that any foreign material will fall away from the burner, use a stiff bristle brush to loosen and remove any foreign material(s). If the burner is excessively dirty, remove one of the burner end caps. Remove the four screws that hold the end cap to the burner housing. Lightly tap the end cap to remove it.
+
+Clean all foreign material from the burner and venturi. After the burner is thoroughly clean, replace the end cap making certain that it is tight against the burner housing. NOTE: If any of the burner components are damaged or deteriorated, replace the burner assembly.
+
+Inspect the Lower Portion of the Heat Exchanger (with burner assembly removed)
+
+At the burner flame entrance of each tube, shine a bright light into each heat exchanger section. With the light shining into the heat exchanger, observe the outside for visible light. Repeat this procedure with each heat exchanger section. If any light is observed, replace the heat exchanger.
+
+Instructions to Re-Install the Burner
+
+1. Attach the Burner Assembly - Holding the venturi tube, slide the entire burner assembly into position. Align the supports on the left side with the slots in the burner shield; sliding the supports into the slots. On the right, re-attach each burner body support to the secondary air shield.
+
+2. Attach the Secondary Air Baffles (Sizes 60-400 only) - Re-attach the secondary air baffles as marked. Baffles may be different sizes and each must be attached in the correct location.
+
+3. Attach the Control Assembly - Carefully slide the control assembly into position. Re-attach with the same screws. Check to be sure all wire connections are secure.
+
+4. Attach the Gas Train - Slide the gas train so that the orifice adapter is through the bracket. Fasten the gas train to the bracket with the locking nut. Install the gas orifice. Re-connect the wires to the gas valve.
+
+5. Close the access panel.
+
+6. Reconnect the gas supply at the union outside of the cabinet. Leak test the connection with leak detecting solution.
+
+7. Turn on the electric and the gas. Check for proper operation.
+
+Burner orifice usually only needs to be replaced when installing a gas conversion kit. If ordering a replacement orifice only, give BTUH content and specific gravity of gas, as well as the model and serial number of the unit. When removing or replacing the burner orifice be careful not to damage the venturi tube and/or the bracket.
+
+DSI Integrated Control Module (circuit board) - The module monitors the operation of the heater including ignition. The only replaceable component is the 3 amp Type ATC or ATO fuse. If the fuse is blown, the problem is most likely an external overload. Correct the problem and replace the fuse.
+
+Do not attempt to disassemble the control module. However, each heating season check the lead wires for insulation deterioration and good connections.
+
+Proper operation of the direct spark ignition system requires a minimum flame signal of 1.0 microamps as measured by a microampmeter.
+
+For further information and check out procedure on the direct spark ignition system, refer to Paragraph 20 and the Troubleshooting Flow Chart in Paragraph 40.
+
+IMPORTANT: When re-assembling, the brown ground wire must remain attached to the ignitor.
+
+CAUTION: Due to high voltage on the spark wire and electrode, do not touch when energized. See Hazard Levels, page 2.
+
+Flame Sensor - Disconnect the wire; remove the screw and the flame sensor. Clean with an emery cloth.
+
+Remove dirt and grease from the motor, the fan guard, and blades. Use care when cleaning the fan blades to prevent causing misalignment or imbalance. Check that the hub of the fan blades is secure to the shaft.
+
+Follow these instructions for replacement of the fan guard, fan motor and/or fan blades.
+
+1. If the heater is installed, turn off the gas and disconnect the electric power.
+
+2. Open the access door and disconnect the fan motor wires, capacitor wires at the capacitor, and ground screw.
+
+3. Remove the assembled parts (the fan guard, the motor and the fan blade).
+
+4. Disassemble and replace whatever parts are needed and reassemble using whatever part(s) are being replaced and the original parts.
+
+Be sure the fan blade is in the proper position on the shaft.
+
+Position the assembly on the heater. Attach the fan guard.
+
+Rotate the fan blade to check for adequate clearance. If adjustment is required, loosen the mounting screws, re-position the fan guard, and tighten the screws. Rotate the fan blade and re-check for adequate clearance. Repeat this procedure until the assembly is positioned properly.
+
+5. Reconnect the fan motor wires according to the wiring diagram and close the access panel.
+
+6. Restore power to the heater and turn on the gas. Light, following the instructions on the lighting instruction plate. Check for proper operation.
+
+Remove dirt and grease from the motor casing, the venter housing, and the venter wheel. Venter motor bearings are permanently lubricated. Follow these instructions for replacement of the venter motor and wheel assembly. Keep all hardware removed to be used in re-assembling and installing the replacement parts.
+
+1. Turn off the gas and disconnect the electric power.
+
+2. Open the burner/control compartment access panel.
+
+3. Disconnect the three venter motor wires at the DSI control, capacitor wires at the capacitor (if applicable), and ground screw (located on the control panel).
+
+4. Sizes 30 and 45 - Disconnect the gas train and move it out of the way. Disconnect the gas supply at the union outside of the cabinet. At the gas valve, mark and disconnect the wires. Carefully remove the burner orifice and orifice adapter locking nut. Slide the orifice adapter out through the bracket on the burner pushing the gas train to the right. This will move the gas train out of the way.
+
+5. Holding the venter motor, remove the three or four screws that attach the venter motor mounting plate to the venter housing. Remove the motor and wheel assembly from the heater.
+
+6. Re-assemble with the replacement venter motor and wheel assembly.
+
+7. Follow the wiring diagram to connect the venter wires.
+
+8. Sizes 30 and 45 - Reconnect the gas supply at the union outside of the cabinet. Leak test the connection with leak detecting solution.
+
+9. Replace the access panel. Restore power to the heater and turn on the gas. Light, following the instructions on the lighting instruction plate. Check for proper operation.
+
+The gas valve requires no field maintenance except careful removal of external dirt accumulation and checking of wiring connections. Instructions for testing pressure settings are in Paragraph 12.
+
+See the control-location figure for pressure switch location. If it is determined that the pressure switch needs replacing, use only the factory-authorized replacement part that is designed for the model and size of heater being serviced.
+
+NOTE: A unit operating above 6000 ft elevation requires a high altitude pressure switch.
+
+If it is determined that the limit control needs replacing, use only a factory-authorized replacement part that is designed for the size of heater.
+
+If it is determined that the door switch needs replacing, use only a factory-authorized replacement part that is designed for the heater.
+
+See the control-location figure for transformer location. Use a voltmeter to verify that there are 24 volts output from the transformer. If the transformer is not functioning, it must be replaced. Use a replacement transformer identical to the factory-installed model.
+
+The cause of a flame rollout switch activating must be determined. Activation of the manually reset flame rollout switch could be caused by one or more of the following:
+
+Restricted or plugged heat exchanger.
+
+Pressurization of the heat exchanger.
+
+Restricted combustion air inlet or exhaust outlet in combination with a defective pressure switch.
+
+Building exhaust.
+
+Electrical power interruption during operation.
+
+If a flame rollout switch trips, inspect the burner/control compartment for signs of excessive heat and burned wiring.
+
+If the compartment appears normal, reset by depressing the red button on the switch. 15 to 20 minutes are required for the switch to cool sufficiently for resetting. A distinct click will be felt when the switch resets. Operate the furnace. If the flame rollout switch trips again, determine and correct the cause before resetting the switch.
+
+If there is damage to the control compartment, repairs must be made before resetting the switch.
+
+If it is determined that the flame rollout switch needs replacing, use only the factory-authorized replacement part that is designed for that size of heater.
+
+The disconnect switch is located in the sealed electrical box inside the control compartment with the toggle on the rear of the heater.
+
+If it is determined that the disconnect switch needs replacing, use only the factory-authorized replacement part that is designed for the heater. Always replace electrical box cover.
+
+Check the complete system at least once a year. Inspection should include all joints, seams, concentric adapter box (UDAS), inlet air guard or inlet air cap (UDAS), and the vent terminal cap. Clean openings. Replace any defective parts.
+
+General Troubleshooting
+
+The integrated circuit board monitors the operation of the heater and includes two LED signal lights that indicate normal operation and various abnormal conditions. If the heater fails to operate properly, check this signal to determine the cause and/or to eliminate certain causes. See operating sequence in Paragraph 20.
+
+Do not attempt to repair the DSI integrated control module; the only field replaceable component is the fuse.
+
+FOR SERVICE OR REPAIR, FOLLOW THESE STEPS IN ORDER:
+
+FIRST: Contact the Installer.
+
+SECOND: Contact the nearest distributor (See Yellow Pages). If no listing, contact Authorized Factory Representative, 1-800-695-1901 (Press 1).
+
+THIRD: Contact REZNOR® / Thomas & Betts Corporation, 150 McKinley Avenue, Mercer, PA 16137. Phone: (724) 662-4400.
+
+MANUFACTURER OF HEATING, COOLING, AND VENTILATING SYSTEMS

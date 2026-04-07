@@ -1,0 +1,927 @@
+{
+  "id": "sherlock-red-headed-league",
+  "instruction": "Proofread the document. Fix the known spelling, grammar, punctuation, word-choice, and style mistakes while preserving meaning, tone, paragraph ids, and intentional wording everywhere else.",
+  "sourcePath": "sherlock-red-headed-league-corrupted.txt",
+  "issues": [
+    {
+      "id": "issue-01",
+      "category": "orthography_and_word_form.insertion",
+      "paragraphId": "bJ5XUy",
+      "description": "Insert an extra letter into the word \"conversation\" within a longer unique span, creating a realistic misspelling.",
+      "classification": {
+        "label": "orthography_and_word_form.insertion",
+        "parent": "orthography_and_word_form",
+        "child": "insertion",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "insertion",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "found him in deep converstation with a very stout,",
+        "replace": "found him in deep conversation with a very stout,"
+      }
+    },
+    {
+      "id": "issue-02",
+      "category": "grammar_and_syntax.extra_word",
+      "paragraphId": "b2KFQk",
+      "description": "Inserted an unnecessary duplicate function word, creating a clear extra-word grammar error within a long unique span.",
+      "classification": {
+        "label": "grammar_and_syntax.extra_word",
+        "parent": "grammar_and_syntax",
+        "child": "extra_word",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "duplication",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "that you share my love of of all that is bizarre",
+        "replace": "that you share my love of all that is bizarre"
+      }
+    },
+    {
+      "id": "issue-03",
+      "category": "grammar_and_syntax.relative_clause_error",
+      "paragraphId": "ugoDxH",
+      "description": "Introduces a malformed relative clause by replacing the relative marker with an inappropriate one.",
+      "classification": {
+        "label": "grammar_and_syntax.relative_clause_error",
+        "parent": "grammar_and_syntax",
+        "child": "relative_clause_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "the thousands of other similar cases where occur to my memory",
+        "replace": "the thousands of other similar cases which occur to my memory"
+      }
+    },
+    {
+      "id": "issue-04",
+      "category": "orthography_and_word_form.nonword_spelling_error",
+      "paragraphId": "7lkDni",
+      "description": "Introduce a realistic nonword spelling error by misspelling one content word within a longer unique span.",
+      "classification": {
+        "label": "orthography_and_word_form.nonword_spelling_error",
+        "parent": "orthography_and_word_form",
+        "child": "nonword_spelling_error",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "substitution",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "there was nothing remarkble about the man save his",
+        "replace": "there was nothing remarkable about the man save his"
+      }
+    },
+    {
+      "id": "issue-05",
+      "category": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+      "paragraphId": "0VopLW",
+      "description": "Replace a visually similar word with the wrong valid word, creating a near-neighbor lexical confusion.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homograph_or_near_neighbor_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "rather against the strict roles of your order, you use",
+        "replace": "rather against the strict rules of your order, you use"
+      }
+    },
+    {
+      "id": "issue-06",
+      "category": "orthography_and_word_form.transposition",
+      "paragraphId": "yXEj7R",
+      "description": "Introduce a realistic letter-transposition typo in a content word near the end of the paragraph.",
+      "classification": {
+        "label": "orthography_and_word_form.transposition",
+        "parent": "orthography_and_word_form",
+        "child": "transposition",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "transposition",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "Can you not find the avdertisement, Mr. Wilson?\"",
+        "replace": "Can you not find the advertisement, Mr. Wilson?\""
+      }
+    },
+    {
+      "id": "issue-07",
+      "category": "punctuation_and_boundaries.apostrophe_error",
+      "paragraphId": "fpiA1w",
+      "description": "Remove the apostrophe from the contraction \"he's\" within a longer contextual span.",
+      "classification": {
+        "label": "punctuation_and_boundaries.apostrophe_error",
+        "parent": "punctuation_and_boundaries",
+        "child": "apostrophe_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": false,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "fault, but on the whole hes a good worker.",
+        "replace": "fault, but on the whole he's a good worker."
+      }
+    },
+    {
+      "id": "issue-08",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "paragraphId": "930Iq0",
+      "description": "Introduce a homophone confusion by replacing the second instance of \"there\" with \"their\" in a long unique span.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homophone_confusion",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "that there are more vacancies than their are men,",
+        "replace": "that there are more vacancies than there are men,"
+      }
+    },
+    {
+      "id": "issue-09",
+      "category": "orthography_and_word_form.nonword_spelling_error",
+      "paragraphId": "8Rv0RX",
+      "description": "Introduce a realistic nonword misspelling by changing the noun at the end of a longer unique span.",
+      "classification": {
+        "label": "orthography_and_word_form.nonword_spelling_error",
+        "parent": "orthography_and_word_form",
+        "child": "nonword_spelling_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "interfere very much with one's other occuptions",
+        "replace": "interfere very much with one's other occupations"
+      }
+    },
+    {
+      "id": "issue-10",
+      "category": "punctuation_and_boundaries.quotation_or_delimiter_error",
+      "paragraphId": "D5u8Of",
+      "description": "Omit the opening quotation mark before the continued spoken clause, creating a quotation delimiter error.",
+      "classification": {
+        "label": "punctuation_and_boundaries.quotation_or_delimiter_error",
+        "parent": "punctuation_and_boundaries",
+        "child": "quotation_or_delimiter_error",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "\"Well,\" said he, showing me the advertisement, you can see for yourself",
+        "replace": "\"Well,\" said he, showing me the advertisement, \"you can see for yourself"
+      }
+    },
+    {
+      "id": "issue-11",
+      "category": "orthography_and_word_form.insertion",
+      "paragraphId": "1EmKe9",
+      "description": "Introduce a realistic nonword by inserting an extra letter into a word within a long unique span.",
+      "classification": {
+        "label": "orthography_and_word_form.insertion",
+        "parent": "orthography_and_word_form",
+        "child": "insertion",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "insertion",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "it is no use your applyinng if your hair is",
+        "replace": "it is no use your applying if your hair is"
+      }
+    },
+    {
+      "id": "issue-12",
+      "category": "grammar_and_syntax.relative_clause_error",
+      "paragraphId": "8o4D2w",
+      "description": "Introduced a malformed relative marker by replacing the standard relative pronoun in a long anchor span within one paragraph.",
+      "classification": {
+        "label": "grammar_and_syntax.relative_clause_error",
+        "parent": "grammar_and_syntax",
+        "child": "relative_clause_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "as good a chance as any man what I had ever met",
+        "replace": "as good a chance as any man that I had ever met"
+      }
+    },
+    {
+      "id": "issue-13",
+      "category": "punctuation_and_boundaries.apostrophe_error",
+      "paragraphId": "RE24AP",
+      "description": "Remove the possessive apostrophe from the proper name in a longer unique span.",
+      "classification": {
+        "label": "punctuation_and_boundaries.apostrophe_error",
+        "parent": "punctuation_and_boundaries",
+        "child": "apostrophe_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "red-headed folk, and Popes Court looked like a coster's",
+        "replace": "red-headed folk, and Pope's Court looked like a coster's"
+      }
+    },
+    {
+      "id": "issue-14",
+      "category": "grammar_and_syntax.word_order_error",
+      "paragraphId": "Jnq2Sf",
+      "description": "Introduces an incorrect inversion in the clause, creating a word order error.",
+      "classification": {
+        "label": "grammar_and_syntax.word_order_error",
+        "parent": "grammar_and_syntax",
+        "child": "word_order_error",
+        "severity": "major",
+        "editScope": "clause",
+        "operationType": "transposition",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "when our turn came was the little man much more favourable",
+        "replace": "when our turn came the little man was much more favourable"
+      }
+    },
+    {
+      "id": "issue-15",
+      "category": "orthography_and_word_form.spacing_error",
+      "paragraphId": "hfxJR9",
+      "description": "Omit the space after the comma to create a realistic spacing error.",
+      "classification": {
+        "label": "orthography_and_word_form.spacing_error",
+        "parent": "orthography_and_word_form",
+        "child": "spacing_error",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "He took a step backward,cocked his head on one side",
+        "replace": "He took a step backward, cocked his head on one side"
+      }
+    },
+    {
+      "id": "issue-16",
+      "category": "lexical_choice_and_confusability.misused_word",
+      "paragraphId": "2FYwAR",
+      "description": "Replace a correctly chosen word with a common confusable valid word, creating a lexical misselection.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.misused_word",
+        "parent": "lexical_choice_and_confusability",
+        "child": "misused_word",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "I am sorry to here you say that.",
+        "replace": "I am sorry to hear you say that."
+      }
+    },
+    {
+      "id": "issue-17",
+      "category": "orthography_and_word_form.transposition",
+      "paragraphId": "Nb3sfn",
+      "description": "Transpose two letters within a word to create a clear misspelling in a unique span.",
+      "classification": {
+        "label": "orthography_and_word_form.transposition",
+        "parent": "orthography_and_word_form",
+        "child": "transposition",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "transposition",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "at least in the building, the whole tiem.",
+        "replace": "at least in the building, the whole time."
+      }
+    },
+    {
+      "id": "issue-18",
+      "category": "orthography_and_word_form.insertion",
+      "paragraphId": "ozK2hg",
+      "description": "Insert an extra letter into a content word, creating a realistic misspelling within a longer unique span.",
+      "classification": {
+        "label": "orthography_and_word_form.insertion",
+        "parent": "orthography_and_word_form",
+        "child": "insertion",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "insertion",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "you once more on the imporrtant position which",
+        "replace": "you once more on the important position which"
+      }
+    },
+    {
+      "id": "issue-19",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "paragraphId": "1TFRfF",
+      "description": "Replace the homophone \"there\" with the incorrect same-sounding word \"their.\"",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homophone_confusion",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "I cannot see that their is anything very funny,",
+        "replace": "I cannot see that there is anything very funny,"
+      }
+    },
+    {
+      "id": "issue-20",
+      "category": "lexical_choice_and_confusability.misused_word",
+      "paragraphId": "n2TKxM",
+      "description": "Replace a contextually correct noun with a confusable but wrong valid word, creating a realistic lexical-choice error.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.misused_word",
+        "parent": "lexical_choice_and_confusability",
+        "child": "misused_word",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "my room as a temporary convenience until his new promises were ready.",
+        "replace": "my room as a temporary convenience until his new premises were ready."
+      }
+    },
+    {
+      "id": "issue-21",
+      "category": "orthography_and_word_form.spacing_error",
+      "paragraphId": "px1Dk4",
+      "description": "Introduce a missing space within a number phrase to create a realistic spacing error.",
+      "classification": {
+        "label": "orthography_and_word_form.spacing_error",
+        "parent": "orthography_and_word_form",
+        "child": "spacing_error",
+        "severity": "minor",
+        "editScope": "phrase",
+        "operationType": "boundary_error",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "joke for them, for it cost them two andthirty pounds.",
+        "replace": "joke for them, for it cost them two and thirty pounds."
+      }
+    },
+    {
+      "id": "issue-22",
+      "category": "grammar_and_syntax.sentence_fragment",
+      "paragraphId": "qteVDk",
+      "description": "Create a sentence fragment by omitting the subject from a complete sentence.",
+      "classification": {
+        "label": "grammar_and_syntax.sentence_fragment",
+        "parent": "grammar_and_syntax",
+        "child": "sentence_fragment",
+        "severity": "major",
+        "editScope": "sentence",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "Sat up in his chair in considerable excitement.",
+        "replace": "Holmes sat up in his chair in considerable excitement."
+      }
+    },
+    {
+      "id": "issue-23",
+      "category": "orthography_and_word_form.transposition",
+      "paragraphId": "JL1Wwy",
+      "description": "Introduce a single character transposition in the word \"that\" within a longer unique span.",
+      "classification": {
+        "label": "orthography_and_word_form.transposition",
+        "parent": "orthography_and_word_form",
+        "child": "transposition",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "transposition",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "come to the conclusion taht he had dropped asleep",
+        "replace": "come to the conclusion that he had dropped asleep"
+      }
+    },
+    {
+      "id": "issue-24",
+      "category": "grammar_and_syntax.run_on_fused_sentence_or_comma_splice",
+      "paragraphId": "XcR7mC",
+      "description": "Replace the sentence boundary after the imperative clause with a comma, creating a comma splice between two independent clauses.",
+      "classification": {
+        "label": "grammar_and_syntax.run_on_fused_sentence_or_comma_splice",
+        "parent": "grammar_and_syntax",
+        "child": "run_on_fused_sentence_or_comma_splice",
+        "severity": "major",
+        "editScope": "clause",
+        "operationType": "boundary_error",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "your hat and come, I am going through the City",
+        "replace": "your hat and come. I am going through the City"
+      }
+    },
+    {
+      "id": "issue-25",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "paragraphId": "ElD41Z",
+      "description": "Introduce a homophone confusion by replacing the correct locative word with its same-sounding counterpart.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homophone_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "announced the place wear our red-headed client carried on",
+        "replace": "announced the place where our red-headed client carried on"
+      }
+    },
+    {
+      "id": "issue-26",
+      "category": "orthography_and_word_form.capitalization_error",
+      "paragraphId": "4QpfmE",
+      "description": "Introduce a capitalization error by lowercasing the proper noun \"Strand\" within a longer unique span.",
+      "classification": {
+        "label": "orthography_and_word_form.capitalization_error",
+        "parent": "orthography_and_word_form",
+        "child": "capitalization_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "ask you how you would go from here to the strand.",
+        "replace": "ask you how you would go from here to the Strand."
+      }
+    },
+    {
+      "id": "issue-27",
+      "category": "grammar_and_syntax.preposition_error",
+      "paragraphId": "CczdC4",
+      "description": "Replace the required preposition after \"knowledge\" with an incorrect one.",
+      "classification": {
+        "label": "grammar_and_syntax.preposition_error",
+        "parent": "grammar_and_syntax",
+        "child": "preposition_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "to have an exact knowledge on London. There is",
+        "replace": "to have an exact knowledge of London. There is"
+      }
+    },
+    {
+      "id": "issue-28",
+      "category": "orthography_and_word_form.capitalization_error",
+      "paragraphId": "Z1HPkq",
+      "description": "Introduce a capitalization error by lowercasing the proper noun in the hall name.",
+      "classification": {
+        "label": "orthography_and_word_form.capitalization_error",
+        "parent": "orthography_and_word_form",
+        "child": "capitalization_error",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "that afternoon so enwrapped in the music at St. james's Hall",
+        "replace": "that afternoon so enwrapped in the music at St. James's Hall"
+      }
+    },
+    {
+      "id": "issue-29",
+      "category": "orthography_and_word_form.transposition",
+      "paragraphId": "nLCWFu",
+      "description": "Transpose two letters in a common function word to create a realistic typo.",
+      "classification": {
+        "label": "orthography_and_word_form.transposition",
+        "parent": "orthography_and_word_form",
+        "child": "transposition",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "transposition",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "so kindly put your army revolver in yuor pocket.",
+        "replace": "so kindly put your army revolver in your pocket."
+      }
+    },
+    {
+      "id": "issue-30",
+      "category": "orthography_and_word_form.insertion",
+      "paragraphId": "xfikTT",
+      "description": "Insert an extra letter into a word to create a realistic orthographic typo.",
+      "classification": {
+        "label": "orthography_and_word_form.insertion",
+        "parent": "orthography_and_word_form",
+        "child": "insertion",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "insertion",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "I tried to puzzzle it out, but gave",
+        "replace": "I tried to puzzle it out, but gave"
+      }
+    },
+    {
+      "id": "issue-31",
+      "category": "orthography_and_word_form.nonword_spelling_error",
+      "paragraphId": "ujWNj6",
+      "description": "Introduce a realistic nonword misspelling by altering one word within a long unique span in the second paragraph.",
+      "classification": {
+        "label": "orthography_and_word_form.nonword_spelling_error",
+        "parent": "orthography_and_word_form",
+        "child": "nonword_spelling_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "said Holmes, butoning up his pea-jacket and taking his heavy",
+        "replace": "said Holmes, buttoning up his pea-jacket and taking his heavy"
+      }
+    },
+    {
+      "id": "issue-32",
+      "category": "lexical_choice_and_confusability.malapropism",
+      "paragraphId": "MAqvwV",
+      "description": "Introduce a clear malapropism by replacing the noun referring to a wager amount with its homophone, creating an obviously incorrect word in context while preserving the surrounding span.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.malapropism",
+        "parent": "lexical_choice_and_confusability",
+        "child": "malapropism",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "Mr. Merryweather, the steak will be some £ 30,000; and for you",
+        "replace": "Mr. Merryweather, the stake will be some £ 30,000; and for you"
+      }
+    },
+    {
+      "id": "issue-33",
+      "category": "orthography_and_word_form.spacing_error",
+      "paragraphId": "wk1bAx",
+      "description": "Introduce a missing space between two words within a longer unique span, creating a realistic spacing error.",
+      "classification": {
+        "label": "orthography_and_word_form.spacing_error",
+        "parent": "orthography_and_word_form",
+        "child": "spacing_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "boundary_error",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "and though we meet signs of him at every turn, we neverknow",
+        "replace": "and though we meet signs of him at every turn, we never know"
+      }
+    },
+    {
+      "id": "issue-34",
+      "category": "orthography_and_word_form.insertion",
+      "paragraphId": "KYjPaE",
+      "description": "Inserted an extra letter into the word \"drive\" within a longer unique span.",
+      "classification": {
+        "label": "orthography_and_word_form.insertion",
+        "parent": "orthography_and_word_form",
+        "child": "insertion",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "insertion",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "during the long drivve and lay back in the cab",
+        "replace": "during the long drive and lay back in the cab"
+      }
+    },
+    {
+      "id": "issue-35",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "paragraphId": "PyowAf",
+      "description": "Replace a correctly used word with its homophone to create a realistic lexical confusability error in the first paragraph.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homophone_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "imperilled the hole success of our expedition. Might I beg",
+        "replace": "imperilled the whole success of our expedition. Might I beg"
+      }
+    },
+    {
+      "id": "issue-36",
+      "category": "orthography_and_word_form.nonword_spelling_error",
+      "paragraphId": "RSOLD7",
+      "description": "Introduce a realistic nonword misspelling by dropping a letter in a content word within a long unique span.",
+      "classification": {
+        "label": "orthography_and_word_form.nonword_spelling_error",
+        "parent": "orthography_and_word_form",
+        "child": "nonword_spelling_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "why the more daring crimnals of London should take",
+        "replace": "why the more daring criminals of London should take"
+      }
+    },
+    {
+      "id": "issue-37",
+      "category": "orthography_and_word_form.capitalization_error",
+      "paragraphId": "dfT93g",
+      "description": "Introduce a capitalization error by lowercasing a proper noun within a longer unique span.",
+      "classification": {
+        "label": "orthography_and_word_form.capitalization_error",
+        "parent": "orthography_and_word_form",
+        "child": "capitalization_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "borrowed for that purpose 30,000 napoleons from the bank of France.",
+        "replace": "borrowed for that purpose 30,000 napoleons from the Bank of France."
+      }
+    },
+    {
+      "id": "issue-38",
+      "category": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+      "paragraphId": "wQeVCW",
+      "description": "Replace a context-appropriate noun with a visually similar valid word, creating a near-neighbor confusion error.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homograph_or_near_neighbor_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "I shall stand behind this create, and do you",
+        "replace": "I shall stand behind this crate, and do you"
+      }
+    },
+    {
+      "id": "issue-39",
+      "category": "orthography_and_word_form.wrong_word_form",
+      "paragraphId": "6mO4Gu",
+      "description": "Introduce a wrong derivational form by replacing the adjective \"absolute\" with the adverb \"absolutely\" in a long unique span.",
+      "classification": {
+        "label": "orthography_and_word_form.wrong_word_form",
+        "parent": "orthography_and_word_form",
+        "child": "wrong_word_form",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "such an absolutely darkness as I have never before experienced",
+        "replace": "such an absolute darkness as I have never before experienced"
+      }
+    },
+    {
+      "id": "issue-40",
+      "category": "grammar_and_syntax.preposition_error",
+      "paragraphId": "CPzUPO",
+      "description": "Substitute the preposition \"in\" with the incorrect preposition \"on\" in a long unique span.",
+      "classification": {
+        "label": "grammar_and_syntax.preposition_error",
+        "parent": "grammar_and_syntax",
+        "child": "preposition_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "could look over the case on the direction of the floor.",
+        "replace": "could look over the case in the direction of the floor."
+      }
+    },
+    {
+      "id": "issue-41",
+      "category": "orthography_and_word_form.insertion",
+      "paragraphId": "xqzFVv",
+      "description": "Insert an extra determiner to create a realistic word-level insertion error in a unique span.",
+      "classification": {
+        "label": "orthography_and_word_form.insertion",
+        "parent": "orthography_and_word_form",
+        "child": "insertion",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "insertion",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "all was dark again save the the single lurid spark",
+        "replace": "all was dark again save the single lurid spark"
+      }
+    },
+    {
+      "id": "issue-42",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "paragraphId": "rNJfer",
+      "description": "Replace a correctly used noun with its same-sounding homophone to create a realistic confusability error.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homophone_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "stood at the side of the whole and was hauling",
+        "replace": "stood at the side of the hole and was hauling"
+      }
+    },
+    {
+      "id": "issue-43",
+      "category": "punctuation_and_boundaries.apostrophe_error",
+      "paragraphId": "giooOW",
+      "description": "Omit the apostrophe in the contraction \"You'll,\" creating a standard apostrophe error while preserving the surrounding quoted context.",
+      "classification": {
+        "label": "punctuation_and_boundaries.apostrophe_error",
+        "parent": "punctuation_and_boundaries",
+        "child": "apostrophe_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "omission",
+        "createsValidWord": false,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "\"Youll see your pal again presently,\" said Jones.",
+        "replace": "\"You'll see your pal again presently,\" said Jones."
+      }
+    },
+    {
+      "id": "issue-44",
+      "category": "orthography_and_word_form.spacing_error",
+      "paragraphId": "CHRRUA",
+      "description": "Introduce a missing-space typo between two words in a long unique span from the first paragraph.",
+      "classification": {
+        "label": "orthography_and_word_form.spacing_error",
+        "parent": "orthography_and_word_form",
+        "child": "spacing_error",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "boundary_error",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "bow to the three of us andwalked quietly",
+        "replace": "bow to the three of us and walked quietly"
+      }
+    },
+    {
+      "id": "issue-45",
+      "category": "orthography_and_word_form.transposition",
+      "paragraphId": "w9qYPp",
+      "description": "Introduce a realistic letter-transposition typo in one word within a long unique span.",
+      "classification": {
+        "label": "orthography_and_word_form.transposition",
+        "parent": "orthography_and_word_form",
+        "child": "transposition",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "transposition",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "that the only possilbe object of this rather fantastic",
+        "replace": "that the only possible object of this rather fantastic"
+      }
+    },
+    {
+      "id": "issue-46",
+      "category": "grammar_and_syntax.article_or_determiner_error",
+      "paragraphId": "6Hxe3E",
+      "description": "Omit the definite article before a singular count noun, creating a determiner error.",
+      "classification": {
+        "label": "grammar_and_syntax.article_or_determiner_error",
+        "parent": "grammar_and_syntax",
+        "child": "article_or_determiner_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "as I hoped, assistant answered it.",
+        "replace": "as I hoped, the assistant answered it."
+      }
+    }
+  ]
+}

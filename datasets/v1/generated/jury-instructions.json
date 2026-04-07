@@ -1,0 +1,567 @@
+{
+  "id": "jury-instructions",
+  "instruction": "Proofread the document. Fix the known spelling, grammar, punctuation, word-choice, and style mistakes while preserving meaning, tone, paragraph ids, and intentional wording everywhere else.",
+  "sourcePath": "jury-instructions-corrupted.txt",
+  "issues": [
+    {
+      "id": "issue-01",
+      "category": "orthography_and_word_form.omission",
+      "paragraphId": "lgxv3P",
+      "description": "The word 'trademark' is missing a letter, resulting in 'tradmark' — a plausible typographical omission of the letter 'e'.",
+      "classification": {
+        "label": "orthography_and_word_form.omission",
+        "parent": "orthography_and_word_form",
+        "child": "omission",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "omission",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "The main function of a tradmark is to identify and distinguish goods",
+        "replace": "The main function of a trademark is to identify and distinguish goods"
+      }
+    },
+    {
+      "id": "issue-02",
+      "category": "semantics_discourse_and_style.cross_sentence_tense_inconsistency",
+      "paragraphId": "Ohgxvy",
+      "description": "Changed 'acquires' (present tense, matching the generic/habitual present used throughout) to 'acquired' (past tense), creating a tense inconsistency with the surrounding discourse context which consistently uses present tense for legal definitions.",
+      "classification": {
+        "label": "semantics_discourse_and_style.cross_sentence_tense_inconsistency",
+        "parent": "semantics_discourse_and_style",
+        "child": "cross_sentence_tense_inconsistency",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "A person acquired the right to exclude others from using the same mark",
+        "replace": "A person acquires the right to exclude others from using the same mark"
+      }
+    },
+    {
+      "id": "issue-03",
+      "category": "orthography_and_word_form.hyphenation_or_compounding_error",
+      "paragraphId": "3PyVcN",
+      "description": "Incorrect hyphenation/compounding: 'goodwill' (a single closed compound noun) was split into two words 'good will', which changes the standard legal term.",
+      "classification": {
+        "label": "orthography_and_word_form.hyphenation_or_compounding_error",
+        "parent": "orthography_and_word_form",
+        "child": "hyphenation_or_compounding_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "It must also include the good will of the business connected",
+        "replace": "It must also include the goodwill of the business connected"
+      }
+    },
+    {
+      "id": "issue-04",
+      "category": "grammar_and_syntax.preposition_error",
+      "paragraphId": "bd5vAS",
+      "description": "The preposition 'in' is incorrectly changed to 'on' before 'commerce', creating a preposition error. The correct legal phrase is 'used in commerce', not 'used on commerce'.",
+      "classification": {
+        "label": "grammar_and_syntax.preposition_error",
+        "parent": "grammar_and_syntax",
+        "child": "preposition_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "used on commerce a reproduction, copy, counterfeit or colorable imitation",
+        "replace": "used in commerce a reproduction, copy, counterfeit or colorable imitation"
+      }
+    },
+    {
+      "id": "issue-05",
+      "category": "grammar_and_syntax.missing_word",
+      "paragraphId": "OAxqUg",
+      "description": "The required article 'a' before 'preponderance' is omitted, creating a missing word error (countability/grammar issue with the noun phrase).",
+      "classification": {
+        "label": "grammar_and_syntax.missing_word",
+        "parent": "grammar_and_syntax",
+        "child": "missing_word",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "The plaintiff [name] has the burden of proving by preponderance of the evidence",
+        "replace": "The plaintiff [name] has the burden of proving by a preponderance of the evidence"
+      }
+    },
+    {
+      "id": "issue-06",
+      "category": "grammar_and_syntax.preposition_error",
+      "paragraphId": "TTnkYX",
+      "description": "Wrong preposition: 'tailored to fit' should use 'to' but was changed to 'tailored for fit', using the wrong preposition.",
+      "classification": {
+        "label": "grammar_and_syntax.preposition_error",
+        "parent": "grammar_and_syntax",
+        "child": "preposition_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "In a case involving merely intended use of a trademark, these instructions must be tailored for fit the case.",
+        "replace": "In a case involving merely intended use of a trademark, these instructions must be tailored to fit the case."
+      }
+    },
+    {
+      "id": "issue-07",
+      "category": "grammar_and_syntax.run_on_fused_sentence_or_comma_splice",
+      "paragraphId": "TTnkYX",
+      "description": "Two independent clauses ('A trademark infringement case can be brought under three different causes of action...' and 'Although elements of a claim in trademark may overlap...') are fused with a comma splice instead of being properly separated with a period.",
+      "classification": {
+        "label": "grammar_and_syntax.run_on_fused_sentence_or_comma_splice",
+        "parent": "grammar_and_syntax",
+        "child": "run_on_fused_sentence_or_comma_splice",
+        "severity": "major",
+        "editScope": "sentence",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "unfair competition, although elements of a claim in trademark may overlap with a claim in copyright, the acts do not preempt each other.",
+        "replace": "unfair competition. Although elements of a claim in trademark may overlap with a claim in copyright, the acts do not preempt each other."
+      }
+    },
+    {
+      "id": "issue-08",
+      "category": "orthography_and_word_form.capitalization_error",
+      "paragraphId": "TTnkYX",
+      "description": "Incorrect capitalization of 'act' in 'Copyright Act' — 'Act' should be capitalized as it refers to a specific proper noun (the Copyright Act).",
+      "classification": {
+        "label": "orthography_and_word_form.capitalization_error",
+        "parent": "orthography_and_word_form",
+        "child": "capitalization_error",
+        "severity": "minor",
+        "editScope": "character",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "statutory damages under Copyright act and actual damages under trademark statute",
+        "replace": "statutory damages under Copyright Act and actual damages under trademark statute"
+      }
+    },
+    {
+      "id": "issue-09",
+      "category": "semantics_discourse_and_style.discourse_coherence_error",
+      "paragraphId": "V02TWG",
+      "description": "The connective 'But' introducing a contrasting point about when a trademark fails its source-identifying function is replaced with 'And', which destroys the logical contrast and creates a discourse coherence error.",
+      "classification": {
+        "label": "semantics_discourse_and_style.discourse_coherence_error",
+        "parent": "semantics_discourse_and_style",
+        "child": "discourse_coherence_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "A trademark identifies the source of goods. See Brookfield Commc'ns Inc. v. W. Coast Ent. Corp., 174 F.3d 1036, 1051 (9th Cir. 1999). And it fails to serve its source-identifying function",
+        "replace": "A trademark identifies the source of goods. See Brookfield Commc'ns Inc. v. W. Coast Ent. Corp., 174 F.3d 1036, 1051 (9th Cir. 1999). But it fails to serve its source-identifying function"
+      }
+    },
+    {
+      "id": "issue-10",
+      "category": "grammar_and_syntax.article_or_determiner_error",
+      "paragraphId": "gUAL4e",
+      "description": "(disqualified)",
+      "classification": {
+        "label": "grammar_and_syntax.article_or_determiner_error",
+        "parent": "grammar_and_syntax",
+        "child": "article_or_determiner_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "Trade dress is a product's total image and overall appearance",
+        "replace": "Trade dress is the product's total image and overall appearance"
+      }
+    },
+    {
+      "id": "issue-11",
+      "category": "orthography_and_word_form.wrong_word_form",
+      "paragraphId": "YQldCs",
+      "description": "The wrong derivational form is used: 'functionality' (noun) should be 'functional' (adjective) to serve as a predicate adjective after 'is'. The sentence should read 'functionality is an important issue,' but replacing 'functionality' with 'functional' creates a wrong word form error where an adjective is used instead of the required noun subject.",
+      "classification": {
+        "label": "orthography_and_word_form.wrong_word_form",
+        "parent": "orthography_and_word_form",
+        "child": "wrong_word_form",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "functional is an important issue. If such trade dress",
+        "replace": "functionality is an important issue. If such trade dress"
+      }
+    },
+    {
+      "id": "issue-12",
+      "category": "punctuation_and_boundaries.sentence_boundary_error",
+      "paragraphId": "YQldCs",
+      "description": "Incorrect sentence boundary: a period is inserted after 'product' mid-sentence, splitting one sentence into two and creating a malformed second fragment.",
+      "classification": {
+        "label": "punctuation_and_boundaries.sentence_boundary_error",
+        "parent": "punctuation_and_boundaries",
+        "child": "sentence_boundary_error",
+        "severity": "major",
+        "editScope": "sentence",
+        "operationType": "boundary_error",
+        "createsValidWord": null,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "Trade dress concerns the overall visual impression created in the consumer's mind when viewing the non-functional aspects of the product. And not from the utilitarian",
+        "replace": "Trade dress concerns the overall visual impression created in the consumer's mind when viewing the non-functional aspects of the product and not from the utilitarian"
+      }
+    },
+    {
+      "id": "issue-13",
+      "category": "semantics_discourse_and_style.register_mismatch",
+      "paragraphId": "B6vzP1",
+      "description": "Register mismatch: the formal legal instruction text uses the inappropriately informal 'gonna' instead of the formal 'will' in a jury instruction context.",
+      "classification": {
+        "label": "semantics_discourse_and_style.register_mismatch",
+        "parent": "semantics_discourse_and_style",
+        "child": "register_mismatch",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "stylistic"
+      },
+      "expectedCorrection": {
+        "find": "In this case, you're gonna hear evidence about the manner in which [insert name of business] identifies its business",
+        "replace": "In this case, you will hear evidence about the manner in which [insert name of business] identifies its business"
+      }
+    },
+    {
+      "id": "issue-14",
+      "category": "lexical_choice_and_confusability.misused_word",
+      "paragraphId": "EUNNJk",
+      "description": "The word 'symbol' should be 'symbols' to match the plural 'words' in the parallel structure, but the actual corruption here is replacing 'distinguish' with 'extinguish', which is a misused word — semantically wrong but phonetically/orthographically similar.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.misused_word",
+        "parent": "lexical_choice_and_confusability",
+        "child": "misused_word",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "and to extinguish it from the business of others",
+        "replace": "and to distinguish it from the business of others"
+      }
+    },
+    {
+      "id": "issue-15",
+      "category": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+      "paragraphId": "8rMPXC",
+      "description": "The word 'coterminous' is replaced with 'conterminous', a visually similar near-neighbor word. While 'conterminous' exists (meaning 'sharing a boundary'), the correct legal term here is 'coterminous' (meaning 'having the same extent or scope').",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homograph_or_near_neighbor_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homograph_or_near_neighbor_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "is not necessarily conterminous with the right to use that term",
+        "replace": "is not necessarily coterminous with the right to use that term"
+      }
+    },
+    {
+      "id": "issue-16",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "paragraphId": "8rMPXC",
+      "description": "Homophone confusion: 'whole' replaced with 'hole'. These are homophones (/hoʊl/), and 'hole' is clearly wrong in the context of 'a business as a hole' (meaning 'entirety').",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homophone_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "symbolize the reputation of a business as a hole. In contrast",
+        "replace": "symbolize the reputation of a business as a whole. In contrast"
+      }
+    },
+    {
+      "id": "issue-17",
+      "category": "lexical_choice_and_confusability.idiom_error",
+      "paragraphId": "SJeKqa",
+      "description": "The idiom 'from case to case' is altered to the incorrect form 'from case by case', corrupting the standard idiomatic expression.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.idiom_error",
+        "parent": "lexical_choice_and_confusability",
+        "child": "idiom_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "varies from case by case, because they may often conflict",
+        "replace": "varies from case to case, because they may often conflict"
+      }
+    },
+    {
+      "id": "issue-18",
+      "category": "punctuation_and_boundaries.quotation_or_delimiter_error",
+      "paragraphId": "SJeKqa",
+      "description": "A closing square bracket is missing, replaced by a closing parenthesis, creating a delimiter mismatch.",
+      "classification": {
+        "label": "punctuation_and_boundaries.quotation_or_delimiter_error",
+        "parent": "punctuation_and_boundaries",
+        "child": "quotation_or_delimiter_error",
+        "severity": "major",
+        "editScope": "character",
+        "operationType": "substitution",
+        "createsValidWord": null,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "[(2) unfairly competing, by using a trademark in a manner likely to cause confusion as to the origin or quality of plaintiff's goods;)",
+        "replace": "[(2) unfairly competing, by using a trademark in a manner likely to cause confusion as to the origin or quality of plaintiff's goods;]"
+      }
+    },
+    {
+      "id": "issue-19",
+      "category": "lexical_choice_and_confusability.malapropism",
+      "paragraphId": "2kpeLL",
+      "description": "Malapropism: 'duping' (meaning tricking/deceiving) replaced with 'dumping' (meaning discarding), a similar-sounding word that is incorrect in context.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.malapropism",
+        "parent": "lexical_choice_and_confusability",
+        "child": "malapropism",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "prevent[ ] others from dumping consumers into buying a product",
+        "replace": "prevent[ ] others from duping consumers into buying a product"
+      }
+    },
+    {
+      "id": "issue-20",
+      "category": "orthography_and_word_form.real_word_spelling_error",
+      "paragraphId": "2kpeLL",
+      "description": "The word 'dual' is replaced with 'duel', a real word that is a misspelling in this context. 'Dual purposes' (meaning two purposes) is correct; 'duel purposes' (relating to a fight/contest) is wrong but forms a valid English word.",
+      "classification": {
+        "label": "orthography_and_word_form.real_word_spelling_error",
+        "parent": "orthography_and_word_form",
+        "child": "real_word_spelling_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "Federal trademark law addresses \"the duel purposes of infringement law",
+        "replace": "Federal trademark law addresses \"the dual purposes of infringement law"
+      }
+    },
+    {
+      "id": "issue-21",
+      "category": "grammar_and_syntax.extra_word",
+      "paragraphId": "2kpeLL",
+      "description": "Inserted an extra word 'the' before 'likelihood of confusion' creating a grammatical error with an unnecessary article.",
+      "classification": {
+        "label": "grammar_and_syntax.extra_word",
+        "parent": "grammar_and_syntax",
+        "child": "extra_word",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "insertion",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "The general test of liability under the trademark law is the the likelihood of confusion.",
+        "replace": "The general test of liability under the trademark law is likelihood of confusion."
+      }
+    },
+    {
+      "id": "issue-22",
+      "category": "lexical_choice_and_confusability.homophone_confusion",
+      "paragraphId": "2kpeLL",
+      "description": "Homophone confusion: 'sights' (meaning 'aims' or 'focus') replaced with 'sites' (meaning 'locations'), which is a common homophone error.",
+      "classification": {
+        "label": "lexical_choice_and_confusability.homophone_confusion",
+        "parent": "lexical_choice_and_confusability",
+        "child": "homophone_confusion",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "most commonly in trademark law's sites is confusion",
+        "replace": "most commonly in trademark law's sights is confusion"
+      }
+    },
+    {
+      "id": "issue-23",
+      "category": "orthography_and_word_form.incorrect_conjugation",
+      "paragraphId": "2kpeLL",
+      "description": "The verb 'is' is incorrectly conjugated as singular when it should agree with the plural subject 'Elements'. 'Elements required for a false advertising claim ... are set forth' is correct, but corrupting 'are' to 'is' creates a subject-verb agreement error (incorrect conjugation).",
+      "classification": {
+        "label": "orthography_and_word_form.incorrect_conjugation",
+        "parent": "orthography_and_word_form",
+        "child": "incorrect_conjugation",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "Elements required for a false advertising claim, cognizable under 15 U.S.C. § 1125(a)(1)(B), is set forth in Rice",
+        "replace": "Elements required for a false advertising claim, cognizable under 15 U.S.C. § 1125(a)(1)(B), are set forth in Rice"
+      }
+    },
+    {
+      "id": "issue-24",
+      "category": "orthography_and_word_form.nonword_spelling_error",
+      "paragraphId": "d0x0rv",
+      "description": "Misspelling of 'preponderance' as 'preponderence', creating a nonword.",
+      "classification": {
+        "label": "orthography_and_word_form.nonword_spelling_error",
+        "parent": "orthography_and_word_form",
+        "child": "nonword_spelling_error",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": false,
+        "dimension": "orthographic"
+      },
+      "expectedCorrection": {
+        "find": "proving each of the following elements by a preponderence of the evidence",
+        "replace": "proving each of the following elements by a preponderance of the evidence"
+      }
+    },
+    {
+      "id": "issue-25",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "u6cPmT",
+      "description": "Semantic anomaly: 'unfair competition' is replaced with 'fair competition', creating a contradictory meaning — the intent of Congress was to stop unfair competition, not fair competition.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "create a right of action for a competitor to stop . . . fair competition in interstate commerce.\"",
+        "replace": "create a right of action for a competitor to stop . . . unfair competition in interstate commerce.\""
+      }
+    },
+    {
+      "id": "issue-26",
+      "category": "lexical_choice_and_confusability.eggcorn",
+      "paragraphId": "u6cPmT",
+      "description": "The eggcorn 'prima facia' replaces the correct Latin legal term 'prima facie', reanalyzing the unfamiliar 'facie' as the more familiar English word 'facia' (as in 'fascia/facia').",
+      "classification": {
+        "label": "lexical_choice_and_confusability.eggcorn",
+        "parent": "lexical_choice_and_confusability",
+        "child": "eggcorn",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "lexical"
+      },
+      "expectedCorrection": {
+        "find": "it is not necessary for plaintiff to prove actual damage or injury to state a prima facia case of infringement",
+        "replace": "it is not necessary for plaintiff to prove actual damage or injury to state a prima facie case of infringement"
+      }
+    },
+    {
+      "id": "issue-27",
+      "category": "punctuation_and_boundaries.apostrophe_error",
+      "paragraphId": "rSHZma",
+      "description": "The possessive apostrophe in 'plaintiff's' is incorrectly removed, turning the possessive form into a bare plural, which is wrong in this context where possession is intended.",
+      "classification": {
+        "label": "punctuation_and_boundaries.apostrophe_error",
+        "parent": "punctuation_and_boundaries",
+        "child": "apostrophe_error",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "omission",
+        "createsValidWord": true,
+        "dimension": "punctuation"
+      },
+      "expectedCorrection": {
+        "find": "Third, the [describe the plaintiffs trade dress] is nonfunctional",
+        "replace": "Third, the [describe the plaintiff's trade dress] is nonfunctional"
+      }
+    },
+    {
+      "id": "issue-28",
+      "category": "orthography_and_word_form.incorrect_conjugation",
+      "paragraphId": "rSHZma",
+      "description": "Incorrect verb conjugation: 'has' should be 'have' is wrong here — actually, the error is changing 'has' (correct singular) to 'have' (incorrect plural form). The subject 'each of the elements' takes a singular verb 'has', so changing it to 'have' creates an agreement error.",
+      "classification": {
+        "label": "orthography_and_word_form.incorrect_conjugation",
+        "parent": "orthography_and_word_form",
+        "child": "incorrect_conjugation",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "each of the elements on which the plaintiff [name] has the burden of proof have been proved",
+        "replace": "each of the elements on which the plaintiff [name] has the burden of proof has been proved"
+      }
+    }
+  ]
+}

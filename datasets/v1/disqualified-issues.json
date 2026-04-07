@@ -1,0 +1,57 @@
+{
+  "version": "v1",
+  "issues": [
+    {
+      "caseId": "aerodynamics-of-flight",
+      "issueId": "issue-12",
+      "reason": "\"if the velocity increased\" is already grammatical and too weak to benchmark."
+    },
+    {
+      "caseId": "jury-instructions",
+      "issueId": "issue-10"
+    },
+    {
+      "caseId": "owid-better-learning",
+      "issueId": "issue-21",
+      "reason": "\"not all of which\" is too semantically subtle for proofreading."
+    },
+    {
+      "caseId": "owid-better-learning",
+      "issueId": "issue-23",
+      "reason": "\"Research in Kenya tries\" is awkward but still plausible summary prose."
+    },
+    {
+      "caseId": "owid-better-learning",
+      "issueId": "issue-28",
+      "reason": "\"reproduce this in any medium\" is acceptable boilerplate."
+    },
+    {
+      "caseId": "owid-what-is-economic-growth",
+      "issueId": "issue-03",
+      "reason": "\"word-by-word\" is acceptable and not a reliable proofreading catch."
+    },
+    {
+      "caseId": "owid-what-is-economic-growth",
+      "issueId": "issue-18",
+      "reason": "The connective swap is too discourse-interpretive."
+    },
+    {
+      "caseId": "owid-what-is-economic-growth",
+      "issueId": "issue-31",
+      "reason": "The sentence is odd but not clearly wrong enough for a benchmark issue."
+    },
+    {
+      "caseId": "reznor-heater",
+      "issueId": "issue-26",
+      "reason": "\"dip switch\" versus \"dip switches\" is too domain-specific."
+    },
+    {
+      "caseId": "uk-hospital-surgery",
+      "issueId": "issue-15"
+    },
+    {
+      "caseId": "uk-hospital-surgery",
+      "issueId": "issue-44"
+    }
+  ]
+}

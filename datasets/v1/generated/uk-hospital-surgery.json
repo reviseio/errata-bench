@@ -1,0 +1,1147 @@
+{
+  "id": "uk-hospital-surgery",
+  "instruction": "Proofread the document. Fix the known spelling, grammar, punctuation, word-choice, and style mistakes while preserving meaning, tone, paragraph ids, and intentional wording everywhere else.",
+  "sourcePath": "uk-hospital-surgery-corrupted.txt",
+  "issues": [
+    {
+      "id": "issue-01",
+      "category": "grammar_and_syntax.dangling_or_misplaced_modifier",
+      "paragraphId": "wSpPT2",
+      "description": "Reorders a modifier so that \"undergoing elective or emergency surgery\" incorrectly attaches to \"hospital\" instead of \"patients,\" creating a misplaced modifier.",
+      "classification": {
+        "label": "grammar_and_syntax.dangling_or_misplaced_modifier",
+        "parent": "grammar_and_syntax",
+        "child": "dangling_or_misplaced_modifier",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "transposition",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "that care for patients within an average-sized new-build acute general hospital undergoing elective or emergency surgery as in-patients",
+        "replace": "that care for patients undergoing elective or emergency surgery as in-patients within an average-sized new-build acute general hospital"
+      }
+    },
+    {
+      "id": "issue-02",
+      "category": "grammar_and_syntax.parallelism_error",
+      "paragraphId": "qiFOhJ",
+      "description": "Introduces a nonparallel item in a coordinated series by changing a noun phrase to an adverbial phrase.",
+      "classification": {
+        "label": "grammar_and_syntax.parallelism_error",
+        "parent": "grammar_and_syntax",
+        "child": "parallelism_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "This helps with flexibility of operation, staffing efficiently, clinical governance",
+        "replace": "This helps with flexibility of operation, efficiency of staffing, clinical governance"
+      }
+    },
+    {
+      "id": "issue-03",
+      "category": "grammar_and_syntax.parallelism_error",
+      "paragraphId": "qcDP0i",
+      "description": "Introduce a non-parallel first item in the coordinated infinitive list by changing the first verb phrase to a gerund phrase.",
+      "classification": {
+        "label": "grammar_and_syntax.parallelism_error",
+        "parent": "grammar_and_syntax",
+        "child": "parallelism_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "The rationale is preserving beds, reduce pressure on surgical wards",
+        "replace": "The rationale is to preserve beds, reduce pressure on surgical wards"
+      }
+    },
+    {
+      "id": "issue-04",
+      "category": "semantics_discourse_and_style.awkward_phrasing",
+      "paragraphId": "mQ3Z2t",
+      "description": "Introduces an accidental repeated infinitive, creating an unnatural and hard-to-process phrase.",
+      "classification": {
+        "label": "semantics_discourse_and_style.awkward_phrasing",
+        "parent": "semantics_discourse_and_style",
+        "child": "awkward_phrasing",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "duplication",
+        "createsValidWord": null,
+        "dimension": "stylistic"
+      },
+      "expectedCorrection": {
+        "find": "anaesthesia teams in the UK prefer to continue to continue this model",
+        "replace": "anaesthesia teams in the UK prefer to continue this model"
+      }
+    },
+    {
+      "id": "issue-05",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "FuvubW",
+      "description": "Replace a contextually necessary technical term with a valid but semantically incompatible word, creating a clear semantic anomaly in the ventilation context.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "ventilation system to maintain pleasure. Where it is intended",
+        "replace": "ventilation system to maintain pressure. Where it is intended"
+      }
+    },
+    {
+      "id": "issue-06",
+      "category": "grammar_and_syntax.parallelism_error",
+      "paragraphId": "ymPYm1",
+      "description": "Introduces a parallelism error by changing the coordinated finite verb phrase \"has led\" to the non-parallel participial form \"leading\".",
+      "classification": {
+        "label": "grammar_and_syntax.parallelism_error",
+        "parent": "grammar_and_syntax",
+        "child": "parallelism_error",
+        "severity": "major",
+        "editScope": "clause",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "pressure on critical care beds and leading to major elective",
+        "replace": "pressure on critical care beds and has led to major elective"
+      }
+    },
+    {
+      "id": "issue-07",
+      "category": "semantics_discourse_and_style.nonstandard_dialect_or_colloquial_form",
+      "paragraphId": "XcIfdd",
+      "description": "Introduce a nonstandard dialectal relative pronoun in place of the standard form.",
+      "classification": {
+        "label": "semantics_discourse_and_style.nonstandard_dialect_or_colloquial_form",
+        "parent": "semantics_discourse_and_style",
+        "child": "nonstandard_dialect_or_colloquial_form",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "stylistic"
+      },
+      "expectedCorrection": {
+        "find": "also be utilised for patients what require isolation, for example",
+        "replace": "also be utilised for patients who require isolation, for example"
+      }
+    },
+    {
+      "id": "issue-08",
+      "category": "semantics_discourse_and_style.awkward_phrasing",
+      "paragraphId": "EFOfYj",
+      "description": "Introduces an awkward idiomatic phrasing by changing the fixed expression 'borne in mind' to the unnatural 'borne into mind'.",
+      "classification": {
+        "label": "semantics_discourse_and_style.awkward_phrasing",
+        "parent": "semantics_discourse_and_style",
+        "child": "awkward_phrasing",
+        "severity": "minor",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "stylistic"
+      },
+      "expectedCorrection": {
+        "find": "to facilitate waste anaesthetic dilution should be borne into mind.",
+        "replace": "to facilitate waste anaesthetic dilution should be borne in mind."
+      }
+    },
+    {
+      "id": "issue-09",
+      "category": "semantics_discourse_and_style.nonstandard_dialect_or_colloquial_form",
+      "paragraphId": "LiQKB6",
+      "description": "Introduce a nonstandard dialect verb form by replacing the standard perfect construction \"have taken place\" with \"have took place\" within a long unique span.",
+      "classification": {
+        "label": "semantics_discourse_and_style.nonstandard_dialect_or_colloquial_form",
+        "parent": "semantics_discourse_and_style",
+        "child": "nonstandard_dialect_or_colloquial_form",
+        "severity": "major",
+        "editScope": "clause",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "stylistic"
+      },
+      "expectedCorrection": {
+        "find": "was published a number of organisational changes and capacity increases have took place",
+        "replace": "was published a number of organisational changes and capacity increases have taken place"
+      }
+    },
+    {
+      "id": "issue-10",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "slLMdt",
+      "description": "Introduces a clear semantic contradiction by changing a safety-related phrase to its opposite while keeping the sentence grammatical.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "ensure that patients are placed at maximal risk of injury",
+        "replace": "ensure that patients are placed at minimal risk of injury"
+      }
+    },
+    {
+      "id": "issue-11",
+      "category": "grammar_and_syntax.parallelism_error",
+      "paragraphId": "313bTp",
+      "description": "Introduces a parallelism error by changing one coordinated adjective to an adverb, making the modifiers of \"storage space\" non-parallel.",
+      "classification": {
+        "label": "grammar_and_syntax.parallelism_error",
+        "parent": "grammar_and_syntax",
+        "child": "parallelism_error",
+        "severity": "minor",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "large areas of additional and securely storage space.",
+        "replace": "large areas of additional and secure storage space."
+      }
+    },
+    {
+      "id": "issue-12",
+      "category": "grammar_and_syntax.parallelism_error",
+      "paragraphId": "KpgD2I",
+      "description": "Introduce a nonparallel verb form in a coordinated list by changing one infinitive complement to a gerund.",
+      "classification": {
+        "label": "grammar_and_syntax.parallelism_error",
+        "parent": "grammar_and_syntax",
+        "child": "parallelism_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "The furnishings and fittings should be easy to clean, disinfecting and maintain.",
+        "replace": "The furnishings and fittings should be easy to clean, disinfect and maintain."
+      }
+    },
+    {
+      "id": "issue-13",
+      "category": "grammar_and_syntax.negation_scope_error",
+      "paragraphId": "W84ZKI",
+      "description": "Moves the negator to the wrong position, changing the scope of negation within the modifier phrase.",
+      "classification": {
+        "label": "grammar_and_syntax.negation_scope_error",
+        "parent": "grammar_and_syntax",
+        "child": "negation_scope_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "transposition",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "personnel who are directly not involved with patient care",
+        "replace": "personnel who are not directly involved with patient care"
+      }
+    },
+    {
+      "id": "issue-14",
+      "category": "grammar_and_syntax.dangling_or_misplaced_modifier",
+      "paragraphId": "S7FhTW",
+      "description": "Introduce a dangling modifier by removing the subject of the opening clause so the modifier appears to attach to 'comfortable seating' instead of the people waiting.",
+      "classification": {
+        "label": "grammar_and_syntax.dangling_or_misplaced_modifier",
+        "parent": "grammar_and_syntax",
+        "child": "dangling_or_misplaced_modifier",
+        "severity": "major",
+        "editScope": "sentence",
+        "operationType": "substitution",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "Waiting here for long periods of time, comfortable seating is essential.",
+        "replace": "People may wish to wait here for long periods of time, so comfortable seating is essential."
+      }
+    },
+    {
+      "id": "issue-15",
+      "category": "grammar_and_syntax.negation_scope_error",
+      "paragraphId": "WxvnlA",
+      "description": "Omit the negation so the requirement is reversed.",
+      "classification": {
+        "label": "grammar_and_syntax.negation_scope_error",
+        "parent": "grammar_and_syntax",
+        "child": "negation_scope_error",
+        "severity": "major",
+        "editScope": "sentence",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "Shower and bathing facilities will be required.",
+        "replace": "Shower and bathing facilities will not be required."
+      }
+    },
+    {
+      "id": "issue-16",
+      "category": "grammar_and_syntax.dangling_or_misplaced_modifier",
+      "paragraphId": "SD2yeT",
+      "description": "Omitting the noun 'room' makes the following modifier attach awkwardly, creating a dangling/misplaced modifier reading.",
+      "classification": {
+        "label": "grammar_and_syntax.dangling_or_misplaced_modifier",
+        "parent": "grammar_and_syntax",
+        "child": "dangling_or_misplaced_modifier",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "The general waiting used by family and friends",
+        "replace": "The general waiting room used by family and friends"
+      }
+    },
+    {
+      "id": "issue-17",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "JIcQD3",
+      "description": "Creates a clear semantic contradiction by changing a desirable 'undisturbed environment' into the incompatible 'disturbed environment' while keeping the sentence grammatical.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "the maintenance of a disturbed environment, is of great importance",
+        "replace": "the maintenance of an undisturbed environment, is of great importance"
+      }
+    },
+    {
+      "id": "issue-18",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "Yej4dq",
+      "description": "Introduces a semantically incompatible requirement by changing how the doors should close from a quiet operation to a loud one.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "minimum clear opening width of 1600 mm, and close loudly.",
+        "replace": "minimum clear opening width of 1600 mm, and close quietly."
+      }
+    },
+    {
+      "id": "issue-19",
+      "category": "grammar_and_syntax.dangling_or_misplaced_modifier",
+      "paragraphId": "HRf1Av",
+      "description": "Create a clear dangling modifier by removing the explicit subject from the opening subordinate clause, making it appear that the anaesthetic room is undergoing the procedure.",
+      "classification": {
+        "label": "grammar_and_syntax.dangling_or_misplaced_modifier",
+        "parent": "grammar_and_syntax",
+        "child": "dangling_or_misplaced_modifier",
+        "severity": "major",
+        "editScope": "clause",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "4.47 When undergoing a procedure, the anaesthetic room is",
+        "replace": "4.47 When a child is undergoing a procedure, the anaesthetic room is"
+      }
+    },
+    {
+      "id": "issue-20",
+      "category": "semantics_discourse_and_style.nonstandard_dialect_or_colloquial_form",
+      "paragraphId": "287kcG",
+      "description": "Introduced a nonstandard dialectal determiner by replacing the standard article in a long contextual span.",
+      "classification": {
+        "label": "semantics_discourse_and_style.nonstandard_dialect_or_colloquial_form",
+        "parent": "semantics_discourse_and_style",
+        "child": "nonstandard_dialect_or_colloquial_form",
+        "severity": "minor",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "stylistic"
+      },
+      "expectedCorrection": {
+        "find": "contamination from each other or from them surrounding fittings.",
+        "replace": "contamination from each other or from the surrounding fittings."
+      }
+    },
+    {
+      "id": "issue-21",
+      "category": "grammar_and_syntax.negation_scope_error",
+      "paragraphId": "PMXQm4",
+      "description": "Moves the negation to the infinitive phrase, incorrectly changing what is negated in the requirement.",
+      "classification": {
+        "label": "grammar_and_syntax.negation_scope_error",
+        "parent": "grammar_and_syntax",
+        "child": "negation_scope_error",
+        "severity": "major",
+        "editScope": "clause",
+        "operationType": "substitution",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "It is essential not to have a door between the scrub room and theatre.",
+        "replace": "It is not essential to have a door between the scrub room and theatre."
+      }
+    },
+    {
+      "id": "issue-22",
+      "category": "grammar_and_syntax.parallelism_error",
+      "paragraphId": "Yosms8",
+      "description": "Introduce a parallelism error by changing the second coordinated phrase so it no longer matches the first after 'between'.",
+      "classification": {
+        "label": "grammar_and_syntax.parallelism_error",
+        "parent": "grammar_and_syntax",
+        "child": "parallelism_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "between the preparation room and the operating theatre and the preparation room to the corridor",
+        "replace": "between the preparation room and the operating theatre and the preparation room and the corridor"
+      }
+    },
+    {
+      "id": "issue-23",
+      "category": "grammar_and_syntax.parallelism_error",
+      "paragraphId": "sxHjZv",
+      "description": "Introduce a clear parallelism error by changing the third coordinated -ing phrase into a finite clause.",
+      "classification": {
+        "label": "grammar_and_syntax.parallelism_error",
+        "parent": "grammar_and_syntax",
+        "child": "parallelism_error",
+        "severity": "major",
+        "editScope": "clause",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "supplying items to the scrub team, moving equipment into place and they monitor patient progress",
+        "replace": "supplying items to the scrub team, moving equipment into place and monitoring patient progress"
+      }
+    },
+    {
+      "id": "issue-24",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "dHd9se",
+      "description": "Introduce a semantic contradiction by replacing the size comparison with its opposite.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "A bed is significantly smaller than a trolley.",
+        "replace": "A bed is significantly larger than a trolley."
+      }
+    },
+    {
+      "id": "issue-25",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "hIgX71",
+      "description": "Replace a key content word with a contradictory but grammatical alternative, creating a clear semantic anomaly.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "the need for a general anaesthetic and remain asleep during the procedure.",
+        "replace": "the need for a general anaesthetic and remain awake during the procedure."
+      }
+    },
+    {
+      "id": "issue-26",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "eAV05t",
+      "description": "Substitute a key adjective with its opposite to create a grammatical but contextually contradictory statement about door-opening resistance.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "These units are adjustable, allowing maximum opening resistance.",
+        "replace": "These units are adjustable, allowing minimum opening resistance."
+      }
+    },
+    {
+      "id": "issue-27",
+      "category": "grammar_and_syntax.parallelism_error",
+      "paragraphId": "Xfhqhe",
+      "description": "Introduce a parallelism error by changing the second coordinated verb from the bare infinitive form to a participle, breaking the parallel structure after \"allow\".",
+      "classification": {
+        "label": "grammar_and_syntax.parallelism_error",
+        "parent": "grammar_and_syntax",
+        "child": "parallelism_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "allow unrestricted access to the patient and enabling staff of all heights",
+        "replace": "allow unrestricted access to the patient and enable staff of all heights"
+      }
+    },
+    {
+      "id": "issue-28",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "mnoHNf",
+      "description": "Introduces a semantic anomaly by replacing the intended goal of minimizing airflow disruption with the contradictory idea of maximizing it.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "ultra-clean ventilation, to maintain maximal interference with downward airflow patterns.",
+        "replace": "ultra-clean ventilation, to maintain minimal interference with downward airflow patterns."
+      }
+    },
+    {
+      "id": "issue-29",
+      "category": "grammar_and_syntax.parallelism_error",
+      "paragraphId": "cOrJLa",
+      "description": "Introduces a parallelism error by changing the second coordinated verb phrase to a gerund while keeping the first as a bare infinitive.",
+      "classification": {
+        "label": "grammar_and_syntax.parallelism_error",
+        "parent": "grammar_and_syntax",
+        "child": "parallelism_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "the staff can retrieve information and inputting patient data",
+        "replace": "the staff can retrieve information and input patient data"
+      }
+    },
+    {
+      "id": "issue-30",
+      "category": "grammar_and_syntax.parallelism_error",
+      "paragraphId": "b0xFc6",
+      "description": "Introduces a nonparallel coordinated verb form by changing the second infinitive to a gerund.",
+      "classification": {
+        "label": "grammar_and_syntax.parallelism_error",
+        "parent": "grammar_and_syntax",
+        "child": "parallelism_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "essential to assure the clean environment, and assisting the air-conditioning",
+        "replace": "essential to assure the clean environment, and assist the air-conditioning"
+      }
+    },
+    {
+      "id": "issue-31",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "MOL3UM",
+      "description": "Removes the negation in a safety requirement, creating a semantically incompatible statement while remaining grammatical.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "clause",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "it is important that there are reflective surfaces or bright door handles.",
+        "replace": "it is important that there are no reflective surfaces or bright door handles."
+      }
+    },
+    {
+      "id": "issue-32",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "26tQgI",
+      "description": "Replace a contextually appropriate action with a semantically incompatible but grammatical one.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "socket-outlet should be provided for changing the imaging equipment.",
+        "replace": "socket-outlet should be provided for charging the imaging equipment."
+      }
+    },
+    {
+      "id": "issue-33",
+      "category": "grammar_and_syntax.dangling_or_misplaced_modifier",
+      "paragraphId": "7KC5re",
+      "description": "Moves the relative clause away from the noun it modifies, creating a misplaced modifier.",
+      "classification": {
+        "label": "grammar_and_syntax.dangling_or_misplaced_modifier",
+        "parent": "grammar_and_syntax",
+        "child": "dangling_or_misplaced_modifier",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "transposition",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "re-usable accessories should be purchased that are autoclaveable",
+        "replace": "re-usable accessories that are autoclaveable should be purchased"
+      }
+    },
+    {
+      "id": "issue-34",
+      "category": "grammar_and_syntax.negation_scope_error",
+      "paragraphId": "MdhsAI",
+      "description": "Introduces an erroneous negation that changes the condition under which glutaraldehyde is described as hazardous.",
+      "classification": {
+        "label": "grammar_and_syntax.negation_scope_error",
+        "parent": "grammar_and_syntax",
+        "child": "negation_scope_error",
+        "severity": "major",
+        "editScope": "clause",
+        "operationType": "insertion",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "alternative chemical substances for disinfection. If not still used, glutaraldehyde is a hazardous substance.",
+        "replace": "alternative chemical substances for disinfection. If still used, glutaraldehyde is a hazardous substance."
+      }
+    },
+    {
+      "id": "issue-35",
+      "category": "grammar_and_syntax.parallelism_error",
+      "paragraphId": "oggbhT",
+      "description": "Introduced a parallelism error by changing the second coordinated gerund phrase into an infinitive phrase.",
+      "classification": {
+        "label": "grammar_and_syntax.parallelism_error",
+        "parent": "grammar_and_syntax",
+        "child": "parallelism_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "suitable for use when decontaminating endoscopes or to mix solutions of chemicals.",
+        "replace": "suitable for use when decontaminating endoscopes or mixing solutions of chemicals."
+      }
+    },
+    {
+      "id": "issue-36",
+      "category": "grammar_and_syntax.parallelism_error",
+      "paragraphId": "KFQGhN",
+      "description": "Introduces a nonparallel verb form in a coordinated passive construction by replacing the past participle with a present participle.",
+      "classification": {
+        "label": "grammar_and_syntax.parallelism_error",
+        "parent": "grammar_and_syntax",
+        "child": "parallelism_error",
+        "severity": "minor",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "should be closed and taking to the disposal hold",
+        "replace": "should be closed and taken to the disposal hold"
+      }
+    },
+    {
+      "id": "issue-37",
+      "category": "grammar_and_syntax.parallelism_error",
+      "paragraphId": "jEfLcI",
+      "description": "Introduce a clear parallelism error by changing one coordinated past participle to a gerund in a three-part passive verb sequence.",
+      "classification": {
+        "label": "grammar_and_syntax.parallelism_error",
+        "parent": "grammar_and_syntax",
+        "child": "parallelism_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "medical devices are stored and reprocessing or disposed of",
+        "replace": "medical devices are stored and reprocessed or disposed of"
+      }
+    },
+    {
+      "id": "issue-38",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "3f8IeE",
+      "description": "Replace a negation with a similarly spelled valid word, creating a grammatical but semantically contradictory statement about whether bench-top sterilizers are recommended.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "Bench-top sterilizers should now be installed, as the protocols are",
+        "replace": "Bench-top sterilizers should not be installed, as the protocols are"
+      }
+    },
+    {
+      "id": "issue-39",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "W11l5H",
+      "description": "Introduces an accidental negation, making the requirement semantically contradictory while remaining grammatical.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "clause",
+        "operationType": "insertion",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "Separate clinical hand-washing facilities are also not required.",
+        "replace": "Separate clinical hand-washing facilities are also required."
+      }
+    },
+    {
+      "id": "issue-40",
+      "category": "grammar_and_syntax.parallelism_error",
+      "paragraphId": "kqkrVv",
+      "description": "Omit the copula in a coordinated predicate so the two parts are no longer grammatically parallel.",
+      "classification": {
+        "label": "grammar_and_syntax.parallelism_error",
+        "parent": "grammar_and_syntax",
+        "child": "parallelism_error",
+        "severity": "major",
+        "editScope": "clause",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "Natural daylight enhances the feeling of well-being and desirable.",
+        "replace": "Natural daylight enhances the feeling of well-being and is desirable."
+      }
+    },
+    {
+      "id": "issue-41",
+      "category": "grammar_and_syntax.negation_scope_error",
+      "paragraphId": "BE5krm",
+      "description": "Inserted a misplaced negation so the sentence states that every bed space should not be separated, creating a negation scope error.",
+      "classification": {
+        "label": "grammar_and_syntax.negation_scope_error",
+        "parent": "grammar_and_syntax",
+        "child": "negation_scope_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "insertion",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "every bed space should not be separated by lead-lined",
+        "replace": "every bed space should be separated by lead-lined"
+      }
+    },
+    {
+      "id": "issue-42",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "fIwDHn",
+      "description": "Introduce a plausible real-word typo that keeps the phrase grammatical but makes it semantically incompatible in context.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "enclosed by partition walls of wired fireproof double-glazed grass, from",
+        "replace": "enclosed by partition walls of wired fireproof double-glazed glass, from"
+      }
+    },
+    {
+      "id": "issue-43",
+      "category": "grammar_and_syntax.parallelism_error",
+      "paragraphId": "wHBx7d",
+      "description": "Introduce a parallelism error by changing the second coordinated infinitive phrase to a gerund phrase.",
+      "classification": {
+        "label": "grammar_and_syntax.parallelism_error",
+        "parent": "grammar_and_syntax",
+        "child": "parallelism_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "to park and manoeuvre equipment and accommodating a workbench",
+        "replace": "to park and manoeuvre equipment and to accommodate a workbench"
+      }
+    },
+    {
+      "id": "issue-44",
+      "category": "grammar_and_syntax.negation_scope_error",
+      "paragraphId": "Mvk3WV",
+      "description": "Introduces a negation-scope error by shifting the negation from the room's location to the type of route, changing the intended meaning.",
+      "classification": {
+        "label": "grammar_and_syntax.negation_scope_error",
+        "parent": "grammar_and_syntax",
+        "child": "negation_scope_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "transposition",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "but generally on a route not used by beds or trolleys,",
+        "replace": "but not generally on a route used by beds or trolleys,"
+      }
+    },
+    {
+      "id": "issue-45",
+      "category": "grammar_and_syntax.parallelism_error",
+      "paragraphId": "ktUZhT",
+      "description": "Introduce a nonparallel coordinated verb form by changing the second finite verb to a participle.",
+      "classification": {
+        "label": "grammar_and_syntax.parallelism_error",
+        "parent": "grammar_and_syntax",
+        "child": "parallelism_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "helps morale and contributing to the efficient functioning",
+        "replace": "helps morale and contributes to the efficient functioning"
+      }
+    },
+    {
+      "id": "issue-46",
+      "category": "grammar_and_syntax.parallelism_error",
+      "paragraphId": "7FhZVl",
+      "description": "Introduces a nonparallel coordinated element by changing the bare infinitive phrase to a participial form within a list of predicates after \"should have\".",
+      "classification": {
+        "label": "grammar_and_syntax.parallelism_error",
+        "parent": "grammar_and_syntax",
+        "child": "parallelism_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "with a pleasant outlook, being comfortably furnished and have a telephone.",
+        "replace": "with a pleasant outlook, be comfortably furnished and have a telephone."
+      }
+    },
+    {
+      "id": "issue-47",
+      "category": "grammar_and_syntax.parallelism_error",
+      "paragraphId": "ixOfyL",
+      "description": "Introduced a non-parallel infinitive phrase in a coordination that originally linked two noun phrases after 'will require.'",
+      "classification": {
+        "label": "grammar_and_syntax.parallelism_error",
+        "parent": "grammar_and_syntax",
+        "child": "parallelism_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "Each WC will require a hand-wash basin with non-touch taps and to have a WC with a non-touch flush valve.",
+        "replace": "Each WC will require a hand-wash basin with non-touch taps and a WC with a non-touch flush valve."
+      }
+    },
+    {
+      "id": "issue-48",
+      "category": "grammar_and_syntax.parallelism_error",
+      "paragraphId": "yu0srn",
+      "description": "Introduce a clear parallelism error by changing the second coordinated verb phrase from the bare infinitive form to a gerund, making the pair 'to shower and changing' non-parallel.",
+      "classification": {
+        "label": "grammar_and_syntax.parallelism_error",
+        "parent": "grammar_and_syntax",
+        "child": "parallelism_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "they will need to shower and changing their clothes",
+        "replace": "they will need to shower and change their clothes"
+      }
+    },
+    {
+      "id": "issue-49",
+      "category": "grammar_and_syntax.parallelism_error",
+      "paragraphId": "7Yn83e",
+      "description": "Introduce a nonparallel coordinated phrase by changing the second gerund to an infinitive.",
+      "classification": {
+        "label": "grammar_and_syntax.parallelism_error",
+        "parent": "grammar_and_syntax",
+        "child": "parallelism_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "Seating is also required for dressing and to undress.",
+        "replace": "Seating is also required for dressing and undressing."
+      }
+    },
+    {
+      "id": "issue-50",
+      "category": "grammar_and_syntax.parallelism_error",
+      "paragraphId": "gXGooK",
+      "description": "Introduce a grammatical parallelism error by removing the verbal phrase after the coordinator, leaving nonparallel coordinated elements in the relative clause.",
+      "classification": {
+        "label": "grammar_and_syntax.parallelism_error",
+        "parent": "grammar_and_syntax",
+        "child": "parallelism_error",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "grammatical"
+      },
+      "expectedCorrection": {
+        "find": "room that is comfortably furnished and for interviewing",
+        "replace": "room that is comfortably furnished and can be used for interviewing"
+      }
+    },
+    {
+      "id": "issue-51",
+      "category": "semantics_discourse_and_style.nonstandard_dialect_or_colloquial_form",
+      "paragraphId": "a6iAh2",
+      "description": "Introduces a common nonstandard colloquial form in place of the standard auxiliary construction in a formal specification sentence.",
+      "classification": {
+        "label": "semantics_discourse_and_style.nonstandard_dialect_or_colloquial_form",
+        "parent": "semantics_discourse_and_style",
+        "child": "nonstandard_dialect_or_colloquial_form",
+        "severity": "minor",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "stylistic"
+      },
+      "expectedCorrection": {
+        "find": "every office should of a window and natural ventilation",
+        "replace": "every office should have a window and natural ventilation"
+      }
+    },
+    {
+      "id": "issue-52",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "FeTlod",
+      "description": "Replace a contextually appropriate noun with a valid but semantically incompatible one, creating a clear semantic anomaly in the office-facilities description.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "points for telephone and tax transmission",
+        "replace": "points for telephone and fax transmission"
+      }
+    },
+    {
+      "id": "issue-53",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "Kgq1F8",
+      "description": "Omitting the negation creates a clear contradiction with the surrounding description, yielding a grammatical but semantically incompatible statement.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "sentence",
+        "operationType": "omission",
+        "createsValidWord": null,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "It is an operational rather than a clinical base. Patients do visit here.",
+        "replace": "It is an operational rather than a clinical base. Patients do not visit here."
+      }
+    },
+    {
+      "id": "issue-54",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "auGCn0",
+      "description": "Introduce a clear semantic contradiction by replacing a contextually appropriate adjective with an incompatible one, while keeping the sentence grammatical.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "phrase",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "they should be sufficiently private for public discussions between staff",
+        "replace": "they should be sufficiently private for confidential discussions between staff"
+      }
+    },
+    {
+      "id": "issue-55",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "gkqzAb",
+      "description": "Replace a contextually appropriate noun with a valid but semantically incompatible one, creating a clear semantic anomaly in the storage description.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "with seating for up to three other people and storage for books and fires.",
+        "replace": "with seating for up to three other people and storage for books and files."
+      }
+    },
+    {
+      "id": "issue-56",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "hSfiXD",
+      "description": "Substitute a contextually wrong but valid word to create a grammatical semantic anomaly in the meeting types listed.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "should be provided for audit, morbidity and morality, clinical governance",
+        "replace": "should be provided for audit, morbidity and mortality, clinical governance"
+      }
+    },
+    {
+      "id": "issue-57",
+      "category": "semantics_discourse_and_style.semantic_anomaly",
+      "paragraphId": "BCQZIU",
+      "description": "Replace a negated access-control term with its opposite, creating a grammatical but semantically incompatible requirement.",
+      "classification": {
+        "label": "semantics_discourse_and_style.semantic_anomaly",
+        "parent": "semantics_discourse_and_style",
+        "child": "semantic_anomaly",
+        "severity": "major",
+        "editScope": "token",
+        "operationType": "substitution",
+        "createsValidWord": true,
+        "dimension": "semantic"
+      },
+      "expectedCorrection": {
+        "find": "to ensure that no authorised personnel can gain access.",
+        "replace": "to ensure that no unauthorised personnel can gain access."
+      }
+    }
+  ]
+}

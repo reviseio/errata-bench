@@ -1,0 +1,112 @@
+{
+  "version": "v1",
+  "runId": "2026-04-01T20-06-21-725Z",
+  "createdAt": "2026-04-01T20:06:23.948Z",
+  "summary": {
+    "totalCases": 1,
+    "exactDocumentMatches": 0,
+    "casesWithFullIssueCoverage": 0,
+    "totalIssues": 5,
+    "correctedIssues": 3,
+    "averageIssueCoverage": 0.6,
+    "totalOutputTokens": 155,
+    "averageOutputTokensPerCase": 155,
+    "correctionsPerOutputToken": 0.01935483870967742,
+    "totalDurationMs": 2219,
+    "averageDurationMsPerCase": 2219,
+    "cost": {
+      "candidatePromptTokens": 1757,
+      "candidateOutputTokens": 155,
+      "candidateCostUsd": 0.00201525,
+      "judgePromptTokens": 0,
+      "judgeOutputTokens": 0,
+      "judgeCostUsd": 0,
+      "totalCostUsd": 0.00201525
+    },
+    "axes": {
+      "quality": 0.6,
+      "restraint": null,
+      "efficiency": 1488.64905098623,
+      "speed": 81.11762054979721,
+      "costUsd": 0.00201525,
+      "candidateCostUsd": 0.00201525,
+      "judgeCostUsd": 0
+    }
+  },
+  "cases": [
+    {
+      "caseId": "tool-editing-silly-001",
+      "exactDocumentMatch": false,
+      "correctedIssueCount": 3,
+      "totalIssueCount": 5,
+      "issueCoverage": 0.6,
+      "outputTokens": 155,
+      "promptTokens": 1757,
+      "correctionsPerOutputToken": 0.01935483870967742,
+      "tokensPerCorrectedIssue": 51.666666666666664,
+      "expectedChangedParagraphIds": [
+        "Xr6osk",
+        "CYklKQ"
+      ],
+      "actualChangedParagraphIds": [
+        "Xr6osk",
+        "CYklKQ"
+      ],
+      "unexpectedParagraphChanges": [],
+      "issues": [
+        {
+          "issueId": "issue-p1-dinasaur",
+          "category": "non_word_typo",
+          "paragraphId": "Xr6osk",
+          "description": "Correct dinasaur to dinosaur.",
+          "staticCorrected": true,
+          "alternativeCandidate": false,
+          "corrected": true,
+          "resolutionMethod": "exact"
+        },
+        {
+          "issueId": "issue-p1-teh",
+          "category": "non_word_typo",
+          "paragraphId": "Xr6osk",
+          "description": "Correct teh to the.",
+          "staticCorrected": true,
+          "alternativeCandidate": false,
+          "corrected": true,
+          "resolutionMethod": "exact"
+        },
+        {
+          "issueId": "issue-p2-has-wrote",
+          "category": "verb_form",
+          "paragraphId": "CYklKQ",
+          "description": "Correct has wrote to wrote.",
+          "staticCorrected": false,
+          "alternativeCandidate": true,
+          "corrected": false,
+          "resolutionMethod": "unresolved"
+        },
+        {
+          "issueId": "issue-p2-a-apology",
+          "category": "article",
+          "paragraphId": "CYklKQ",
+          "description": "Correct a apology to an apology.",
+          "staticCorrected": false,
+          "alternativeCandidate": false,
+          "corrected": false,
+          "resolutionMethod": "unresolved"
+        },
+        {
+          "issueId": "issue-p2-sound",
+          "category": "agreement",
+          "paragraphId": "CYklKQ",
+          "description": "Correct sound to sounds.",
+          "staticCorrected": true,
+          "alternativeCandidate": false,
+          "corrected": true,
+          "resolutionMethod": "exact"
+        }
+      ],
+      "finalDocumentHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I have written a apology note, but it still sounds ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>",
+      "expectedDocumentHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I wrote an apology note, but it still sounds ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>"
+    }
+  ]
+}

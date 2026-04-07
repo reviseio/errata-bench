@@ -1,0 +1,159 @@
+{
+  "version": "v1",
+  "runId": "2026-04-01T22-08-04-790Z",
+  "createdAt": "2026-04-01T22:08:04.791Z",
+  "datasetPath": "/Users/artur/work/errata-bench/datasets/v1/tool-editing-baseline.json",
+  "maxWordsPerChunk": 3000,
+  "maxTurnsPerChunk": 3,
+  "mode": "mock",
+  "model": "mock-proofreader",
+  "modelLabel": "mock-proofreader:none",
+  "reasoningEffort": "none",
+  "cases": [
+    {
+      "caseId": "tool-editing-silly-001",
+      "instruction": "Proofread the document. Fix spelling and obvious grammar mistakes while preserving meaning, tone, paragraph ids, and intentionally odd details.",
+      "initialDocumentHtml": "<p id=\"Xr6osk\">My pet dinasaur stole teh mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I has wrote a apology note, but it still sound ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>",
+      "expectedDocumentHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I wrote an apology note, but it still sounds ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>",
+      "finalDocumentHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I wrote an apology note, but it still sounds ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>",
+      "issues": [
+        {
+          "id": "issue-p1-dinasaur",
+          "category": "non_word_typo",
+          "paragraphId": "Xr6osk",
+          "description": "Correct dinasaur to dinosaur.",
+          "expectedCorrection": {
+            "find": "dinasaur",
+            "replace": "dinosaur"
+          }
+        },
+        {
+          "id": "issue-p1-teh",
+          "category": "non_word_typo",
+          "paragraphId": "Xr6osk",
+          "description": "Correct teh to the.",
+          "expectedCorrection": {
+            "find": "teh",
+            "replace": "the"
+          }
+        },
+        {
+          "id": "issue-p2-has-wrote",
+          "category": "verb_form",
+          "paragraphId": "CYklKQ",
+          "description": "Correct has wrote to wrote.",
+          "expectedCorrection": {
+            "find": "has wrote",
+            "replace": "wrote"
+          }
+        },
+        {
+          "id": "issue-p2-a-apology",
+          "category": "article",
+          "paragraphId": "CYklKQ",
+          "description": "Correct a apology to an apology.",
+          "expectedCorrection": {
+            "find": "a apology",
+            "replace": "an apology"
+          }
+        },
+        {
+          "id": "issue-p2-sound",
+          "category": "agreement",
+          "paragraphId": "CYklKQ",
+          "description": "Correct sound to sounds.",
+          "expectedCorrection": {
+            "find": "still sound ridiculous",
+            "replace": "still sounds ridiculous"
+          }
+        }
+      ],
+      "chunks": [
+        {
+          "chunkName": "proofread-chunk-1",
+          "chunkInstruction": "Conservatively proofread chunk 1 of 1. You may use at most 3 turns for this chunk.",
+          "chunkIndex": 1,
+          "chunkCount": 1,
+          "chunkParagraphIds": [
+            "Xr6osk",
+            "CYklKQ",
+            "29e0pe"
+          ],
+          "startingDocumentHtml": "<p id=\"Xr6osk\">My pet dinasaur stole teh mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I has wrote a apology note, but it still sound ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>",
+          "endingDocumentHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I wrote an apology note, but it still sounds ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>",
+          "turnTraces": [],
+          "toolExecutions": [
+            {
+              "sequence": 1,
+              "chunkIndex": 1,
+              "turn": 1,
+              "paragraphId": "Xr6osk",
+              "beforeParagraphHtml": "<p id=\"Xr6osk\">My pet dinasaur stole teh mayor's toast at dawn.</p>",
+              "afterParagraphHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>",
+              "toolCallId": "mock-call-proofread-chunk-1-1",
+              "toolName": "replace_paragraph",
+              "arguments": {
+                "paragraphId": "Xr6osk",
+                "newParagraphHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "Xr6osk",
+                "updatedParagraphHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>",
+                "message": "Paragraph \"Xr6osk\" was replaced."
+              }
+            },
+            {
+              "sequence": 2,
+              "chunkIndex": 1,
+              "turn": 1,
+              "paragraphId": "CYklKQ",
+              "beforeParagraphHtml": "<p id=\"CYklKQ\">I has wrote a apology note, but it still sound ridiculous.</p>",
+              "afterParagraphHtml": "<p id=\"CYklKQ\">I wrote an apology note, but it still sounds ridiculous.</p>",
+              "toolCallId": "mock-call-proofread-chunk-1-2",
+              "toolName": "replace_paragraph",
+              "arguments": {
+                "paragraphId": "CYklKQ",
+                "newParagraphHtml": "<p id=\"CYklKQ\">I wrote an apology note, but it still sounds ridiculous.</p>"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "CYklKQ",
+                "updatedParagraphHtml": "<p id=\"CYklKQ\">I wrote an apology note, but it still sounds ridiculous.</p>",
+                "message": "Paragraph \"CYklKQ\" was replaced."
+              }
+            },
+            {
+              "sequence": 3,
+              "chunkIndex": 1,
+              "turn": 1,
+              "paragraphId": null,
+              "beforeParagraphHtml": null,
+              "afterParagraphHtml": null,
+              "toolCallId": "mock-call-proofread-chunk-1-finish",
+              "toolName": "proofreading_complete",
+              "arguments": {
+                "note": "Applied the proofreading edits. The current chunk is now clean."
+              },
+              "result": {
+                "ok": true,
+                "decision": "stop",
+                "message": "STOP: Applied the proofreading edits. The current chunk is now clean."
+              }
+            }
+          ],
+          "finalAssistantMessage": "STOP: Applied the proofreading edits. The current chunk is now clean.",
+          "decision": "stop",
+          "outputTokens": 79,
+          "promptTokens": 0,
+          "durationMs": 0
+        }
+      ],
+      "finalAssistantMessage": "STOP: Applied the proofreading edits. The current chunk is now clean.",
+      "terminationReason": "model_stop",
+      "outputTokens": 79,
+      "promptTokens": 0,
+      "durationMs": 0
+    }
+  ]
+}

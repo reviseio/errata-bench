@@ -1,0 +1,123 @@
+{
+  "version": "v1",
+  "matrixId": "2026-03-31T02-49-57-494Z",
+  "createdAt": "2026-03-31T02:50:15.055Z",
+  "datasetPath": "/Users/artur/work/errata-bench/datasets/v1/tool-editing-baseline.json",
+  "judgeModel": "openai/gpt-5.4-mini",
+  "runs": 2,
+  "models": [
+    "openai/gpt-5.4-mini"
+  ],
+  "attempts": [
+    {
+      "model": "openai/gpt-5.4-mini",
+      "runNumber": 1,
+      "succeeded": true,
+      "error": null,
+      "runId": "2026-03-31T02-49-57-495Z",
+      "runArtifact": "/Users/artur/work/errata-bench/artifacts/runs/2026-03-31T02-49-57-495Z.json",
+      "reportArtifact": "/Users/artur/work/errata-bench/artifacts/reports/2026-03-31T02-49-57-495Z.json",
+      "correctedIssues": 4,
+      "totalIssues": 5,
+      "fullIssueCoverageCases": 0,
+      "totalCases": 1,
+      "totalOutputTokens": 209,
+      "correctionsPerOutputToken": 0.019138755980861243,
+      "judgePassedCases": 0,
+      "judgeResolvedIssues": 4,
+      "judgeTotalIssues": 5,
+      "judgeUnnecessaryChanges": 1,
+      "judgeCollateralDamage": 1,
+      "judgeAverageQualityScore": 0.7000000000000001,
+      "judgeAverageBenchmarkScore": 71.21212121212122
+    },
+    {
+      "model": "openai/gpt-5.4-mini",
+      "runNumber": 2,
+      "succeeded": true,
+      "error": null,
+      "runId": "2026-03-31T02-50-07-505Z",
+      "runArtifact": "/Users/artur/work/errata-bench/artifacts/runs/2026-03-31T02-50-07-505Z.json",
+      "reportArtifact": "/Users/artur/work/errata-bench/artifacts/reports/2026-03-31T02-50-07-505Z.json",
+      "correctedIssues": 4,
+      "totalIssues": 5,
+      "fullIssueCoverageCases": 0,
+      "totalCases": 1,
+      "totalOutputTokens": 186,
+      "correctionsPerOutputToken": 0.021505376344086023,
+      "judgePassedCases": 1,
+      "judgeResolvedIssues": 5,
+      "judgeTotalIssues": 5,
+      "judgeUnnecessaryChanges": 1,
+      "judgeCollateralDamage": 0,
+      "judgeAverageQualityScore": 0.97,
+      "judgeAverageBenchmarkScore": 98.81818181818181
+    }
+  ],
+  "aggregates": [
+    {
+      "model": "openai/gpt-5.4-mini",
+      "totalRuns": 2,
+      "succeededRuns": 2,
+      "failedRuns": 0,
+      "runIds": [
+        "2026-03-31T02-49-57-495Z",
+        "2026-03-31T02-50-07-505Z"
+      ],
+      "runScoreSeries": [
+        71.21212121212122,
+        98.81818181818181
+      ],
+      "meanCorrectedIssues": 4,
+      "meanTotalIssues": 5,
+      "meanFullIssueCoverageCases": 0,
+      "meanTotalCases": 1,
+      "meanTotalOutputTokens": 197.5,
+      "meanCorrectionsPerOutputToken": 0.02032206616247363,
+      "meanJudgePassedCases": 0.5,
+      "meanJudgeResolvedIssues": 4.5,
+      "meanJudgeTotalIssues": 5,
+      "meanJudgeUnnecessaryChanges": 1,
+      "meanJudgeCollateralDamage": 0.5,
+      "meanJudgeAverageQualityScore": 0.835,
+      "meanJudgeAverageBenchmarkScore": 85.01515151515152,
+      "stdevJudgeAverageQualityScore": 0.13499999999999995,
+      "stdevJudgeAverageBenchmarkScore": 13.803030303030297,
+      "bestJudgeAverageBenchmarkScore": 98.81818181818181,
+      "worstJudgeAverageBenchmarkScore": 71.21212121212122
+    }
+  ],
+  "ranking": [
+    {
+      "model": "openai/gpt-5.4-mini",
+      "totalRuns": 2,
+      "succeededRuns": 2,
+      "failedRuns": 0,
+      "runIds": [
+        "2026-03-31T02-49-57-495Z",
+        "2026-03-31T02-50-07-505Z"
+      ],
+      "runScoreSeries": [
+        71.21212121212122,
+        98.81818181818181
+      ],
+      "meanCorrectedIssues": 4,
+      "meanTotalIssues": 5,
+      "meanFullIssueCoverageCases": 0,
+      "meanTotalCases": 1,
+      "meanTotalOutputTokens": 197.5,
+      "meanCorrectionsPerOutputToken": 0.02032206616247363,
+      "meanJudgePassedCases": 0.5,
+      "meanJudgeResolvedIssues": 4.5,
+      "meanJudgeTotalIssues": 5,
+      "meanJudgeUnnecessaryChanges": 1,
+      "meanJudgeCollateralDamage": 0.5,
+      "meanJudgeAverageQualityScore": 0.835,
+      "meanJudgeAverageBenchmarkScore": 85.01515151515152,
+      "stdevJudgeAverageQualityScore": 0.13499999999999995,
+      "stdevJudgeAverageBenchmarkScore": 13.803030303030297,
+      "bestJudgeAverageBenchmarkScore": 98.81818181818181,
+      "worstJudgeAverageBenchmarkScore": 71.21212121212122
+    }
+  ]
+}

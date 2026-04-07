@@ -1,0 +1,485 @@
+{
+  "version": "v1",
+  "runId": "2026-04-01T19-14-25-383Z",
+  "createdAt": "2026-04-01T19:14:25.383Z",
+  "datasetPath": "/Users/artur/work/errata-bench/datasets/v1/starter-suite.json",
+  "mode": "openrouter",
+  "model": "google/gemini-3.1-flash-lite-preview",
+  "modelLabel": "google/gemini-3.1-flash-lite-preview:medium",
+  "reasoningEffort": "medium",
+  "cases": [
+    {
+      "caseId": "mixed-rewrite-001",
+      "instruction": "Proofread the document. Fix spelling and obvious grammar mistakes while preserving meaning, tone, paragraph ids, and intentionally odd details.",
+      "initialDocumentHtml": "<p id=\"Xr6osk\">My pet dinasaur stole teh mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I has wrote a apology note, but it still sound ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>",
+      "expectedDocumentHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I wrote an apology note, but it still sounds ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>",
+      "finalDocumentHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I have written an apology note, but it still sounds ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>",
+      "issues": [
+        {
+          "id": "issue-p1-dinasaur",
+          "category": "non_word_typo",
+          "paragraphId": "Xr6osk",
+          "description": "Correct dinasaur to dinosaur.",
+          "expectedCorrection": {
+            "find": "dinasaur",
+            "replace": "dinosaur"
+          }
+        },
+        {
+          "id": "issue-p1-teh",
+          "category": "non_word_typo",
+          "paragraphId": "Xr6osk",
+          "description": "Correct teh to the.",
+          "expectedCorrection": {
+            "find": "teh",
+            "replace": "the"
+          }
+        },
+        {
+          "id": "issue-p2-has-wrote",
+          "category": "verb_form",
+          "paragraphId": "CYklKQ",
+          "description": "Correct has wrote to wrote.",
+          "expectedCorrection": {
+            "find": "has wrote",
+            "replace": "wrote"
+          }
+        },
+        {
+          "id": "issue-p2-a-apology",
+          "category": "article",
+          "paragraphId": "CYklKQ",
+          "description": "Correct a apology to an apology.",
+          "expectedCorrection": {
+            "find": "a apology",
+            "replace": "an apology"
+          }
+        },
+        {
+          "id": "issue-p2-sound",
+          "category": "agreement",
+          "paragraphId": "CYklKQ",
+          "description": "Correct sound to sounds.",
+          "expectedCorrection": {
+            "find": "still sound ridiculous",
+            "replace": "still sounds ridiculous"
+          }
+        }
+      ],
+      "passes": [
+        {
+          "passName": "proofread-pass-1",
+          "passInstruction": "Do one conservative proofreading pass over the document. This is pass 1 of at most 3.",
+          "startingDocumentHtml": "<p id=\"Xr6osk\">My pet dinasaur stole teh mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I has wrote a apology note, but it still sound ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>",
+          "endingDocumentHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I have written an apology note, but it still sounds ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>",
+          "turnTraces": [
+            {
+              "turn": 1,
+              "requestDurationMs": 31149,
+              "finishReason": "tool_calls",
+              "assistantContent": null,
+              "toolCallCount": 4,
+              "rawToolCallCount": 4,
+              "rawContentPartTypes": [],
+              "rawContentPreview": null,
+              "reasoningTextLength": 0,
+              "reasoningDetailsCount": 1
+            }
+          ],
+          "toolExecutions": [
+            {
+              "step": 1,
+              "toolCallId": "tool_find_and_replace_R45Cves0m0VwzaVz4JZC",
+              "toolName": "find_and_replace",
+              "arguments": {
+                "paragraphId": "Xr6osk",
+                "find": "dinasaur",
+                "replace": "dinosaur"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "Xr6osk",
+                "updatedParagraphHtml": "<p id=\"Xr6osk\">My pet dinosaur stole teh mayor's toast at dawn.</p>",
+                "replacementsApplied": 1,
+                "message": "Replaced 1 occurrence(s) in paragraph \"Xr6osk\"."
+              }
+            },
+            {
+              "step": 2,
+              "toolCallId": "tool_find_and_replace_FNbr7xVHXeHcSalYpxBT",
+              "toolName": "find_and_replace",
+              "arguments": {
+                "paragraphId": "Xr6osk",
+                "find": "teh",
+                "replace": "the"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "Xr6osk",
+                "updatedParagraphHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>",
+                "replacementsApplied": 1,
+                "message": "Replaced 1 occurrence(s) in paragraph \"Xr6osk\"."
+              }
+            },
+            {
+              "step": 3,
+              "toolCallId": "tool_replace_paragraph_2IiwHlUvXbJYcV5r5rw3",
+              "toolName": "replace_paragraph",
+              "arguments": {
+                "paragraphId": "CYklKQ",
+                "newParagraphHtml": "<p id=\"CYklKQ\">I have written an apology note, but it still sounds ridiculous.</p>"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "CYklKQ",
+                "updatedParagraphHtml": "<p id=\"CYklKQ\">I have written an apology note, but it still sounds ridiculous.</p>",
+                "message": "Paragraph \"CYklKQ\" was replaced."
+              }
+            },
+            {
+              "step": 4,
+              "toolCallId": "tool_proofreading_complete_NwWx0r6dn4W1EQnVjI8W",
+              "toolName": "proofreading_complete",
+              "arguments": {
+                "note": "Fixed spelling and grammar errors."
+              },
+              "result": {
+                "ok": true,
+                "decision": "stop",
+                "message": "STOP: Fixed spelling and grammar errors."
+              }
+            }
+          ],
+          "finalAssistantMessage": "STOP: Fixed spelling and grammar errors.",
+          "decision": "stop",
+          "outputTokens": 474,
+          "promptTokens": 635,
+          "durationMs": 31149
+        }
+      ],
+      "finalAssistantMessage": "STOP: Fixed spelling and grammar errors.",
+      "terminationReason": "model_stop",
+      "outputTokens": 474,
+      "promptTokens": 635,
+      "durationMs": 31149
+    },
+    {
+      "caseId": "no-op-restraint-001",
+      "instruction": "Proofread the document. Preserve correct text exactly unless a change is actually needed for proofreading.",
+      "initialDocumentHtml": "<p id=\"ypDjun\">The sign literally says \"NOPE!!!\", and that punctuation is intentional.</p>\n<p id=\"pTUIje\">Mara said the plan was \"good enough for Tuesday,\" which is already grammatical.</p>",
+      "expectedDocumentHtml": "<p id=\"ypDjun\">The sign literally says \"NOPE!!!\", and that punctuation is intentional.</p>\n<p id=\"pTUIje\">Mara said the plan was \"good enough for Tuesday,\" which is already grammatical.</p>",
+      "finalDocumentHtml": "<p id=\"ypDjun\">The sign literally says \"NOPE!!!\", and that punctuation is intentional.</p>\n<p id=\"pTUIje\">Mara said the plan was \"good enough for Tuesday,\" which is already grammatical.</p>",
+      "issues": [],
+      "passes": [
+        {
+          "passName": "proofread-pass-1",
+          "passInstruction": "Do one conservative proofreading pass over the document. This is pass 1 of at most 3.",
+          "startingDocumentHtml": "<p id=\"ypDjun\">The sign literally says \"NOPE!!!\", and that punctuation is intentional.</p>\n<p id=\"pTUIje\">Mara said the plan was \"good enough for Tuesday,\" which is already grammatical.</p>",
+          "endingDocumentHtml": "<p id=\"ypDjun\">The sign literally says \"NOPE!!!\", and that punctuation is intentional.</p>\n<p id=\"pTUIje\">Mara said the plan was \"good enough for Tuesday,\" which is already grammatical.</p>",
+          "turnTraces": [
+            {
+              "turn": 1,
+              "requestDurationMs": 749,
+              "finishReason": "tool_calls",
+              "assistantContent": null,
+              "toolCallCount": 1,
+              "rawToolCallCount": 1,
+              "rawContentPartTypes": [],
+              "rawContentPreview": null,
+              "reasoningTextLength": 0,
+              "reasoningDetailsCount": 1
+            }
+          ],
+          "toolExecutions": [
+            {
+              "step": 1,
+              "toolCallId": "tool_proofreading_complete_0PBN2jA205kSijbFKqIi",
+              "toolName": "proofreading_complete",
+              "arguments": {
+                "note": "The document is grammatically correct and punctuation is intentional."
+              },
+              "result": {
+                "ok": true,
+                "decision": "stop",
+                "message": "STOP: The document is grammatically correct and punctuation is intentional."
+              }
+            }
+          ],
+          "finalAssistantMessage": "STOP: The document is grammatically correct and punctuation is intentional.",
+          "decision": "stop",
+          "outputTokens": 27,
+          "promptTokens": 609,
+          "durationMs": 749
+        }
+      ],
+      "finalAssistantMessage": "STOP: The document is grammatically correct and punctuation is intentional.",
+      "terminationReason": "model_stop",
+      "outputTokens": 27,
+      "promptTokens": 609,
+      "durationMs": 749
+    },
+    {
+      "caseId": "protected-entities-001",
+      "instruction": "Proofread the document. Fix proofreading mistakes, but preserve names, email addresses, URLs, environment variable names, and capitalization exactly unless they are clearly wrong.",
+      "initialDocumentHtml": "<p id=\"AQpZkX\">Please send teh final invoice to Jae at jae@example.com before Friday.</p>\n<p id=\"RRWvsf\">The environment variable is OPENROUTER_API_KEY, and the docs live at https://openrouter.ai/docs.</p>",
+      "expectedDocumentHtml": "<p id=\"AQpZkX\">Please send the final invoice to Jae at jae@example.com before Friday.</p>\n<p id=\"RRWvsf\">The environment variable is OPENROUTER_API_KEY, and the docs live at https://openrouter.ai/docs.</p>",
+      "finalDocumentHtml": "<p id=\"AQpZkX\">Please send the final invoice to Jae at jae@example.com before Friday.</p>\n<p id=\"RRWvsf\">The environment variable is OPENROUTER_API_KEY, and the docs live at https://openrouter.ai/docs.</p>",
+      "issues": [
+        {
+          "id": "issue-p1-teh",
+          "category": "non_word_typo",
+          "paragraphId": "AQpZkX",
+          "description": "Correct teh to the without changing the email address or name.",
+          "expectedCorrection": {
+            "find": "teh",
+            "replace": "the"
+          }
+        }
+      ],
+      "passes": [
+        {
+          "passName": "proofread-pass-1",
+          "passInstruction": "Do one conservative proofreading pass over the document. This is pass 1 of at most 3.",
+          "startingDocumentHtml": "<p id=\"AQpZkX\">Please send teh final invoice to Jae at jae@example.com before Friday.</p>\n<p id=\"RRWvsf\">The environment variable is OPENROUTER_API_KEY, and the docs live at https://openrouter.ai/docs.</p>",
+          "endingDocumentHtml": "<p id=\"AQpZkX\">Please send the final invoice to Jae at jae@example.com before Friday.</p>\n<p id=\"RRWvsf\">The environment variable is OPENROUTER_API_KEY, and the docs live at https://openrouter.ai/docs.</p>",
+          "turnTraces": [
+            {
+              "turn": 1,
+              "requestDurationMs": 30059,
+              "finishReason": "tool_calls",
+              "assistantContent": null,
+              "toolCallCount": 2,
+              "rawToolCallCount": 2,
+              "rawContentPartTypes": [],
+              "rawContentPreview": null,
+              "reasoningTextLength": 0,
+              "reasoningDetailsCount": 1
+            }
+          ],
+          "toolExecutions": [
+            {
+              "step": 1,
+              "toolCallId": "tool_find_and_replace_R0m2bJ44qvQPpkUxfcSm",
+              "toolName": "find_and_replace",
+              "arguments": {
+                "paragraphId": "AQpZkX",
+                "find": "teh",
+                "replace": "the"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "AQpZkX",
+                "updatedParagraphHtml": "<p id=\"AQpZkX\">Please send the final invoice to Jae at jae@example.com before Friday.</p>",
+                "replacementsApplied": 1,
+                "message": "Replaced 1 occurrence(s) in paragraph \"AQpZkX\"."
+              }
+            },
+            {
+              "step": 2,
+              "toolCallId": "tool_proofreading_complete_SMYttapMvpj3hG6Vryxn",
+              "toolName": "proofreading_complete",
+              "arguments": {},
+              "result": {
+                "ok": true,
+                "decision": "stop",
+                "message": "STOP: Model marked the document as fully proofread."
+              }
+            }
+          ],
+          "finalAssistantMessage": "STOP: Model marked the document as fully proofread.",
+          "decision": "stop",
+          "outputTokens": 276,
+          "promptTokens": 636,
+          "durationMs": 30059
+        }
+      ],
+      "finalAssistantMessage": "STOP: Model marked the document as fully proofread.",
+      "terminationReason": "model_stop",
+      "outputTokens": 276,
+      "promptTokens": 636,
+      "durationMs": 30059
+    },
+    {
+      "caseId": "context-homophone-001",
+      "instruction": "Proofread the document. Use context to resolve grammar and homophone mistakes while preserving the intended meaning.",
+      "initialDocumentHtml": "<p id=\"QNrOzc\">Their going to loose the match because its raining again.</p>\n<p id=\"7eLM0y\">Coach Rivera already packed the orange cones.</p>",
+      "expectedDocumentHtml": "<p id=\"QNrOzc\">They're going to lose the match because it's raining again.</p>\n<p id=\"7eLM0y\">Coach Rivera already packed the orange cones.</p>",
+      "finalDocumentHtml": "<p id=\"QNrOzc\">They're going to lose the match because it's raining again.</p>\n<p id=\"7eLM0y\">Coach Rivera already packed the orange cones.</p>",
+      "issues": [
+        {
+          "id": "issue-p1-their",
+          "category": "homophone",
+          "paragraphId": "QNrOzc",
+          "description": "Correct Their to They're.",
+          "expectedCorrection": {
+            "find": "Their",
+            "replace": "They're"
+          }
+        },
+        {
+          "id": "issue-p1-loose",
+          "category": "real_word_error",
+          "paragraphId": "QNrOzc",
+          "description": "Correct loose to lose.",
+          "expectedCorrection": {
+            "find": "loose",
+            "replace": "lose"
+          }
+        },
+        {
+          "id": "issue-p1-its",
+          "category": "apostrophe",
+          "paragraphId": "QNrOzc",
+          "description": "Correct its to it's.",
+          "expectedCorrection": {
+            "find": "its",
+            "replace": "it's"
+          }
+        }
+      ],
+      "passes": [
+        {
+          "passName": "proofread-pass-1",
+          "passInstruction": "Do one conservative proofreading pass over the document. This is pass 1 of at most 3.",
+          "startingDocumentHtml": "<p id=\"QNrOzc\">Their going to loose the match because its raining again.</p>\n<p id=\"7eLM0y\">Coach Rivera already packed the orange cones.</p>",
+          "endingDocumentHtml": "<p id=\"QNrOzc\">They're going to lose the match because it's raining again.</p>\n<p id=\"7eLM0y\">Coach Rivera already packed the orange cones.</p>",
+          "turnTraces": [
+            {
+              "turn": 1,
+              "requestDurationMs": 3244,
+              "finishReason": "tool_calls",
+              "assistantContent": null,
+              "toolCallCount": 2,
+              "rawToolCallCount": 2,
+              "rawContentPartTypes": [],
+              "rawContentPreview": null,
+              "reasoningTextLength": 0,
+              "reasoningDetailsCount": 1
+            }
+          ],
+          "toolExecutions": [
+            {
+              "step": 1,
+              "toolCallId": "tool_replace_paragraph_5PwM5C76ylXeVmLJAoXN",
+              "toolName": "replace_paragraph",
+              "arguments": {
+                "paragraphId": "QNrOzc",
+                "newParagraphHtml": "<p id=\"QNrOzc\">They're going to lose the match because it's raining again.</p>"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "QNrOzc",
+                "updatedParagraphHtml": "<p id=\"QNrOzc\">They're going to lose the match because it's raining again.</p>",
+                "message": "Paragraph \"QNrOzc\" was replaced."
+              }
+            },
+            {
+              "step": 2,
+              "toolCallId": "tool_proofreading_complete_BYU9ukHCmbZdpEyJZW0Q",
+              "toolName": "proofreading_complete",
+              "arguments": {
+                "note": "Corrected homophone and contraction errors in the first paragraph. The second paragraph was correct."
+              },
+              "result": {
+                "ok": true,
+                "decision": "stop",
+                "message": "STOP: Corrected homophone and contraction errors in the first paragraph. The second paragraph was correct."
+              }
+            }
+          ],
+          "finalAssistantMessage": "STOP: Corrected homophone and contraction errors in the first paragraph. The second paragraph was correct.",
+          "decision": "stop",
+          "outputTokens": 524,
+          "promptTokens": 600,
+          "durationMs": 3244
+        }
+      ],
+      "finalAssistantMessage": "STOP: Corrected homophone and contraction errors in the first paragraph. The second paragraph was correct.",
+      "terminationReason": "model_stop",
+      "outputTokens": 524,
+      "promptTokens": 600,
+      "durationMs": 3244
+    },
+    {
+      "caseId": "voice-preservation-001",
+      "instruction": "Proofread the document. Fix actual errors, but preserve intentional colloquial voice and quoted phrases.",
+      "initialDocumentHtml": "<p id=\"xuRzNZ\">Yeah, I ain't gonna pretend this lasagna isnt weird, but it's delicious.</p>\n<p id=\"BxcKxl\">My cousin calls it \"cheese brick,\" and that's fine.</p>",
+      "expectedDocumentHtml": "<p id=\"xuRzNZ\">Yeah, I ain't gonna pretend this lasagna isn't weird, but it's delicious.</p>\n<p id=\"BxcKxl\">My cousin calls it \"cheese brick,\" and that's fine.</p>",
+      "finalDocumentHtml": "<p id=\"xuRzNZ\">Yeah, I ain't gonna pretend this lasagna isn't weird, but it's delicious.</p>\n<p id=\"BxcKxl\">My cousin calls it \"cheese brick,\" and that's fine.</p>",
+      "issues": [
+        {
+          "id": "issue-p1-isnt",
+          "category": "apostrophe",
+          "paragraphId": "xuRzNZ",
+          "description": "Correct isnt to isn't without normalizing the voice.",
+          "expectedCorrection": {
+            "find": "isnt",
+            "replace": "isn't"
+          }
+        }
+      ],
+      "passes": [
+        {
+          "passName": "proofread-pass-1",
+          "passInstruction": "Do one conservative proofreading pass over the document. This is pass 1 of at most 3.",
+          "startingDocumentHtml": "<p id=\"xuRzNZ\">Yeah, I ain't gonna pretend this lasagna isnt weird, but it's delicious.</p>\n<p id=\"BxcKxl\">My cousin calls it \"cheese brick,\" and that's fine.</p>",
+          "endingDocumentHtml": "<p id=\"xuRzNZ\">Yeah, I ain't gonna pretend this lasagna isn't weird, but it's delicious.</p>\n<p id=\"BxcKxl\">My cousin calls it \"cheese brick,\" and that's fine.</p>",
+          "turnTraces": [
+            {
+              "turn": 1,
+              "requestDurationMs": 73823,
+              "finishReason": "tool_calls",
+              "assistantContent": null,
+              "toolCallCount": 2,
+              "rawToolCallCount": 2,
+              "rawContentPartTypes": [],
+              "rawContentPreview": null,
+              "reasoningTextLength": 0,
+              "reasoningDetailsCount": 1
+            }
+          ],
+          "toolExecutions": [
+            {
+              "step": 1,
+              "toolCallId": "tool_find_and_replace_Z2esWkee7GKtOyfdg8Rn",
+              "toolName": "find_and_replace",
+              "arguments": {
+                "paragraphId": "xuRzNZ",
+                "find": "isnt",
+                "replace": "isn't"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "xuRzNZ",
+                "updatedParagraphHtml": "<p id=\"xuRzNZ\">Yeah, I ain't gonna pretend this lasagna isn't weird, but it's delicious.</p>",
+                "replacementsApplied": 1,
+                "message": "Replaced 1 occurrence(s) in paragraph \"xuRzNZ\"."
+              }
+            },
+            {
+              "step": 2,
+              "toolCallId": "tool_proofreading_complete_RRkquMDcNacpHonzVIl3",
+              "toolName": "proofreading_complete",
+              "arguments": {},
+              "result": {
+                "ok": true,
+                "decision": "stop",
+                "message": "STOP: Model marked the document as fully proofread."
+              }
+            }
+          ],
+          "finalAssistantMessage": "STOP: Model marked the document as fully proofread.",
+          "decision": "stop",
+          "outputTokens": 168,
+          "promptTokens": 611,
+          "durationMs": 73823
+        }
+      ],
+      "finalAssistantMessage": "STOP: Model marked the document as fully proofread.",
+      "terminationReason": "model_stop",
+      "outputTokens": 168,
+      "promptTokens": 611,
+      "durationMs": 73823
+    }
+  ]
+}

@@ -1,0 +1,490 @@
+{
+  "version": "v1",
+  "runId": "2026-04-05T15-32-55-774Z",
+  "createdAt": "2026-04-05T15:32:55.775Z",
+  "datasetPath": "/Users/artur/work/errata-bench/datasets/v1/starter-suite.json",
+  "maxWordsPerChunk": 3000,
+  "maxTurnsPerChunk": 3,
+  "mode": "mock",
+  "apiProvider": "mock",
+  "apiEndpointLabel": "mock",
+  "model": "mock-proofreader",
+  "modelLabel": "mock-proofreader:none",
+  "reasoningEffort": "none",
+  "cases": [
+    {
+      "caseId": "mixed-rewrite-001",
+      "instruction": "Proofread the document. Fix spelling and obvious grammar mistakes while preserving meaning, tone, paragraph ids, and intentionally odd details.",
+      "initialDocumentHtml": "<p id=\"Xr6osk\">My pet dinasaur stole teh mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I has wrote a apology note, but it still sound ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>",
+      "expectedDocumentHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I wrote an apology note, but it still sounds ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>",
+      "finalDocumentHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I wrote an apology note, but it still sounds ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>",
+      "issues": [
+        {
+          "id": "issue-p1-dinasaur",
+          "category": "non_word_typo",
+          "paragraphId": "Xr6osk",
+          "description": "Correct dinasaur to dinosaur.",
+          "expectedCorrection": {
+            "find": "dinasaur",
+            "replace": "dinosaur"
+          }
+        },
+        {
+          "id": "issue-p1-teh",
+          "category": "non_word_typo",
+          "paragraphId": "Xr6osk",
+          "description": "Correct teh to the.",
+          "expectedCorrection": {
+            "find": "teh",
+            "replace": "the"
+          }
+        },
+        {
+          "id": "issue-p2-has-wrote",
+          "category": "verb_form",
+          "paragraphId": "CYklKQ",
+          "description": "Correct has wrote to wrote.",
+          "expectedCorrection": {
+            "find": "has wrote",
+            "replace": "wrote"
+          }
+        },
+        {
+          "id": "issue-p2-a-apology",
+          "category": "article",
+          "paragraphId": "CYklKQ",
+          "description": "Correct a apology to an apology.",
+          "expectedCorrection": {
+            "find": "a apology",
+            "replace": "an apology"
+          }
+        },
+        {
+          "id": "issue-p2-sound",
+          "category": "agreement",
+          "paragraphId": "CYklKQ",
+          "description": "Correct sound to sounds.",
+          "expectedCorrection": {
+            "find": "still sound ridiculous",
+            "replace": "still sounds ridiculous"
+          }
+        }
+      ],
+      "chunks": [
+        {
+          "chunkName": "proofread-chunk-1",
+          "chunkInstruction": "Conservatively proofread chunk 1 of 1. You may use at most 3 turns for this chunk.",
+          "chunkIndex": 1,
+          "chunkCount": 1,
+          "chunkParagraphIds": [
+            "Xr6osk",
+            "CYklKQ",
+            "29e0pe"
+          ],
+          "startingDocumentHtml": "<p id=\"Xr6osk\">My pet dinasaur stole teh mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I has wrote a apology note, but it still sound ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>",
+          "endingDocumentHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>\n<p id=\"CYklKQ\">I wrote an apology note, but it still sounds ridiculous.</p>\n<p id=\"29e0pe\">This paragraph is already correct and should stay exactly the same.</p>",
+          "turnTraces": [],
+          "toolExecutions": [
+            {
+              "sequence": 1,
+              "chunkIndex": 1,
+              "turn": 1,
+              "paragraphId": "Xr6osk",
+              "beforeParagraphHtml": "<p id=\"Xr6osk\">My pet dinasaur stole teh mayor's toast at dawn.</p>",
+              "afterParagraphHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>",
+              "toolCallId": "mock-call-proofread-chunk-1-1",
+              "toolName": "replace_paragraph",
+              "arguments": {
+                "paragraphId": "Xr6osk",
+                "newParagraphHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "Xr6osk",
+                "updatedParagraphHtml": "<p id=\"Xr6osk\">My pet dinosaur stole the mayor's toast at dawn.</p>",
+                "message": "Paragraph \"Xr6osk\" was replaced."
+              }
+            },
+            {
+              "sequence": 2,
+              "chunkIndex": 1,
+              "turn": 1,
+              "paragraphId": "CYklKQ",
+              "beforeParagraphHtml": "<p id=\"CYklKQ\">I has wrote a apology note, but it still sound ridiculous.</p>",
+              "afterParagraphHtml": "<p id=\"CYklKQ\">I wrote an apology note, but it still sounds ridiculous.</p>",
+              "toolCallId": "mock-call-proofread-chunk-1-2",
+              "toolName": "replace_paragraph",
+              "arguments": {
+                "paragraphId": "CYklKQ",
+                "newParagraphHtml": "<p id=\"CYklKQ\">I wrote an apology note, but it still sounds ridiculous.</p>"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "CYklKQ",
+                "updatedParagraphHtml": "<p id=\"CYklKQ\">I wrote an apology note, but it still sounds ridiculous.</p>",
+                "message": "Paragraph \"CYklKQ\" was replaced."
+              }
+            },
+            {
+              "sequence": 3,
+              "chunkIndex": 1,
+              "turn": 1,
+              "paragraphId": null,
+              "beforeParagraphHtml": null,
+              "afterParagraphHtml": null,
+              "toolCallId": "mock-call-proofread-chunk-1-finish",
+              "toolName": "proofreading_complete",
+              "arguments": {
+                "note": "Applied the proofreading edits. The current chunk is now clean."
+              },
+              "result": {
+                "ok": true,
+                "decision": "stop",
+                "message": "STOP: Applied the proofreading edits. The current chunk is now clean."
+              }
+            }
+          ],
+          "finalAssistantMessage": "STOP: Applied the proofreading edits. The current chunk is now clean.",
+          "decision": "stop",
+          "outputTokens": 79,
+          "promptTokens": 0,
+          "durationMs": 0
+        }
+      ],
+      "finalAssistantMessage": "STOP: Applied the proofreading edits. The current chunk is now clean.",
+      "terminationReason": "model_stop",
+      "outputTokens": 79,
+      "promptTokens": 0,
+      "durationMs": 0
+    },
+    {
+      "caseId": "no-op-restraint-001",
+      "instruction": "Proofread the document. Preserve correct text exactly unless a change is actually needed for proofreading.",
+      "initialDocumentHtml": "<p id=\"ypDjun\">The sign literally says \"NOPE!!!\", and that punctuation is intentional.</p>\n<p id=\"pTUIje\">Mara said the plan was \"good enough for Tuesday,\" which is already grammatical.</p>",
+      "expectedDocumentHtml": "<p id=\"ypDjun\">The sign literally says \"NOPE!!!\", and that punctuation is intentional.</p>\n<p id=\"pTUIje\">Mara said the plan was \"good enough for Tuesday,\" which is already grammatical.</p>",
+      "finalDocumentHtml": "<p id=\"ypDjun\">The sign literally says \"NOPE!!!\", and that punctuation is intentional.</p>\n<p id=\"pTUIje\">Mara said the plan was \"good enough for Tuesday,\" which is already grammatical.</p>",
+      "issues": [],
+      "chunks": [
+        {
+          "chunkName": "proofread-chunk-1",
+          "chunkInstruction": "Conservatively proofread chunk 1 of 1. You may use at most 3 turns for this chunk.",
+          "chunkIndex": 1,
+          "chunkCount": 1,
+          "chunkParagraphIds": [
+            "ypDjun",
+            "pTUIje"
+          ],
+          "startingDocumentHtml": "<p id=\"ypDjun\">The sign literally says \"NOPE!!!\", and that punctuation is intentional.</p>\n<p id=\"pTUIje\">Mara said the plan was \"good enough for Tuesday,\" which is already grammatical.</p>",
+          "endingDocumentHtml": "<p id=\"ypDjun\">The sign literally says \"NOPE!!!\", and that punctuation is intentional.</p>\n<p id=\"pTUIje\">Mara said the plan was \"good enough for Tuesday,\" which is already grammatical.</p>",
+          "turnTraces": [],
+          "toolExecutions": [
+            {
+              "sequence": 1,
+              "chunkIndex": 1,
+              "turn": 1,
+              "paragraphId": null,
+              "beforeParagraphHtml": null,
+              "afterParagraphHtml": null,
+              "toolCallId": "mock-call-proofread-chunk-1-finish",
+              "toolName": "proofreading_complete",
+              "arguments": {
+                "note": "Applied the proofreading edits. The current chunk is now clean."
+              },
+              "result": {
+                "ok": true,
+                "decision": "stop",
+                "message": "STOP: Applied the proofreading edits. The current chunk is now clean."
+              }
+            }
+          ],
+          "finalAssistantMessage": "STOP: Applied the proofreading edits. The current chunk is now clean.",
+          "decision": "stop",
+          "outputTokens": 19,
+          "promptTokens": 0,
+          "durationMs": 0
+        }
+      ],
+      "finalAssistantMessage": "STOP: Applied the proofreading edits. The current chunk is now clean.",
+      "terminationReason": "model_stop",
+      "outputTokens": 19,
+      "promptTokens": 0,
+      "durationMs": 0
+    },
+    {
+      "caseId": "protected-entities-001",
+      "instruction": "Proofread the document. Fix proofreading mistakes, but preserve names, email addresses, URLs, environment variable names, and capitalization exactly unless they are clearly wrong.",
+      "initialDocumentHtml": "<p id=\"AQpZkX\">Please send teh final invoice to Jae at jae@example.com before Friday.</p>\n<p id=\"RRWvsf\">The environment variable is OPENROUTER_API_KEY, and the docs live at https://openrouter.ai/docs.</p>",
+      "expectedDocumentHtml": "<p id=\"AQpZkX\">Please send the final invoice to Jae at jae@example.com before Friday.</p>\n<p id=\"RRWvsf\">The environment variable is OPENROUTER_API_KEY, and the docs live at https://openrouter.ai/docs.</p>",
+      "finalDocumentHtml": "<p id=\"AQpZkX\">Please send the final invoice to Jae at jae@example.com before Friday.</p>\n<p id=\"RRWvsf\">The environment variable is OPENROUTER_API_KEY, and the docs live at https://openrouter.ai/docs.</p>",
+      "issues": [
+        {
+          "id": "issue-p1-teh",
+          "category": "non_word_typo",
+          "paragraphId": "AQpZkX",
+          "description": "Correct teh to the without changing the email address or name.",
+          "expectedCorrection": {
+            "find": "teh",
+            "replace": "the"
+          }
+        }
+      ],
+      "chunks": [
+        {
+          "chunkName": "proofread-chunk-1",
+          "chunkInstruction": "Conservatively proofread chunk 1 of 1. You may use at most 3 turns for this chunk.",
+          "chunkIndex": 1,
+          "chunkCount": 1,
+          "chunkParagraphIds": [
+            "AQpZkX",
+            "RRWvsf"
+          ],
+          "startingDocumentHtml": "<p id=\"AQpZkX\">Please send teh final invoice to Jae at jae@example.com before Friday.</p>\n<p id=\"RRWvsf\">The environment variable is OPENROUTER_API_KEY, and the docs live at https://openrouter.ai/docs.</p>",
+          "endingDocumentHtml": "<p id=\"AQpZkX\">Please send the final invoice to Jae at jae@example.com before Friday.</p>\n<p id=\"RRWvsf\">The environment variable is OPENROUTER_API_KEY, and the docs live at https://openrouter.ai/docs.</p>",
+          "turnTraces": [],
+          "toolExecutions": [
+            {
+              "sequence": 1,
+              "chunkIndex": 1,
+              "turn": 1,
+              "paragraphId": "AQpZkX",
+              "beforeParagraphHtml": "<p id=\"AQpZkX\">Please send teh final invoice to Jae at jae@example.com before Friday.</p>",
+              "afterParagraphHtml": "<p id=\"AQpZkX\">Please send the final invoice to Jae at jae@example.com before Friday.</p>",
+              "toolCallId": "mock-call-proofread-chunk-1-1",
+              "toolName": "find_and_replace",
+              "arguments": {
+                "paragraphId": "AQpZkX",
+                "find": "teh",
+                "replace": "the"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "AQpZkX",
+                "updatedParagraphHtml": "<p id=\"AQpZkX\">Please send the final invoice to Jae at jae@example.com before Friday.</p>",
+                "replacementsApplied": 1,
+                "message": "Replaced 1 occurrence(s) in paragraph \"AQpZkX\"."
+              }
+            },
+            {
+              "sequence": 2,
+              "chunkIndex": 1,
+              "turn": 1,
+              "paragraphId": null,
+              "beforeParagraphHtml": null,
+              "afterParagraphHtml": null,
+              "toolCallId": "mock-call-proofread-chunk-1-finish",
+              "toolName": "proofreading_complete",
+              "arguments": {
+                "note": "Applied the proofreading edits. The current chunk is now clean."
+              },
+              "result": {
+                "ok": true,
+                "decision": "stop",
+                "message": "STOP: Applied the proofreading edits. The current chunk is now clean."
+              }
+            }
+          ],
+          "finalAssistantMessage": "STOP: Applied the proofreading edits. The current chunk is now clean.",
+          "decision": "stop",
+          "outputTokens": 33,
+          "promptTokens": 0,
+          "durationMs": 0
+        }
+      ],
+      "finalAssistantMessage": "STOP: Applied the proofreading edits. The current chunk is now clean.",
+      "terminationReason": "model_stop",
+      "outputTokens": 33,
+      "promptTokens": 0,
+      "durationMs": 0
+    },
+    {
+      "caseId": "context-homophone-001",
+      "instruction": "Proofread the document. Use context to resolve grammar and homophone mistakes while preserving the intended meaning.",
+      "initialDocumentHtml": "<p id=\"QNrOzc\">Their going to loose the match because its raining again.</p>\n<p id=\"7eLM0y\">Coach Rivera already packed the orange cones.</p>",
+      "expectedDocumentHtml": "<p id=\"QNrOzc\">They're going to lose the match because it's raining again.</p>\n<p id=\"7eLM0y\">Coach Rivera already packed the orange cones.</p>",
+      "finalDocumentHtml": "<p id=\"QNrOzc\">They're going to lose the match because it's raining again.</p>\n<p id=\"7eLM0y\">Coach Rivera already packed the orange cones.</p>",
+      "issues": [
+        {
+          "id": "issue-p1-their",
+          "category": "homophone",
+          "paragraphId": "QNrOzc",
+          "description": "Correct Their to They're.",
+          "expectedCorrection": {
+            "find": "Their",
+            "replace": "They're"
+          }
+        },
+        {
+          "id": "issue-p1-loose",
+          "category": "real_word_error",
+          "paragraphId": "QNrOzc",
+          "description": "Correct loose to lose.",
+          "expectedCorrection": {
+            "find": "loose",
+            "replace": "lose"
+          }
+        },
+        {
+          "id": "issue-p1-its",
+          "category": "apostrophe",
+          "paragraphId": "QNrOzc",
+          "description": "Correct its to it's.",
+          "expectedCorrection": {
+            "find": "its",
+            "replace": "it's"
+          }
+        }
+      ],
+      "chunks": [
+        {
+          "chunkName": "proofread-chunk-1",
+          "chunkInstruction": "Conservatively proofread chunk 1 of 1. You may use at most 3 turns for this chunk.",
+          "chunkIndex": 1,
+          "chunkCount": 1,
+          "chunkParagraphIds": [
+            "QNrOzc",
+            "7eLM0y"
+          ],
+          "startingDocumentHtml": "<p id=\"QNrOzc\">Their going to loose the match because its raining again.</p>\n<p id=\"7eLM0y\">Coach Rivera already packed the orange cones.</p>",
+          "endingDocumentHtml": "<p id=\"QNrOzc\">They're going to lose the match because it's raining again.</p>\n<p id=\"7eLM0y\">Coach Rivera already packed the orange cones.</p>",
+          "turnTraces": [],
+          "toolExecutions": [
+            {
+              "sequence": 1,
+              "chunkIndex": 1,
+              "turn": 1,
+              "paragraphId": "QNrOzc",
+              "beforeParagraphHtml": "<p id=\"QNrOzc\">Their going to loose the match because its raining again.</p>",
+              "afterParagraphHtml": "<p id=\"QNrOzc\">They're going to lose the match because it's raining again.</p>",
+              "toolCallId": "mock-call-proofread-chunk-1-1",
+              "toolName": "replace_paragraph",
+              "arguments": {
+                "paragraphId": "QNrOzc",
+                "newParagraphHtml": "<p id=\"QNrOzc\">They're going to lose the match because it's raining again.</p>"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "QNrOzc",
+                "updatedParagraphHtml": "<p id=\"QNrOzc\">They're going to lose the match because it's raining again.</p>",
+                "message": "Paragraph \"QNrOzc\" was replaced."
+              }
+            },
+            {
+              "sequence": 2,
+              "chunkIndex": 1,
+              "turn": 1,
+              "paragraphId": null,
+              "beforeParagraphHtml": null,
+              "afterParagraphHtml": null,
+              "toolCallId": "mock-call-proofread-chunk-1-finish",
+              "toolName": "proofreading_complete",
+              "arguments": {
+                "note": "Applied the proofreading edits. The current chunk is now clean."
+              },
+              "result": {
+                "ok": true,
+                "decision": "stop",
+                "message": "STOP: Applied the proofreading edits. The current chunk is now clean."
+              }
+            }
+          ],
+          "finalAssistantMessage": "STOP: Applied the proofreading edits. The current chunk is now clean.",
+          "decision": "stop",
+          "outputTokens": 51,
+          "promptTokens": 0,
+          "durationMs": 0
+        }
+      ],
+      "finalAssistantMessage": "STOP: Applied the proofreading edits. The current chunk is now clean.",
+      "terminationReason": "model_stop",
+      "outputTokens": 51,
+      "promptTokens": 0,
+      "durationMs": 0
+    },
+    {
+      "caseId": "voice-preservation-001",
+      "instruction": "Proofread the document. Fix actual errors, but preserve intentional colloquial voice and quoted phrases.",
+      "initialDocumentHtml": "<p id=\"xuRzNZ\">Yeah, I ain't gonna pretend this lasagna isnt weird, but it's delicious.</p>\n<p id=\"BxcKxl\">My cousin calls it \"cheese brick,\" and that's fine.</p>",
+      "expectedDocumentHtml": "<p id=\"xuRzNZ\">Yeah, I ain't gonna pretend this lasagna isn't weird, but it's delicious.</p>\n<p id=\"BxcKxl\">My cousin calls it \"cheese brick,\" and that's fine.</p>",
+      "finalDocumentHtml": "<p id=\"xuRzNZ\">Yeah, I ain't gonna pretend this lasagna isn't weird, but it's delicious.</p>\n<p id=\"BxcKxl\">My cousin calls it \"cheese brick,\" and that's fine.</p>",
+      "issues": [
+        {
+          "id": "issue-p1-isnt",
+          "category": "apostrophe",
+          "paragraphId": "xuRzNZ",
+          "description": "Correct isnt to isn't without normalizing the voice.",
+          "expectedCorrection": {
+            "find": "isnt",
+            "replace": "isn't"
+          }
+        }
+      ],
+      "chunks": [
+        {
+          "chunkName": "proofread-chunk-1",
+          "chunkInstruction": "Conservatively proofread chunk 1 of 1. You may use at most 3 turns for this chunk.",
+          "chunkIndex": 1,
+          "chunkCount": 1,
+          "chunkParagraphIds": [
+            "xuRzNZ",
+            "BxcKxl"
+          ],
+          "startingDocumentHtml": "<p id=\"xuRzNZ\">Yeah, I ain't gonna pretend this lasagna isnt weird, but it's delicious.</p>\n<p id=\"BxcKxl\">My cousin calls it \"cheese brick,\" and that's fine.</p>",
+          "endingDocumentHtml": "<p id=\"xuRzNZ\">Yeah, I ain't gonna pretend this lasagna isn't weird, but it's delicious.</p>\n<p id=\"BxcKxl\">My cousin calls it \"cheese brick,\" and that's fine.</p>",
+          "turnTraces": [],
+          "toolExecutions": [
+            {
+              "sequence": 1,
+              "chunkIndex": 1,
+              "turn": 1,
+              "paragraphId": "xuRzNZ",
+              "beforeParagraphHtml": "<p id=\"xuRzNZ\">Yeah, I ain't gonna pretend this lasagna isnt weird, but it's delicious.</p>",
+              "afterParagraphHtml": "<p id=\"xuRzNZ\">Yeah, I ain't gonna pretend this lasagna isn't weird, but it's delicious.</p>",
+              "toolCallId": "mock-call-proofread-chunk-1-1",
+              "toolName": "find_and_replace",
+              "arguments": {
+                "paragraphId": "xuRzNZ",
+                "find": "isnt",
+                "replace": "isn't"
+              },
+              "result": {
+                "ok": true,
+                "paragraphId": "xuRzNZ",
+                "updatedParagraphHtml": "<p id=\"xuRzNZ\">Yeah, I ain't gonna pretend this lasagna isn't weird, but it's delicious.</p>",
+                "replacementsApplied": 1,
+                "message": "Replaced 1 occurrence(s) in paragraph \"xuRzNZ\"."
+              }
+            },
+            {
+              "sequence": 2,
+              "chunkIndex": 1,
+              "turn": 1,
+              "paragraphId": null,
+              "beforeParagraphHtml": null,
+              "afterParagraphHtml": null,
+              "toolCallId": "mock-call-proofread-chunk-1-finish",
+              "toolName": "proofreading_complete",
+              "arguments": {
+                "note": "Applied the proofreading edits. The current chunk is now clean."
+              },
+              "result": {
+                "ok": true,
+                "decision": "stop",
+                "message": "STOP: Applied the proofreading edits. The current chunk is now clean."
+              }
+            }
+          ],
+          "finalAssistantMessage": "STOP: Applied the proofreading edits. The current chunk is now clean.",
+          "decision": "stop",
+          "outputTokens": 33,
+          "promptTokens": 0,
+          "durationMs": 0
+        }
+      ],
+      "finalAssistantMessage": "STOP: Applied the proofreading edits. The current chunk is now clean.",
+      "terminationReason": "model_stop",
+      "outputTokens": 33,
+      "promptTokens": 0,
+      "durationMs": 0
+    }
+  ]
+}

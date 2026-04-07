@@ -1,0 +1,227 @@
+{
+  "version": "v1",
+  "runId": "2026-04-05T03-25-37-840Z",
+  "createdAt": "2026-04-05T03:25:55.304Z",
+  "summary": {
+    "totalCases": 1,
+    "exactDocumentMatches": 1,
+    "casesWithFullIssueCoverage": 1,
+    "totalIssues": 6,
+    "correctedIssues": 6,
+    "attemptedButInvalidIssues": 0,
+    "notAddressedIssues": 0,
+    "attemptedButInvalidRate": 0,
+    "notAddressedRate": 0,
+    "averageIssueCoverage": 1,
+    "totalOutputTokens": 1287,
+    "averageOutputTokensPerCase": 1287,
+    "correctionsPerOutputToken": 0.004662004662004662,
+    "totalDurationMs": 17462,
+    "averageDurationMsPerCase": 17462,
+    "cost": {
+      "candidatePromptTokens": 8920,
+      "candidateOutputTokens": 1287,
+      "candidateCostUsd": 0.07677500000000001,
+      "judgePromptTokens": 0,
+      "judgeOutputTokens": 0,
+      "judgeCostUsd": 0,
+      "totalCostUsd": 0.07677500000000001
+    },
+    "axes": {
+      "quality": 1,
+      "restraint": null,
+      "efficiency": 78.15043959622272,
+      "speed": 20.616195166647575,
+      "costUsd": 0.07677500000000001,
+      "candidateCostUsd": 0.07677500000000001,
+      "judgeCostUsd": 0
+    },
+    "tooling": {
+      "totalEditToolCalls": 6,
+      "totalEditToolArgumentChars": 457,
+      "benchmarkToolCalls": 6,
+      "benchmarkToolArgumentChars": 457,
+      "offTargetToolCalls": 0,
+      "offTargetToolArgumentChars": 0,
+      "benchmarkToolCallsPerResolvedIssue": 1,
+      "benchmarkToolCharsPerResolvedIssue": 76.16666666666667,
+      "offTargetToolCharsShare": 0,
+      "benchmarkParagraphRewriteShare": 0
+    },
+    "judge": {
+      "judgeModel": "anthropic/claude-opus-4.6:low",
+      "casesPassed": 1,
+      "casesWithNewErrors": 0,
+      "unnecessaryChanges": 0,
+      "collateralDamageCount": 0,
+      "resolvedIssues": 0,
+      "totalIssues": 0,
+      "averageRestraintScore": 1,
+      "averageResolvedIssuesPerUsd": 0,
+      "averageQualityScore": 1,
+      "averageBenchmarkScore": 100
+    }
+  },
+  "cases": [
+    {
+      "caseId": "zorn-v-linton",
+      "exactDocumentMatch": true,
+      "correctedIssueCount": 6,
+      "attemptedButInvalidIssueCount": 0,
+      "notAddressedIssueCount": 0,
+      "totalIssueCount": 6,
+      "issueCoverage": 1,
+      "outputTokens": 1287,
+      "promptTokens": 8920,
+      "correctionsPerOutputToken": 0.004662004662004662,
+      "tokensPerCorrectedIssue": 214.5,
+      "expectedChangedParagraphIds": [
+        "FobVd2",
+        "XaW6dk",
+        "UfteRL",
+        "Y2pQvl",
+        "81DAdh",
+        "ix4l9x"
+      ],
+      "actualChangedParagraphIds": [
+        "FobVd2",
+        "XaW6dk",
+        "UfteRL",
+        "Y2pQvl",
+        "81DAdh",
+        "ix4l9x"
+      ],
+      "unexpectedParagraphChanges": [],
+      "issues": [
+        {
+          "issueId": "issue-01",
+          "category": "lexical_choice_and_confusability.malapropism",
+          "paragraphId": "FobVd2",
+          "description": "Replace the correct word \"capitol\" with the similar-sounding but incorrect word \"capital,\" creating a clear malapropism/confusable-word error.",
+          "classification": {
+            "label": "lexical_choice_and_confusability.malapropism",
+            "parent": "lexical_choice_and_confusability",
+            "child": "malapropism",
+            "severity": "major",
+            "editScope": "token",
+            "operationType": "substitution",
+            "createsValidWord": true,
+            "dimension": "lexical"
+          },
+          "staticCorrected": true,
+          "attemptedChange": true,
+          "alternativeCandidate": false,
+          "corrected": true,
+          "resolutionMethod": "exact"
+        },
+        {
+          "issueId": "issue-02",
+          "category": "punctuation_and_boundaries.punctuation_error",
+          "paragraphId": "XaW6dk",
+          "description": "Omit the comma after \"night\" to create a punctuation error.",
+          "classification": {
+            "label": "punctuation_and_boundaries.punctuation_error",
+            "parent": "punctuation_and_boundaries",
+            "child": "punctuation_error",
+            "severity": "minor",
+            "editScope": "phrase",
+            "operationType": "omission",
+            "createsValidWord": null,
+            "dimension": "punctuation"
+          },
+          "staticCorrected": true,
+          "attemptedChange": true,
+          "alternativeCandidate": false,
+          "corrected": true,
+          "resolutionMethod": "exact"
+        },
+        {
+          "issueId": "issue-03",
+          "category": "orthography_and_word_form.fat_finger_typo",
+          "paragraphId": "UfteRL",
+          "description": "Introduce a realistic fat-finger typo by replacing one character in 'continued' with a nearby keyboard key while preserving the surrounding context.",
+          "classification": {
+            "label": "orthography_and_word_form.fat_finger_typo",
+            "parent": "orthography_and_word_form",
+            "child": "fat_finger_typo",
+            "severity": "minor",
+            "editScope": "character",
+            "operationType": "substitution",
+            "createsValidWord": false,
+            "dimension": "orthographic"
+          },
+          "staticCorrected": true,
+          "attemptedChange": true,
+          "alternativeCandidate": false,
+          "corrected": true,
+          "resolutionMethod": "exact"
+        },
+        {
+          "issueId": "issue-04",
+          "category": "orthography_and_word_form.spacing_error",
+          "paragraphId": "Y2pQvl",
+          "description": "Introduces a missing space within the phrase, creating a clear spacing error.",
+          "classification": {
+            "label": "orthography_and_word_form.spacing_error",
+            "parent": "orthography_and_word_form",
+            "child": "spacing_error",
+            "severity": "minor",
+            "editScope": "character",
+            "operationType": "boundary_error",
+            "createsValidWord": false,
+            "dimension": "orthographic"
+          },
+          "staticCorrected": true,
+          "attemptedChange": true,
+          "alternativeCandidate": false,
+          "corrected": true,
+          "resolutionMethod": "exact"
+        },
+        {
+          "issueId": "issue-05",
+          "category": "orthography_and_word_form.insertion",
+          "paragraphId": "81DAdh",
+          "description": "Introduce a single orthographic insertion error by adding an extra letter to a word within a long unique span.",
+          "classification": {
+            "label": "orthography_and_word_form.insertion",
+            "parent": "orthography_and_word_form",
+            "child": "insertion",
+            "severity": "minor",
+            "editScope": "character",
+            "operationType": "insertion",
+            "createsValidWord": false,
+            "dimension": "orthographic"
+          },
+          "staticCorrected": true,
+          "attemptedChange": true,
+          "alternativeCandidate": false,
+          "corrected": true,
+          "resolutionMethod": "exact"
+        },
+        {
+          "issueId": "issue-06",
+          "category": "grammar_and_syntax.article_or_determiner_error",
+          "paragraphId": "ix4l9x",
+          "description": "Omit the required article \"the\" before \"high degree of specificity,\" creating a determiner error.",
+          "classification": {
+            "label": "grammar_and_syntax.article_or_determiner_error",
+            "parent": "grammar_and_syntax",
+            "child": "article_or_determiner_error",
+            "severity": "minor",
+            "editScope": "phrase",
+            "operationType": "omission",
+            "createsValidWord": null,
+            "dimension": "grammatical"
+          },
+          "staticCorrected": true,
+          "attemptedChange": true,
+          "alternativeCandidate": false,
+          "corrected": true,
+          "resolutionMethod": "exact"
+        }
+      ],
+      "finalDocumentHtml": "<p id=\"FMkxKY\">On the Governor's inauguration day in Vermont, protesters staged a sit-in at the state capitol. When the capitol closed for the day, police officers told them that they would be arrested for trespassing. They refused to leave. As officers removed the protesters one by one, Sergeant Jacob Zorn asked Shela Linton to stand up and warned her that he would eventually have to use force to remove her. She refused to stand. Zorn took Linton's arm, put it behind her back, placed pressure on her wrist, and lifted her to her feet. Linton sued Zorn for using excessive force, claiming that the arrest left her with arm injuries and psychological disorders. The Second Circuit held that Zorn was not entitled to qualified immunity. We reverse.</p>\n<p id=\"FobVd2\">On January 8, 2015, Vermont hosted the inauguration for Governor Peter Shumlin in the capitol. About 200 protesters attended, and some of them staged a sit-in to demand universal healthcare. Shela Linton joined them. She planned to refuse to leave and anticipated being forcibly removed. That was the point of the sit-in part of the protest, she later explained.</p>\n<p id=\"XaW6dk\">When the capitol closed to the public for the night, 29 protesters remained in the legislative chamber, sitting on the floor with their arms linked. At that point, police officers explained that they would arrest the protesters for trespass if they did not leave. The officers dealt with them one at a time; some stood up and were escorted out of the chamber without force, but others refused to stand and had to be lifted to their feet or dragged out.</p>\n<p id=\"UfteRL\">After removing more than a dozen protesters, the officers turned to Linton. Sergeant Jacob Zorn crouched down to speak with her, but she remained seated with her arms interlocked with those of her fellow protesters. As Linton passively resisted, Zorn unlinked her arm from another protester's, put it behind her back in a rear wristlock, and twisted her arm. Linton exclaimed, \"ow, ow, ow,\" while Zorn repeatedly implored her to \"please stand up.\" After Linton responded, \"I will not stand up,\" Zorn told her that he would ask \"one more time\" and then would use more pain compliance. Linton refused, so Zorn placed pressure on her wrist and lifted her up by her underarm. Linton yelled as she stood up. Once on her feet, Linton continued to jerk her arms and fell back to the floor. Zorn asked her to stand up again, and when she did not, three officers picked her up by her arms and legs and carried her outside. Linton alleged resulting physical and psychological injuries including post-traumatic stress disorder.</p>\n<p id=\"SUIhXa\">Linton sued Zorn, claiming that Zorn violated her Fourth Amendment right against excessive use of force. The District Court granted summary judgment for Zorn after concluding that he was entitled to qualified immunity. The District Court reasoned that it was not clearly established at the time of the encounter that, in these circumstances, lifting Linton while putting pressure on her wrist violated the Fourth Amendment.</p>\n<p id=\"51I5mK\">The Second Circuit reversed. It held that its earlier decision had clearly established that the gratuitous use of a rear wristlock on a protester passively resisting arrest constitutes excessive force. It remanded for a jury trial against Zorn. Judge Cabranes dissented. He reasoned that the case before the court was not an exceptional case, but a routine arrest and removal.</p>\n<p id=\"naD0EH\">Government officials enjoy qualified immunity from suit unless their conduct violates clearly established law. A right is clearly established when it is sufficiently clear that every reasonable official would have understood that what he is doing violates that right. A right is not clearly established if existing precedent does not place the constitutional question beyond debate.</p>\n<p id=\"Y2pQvl\">To find that a right is clearly established, courts generally need to identify a case where an officer acting under similar circumstances was held to have violated the Constitution. The relevant precedent must define the right with a high degree of specificity, so that every reasonable official would interpret it to establish the particular rule the plaintiff seeks to apply. Principles stated generally, such as that an officer may not use unreasonable and excessive force, do not suffice. In short, officers receive qualified immunity unless they could have read the relevant precedent beforehand and known that it proscribed their specific conduct.</p>\n<p id=\"oKTAzp\">The Second Circuit contravened these principles. Its earlier precedent did not clearly establish that Zorn's specific conduct violated the Fourth Amendment. Whether any particular use of force violates the Fourth Amendment depends on the facts and circumstances of each particular case, including whether the officer gave warnings before using force. In the earlier case, the court considered a wide range of allegations of excessive force. The officers rammed a protester's head into a wall, dragged another protester across the ground, and used rear wristlocks on two more protesters to lift them up before throwing one of them to the ground. Nothing indicated that the officers gave the protesters any warning that they would use such force.</p>\n<p id=\"81DAdh\">That earlier case did not hold that any of those actions violated the Fourth Amendment, let alone all of them. Instead, it remanded for a jury trial because, while a reasonable jury could find that the officers gratuitously inflicted pain, it was also entirely possible that a reasonable jury would find that the police officers' use of force was objectively reasonable given the circumstances. Relevant here, that decision even relied on an earlier case approving the practice of warning protesters and then using wristlocks to move them.</p>\n<p id=\"mH8x5H\">Reasonable officials would not interpret that earlier case to establish that using a routine wristlock to move a resistant protester after warning her, without more, violates the Constitution. Zorn repeatedly warned Linton that he would have to use more force if she did not stand up, and when she did not do so, he used a wristlock to bring Linton to her feet. That earlier case never held that such conduct alone violated the Fourth Amendment. If anything, it implied the opposite. And its statement that officers who had engaged in a wide range of aggressive conduct may have used excessive force did not put Zorn on notice that his specific conduct was unlawful.</p>\n<p id=\"ix4l9x\">The Second Circuit concluded otherwise by reading the earlier case to establish the general principle that the gratuitous use of pain compliance techniques, such as a rear wristlock, on a protester who is passively resisting arrest constitutes excessive force. But that principle, even assuming the earlier case established it, lacks the high degree of specificity needed to make it clear to officers which actions violate the law. It does not obviously resolve whether using a rear wristlock to move a noncompliant protester after repeated warnings violates the Fourth Amendment, as it fails to specify which circumstances make the use of force gratuitous.</p>\n<p id=\"Y6Cy4v\">Because the Second Circuit failed to identify a case where an officer taking similar actions in similar circumstances was held to have violated the Constitution, Zorn was entitled to qualified immunity. We grant his petition for writ of certiorari and reverse the judgment of the Second Circuit.</p>",
+      "expectedDocumentHtml": "<p id=\"FMkxKY\">On the Governor's inauguration day in Vermont, protesters staged a sit-in at the state capitol. When the capitol closed for the day, police officers told them that they would be arrested for trespassing. They refused to leave. As officers removed the protesters one by one, Sergeant Jacob Zorn asked Shela Linton to stand up and warned her that he would eventually have to use force to remove her. She refused to stand. Zorn took Linton's arm, put it behind her back, placed pressure on her wrist, and lifted her to her feet. Linton sued Zorn for using excessive force, claiming that the arrest left her with arm injuries and psychological disorders. The Second Circuit held that Zorn was not entitled to qualified immunity. We reverse.</p>\n<p id=\"FobVd2\">On January 8, 2015, Vermont hosted the inauguration for Governor Peter Shumlin in the capitol. About 200 protesters attended, and some of them staged a sit-in to demand universal healthcare. Shela Linton joined them. She planned to refuse to leave and anticipated being forcibly removed. That was the point of the sit-in part of the protest, she later explained.</p>\n<p id=\"XaW6dk\">When the capitol closed to the public for the night, 29 protesters remained in the legislative chamber, sitting on the floor with their arms linked. At that point, police officers explained that they would arrest the protesters for trespass if they did not leave. The officers dealt with them one at a time; some stood up and were escorted out of the chamber without force, but others refused to stand and had to be lifted to their feet or dragged out.</p>\n<p id=\"UfteRL\">After removing more than a dozen protesters, the officers turned to Linton. Sergeant Jacob Zorn crouched down to speak with her, but she remained seated with her arms interlocked with those of her fellow protesters. As Linton passively resisted, Zorn unlinked her arm from another protester's, put it behind her back in a rear wristlock, and twisted her arm. Linton exclaimed, \"ow, ow, ow,\" while Zorn repeatedly implored her to \"please stand up.\" After Linton responded, \"I will not stand up,\" Zorn told her that he would ask \"one more time\" and then would use more pain compliance. Linton refused, so Zorn placed pressure on her wrist and lifted her up by her underarm. Linton yelled as she stood up. Once on her feet, Linton continued to jerk her arms and fell back to the floor. Zorn asked her to stand up again, and when she did not, three officers picked her up by her arms and legs and carried her outside. Linton alleged resulting physical and psychological injuries including post-traumatic stress disorder.</p>\n<p id=\"SUIhXa\">Linton sued Zorn, claiming that Zorn violated her Fourth Amendment right against excessive use of force. The District Court granted summary judgment for Zorn after concluding that he was entitled to qualified immunity. The District Court reasoned that it was not clearly established at the time of the encounter that, in these circumstances, lifting Linton while putting pressure on her wrist violated the Fourth Amendment.</p>\n<p id=\"51I5mK\">The Second Circuit reversed. It held that its earlier decision had clearly established that the gratuitous use of a rear wristlock on a protester passively resisting arrest constitutes excessive force. It remanded for a jury trial against Zorn. Judge Cabranes dissented. He reasoned that the case before the court was not an exceptional case, but a routine arrest and removal.</p>\n<p id=\"naD0EH\">Government officials enjoy qualified immunity from suit unless their conduct violates clearly established law. A right is clearly established when it is sufficiently clear that every reasonable official would have understood that what he is doing violates that right. A right is not clearly established if existing precedent does not place the constitutional question beyond debate.</p>\n<p id=\"Y2pQvl\">To find that a right is clearly established, courts generally need to identify a case where an officer acting under similar circumstances was held to have violated the Constitution. The relevant precedent must define the right with a high degree of specificity, so that every reasonable official would interpret it to establish the particular rule the plaintiff seeks to apply. Principles stated generally, such as that an officer may not use unreasonable and excessive force, do not suffice. In short, officers receive qualified immunity unless they could have read the relevant precedent beforehand and known that it proscribed their specific conduct.</p>\n<p id=\"oKTAzp\">The Second Circuit contravened these principles. Its earlier precedent did not clearly establish that Zorn's specific conduct violated the Fourth Amendment. Whether any particular use of force violates the Fourth Amendment depends on the facts and circumstances of each particular case, including whether the officer gave warnings before using force. In the earlier case, the court considered a wide range of allegations of excessive force. The officers rammed a protester's head into a wall, dragged another protester across the ground, and used rear wristlocks on two more protesters to lift them up before throwing one of them to the ground. Nothing indicated that the officers gave the protesters any warning that they would use such force.</p>\n<p id=\"81DAdh\">That earlier case did not hold that any of those actions violated the Fourth Amendment, let alone all of them. Instead, it remanded for a jury trial because, while a reasonable jury could find that the officers gratuitously inflicted pain, it was also entirely possible that a reasonable jury would find that the police officers' use of force was objectively reasonable given the circumstances. Relevant here, that decision even relied on an earlier case approving the practice of warning protesters and then using wristlocks to move them.</p>\n<p id=\"mH8x5H\">Reasonable officials would not interpret that earlier case to establish that using a routine wristlock to move a resistant protester after warning her, without more, violates the Constitution. Zorn repeatedly warned Linton that he would have to use more force if she did not stand up, and when she did not do so, he used a wristlock to bring Linton to her feet. That earlier case never held that such conduct alone violated the Fourth Amendment. If anything, it implied the opposite. And its statement that officers who had engaged in a wide range of aggressive conduct may have used excessive force did not put Zorn on notice that his specific conduct was unlawful.</p>\n<p id=\"ix4l9x\">The Second Circuit concluded otherwise by reading the earlier case to establish the general principle that the gratuitous use of pain compliance techniques, such as a rear wristlock, on a protester who is passively resisting arrest constitutes excessive force. But that principle, even assuming the earlier case established it, lacks the high degree of specificity needed to make it clear to officers which actions violate the law. It does not obviously resolve whether using a rear wristlock to move a noncompliant protester after repeated warnings violates the Fourth Amendment, as it fails to specify which circumstances make the use of force gratuitous.</p>\n<p id=\"Y6Cy4v\">Because the Second Circuit failed to identify a case where an officer taking similar actions in similar circumstances was held to have violated the Constitution, Zorn was entitled to qualified immunity. We grant his petition for writ of certiorari and reverse the judgment of the Second Circuit.</p>"
+    }
+  ]
+}
