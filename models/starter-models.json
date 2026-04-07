@@ -50,5 +50,9 @@
   "qwen/qwen3.5-397b-a17b",
   "qwen/qwen3.5-397b-a17b:high",
   "qwen/qwen3.5-27b",
-  "qwen/qwen3.6-plus:free"
+  "qwen/qwen3.6-plus:free",
+  "z-ai/glm-5.1:none",
+  "z-ai/glm-5.1:low",
+  "z-ai/glm-5.1:medium",
+  "z-ai/glm-5.1:high"
 ]
