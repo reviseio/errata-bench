@@ -11,6 +11,7 @@ type CliOptions = {
   datasetPath: string | null;
   datasetHash: string | null;
   model: string | null;
+  failedOnly: boolean;
 };
 
 function parseArgs(argv: string[]): CliOptions {
@@ -18,6 +19,7 @@ function parseArgs(argv: string[]): CliOptions {
   let datasetPath: string | null = null;
   let datasetHash: string | null = null;
   let model: string | null = null;
+  let failedOnly = false;
 
   for (let index = 0; index < argv.length; index += 1) {
     const arg = argv[index];
@@ -45,9 +47,14 @@ function parseArgs(argv: string[]): CliOptions {
       index += 1;
       continue;
     }
+
+    if (arg === "--failed" || arg === "--failed-only") {
+      failedOnly = true;
+      continue;
+    }
   }
 
-  return { groupId, datasetPath, datasetHash, model };
+  return { groupId, datasetPath, datasetHash, model, failedOnly };
 }
 
 function matchesDatasetPath(candidatePath: string, datasetArg: string): boolean {
@@ -71,8 +78,8 @@ function matchesModel(candidateBaseModel: string, candidateLabel: string, modelA
 async function main(): Promise<void> {
   const options = parseArgs(process.argv.slice(2));
 
-  if (!options.datasetPath && !options.datasetHash && !options.model) {
-    throw new Error("Pass --dataset and/or --dataset-hash and/or --model");
+  if (!options.datasetPath && !options.datasetHash && !options.model && !options.failedOnly) {
+    throw new Error("Pass --dataset and/or --dataset-hash and/or --model and/or --failed");
   }
 
   const groupPath = buildResultsPath(options.groupId);
@@ -82,7 +89,8 @@ async function main(): Promise<void> {
     const datasetMatches = options.datasetPath ? matchesDatasetPath(attempt.datasetPath, options.datasetPath) : true;
     const hashMatches = options.datasetHash ? attempt.datasetHash === options.datasetHash : true;
     const modelMatches = options.model ? matchesModel(attempt.baseModel, attempt.model, options.model) : true;
-    return !(datasetMatches && hashMatches && modelMatches);
+    const statusMatches = options.failedOnly ? !attempt.succeeded : true;
+    return !(datasetMatches && hashMatches && modelMatches && statusMatches);
   });
 
   const removedCount = beforeCount - filteredAttempts.length;
@@ -93,6 +101,7 @@ async function main(): Promise<void> {
     console.log(`dataset_filter=${options.datasetPath ?? "none"}`);
     console.log(`dataset_hash_filter=${options.datasetHash ?? "none"}`);
     console.log(`model_filter=${options.model ?? "none"}`);
+    console.log(`failed_filter=${options.failedOnly}`);
     console.log(`group_artifact=${groupPath}`);
     return;
   }
@@ -106,6 +115,7 @@ async function main(): Promise<void> {
   console.log(`dataset_filter=${options.datasetPath ?? "none"}`);
   console.log(`dataset_hash_filter=${options.datasetHash ?? "none"}`);
   console.log(`model_filter=${options.model ?? "none"}`);
+  console.log(`failed_filter=${options.failedOnly}`);
   console.log(`group_artifact=${groupPath}`);
 }
 

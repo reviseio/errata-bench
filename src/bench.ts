@@ -42,6 +42,7 @@ type CliOptions = {
   reasoningMaxTokens: number | null;
   maxTurnsPerChunk: number;
   maxWordsPerChunk: number | null;
+  failedAttemptRetries: number;
 };
 
 type AttemptTask = {
@@ -60,6 +61,7 @@ type ScheduledAttemptTask = AttemptTask & {
   datasetMeta: Awaited<ReturnType<typeof fingerprintProofreadingDataset>>;
   dataset: Awaited<ReturnType<typeof loadProofreadingDataset>>;
   runKey: string;
+  configKey: string;
 };
 
 type DatasetRunPlan = {
@@ -110,6 +112,7 @@ function parseArgs(argv: string[]): CliOptions {
   let reasoningMaxTokens: number | null = null;
   let maxTurnsPerChunk = DEFAULT_MAX_TURNS_PER_CHUNK;
   let maxWordsPerChunk: number | null = DEFAULT_MAX_WORDS_PER_CHUNK;
+  let failedAttemptRetries = 3;
 
   for (let index = 0; index < argv.length; index += 1) {
     const arg = argv[index];
@@ -207,6 +210,12 @@ function parseArgs(argv: string[]): CliOptions {
       index += 1;
       continue;
     }
+
+    if (arg === "--failed-attempt-retries" || arg === "--retry-failed-attempts") {
+      failedAttemptRetries = Number.parseInt(argv[index + 1] ?? `${failedAttemptRetries}`, 10);
+      index += 1;
+      continue;
+    }
   }
 
   return {
@@ -223,7 +232,8 @@ function parseArgs(argv: string[]): CliOptions {
     reasoningExclude,
     reasoningMaxTokens,
     maxTurnsPerChunk,
-    maxWordsPerChunk
+    maxWordsPerChunk,
+    failedAttemptRetries
   };
 }
 
@@ -447,6 +457,38 @@ function getNextRunNumber(
   }
 
   return Math.max(...matchingRunNumbers) + 1;
+}
+
+function buildScheduledTaskKey(datasetHash: string, modelLabel: string, runNumber: number): string {
+  return `${datasetHash}::${modelLabel}::${runNumber}`;
+}
+
+function buildScheduledConfigKey(datasetHash: string, modelLabel: string): string {
+  return `${datasetHash}::${modelLabel}`;
+}
+
+function interleaveScheduledTasks(tasks: ScheduledAttemptTask[]): ScheduledAttemptTask[] {
+  const groups = new Map<string, ScheduledAttemptTask[]>();
+
+  for (const task of tasks) {
+    const group = groups.get(task.configKey) ?? [];
+    group.push(task);
+    groups.set(task.configKey, group);
+  }
+
+  const interleaved: ScheduledAttemptTask[] = [];
+
+  while (interleaved.length < tasks.length) {
+    for (const group of groups.values()) {
+      const task = group.shift();
+
+      if (task) {
+        interleaved.push(task);
+      }
+    }
+  }
+
+  return interleaved;
 }
 
 function buildDatasetRunPlan(
@@ -746,6 +788,7 @@ class BenchProgressDisplay {
     private readonly reasoningMaxTokens: number | null,
     private readonly maxTurnsPerChunk: number,
     private readonly maxWordsPerChunk: number | null,
+    private readonly failedAttemptRetries: number,
     private readonly models: ModelVariant[],
     private readonly caseCount: number | null,
     private readonly baseSpend: SpendTotals,
@@ -808,6 +851,7 @@ class BenchProgressDisplay {
     console.log(`reasoning_max_tokens=${this.reasoningMaxTokens ?? "default"}`);
     console.log(`max_turns_per_chunk=${this.maxTurnsPerChunk}`);
     console.log(`max_words_per_chunk=${this.maxWordsPerChunk ?? "full"}`);
+    console.log(`failed_attempt_retries=${this.failedAttemptRetries}`);
     console.log(`cases=${this.caseCount ?? "mixed"}`);
     console.log(`target_successful_runs_per_model=${this.runs}`);
     console.log(`target_successful_attempts_per_model=${this.targetRunsPerModel}`);
@@ -1043,9 +1087,10 @@ async function runWithConcurrency<T>(
   tasks: T[],
   concurrency: number,
   shouldStop: () => boolean,
-  worker: (task: T) => Promise<void>
+  worker: (task: T) => Promise<T | null | void>
 ): Promise<void> {
   let nextIndex = 0;
+  const pendingTasks = [...tasks];
 
   async function runWorker(): Promise<void> {
     while (true) {
@@ -1056,11 +1101,15 @@ async function runWithConcurrency<T>(
       const taskIndex = nextIndex;
       nextIndex += 1;
 
-      if (taskIndex >= tasks.length) {
+      if (taskIndex >= pendingTasks.length) {
         return;
       }
 
-      await worker(tasks[taskIndex]);
+      const nextTask = await worker(pendingTasks[taskIndex]);
+
+      if (nextTask) {
+        pendingTasks.push(nextTask);
+      }
     }
   }
 
@@ -1091,6 +1140,10 @@ async function main(): Promise<void> {
 
   if (options.concurrency < 1) {
     throw new Error("--concurrency must be at least 1");
+  }
+
+  if (!Number.isFinite(options.failedAttemptRetries) || options.failedAttemptRetries < 0) {
+    throw new Error("--failed-attempt-retries must be 0 or greater");
   }
 
   const groupPath = buildResultsPath(options.groupId);
@@ -1140,6 +1193,18 @@ async function main(): Promise<void> {
   }
 
   const scheduledTasks: ScheduledAttemptTask[] = [];
+  const retryStates = new Map<
+    string,
+    {
+      successfulRuns: number;
+      targetSuccessfulRuns: number;
+      nextRunNumber: number;
+      retriesScheduled: number;
+      datasetMeta: Awaited<ReturnType<typeof fingerprintProofreadingDataset>>;
+      dataset: Awaited<ReturnType<typeof loadProofreadingDataset>>;
+      model: ModelVariant;
+    }
+  >();
   const matchingAttempts = datasetPlans.flatMap((plan) => plan.runPlan.matchingAttempts);
   const existingMatchingAttemptCount = datasetPlans.reduce(
     (sum, plan) => sum + plan.runPlan.existingMatchingAttempts,
@@ -1152,15 +1217,40 @@ async function main(): Promise<void> {
   const baseSpend = calculateSpendTotals(attempts);
 
   for (const plan of datasetPlans) {
+    for (const model of models) {
+      const configKey = buildScheduledConfigKey(plan.datasetMeta.datasetHash, model.label);
+      const matchingModelAttempts = plan.runPlan.matchingAttempts.filter((attempt) => attempt.model === model.label);
+      const matchingRunNumbers = matchingModelAttempts.map((attempt) => attempt.runNumber);
+      retryStates.set(configKey, {
+        successfulRuns: matchingModelAttempts.filter((attempt) => attempt.succeeded).length,
+        targetSuccessfulRuns: options.runs,
+        nextRunNumber: matchingRunNumbers.length === 0 ? 1 : Math.max(...matchingRunNumbers) + 1,
+        retriesScheduled: 0,
+        datasetMeta: plan.datasetMeta,
+        dataset: plan.dataset,
+        model
+      });
+    }
+
     for (const attemptTask of plan.runPlan.attemptTasks) {
+      const configKey = buildScheduledConfigKey(plan.datasetMeta.datasetHash, attemptTask.model.label);
+      const retryState = retryStates.get(configKey);
+
+      if (retryState) {
+        retryState.nextRunNumber = Math.max(retryState.nextRunNumber, attemptTask.runNumber + 1);
+      }
+
       scheduledTasks.push({
         ...attemptTask,
         datasetMeta: plan.datasetMeta,
         dataset: plan.dataset,
-        runKey: `${plan.datasetMeta.datasetHash}::${attemptTask.model.label}::${attemptTask.runNumber}`
+        configKey,
+        runKey: buildScheduledTaskKey(plan.datasetMeta.datasetHash, attemptTask.model.label, attemptTask.runNumber)
       });
     }
   }
+
+  const executionTasks = interleaveScheduledTasks(scheduledTasks);
 
   const progressDisplay = new BenchProgressDisplay(
     options.groupId,
@@ -1179,6 +1269,7 @@ async function main(): Promise<void> {
     options.reasoningMaxTokens,
     options.maxTurnsPerChunk,
     options.maxWordsPerChunk,
+    options.failedAttemptRetries,
     models,
     datasetPlans.length === 1 ? datasetPlans[0].caseCount : datasetPlans.reduce((sum, plan) => sum + plan.caseCount, 0),
     baseSpend,
@@ -1186,17 +1277,17 @@ async function main(): Promise<void> {
     matchingAttempts,
     existingMatchingAttemptCount,
     existingMatchingSuccessfulRuns,
-    scheduledTasks.length
+    executionTasks.length
   );
 
   progressDisplay.printInitialParameters();
 
-  if (scheduledTasks.length > 0) {
+  if (executionTasks.length > 0) {
     await runWithConcurrency(
-      scheduledTasks,
+      executionTasks,
       options.concurrency,
       () => stopRequested,
-      async ({ runNumber, model, datasetMeta, dataset, runKey }) => {
+      async ({ runNumber, model, datasetMeta, dataset, runKey, configKey }) => {
         progressDisplay.onAttemptStart(model.label, runKey, runNumber, datasetMeta.datasetName);
 
         const metadata = {
@@ -1239,9 +1330,11 @@ async function main(): Promise<void> {
 
           const attempt = buildResultsAttempt(run, report, runArtifact, reportArtifact, runNumber, metadata);
           attempts.push(attempt);
+          retryStates.get(configKey)!.successfulRuns += 1;
           checkpointWrites = enqueueCheckpointWrite(checkpointWrites, options.groupId, attempts, createdAt);
           await checkpointWrites;
           progressDisplay.onAttemptFinish(attempt, runKey);
+          return null;
         } catch (error) {
           const message = error instanceof Error ? error.message : String(error);
           const attempt = buildFailedResultsAttempt(model, runNumber, message, metadata, {
@@ -1253,6 +1346,29 @@ async function main(): Promise<void> {
           checkpointWrites = enqueueCheckpointWrite(checkpointWrites, options.groupId, attempts, createdAt);
           await checkpointWrites;
           progressDisplay.onAttemptFinish(attempt, runKey);
+
+          const retryState = retryStates.get(configKey);
+
+          if (
+            retryState &&
+            retryState.successfulRuns < retryState.targetSuccessfulRuns &&
+            retryState.retriesScheduled < options.failedAttemptRetries
+          ) {
+            const retryRunNumber = retryState.nextRunNumber;
+            retryState.nextRunNumber += 1;
+            retryState.retriesScheduled += 1;
+
+            return {
+              runNumber: retryRunNumber,
+              model: retryState.model,
+              datasetMeta: retryState.datasetMeta,
+              dataset: retryState.dataset,
+              configKey,
+              runKey: buildScheduledTaskKey(retryState.datasetMeta.datasetHash, retryState.model.label, retryRunNumber)
+            };
+          }
+
+          return null;
         }
       }
     );
