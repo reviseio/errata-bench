@@ -8,8 +8,8 @@ A public viewer for the latest run is hosted at [https://revise.io/errata-bench]
 
 The official result set included in this repo covers 51 model variants across 1600+ run samples. Instructions can be found below for running the benchmark yourself with an OpenRouter API key, or OpenAI-compatible API.
 
-[![Results preview](./results_preview.png)](https://revise.io/errata-bench)
-[![Scatterplot preview](./scatterplot_preview.png)](https://revise.io/errata-bench)
+[![Results preview](https://raw.githubusercontent.com/reviseio/errata-bench/refs/heads/main/results_preview.png)](https://revise.io/errata-bench)
+[![Scatterplot preview](https://raw.githubusercontent.com/reviseio/errata-bench/refs/heads/main/scatterplot_preview.png)](https://revise.io/errata-bench)
 
 ## Running the benchmark
 
