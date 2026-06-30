@@ -86,6 +86,11 @@ const STATIC_MODEL_PRICING: Record<string, ModelPricing> = {
     inputUsdPerToken: 0.039 / 1_000_000,
     outputUsdPerToken: 0.19 / 1_000_000,
     source: OPENROUTER_MODELS_API_SOURCE
+  },
+  "z-ai/glm-5.2": {
+    inputUsdPerToken: 0.95 / 1_000_000,
+    outputUsdPerToken: 3 / 1_000_000,
+    source: OPENROUTER_MODELS_API_SOURCE
   }
 };
 
