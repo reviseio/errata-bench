@@ -65,6 +65,8 @@
   "x-ai/grok-4.20:none",
   "x-ai/grok-4.20:medium",
   "x-ai/grok-4.20:high",
+  "x-ai/grok-4.5:medium",
+  "x-ai/grok-4.5:high",
   "qwen/qwen3.5-flash-02-23",
   "qwen/qwen3.5-397b-a17b",
   "qwen/qwen3.5-397b-a17b:high",

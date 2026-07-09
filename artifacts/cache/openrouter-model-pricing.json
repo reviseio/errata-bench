@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-06-30T20:04:04.381Z",
+  "fetchedAt": "2026-07-09T00:21:19.994Z",
   "source": "https://openrouter.ai/api/v1/models",
   "prices": {
     "~anthropic/claude-fable-latest": {
@@ -33,8 +33,8 @@
       "source": "https://openrouter.ai/api/v1/models"
     },
     "~moonshotai/kimi-latest": {
-      "inputUsdPerToken": 5.5e-7,
-      "outputUsdPerToken": 0.0000032,
+      "inputUsdPerToken": 6.5e-7,
+      "outputUsdPerToken": 0.00000341,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "~openai/gpt-latest": {
@@ -47,19 +47,14 @@
       "outputUsdPerToken": 0.0000045,
       "source": "https://openrouter.ai/api/v1/models"
     },
+    "~x-ai/grok-latest": {
+      "inputUsdPerToken": 0.000002,
+      "outputUsdPerToken": 0.000006,
+      "source": "https://openrouter.ai/api/v1/models"
+    },
     "ai21/jamba-large-1.7": {
       "inputUsdPerToken": 0.000002,
       "outputUsdPerToken": 0.000008,
-      "source": "https://openrouter.ai/api/v1/models"
-    },
-    "aion-labs/aion-1.0": {
-      "inputUsdPerToken": 0.000004,
-      "outputUsdPerToken": 0.000008,
-      "source": "https://openrouter.ai/api/v1/models"
-    },
-    "aion-labs/aion-1.0-mini": {
-      "inputUsdPerToken": 7e-7,
-      "outputUsdPerToken": 0.0000014,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "aion-labs/aion-2.0": {
@@ -70,6 +65,26 @@
     "aion-labs/aion-2.0-20260223": {
       "inputUsdPerToken": 8e-7,
       "outputUsdPerToken": 0.0000016,
+      "source": "https://openrouter.ai/api/v1/models"
+    },
+    "aion-labs/aion-3.0": {
+      "inputUsdPerToken": 0.000003,
+      "outputUsdPerToken": 0.000006,
+      "source": "https://openrouter.ai/api/v1/models"
+    },
+    "aion-labs/aion-3.0-20260707": {
+      "inputUsdPerToken": 0.000003,
+      "outputUsdPerToken": 0.000006,
+      "source": "https://openrouter.ai/api/v1/models"
+    },
+    "aion-labs/aion-3.0-mini": {
+      "inputUsdPerToken": 7e-7,
+      "outputUsdPerToken": 0.0000014,
+      "source": "https://openrouter.ai/api/v1/models"
+    },
+    "aion-labs/aion-3.0-mini-20260707": {
+      "inputUsdPerToken": 7e-7,
+      "outputUsdPerToken": 0.0000014,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "aion-labs/aion-rp-llama-3.1-8b": {
@@ -398,8 +413,8 @@
       "source": "https://openrouter.ai/api/v1/models"
     },
     "deepseek/deepseek-chat-v3-0324": {
-      "inputUsdPerToken": 2e-7,
-      "outputUsdPerToken": 7.7e-7,
+      "inputUsdPerToken": 2.4e-7,
+      "outputUsdPerToken": 9e-7,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "deepseek/deepseek-chat-v3.1": {
@@ -443,13 +458,13 @@
       "source": "https://openrouter.ai/api/v1/models"
     },
     "deepseek/deepseek-v4-flash": {
-      "inputUsdPerToken": 9.8e-8,
-      "outputUsdPerToken": 1.96e-7,
+      "inputUsdPerToken": 9e-8,
+      "outputUsdPerToken": 1.8e-7,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "deepseek/deepseek-v4-flash-20260423": {
-      "inputUsdPerToken": 9.8e-8,
-      "outputUsdPerToken": 1.96e-7,
+      "inputUsdPerToken": 9e-8,
+      "outputUsdPerToken": 1.8e-7,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "deepseek/deepseek-v4-pro": {
@@ -833,8 +848,8 @@
       "source": "https://openrouter.ai/api/v1/models"
     },
     "meta-llama/llama-3.2-3b-instruct": {
-      "inputUsdPerToken": 5.09e-8,
-      "outputUsdPerToken": 3.35e-7,
+      "inputUsdPerToken": 5e-8,
+      "outputUsdPerToken": 3.3e-7,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "meta-llama/llama-3.2-3b-instruct:free": {
@@ -899,7 +914,7 @@
     },
     "minimax/minimax-m2": {
       "inputUsdPerToken": 2.55e-7,
-      "outputUsdPerToken": 0.000001,
+      "outputUsdPerToken": 0.00000102,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "minimax/minimax-m2-her": {
@@ -913,8 +928,8 @@
       "source": "https://openrouter.ai/api/v1/models"
     },
     "minimax/minimax-m2.1": {
-      "inputUsdPerToken": 2.9e-7,
-      "outputUsdPerToken": 9.5e-7,
+      "inputUsdPerToken": 3e-7,
+      "outputUsdPerToken": 0.0000012,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "minimax/minimax-m2.5": {
@@ -1093,13 +1108,13 @@
       "source": "https://openrouter.ai/api/v1/models"
     },
     "moonshotai/kimi-k2.6": {
-      "inputUsdPerToken": 5.5e-7,
-      "outputUsdPerToken": 0.0000032,
+      "inputUsdPerToken": 6.5e-7,
+      "outputUsdPerToken": 0.00000341,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "moonshotai/kimi-k2.6-20260420": {
-      "inputUsdPerToken": 5.5e-7,
-      "outputUsdPerToken": 0.0000032,
+      "inputUsdPerToken": 6.5e-7,
+      "outputUsdPerToken": 0.00000341,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "moonshotai/kimi-k2.7-code": {
@@ -1120,6 +1135,11 @@
     "morph/morph-v3-large": {
       "inputUsdPerToken": 9e-7,
       "outputUsdPerToken": 0.0000019,
+      "source": "https://openrouter.ai/api/v1/models"
+    },
+    "nex-agi/nex-n2-mini": {
+      "inputUsdPerToken": 2.5e-8,
+      "outputUsdPerToken": 1e-7,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "nex-agi/nex-n2-pro": {
@@ -1178,13 +1198,13 @@
       "source": "https://openrouter.ai/api/v1/models"
     },
     "nvidia/nemotron-3-super-120b-a12b": {
-      "inputUsdPerToken": 8.5e-8,
-      "outputUsdPerToken": 4e-7,
+      "inputUsdPerToken": 8e-8,
+      "outputUsdPerToken": 4.5e-7,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "nvidia/nemotron-3-super-120b-a12b-20230311": {
-      "inputUsdPerToken": 8.5e-8,
-      "outputUsdPerToken": 4e-7,
+      "inputUsdPerToken": 8e-8,
+      "outputUsdPerToken": 4.5e-7,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "nvidia/nemotron-3-super-120b-a12b:free": {
@@ -1812,6 +1832,21 @@
       "outputUsdPerToken": 0,
       "source": "https://openrouter.ai/api/v1/models"
     },
+    "poolside/laguna-xs-2.1": {
+      "inputUsdPerToken": 6e-8,
+      "outputUsdPerToken": 1.2e-7,
+      "source": "https://openrouter.ai/api/v1/models"
+    },
+    "poolside/laguna-xs-2.1-20260625": {
+      "inputUsdPerToken": 6e-8,
+      "outputUsdPerToken": 1.2e-7,
+      "source": "https://openrouter.ai/api/v1/models"
+    },
+    "poolside/laguna-xs-2.1:free": {
+      "inputUsdPerToken": 0,
+      "outputUsdPerToken": 0,
+      "source": "https://openrouter.ai/api/v1/models"
+    },
     "poolside/laguna-xs.2": {
       "inputUsdPerToken": 1e-7,
       "outputUsdPerToken": 2e-7,
@@ -1918,8 +1953,8 @@
       "source": "https://openrouter.ai/api/v1/models"
     },
     "qwen/qwen3-30b-a3b-thinking-2507": {
-      "inputUsdPerToken": 8e-8,
-      "outputUsdPerToken": 4e-7,
+      "inputUsdPerToken": 1.3e-7,
+      "outputUsdPerToken": 0.00000156,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "qwen/qwen3-32b": {
@@ -1933,13 +1968,13 @@
       "source": "https://openrouter.ai/api/v1/models"
     },
     "qwen/qwen3-8b": {
-      "inputUsdPerToken": 5e-8,
-      "outputUsdPerToken": 4e-7,
+      "inputUsdPerToken": 1.17e-7,
+      "outputUsdPerToken": 4.55e-7,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "qwen/qwen3-8b-04-28": {
-      "inputUsdPerToken": 5e-8,
-      "outputUsdPerToken": 4e-7,
+      "inputUsdPerToken": 1.17e-7,
+      "outputUsdPerToken": 4.55e-7,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "qwen/qwen3-coder": {
@@ -2048,8 +2083,8 @@
       "source": "https://openrouter.ai/api/v1/models"
     },
     "qwen/qwen3-vl-8b-instruct": {
-      "inputUsdPerToken": 8e-8,
-      "outputUsdPerToken": 5e-7,
+      "inputUsdPerToken": 1.17e-7,
+      "outputUsdPerToken": 4.55e-7,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "qwen/qwen3-vl-8b-thinking": {
@@ -2287,6 +2322,16 @@
       "outputUsdPerToken": 5.7e-7,
       "source": "https://openrouter.ai/api/v1/models"
     },
+    "tencent/hy3": {
+      "inputUsdPerToken": 1.4e-7,
+      "outputUsdPerToken": 5.8e-7,
+      "source": "https://openrouter.ai/api/v1/models"
+    },
+    "tencent/hy3-20260706": {
+      "inputUsdPerToken": 1.4e-7,
+      "outputUsdPerToken": 5.8e-7,
+      "source": "https://openrouter.ai/api/v1/models"
+    },
     "tencent/hy3-preview": {
       "inputUsdPerToken": 6.3e-8,
       "outputUsdPerToken": 2.1e-7,
@@ -2295,6 +2340,11 @@
     "tencent/hy3-preview-20260421": {
       "inputUsdPerToken": 6.3e-8,
       "outputUsdPerToken": 2.1e-7,
+      "source": "https://openrouter.ai/api/v1/models"
+    },
+    "tencent/hy3:free": {
+      "inputUsdPerToken": 0,
+      "outputUsdPerToken": 0,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "thedrummer/cydonia-24b-v4.1": {
@@ -2370,6 +2420,16 @@
     "x-ai/grok-4.3-20260430": {
       "inputUsdPerToken": 0.00000125,
       "outputUsdPerToken": 0.0000025,
+      "source": "https://openrouter.ai/api/v1/models"
+    },
+    "x-ai/grok-4.5": {
+      "inputUsdPerToken": 0.000002,
+      "outputUsdPerToken": 0.000006,
+      "source": "https://openrouter.ai/api/v1/models"
+    },
+    "x-ai/grok-4.5-20260708": {
+      "inputUsdPerToken": 0.000002,
+      "outputUsdPerToken": 0.000006,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "x-ai/grok-build-0.1": {
@@ -2478,18 +2538,18 @@
       "source": "errata-bench pinned pricing override"
     },
     "z-ai/glm-5.1-20260406": {
-      "inputUsdPerToken": 9.75e-7,
-      "outputUsdPerToken": 0.0000043,
+      "inputUsdPerToken": 9.66e-7,
+      "outputUsdPerToken": 0.000003036,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "z-ai/glm-5.2": {
-      "inputUsdPerToken": 9.3e-7,
-      "outputUsdPerToken": 0.000003,
+      "inputUsdPerToken": 5.6e-7,
+      "outputUsdPerToken": 0.00000176,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "z-ai/glm-5.2-20260616": {
-      "inputUsdPerToken": 9.3e-7,
-      "outputUsdPerToken": 0.000003,
+      "inputUsdPerToken": 5.6e-7,
+      "outputUsdPerToken": 0.00000176,
       "source": "https://openrouter.ai/api/v1/models"
     },
     "z-ai/glm-5v-turbo": {
