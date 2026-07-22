@@ -669,6 +669,11 @@ async function runLiveChunk(
         break;
       }
 
+      messages.push({
+        role: "user",
+        content: "Continue proofreading this chunk. Use the available tools to apply corrections, then call proofreading_complete when finished."
+      });
+
       continue;
     }
 

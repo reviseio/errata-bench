@@ -89,6 +89,34 @@ type OpenRouterProviderRouting = {
   require_parameters?: boolean;
 };
 
+const MAX_RATE_LIMIT_RETRIES = 8;
+
+function getRetryDelayMs(response: Response, retryNumber: number): number {
+  const backoffMs = Math.min(30_000, 1000 * 2 ** (retryNumber - 1));
+  const jitterMs = Math.floor(Math.random() * 500);
+  const retryAfter = response.headers.get("retry-after")?.trim();
+
+  if (retryAfter) {
+    const seconds = Number(retryAfter);
+
+    if (Number.isFinite(seconds) && seconds >= 0) {
+      return Math.max(backoffMs, Math.ceil(seconds * 1000)) + jitterMs;
+    }
+
+    const retryAt = Date.parse(retryAfter);
+
+    if (Number.isFinite(retryAt)) {
+      return Math.max(backoffMs, retryAt - Date.now()) + jitterMs;
+    }
+  }
+
+  return backoffMs + jitterMs;
+}
+
+async function wait(delayMs: number): Promise<void> {
+  await new Promise<void>((resolve) => setTimeout(resolve, delayMs));
+}
+
 function describeError(error: unknown): string {
   if (error instanceof Error) {
     const cause =
@@ -316,16 +344,33 @@ export async function requestChatCompletion(
   let responseHeadersDurationMs = 0;
 
   try {
-    response = await fetch(getChatCompletionsUrl(), {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${getApiKey()}`,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(requestBody),
-      signal: controller.signal
-    });
-    responseHeadersDurationMs = Date.now() - requestStartedAt;
+    for (let retryNumber = 0; ; retryNumber += 1) {
+      response = await fetch(getChatCompletionsUrl(), {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${getApiKey()}`,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(requestBody),
+        signal: controller.signal
+      });
+      responseHeadersDurationMs = Date.now() - requestStartedAt;
+
+      if (response.status !== 429 || retryNumber >= MAX_RATE_LIMIT_RETRIES) {
+        break;
+      }
+
+      const delayMs = getRetryDelayMs(response, retryNumber + 1);
+
+      if (options?.verbose) {
+        console.error(
+          `[${providerLabel}] retry label=${debugLabel} status=429 retry=${retryNumber + 1}/${MAX_RATE_LIMIT_RETRIES} delay_ms=${delayMs}`
+        );
+      }
+
+      await response.text();
+      await wait(delayMs);
+    }
   } catch (error) {
     if (timeoutHandle != null) {
       clearTimeout(timeoutHandle);
