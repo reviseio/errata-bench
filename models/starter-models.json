@@ -103,5 +103,7 @@
   "z-ai/glm-5.1:low",
   "z-ai/glm-5.1:medium",
   "z-ai/glm-5.1:high",
-  "z-ai/glm-5.2:high"
+  "z-ai/glm-5.2:high",
+  "z-ai/glm-5.3-flash:medium",
+  "z-ai/glm-5.3-flash:high"
 ]

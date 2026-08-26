@@ -1,7 +1,7 @@
 {
   "version": "v1",
   "runId": "2026-07-13T11-11-35-583Z",
-  "createdAt": "2026-07-13T11:12:11.153Z",
+  "createdAt": "2026-08-26T17:31:32.783Z",
   "summary": {
     "totalCases": 1,
     "exactDocumentMatches": 0,
@@ -22,19 +22,19 @@
     "cost": {
       "candidatePromptTokens": 98951,
       "candidateOutputTokens": 5902,
-      "candidateCostUsd": 0.134363,
+      "candidateCostUsd": 0.0268726,
       "judgePromptTokens": 26812,
       "judgeOutputTokens": 3013,
       "judgeCostUsd": 0.20938500000000002,
-      "totalCostUsd": 0.34374800000000005
+      "totalCostUsd": 0.2362576
     },
     "axes": {
       "quality": 0.7636363636363637,
       "restraint": null,
-      "efficiency": 122.18252906198725,
+      "efficiency": 177.77205897291768,
       "speed": 70.90602138435565,
-      "costUsd": 0.34374800000000005,
-      "candidateCostUsd": 0.134363,
+      "costUsd": 0.2362576,
+      "candidateCostUsd": 0.0268726,
       "judgeCostUsd": 0.20938500000000002
     },
     "tooling": {
@@ -58,7 +58,7 @@
       "resolvedIssues": 16,
       "totalIssues": 19,
       "averageRestraintScore": 1,
-      "averageResolvedIssuesPerUsd": 46.54572535694752,
+      "averageResolvedIssuesPerUsd": 67.72268913254007,
       "averageQualityScore": 0.8421052631578947,
       "averageBenchmarkScore": 84.21052631578947
     }

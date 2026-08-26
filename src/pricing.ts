@@ -43,6 +43,7 @@ type PricingOverrideEntry = {
 
 const OPENROUTER_MODELS_API_SOURCE = "https://openrouter.ai/api/v1/models";
 const PINNED_MODEL_PRICING_SOURCE = "errata-bench pinned pricing override";
+const OPENAI_MODEL_PRICING_SOURCE = "https://developers.openai.com/api/docs/models";
 const PRICING_CACHE_PATH = path.resolve("artifacts/cache/openrouter-model-pricing.json");
 const DEFAULT_CACHE_TTL_MS = 6 * 60 * 60 * 1000;
 
@@ -95,6 +96,16 @@ const STATIC_MODEL_PRICING: Record<string, ModelPricing> = {
 };
 
 const PINNED_MODEL_PRICING: Record<string, ModelPricing> = {
+  "openai/gpt-5.6-luna": {
+    inputUsdPerToken: 0.2 / 1_000_000,
+    outputUsdPerToken: 1.2 / 1_000_000,
+    source: OPENAI_MODEL_PRICING_SOURCE
+  },
+  "openai/gpt-5.6-terra": {
+    inputUsdPerToken: 2 / 1_000_000,
+    outputUsdPerToken: 12 / 1_000_000,
+    source: OPENAI_MODEL_PRICING_SOURCE
+  },
   "z-ai/glm-5.1": {
     inputUsdPerToken: 1 / 1_000_000,
     outputUsdPerToken: 3.2 / 1_000_000,
