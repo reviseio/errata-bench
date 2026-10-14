@@ -770,6 +770,7 @@ class BenchProgressDisplay {
   private renderedLineCount = 0;
   private readonly targetRunsPerModel: number;
   private readonly showDatasetInLiveBadges: boolean;
+  private readonly pendingModels: ModelVariant[];
 
   public constructor(
     private readonly groupId: string,
@@ -796,10 +797,12 @@ class BenchProgressDisplay {
     private readonly existingMatchingAttempts: ResultsAttempt[],
     private readonly existingMatchingAttemptCount: number,
     private readonly existingMatchingSuccessfulRuns: number,
-    private readonly scheduledAttemptCount: number
+    private readonly scheduledAttemptCount: number,
+    pendingModelLabels: ReadonlySet<string>
   ) {
     this.targetRunsPerModel = this.runs * this.datasetCount;
     this.showDatasetInLiveBadges = this.datasetCount > 1;
+    this.pendingModels = this.models.filter((model) => pendingModelLabels.has(model.label));
 
     for (const model of models) {
       const matchingAttempts = this.existingMatchingAttempts.filter((attempt) => attempt.model === model.label);
@@ -859,7 +862,8 @@ class BenchProgressDisplay {
     console.log(`existing_matching_attempts=${this.existingMatchingAttemptCount}`);
     console.log(`existing_matching_successful_runs=${this.existingMatchingSuccessfulRuns}`);
     console.log(`existing_group_attempts=${this.existingAttemptCount}`);
-    console.log(`models=${this.models.map((model) => model.label).join(",")}`);
+    console.log(`models=${this.pendingModels.map((model) => model.label).join(",")}`);
+    console.log(`already_completed_models=${this.models.length - this.pendingModels.length}`);
     console.log("");
 
     if (this.interactive) {
@@ -1008,7 +1012,7 @@ class BenchProgressDisplay {
     const spendSummary = this.getSpendTotals();
     const elapsed = formatDuration(Date.now() - this.startedAt);
 
-    const modelLines = this.models.map((model) => {
+    const modelLines = this.pendingModels.map((model) => {
       const state = this.states.get(model.label) as LiveModelProgress;
       const completedRuns = Math.min(state.succeededRuns, this.targetRunsPerModel);
       const modelProgressBar = buildProgressBar(completedRuns, this.targetRunsPerModel, 10);
@@ -1277,7 +1281,8 @@ async function main(): Promise<void> {
     matchingAttempts,
     existingMatchingAttemptCount,
     existingMatchingSuccessfulRuns,
-    executionTasks.length
+    executionTasks.length,
+    new Set(executionTasks.map((task) => task.model.label))
   );
 
   progressDisplay.printInitialParameters();
